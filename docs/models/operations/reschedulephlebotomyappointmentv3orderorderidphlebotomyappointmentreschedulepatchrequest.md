@@ -1,0 +1,9 @@
+# ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `appointment_reschedule_request`                                                                         | [Optional[shared.AppointmentRescheduleRequest]](undefined/models/shared/appointmentreschedulerequest.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `order_id`                                                                                               | *Optional[str]*                                                                                          | :heavy_check_mark:                                                                                       | Your Order ID.                                                                                           |

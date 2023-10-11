@@ -1,0 +1,10 @@
+# OpenLoopEvent
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `event_type`                                                                                 | [Optional[shared.OpenLoopWebhookType]](undefined/models/shared/openloopwebhooktype.md)       | :heavy_check_mark:                                                                           | An enumeration.                                                                              |
+| `resource_id`                                                                                | *Optional[str]*                                                                              | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `resource_id_type`                                                                           | [Optional[shared.OpenLoopResourceIDType]](undefined/models/shared/openloopresourceidtype.md) | :heavy_check_mark:                                                                           | An enumeration.                                                                              |
