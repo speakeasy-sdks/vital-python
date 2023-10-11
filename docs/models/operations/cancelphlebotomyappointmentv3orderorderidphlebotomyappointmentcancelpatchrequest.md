@@ -1,0 +1,9 @@
+# CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `appointment_cancel_request`                                                                     | [Optional[shared.AppointmentCancelRequest]](undefined/models/shared/appointmentcancelrequest.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `order_id`                                                                                       | *Optional[str]*                                                                                  | :heavy_check_mark:                                                                               | Your Order ID.                                                                                   |
