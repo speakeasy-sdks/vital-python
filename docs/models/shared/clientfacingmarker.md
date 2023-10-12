@@ -1,0 +1,16 @@
+# ClientFacingMarker
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `description`                                                        | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *Optional[int]*                                                      | :heavy_check_mark:                                                   | N/A                                                                  |
+| `lab_id`                                                             | *Optional[int]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `name`                                                               | *Optional[str]*                                                      | :heavy_check_mark:                                                   | N/A                                                                  |
+| `price`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `provider_id`                                                        | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `slug`                                                               | *Optional[str]*                                                      | :heavy_check_mark:                                                   | N/A                                                                  |
+| `type`                                                               | [Optional[shared.MarkerType]](undefined/models/shared/markertype.md) | :heavy_minus_sign:                                                   | An enumeration.                                                      |
+| `unit`                                                               | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |

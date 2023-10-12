@@ -1,0 +1,22 @@
+# BiomarkerResult
+
+Represent the schema for an individual biomarker result.
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `interpretation`                                                     | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `is_above_max_range`                                                 | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `is_below_min_range`                                                 | *Optional[bool]*                                                     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `max_range_value`                                                    | *Optional[float]*                                                    | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `min_range_value`                                                    | *Optional[float]*                                                    | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `name`                                                               | *Optional[str]*                                                      | :heavy_check_mark:                                                   | N/A                                                                  |
+| `notes`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `result`                                                             | *Optional[str]*                                                      | :heavy_check_mark:                                                   | N/A                                                                  |
+| `slug`                                                               | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `timestamp`                                                          | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `type`                                                               | [Optional[shared.ResultType]](undefined/models/shared/resulttype.md) | :heavy_check_mark:                                                   | An enumeration.                                                      |
+| `unit`                                                               | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `value`                                                              | *Optional[float]*                                                    | :heavy_check_mark:                                                   | N/A                                                                  |
