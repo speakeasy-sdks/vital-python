@@ -1,0 +1,9 @@
+# LabResultsRaw
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `metadata`                                                                                               | [LabResultsMetadata](../../models/shared/labresultsmetadata.md)                                          | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `results`                                                                                                | [Union[list[BiomarkerResult], LabResultsRawResultsResults]](../../models/shared/labresultsrawresults.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

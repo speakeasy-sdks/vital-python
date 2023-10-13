@@ -1,0 +1,11 @@
+# PostUserVitalsV2TimeseriesUserIDResourcePostRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `resource`                                                                                 | [shared.IngestibleTimeseriesResource](../../models/shared/ingestibletimeseriesresource.md) | :heavy_check_mark:                                                                         | An enumeration.                                                                            |
+| `user_id`                                                                                  | *str*                                                                                      | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `x_vital_android_sdk_version`                                                              | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `x_vital_ios_sdk_version`                                                                  | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |

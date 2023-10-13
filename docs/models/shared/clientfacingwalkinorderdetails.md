@@ -1,0 +1,9 @@
+# ClientFacingWalkInOrderDetails
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `data`                                                                                                | [Optional[ClientFacingWalkInTestOrder]](../../models/shared/clientfacingwalkintestorder.md)           | :heavy_minus_sign:                                                                                    | Schema for a walk-in test order in the client facing API.<br/><br/>To be used as part of a ClientFacingOrder. |
+| `type`                                                                                                | [ClientFacingWalkInOrderDetailsType](../../models/shared/clientfacingwalkinorderdetailstype.md)       | :heavy_check_mark:                                                                                    | N/A                                                                                                   |

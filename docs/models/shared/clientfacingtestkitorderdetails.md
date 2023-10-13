@@ -1,0 +1,9 @@
+# ClientFacingTestKitOrderDetails
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `data`                                                                                            | [Optional[ClientFacingTestkitOrder]](../../models/shared/clientfacingtestkitorder.md)             | :heavy_minus_sign:                                                                                | Schema for a testkit order in the client facing API.<br/><br/>To be used as part of a ClientFacingOrder. |
+| `type`                                                                                            | [ClientFacingTestKitOrderDetailsType](../../models/shared/clientfacingtestkitorderdetailstype.md) | :heavy_check_mark:                                                                                | N/A                                                                                               |
