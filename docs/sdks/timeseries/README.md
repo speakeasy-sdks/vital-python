@@ -38,9 +38,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_blood_oxygen(start_date='impactful', user_id='167a20d0-010c-46df-9636-3b96cbd8acaa', end_date='Dollar', provider='California')
@@ -73,9 +75,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_blood_pressure(start_date='gee', user_id='1b0b644f-7b3e-4a62-b593-87de819d0467', end_date='Silicon', provider='generating')
@@ -108,9 +112,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_caffeine(start_date='Bike', user_id='0eb86098-dcc6-4f6c-b57c-f521cb838d86', end_date='Ward', provider='Account')
@@ -143,9 +149,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_calories_active(start_date='Federation', user_id='1117e3cf-3f90-4377-abb8-9ae3afbb8a22', end_date='minor', provider='Officer')
@@ -178,9 +186,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_calories_basal(start_date='encoding', user_id='ab80902f-0d8b-480a-ba6b-9f3470ca8035', end_date='Cruiser', provider='hm')
@@ -213,9 +223,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_cholesterol_all(start_date='scale', user_id='6c3b209b-90b5-4907-8d42-be3036af6959', end_date='nulla', provider='deposit')
@@ -248,9 +260,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_cholesterol_hdl(start_date='offer', user_id='7d0d0e3b-2a52-49fb-9c2d-8b672820431e', end_date='sticky', provider='Rap')
@@ -283,9 +297,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_cholesterol_ldl(start_date='Shirt', user_id='6985e48f-6e4c-4a12-bede-b29d7329161d', end_date='Fish', provider='Customer')
@@ -318,9 +334,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_distance(start_date='Borders', user_id='ab33e7f6-399b-48f7-bc69-a8c4ea5f811a', end_date='secured', provider='capacitor')
@@ -353,9 +371,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_floors_climbed(start_date='Framingham', user_id='b58dc04a-1477-49d7-b878-666ff90d3c15', end_date='Mazda', provider='aspernatur')
@@ -388,9 +408,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_glucose(start_date='withdrawal', user_id='c755f4e3-6361-4b98-88a3-3b1731a7aeff', end_date='tinker', provider='New')
@@ -423,9 +445,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_heartrate(start_date='Tuna', user_id='24193a7e-0c48-4f71-9f29-3d439db94517', end_date='Bedfordshire', provider='Burundi')
@@ -458,9 +482,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_hrv(start_date='onto', user_id='8c7b86cf-8ac7-4c96-9134-2c13c4a095df', end_date='invoice', provider='Music')
@@ -493,9 +519,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_hypnogram(start_date='Agender', user_id='16363f90-ddad-4e35-80c1-806b114554f6', end_date='South', provider='parsing')
@@ -528,9 +556,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_ige(start_date='gosh', user_id='97cbc298-b6fe-4d30-8681-3b66be805e5c', end_date='maroon', provider='Rupee')
@@ -563,9 +593,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_igg(start_date='orchestrate', user_id='54a70b28-d95e-4f79-8c9c-f8e7ce7fd8db', end_date='Recumbent', provider='Classical')
@@ -598,9 +630,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_mindfulness_minutes(start_date='win', user_id='42bcd30f-79dd-4664-acae-0a26ee2b9de9', end_date='equally', provider='humming')
@@ -633,9 +667,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_respiratory_rate(start_date='circa', user_id='daa7f697-3a55-4ea3-8cb2-e2169f40d62d', end_date='upon', provider='Fluorine')
@@ -668,9 +704,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_steps(start_date='copying', user_id='f7b728ea-d1ba-4037-920b-80b82a067baf', end_date='optical', provider='platforms')
@@ -703,9 +741,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_total_cholesterol(start_date='Director', user_id='6cf900a0-1395-4d12-a9ee-be971547d810', end_date='farad', provider='partially')
@@ -738,9 +778,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_triglycerides(start_date='Optional', user_id='c97f143e-c935-45c9-a6cd-c7190c8f2e16', end_date='state', provider='female')
@@ -773,9 +815,11 @@ Get Sleep stream for a user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_user_sleep_stream(sleep_id='quantify')
@@ -805,9 +849,11 @@ Get User Workouts
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_user_workouts(workout_id='bc0edaf0-6098-41f4-a6eb-525d09cc6d26')
@@ -837,9 +883,11 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.get_water(start_date='Garden', user_id='80182b86-b75b-4a3c-a7d6-4c9e6a0a1275', end_date='construction', provider='withdrawal')
@@ -872,9 +920,11 @@ Post User Blood Pressure
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.post_blood_pressure(user_id='5d55820e-8c39-4307-91e1-9cdd23720f04', x_vital_android_sdk_version='Indium', x_vital_ios_sdk_version='Cab')
@@ -908,7 +958,9 @@ Post User Vitals
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.timeseries.post_vitals(resource=shared.IngestibleTimeseriesResource.BLOOD_OXYGEN, user_id='7a0eca13-40ec-46ac-9433-f77edd2bbc91', x_vital_android_sdk_version='Arkansas', x_vital_ios_sdk_version='perferendis')

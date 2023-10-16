@@ -25,7 +25,9 @@ POST Create a Vital user given a client_user_id and returns the user_id.
 import vital
 from vital.models import shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 req = shared.UserCreateBody(
     client_user_id='dicta Forward',
@@ -58,9 +60,11 @@ Delete User
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.delete(user_id='8db863f6-ef9b-413a-8a70-cb816b33de6b')
@@ -92,7 +96,9 @@ Deregister Provider
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.deregister_provider_v2_user_user_id_provider_delete(provider=shared.Providers.GARMIN, user_id='6d48b1ec-267e-4530-bcf8-b4f041e375ee')
@@ -123,9 +129,11 @@ GET User details given the user_id.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.get(user_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
@@ -155,9 +163,11 @@ GET All users for team.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.get_all(limit=178225, offset=64345)
@@ -188,9 +198,11 @@ GET Users connected providers
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.get_connected_providers(user_id='30ef9033-9974-45c7-af5c-ddc9369dd7a0')
@@ -220,9 +232,11 @@ GET metrics for team.
 
 ```python
 import vital
+from vital.models import shared
 
-
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.get_metrics()
@@ -246,9 +260,11 @@ Get User Sign In Token
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.get_sign_in_token(user_id='d738147a-606f-41ac-a296-81a3993405ee')
@@ -280,7 +296,9 @@ Patch User
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.patch_user_v2_user_user_id_patch(user_patch_body=shared.UserPatchBody(), user_id='02c6960d-b280-4a76-8c76-467d647deb43')
@@ -311,9 +329,11 @@ Trigger a manual refresh for a specific user
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.refresh_user_id_v2_user_refresh_user_id_post(user_id='1d35a855-b124-4dda-9838-fdeec970978f')
@@ -343,9 +363,11 @@ GET user_id from client_user_id.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.user.resolve_by_user_id(client_user_id='Bicycle')

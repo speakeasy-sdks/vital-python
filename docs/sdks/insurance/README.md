@@ -14,9 +14,11 @@ Search Diagnosis
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.insurance.search_diagnosis(diagnosis_query='JBOD')
@@ -48,7 +50,9 @@ Search Insurance Payor Information
 import vital
 from vital.models import shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 req = shared.PayorSearchRequest(
     insurance_name='South entry Bicycle',

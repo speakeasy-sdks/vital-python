@@ -3,14 +3,16 @@
 
 ```python
 import vital
+from vital.models import operations, shared
+
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
-s = vital.Vital()
+res = s.insurance.search_diagnosis(diagnosis_query='JBOD')
 
-
-res = s.vital.robots_robots_txt_get()
-
-if res.robots_robots_txt_get_200_text_plain_string is not None:
+if res.client_facing_diagnosis_informations is not None:
     # handle response
     pass
 ```

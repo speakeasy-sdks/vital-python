@@ -14,7 +14,7 @@ from .team import Team
 from .timeseries import Timeseries
 from .user import User
 from vital import utils
-from vital.models import errors, operations
+from vital.models import errors, operations, shared
 
 class Vital:
     r"""Vital API: API for at-home health Wearables and Lab test API for digital health companies."""
@@ -33,6 +33,7 @@ class Vital:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
+                 api_key: str,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: dict[str, str] = None,
@@ -41,6 +42,8 @@ class Vital:
                  ) -> None:
         """Instantiates the SDK configuring it with the provided parameters.
         
+        :param api_key: The api_key required for authentication
+        :type api_key: str
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -55,7 +58,9 @@ class Vital:
         if client is None:
             client = requests_http.Session()
         
-        security_client = client
+        
+        security_client = utils.configure_security_client(client, shared.Security(api_key = api_key))
+        
         
         if server_url is not None:
             if url_params is not None:
@@ -87,7 +92,7 @@ class Vital:
         headers['Accept'] = 'text/plain'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.client
+        client = self.sdk_configuration.security_client
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

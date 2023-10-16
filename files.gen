@@ -307,6 +307,7 @@ src/vital/models/shared/usersignintokenresponse.py
 src/vital/models/shared/usersignintoken.py
 src/vital/models/shared/userpatchbody.py
 src/vital/models/shared/userrefreshsuccessresponse.py
+src/vital/models/shared/security.py
 src/vital/models/shared/__init__.py
 src/vital/models/errors/httpvalidationerror.py
 src/vital/models/errors/validationerror.py
@@ -749,6 +750,7 @@ docs/models/shared/usersignintokenresponse.md
 docs/models/shared/usersignintoken.md
 docs/models/shared/userpatchbody.md
 docs/models/shared/userrefreshsuccessresponse.md
+docs/models/shared/security.md
 docs/models/errors/httpvalidationerror.md
 docs/models/errors/validationerrorloc.md
 docs/models/errors/validationerror.md

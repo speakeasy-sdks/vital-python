@@ -35,7 +35,9 @@ Book an at-home phlebotomy appointment.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(appointment_booking_request=shared.AppointmentBookingRequest(
@@ -68,9 +70,11 @@ POST cancel order
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.cancel_order_v3_order_order_id_cancel_post(order_id='b9d919c2-b9aa-4759-bba5-fb974a744f9a')
@@ -102,7 +106,9 @@ Cancel a previously booked at-home phlebotomy appointment.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(appointment_cancel_request=shared.AppointmentCancelRequest(
@@ -138,7 +144,9 @@ import vital
 import dateutil.parser
 from vital.models import shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 req = shared.CreateOrderRequestCompatible(
     consents=[
@@ -235,7 +243,9 @@ Creates an order for an unregistered testkit
 import vital
 from vital.models import shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 req = shared.CreateRegistrableTestkitOrderRequest(
     lab_test_id='eb480e87-d170-4ada-8df4-8f4bbca14aec',
@@ -278,9 +288,11 @@ Dispatch Order Status
 
 ```python
 import vital
+from vital.models import shared
 
-
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.dispatch_status()
@@ -304,9 +316,11 @@ GET individual order by ID.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get(order_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
@@ -337,9 +351,11 @@ for the given address and order.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_appointment_availability(order_id='c094c82e-a8e0-42d1-a065-be1f658ff11c', request_body=operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress(
@@ -378,9 +394,11 @@ Information returned:
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_area_info(zip_code='Tuvalu')
@@ -410,9 +428,11 @@ This endpoint returns the lab results for the order.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_lab_test_result(order_id='c9229487-8f86-47ef-848e-7eb7243713ad')
@@ -443,9 +463,11 @@ provider and sample dates.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_lab_test_result_metadata(order_id='daf5fdc5-7c54-4772-826b-69600571af0f')
@@ -475,9 +497,11 @@ Return both metadata and raw json test data
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_lab_test_result_raw(order_id='2cfa7265-4a8d-45d9-b8ea-42e844b02385')
@@ -507,9 +531,11 @@ Get the appointment associated with an order.
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_phlebotomy_appointment(order_id='3e95493c-2969-4eab-9aaf-61adbf59533c')
@@ -539,9 +565,11 @@ Get the list of reasons for cancelling an at-home phlebotomy appointment.
 
 ```python
 import vital
+from vital.models import shared
 
-
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_phlebotomy_cancellation_reasons()
@@ -565,9 +593,11 @@ GET requisition pdf for an order
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.get_requisition_url(order_id='bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335')
@@ -599,7 +629,9 @@ Get available test kits.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.order_process_simulate_v3_order_order_id_test_post(order_id='03c5e046-8598-4154-ab3e-444d34fe425a', delay=560672, final_status=shared.OrderStatus.COLLECTING_SAMPLE_AT_HOME_PHLEBOTOMY_APPOINTMENT_SCHEDULED)
@@ -631,9 +663,11 @@ POST Create shipment for order
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.process_testkit_order_v3_order_testkit_process_team_id_order_id_post(order_id='21061e75-f548-42fd-90f0-d372d63dff6e', team_id='26a256a9-b0f5-4854-8814-40907e852835')
@@ -666,7 +700,9 @@ Process Testkit Ship Hero Order Shipped
 import vital
 from vital.models import shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 req = shared.ShipmentWebhookUpdate(
     fulfillment=shared.Fulfillment(
@@ -706,7 +742,9 @@ import vital
 import dateutil.parser
 from vital.models import shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 req = shared.RegisterTestkitRequest(
     consents=[
@@ -770,7 +808,9 @@ Reschedule a previously booked at-home phlebotomy appointment.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(appointment_reschedule_request=shared.AppointmentRescheduleRequest(
@@ -807,9 +847,11 @@ is sent to the respective team.
 
 ```python
 import vital
+from vital.models import shared
 
-
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.order.sync_testkit_order_status_v3_order_testkit_status_post()

@@ -14,9 +14,11 @@ GET many orders with filters.
 ```python
 import vital
 import dateutil.parser
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 req = operations.GetOrdersV3OrdersGetRequest(
     order_ids=[

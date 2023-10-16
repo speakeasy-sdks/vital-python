@@ -30,9 +30,11 @@ Get user's meals
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_meals(start_date='Money', user_id='fb67cc4d-e4d2-44b5-a3e0-73000b0a593d', end_date='whenever', provider='black')
@@ -65,9 +67,11 @@ Get Daily Activity for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_activity(start_date='salmon', user_id='994eda1c-812f-4363-bbdc-b5592eeffbfe', end_date='sonata', provider='Fantastic')
@@ -100,9 +104,11 @@ Get Daily Activity for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_activity_raw(start_date='turquoise', user_id='52487b77-c7c6-41ed-9ee8-85ef0bdc3cda', end_date='blah', provider='enforcement')
@@ -135,9 +141,11 @@ Get Daily Body data for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_body(start_date='hack', user_id='70daa1c7-02d4-4a96-939a-8a9e6e4eae9b', end_date='magnetic', provider='local')
@@ -170,9 +178,11 @@ Get Daily Body data for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_body_raw(start_date='Computer', user_id='8730e01d-99c9-4457-968e-72c19854893e', end_date='Credit', provider='South')
@@ -205,9 +215,11 @@ Get Devices for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_devices_raw(user_id='d3afcead-cf24-4987-97fa-74fe26009852', provider='Kwacha')
@@ -238,9 +250,11 @@ Get Daily profile for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_profile(user_id='1e03319e-ca0e-4660-8784-a0581ebdd19f', provider='Unbranded')
@@ -271,9 +285,11 @@ Get Daily profile for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_profile_raw(user_id='ae101aa4-8797-4dc6-bac7-aa9d64e72a37', provider='Liberia')
@@ -304,9 +320,11 @@ Get Daily sleep for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_sleep(start_date='Pakistan', user_id='ea429e1c-88ab-4243-bc6a-94c896bba7aa', end_date='Southeast', provider='wireless')
@@ -339,9 +357,11 @@ Get Daily sleep for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_sleep_raw(start_date='Titanium', user_id='ba77ed68-ff41-4f3f-8077-eae7285ab9bb', end_date='generate', provider='Point')
@@ -374,9 +394,11 @@ Get Daily sleep stream for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_sleep_stream(start_date='quantify', user_id='05f1c352-9503-47bc-8ab0-890f30d313cc', end_date='Account', provider='Dakota')
@@ -409,9 +431,11 @@ Get Daily workout for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_workouts(start_date='Plutonium', user_id='0edaf060-981f-44a6-ab52-5d09cc6d2663', end_date='Recumbent', provider='next')
@@ -444,9 +468,11 @@ Get Daily workout for user_id
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.get_user_workouts_raw(start_date='Bike', user_id='65358ad8-c074-4b1c-a19b-ac589e4fc044', end_date='Auto', provider='Legacy')
@@ -479,9 +505,11 @@ Post User Activity
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.post_user_activity(user_id='0e4724f5-d113-41c1-bf58-cd7168d06d0c', x_vital_android_sdk_version='primary', x_vital_ios_sdk_version='tesla')
@@ -513,9 +541,11 @@ Post User Body
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.post_user_body(user_id='2aac64a8-1a4b-47b9-b083-c6d33a9beb02', x_vital_android_sdk_version='dicta', x_vital_ios_sdk_version='Cambridgeshire')
@@ -547,9 +577,11 @@ Post User Profile
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.post_user_profile(user_id='343ee935-de73-408c-a15e-4782d3b864c4', x_vital_android_sdk_version='purple', x_vital_ios_sdk_version='foreground')
@@ -581,9 +613,11 @@ Post User Sleep
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.post_user_sleep(user_id='4332e922-db99-44ec-bd9d-77a063c520e5', x_vital_android_sdk_version='Tasty', x_vital_ios_sdk_version='South')
@@ -615,9 +649,11 @@ Post User Workout
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import operations, shared
 
-s = vital.Vital()
+s = vital.Vital(
+    api_key="<YOUR-API-KEY>",
+)
 
 
 res = s.summary.post_user_workout(user_id='63a9d635-f084-45f5-a781-131420d3a83b', x_vital_android_sdk_version='compress', x_vital_ios_sdk_version='Unbranded')
