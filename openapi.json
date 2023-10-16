@@ -13,7 +13,7 @@
    ],
    "security": [
        {
-           "ApiKeyAuth": []
+           "api_key": []
        }
    ],
    "x-speakeasy-name-override": [
