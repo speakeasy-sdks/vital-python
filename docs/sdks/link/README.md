@@ -96,14 +96,10 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.ConnectBleProviderV2LinkProviderManualProviderPostRequest(
-    manual_connection_data=shared.ManualConnectionData(
-        user_id='especially',
-    ),
-    provider=operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.APPLE_HEALTH_KIT,
-)
 
-res = s.link.connect_ble_provider(req)
+res = s.link.connect_ble_provider(manual_connection_data=shared.ManualConnectionData(
+    user_id='especially',
+), provider=operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.APPLE_HEALTH_KIT)
 
 if res.response_connect_ble_provider_v2_link_provider_manual_provider_post is not None:
     # handle response
@@ -112,9 +108,10 @@ if res.response_connect_ble_provider_v2_link_provider_manual_provider_post is no
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [operations.ConnectBleProviderV2LinkProviderManualProviderPostRequest](../../models/operations/connectbleproviderv2linkprovidermanualproviderpostrequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
+| Parameter                                                                                                                                                                                    | Type                                                                                                                                                                                         | Required                                                                                                                                                                                     | Description                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `manual_connection_data`                                                                                                                                                                     | [shared.ManualConnectionData](../../models/shared/manualconnectiondata.md)                                                                                                                   | :heavy_check_mark:                                                                                                                                                                           | N/A                                                                                                                                                                                          |
+| `provider`                                                                                                                                                                                   | [operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders](../../models/operations/connectbleproviderv2linkprovidermanualproviderpostprovidermanualproviders.md) | :heavy_check_mark:                                                                                                                                                                           | An enumeration.                                                                                                                                                                              |
 
 
 ### Response
@@ -173,14 +170,10 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest(
-    email_provider_auth_link=shared.EmailProviderAuthLink(
-        email='Mabelle_Medhurst23@gmail.com',
-    ),
-    provider=operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders.FREESTYLE_LIBRE,
-)
 
-res = s.link.connect_email_provider(req)
+res = s.link.connect_email_provider(email_provider_auth_link=shared.EmailProviderAuthLink(
+    email='Mabelle_Medhurst23@gmail.com',
+), provider=operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders.FREESTYLE_LIBRE)
 
 if res.connection_status is not None:
     # handle response
@@ -189,9 +182,10 @@ if res.connection_status is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest](../../models/operations/connectemailauthproviderv2linkprovideremailproviderpostrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| Parameter                                                                                                                                                                                            | Type                                                                                                                                                                                                 | Required                                                                                                                                                                                             | Description                                                                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `email_provider_auth_link`                                                                                                                                                                           | [shared.EmailProviderAuthLink](../../models/shared/emailproviderauthlink.md)                                                                                                                         | :heavy_check_mark:                                                                                                                                                                                   | N/A                                                                                                                                                                                                  |
+| `provider`                                                                                                                                                                                           | [operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders](../../models/operations/connectemailauthproviderv2linkprovideremailproviderpostprovideremailproviders.md) | :heavy_check_mark:                                                                                                                                                                                   | An enumeration.                                                                                                                                                                                      |
 
 
 ### Response
@@ -211,15 +205,11 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest(
-    individual_provider_data=shared.IndividualProviderData(
-        password='U7xJdvB5pT6rvW2',
-        username='Chanel73',
-    ),
-    provider=operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders.RENPHO,
-)
 
-res = s.link.connect_individual_provider(req)
+res = s.link.connect_individual_provider(individual_provider_data=shared.IndividualProviderData(
+    password='U7xJdvB5pT6rvW2',
+    username='Chanel73',
+), provider=operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders.RENPHO, x_vital_link_client_region='pascal')
 
 if res.provider_link_response is not None:
     # handle response
@@ -228,9 +218,11 @@ if res.provider_link_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest](../../models/operations/connectindividualproviderv2linkproviderpasswordproviderpostrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| Parameter                                                                                                                                                                                                          | Type                                                                                                                                                                                                               | Required                                                                                                                                                                                                           | Description                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `individual_provider_data`                                                                                                                                                                                         | [shared.IndividualProviderData](../../models/shared/individualproviderdata.md)                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                                 | N/A                                                                                                                                                                                                                |
+| `provider`                                                                                                                                                                                                         | [operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders](../../models/operations/connectindividualproviderv2linkproviderpasswordproviderpostproviderpasswordproviders.md) | :heavy_check_mark:                                                                                                                                                                                                 | An enumeration.                                                                                                                                                                                                    |
+| `x_vital_link_client_region`                                                                                                                                                                                       | *Optional[str]*                                                                                                                                                                                                    | :heavy_minus_sign:                                                                                                                                                                                                 | N/A                                                                                                                                                                                                                |
 
 
 ### Response
@@ -252,16 +244,13 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.ConnectPasswordAuthV2LinkAuthPostRequest(
-    password_auth_link=shared.PasswordAuthLink(
-        auth_type=shared.AuthType.PASSWORD,
-        password='HuGgl1Kl3rSJCBn',
-        provider=shared.Providers.WAHOO,
-        username='Brett32',
-    ),
-)
 
-res = s.link.connect_password_auth(req)
+res = s.link.connect_password_auth(password_auth_link=shared.PasswordAuthLink(
+    auth_type=shared.AuthType.PASSWORD,
+    password='HuGgl1Kl3rSJCBn',
+    provider=shared.Providers.WAHOO,
+    username='Brett32',
+), x_vital_link_client_region='Loan')
 
 if res.connection_status is not None:
     # handle response
@@ -270,9 +259,10 @@ if res.connection_status is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.ConnectPasswordAuthV2LinkAuthPostRequest](../../models/operations/connectpasswordauthv2linkauthpostrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `password_auth_link`                                               | [shared.PasswordAuthLink](../../models/shared/passwordauthlink.md) | :heavy_check_mark:                                                 | N/A                                                                |
+| `x_vital_link_client_region`                                       | *Optional[str]*                                                    | :heavy_minus_sign:                                                 | N/A                                                                |
 
 
 ### Response
@@ -294,11 +284,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.ConnectProviderV2LinkConnectProviderGetRequest(
-    provider='newton Gasoline Cotton',
-)
 
-res = s.link.connect_provider(req)
+res = s.link.connect_provider(provider='smoothly', x_vital_sdk_no_redirect='revolutionize')
 
 if res.response_connect_provider_v2_link_connect_provider_get is not None:
     # handle response
@@ -307,9 +294,10 @@ if res.response_connect_provider_v2_link_connect_provider_get is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.ConnectProviderV2LinkConnectProviderGetRequest](../../models/operations/connectproviderv2linkconnectprovidergetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                        | Type                                             | Required                                         | Description                                      |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| `provider`                                       | *str*                                            | :heavy_check_mark:                               | Provider slug. e.g., `oura`, `fitbit`, `garmin`. |
+| `x_vital_sdk_no_redirect`                        | *Optional[str]*                                  | :heavy_minus_sign:                               | N/A                                              |
 
 
 ### Response
@@ -366,11 +354,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.CreateTokenV2LinkCodeCreatePostRequest(
-    user_id='2795b4e3-bfe4-4e25-a003-d249bbaf85eb',
-)
 
-res = s.link.create_token(req)
+res = s.link.create_token(user_id='2795b4e3-bfe4-4e25-a003-d249bbaf85eb', expires_at=dateutil.parser.isoparse('2021-12-10T10:53:22.771Z'))
 
 if res.vital_token_created_response is not None:
     # handle response
@@ -379,9 +364,10 @@ if res.vital_token_created_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.CreateTokenV2LinkCodeCreatePostRequest](../../models/operations/createtokenv2linkcodecreatepostrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `user_id`                                                            | *str*                                                                | :heavy_check_mark:                                                   | N/A                                                                  |
+| `expires_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | N/A                                                                  |
 
 
 ### Response
@@ -401,11 +387,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.ExchangeTokenV2LinkCodeExchangePostRequest(
-    code='blue',
-)
 
-res = s.link.exchange_token(req)
+res = s.link.exchange_token(code='Sierra')
 
 if res.vital_token_exchange_response is not None:
     # handle response
@@ -414,9 +397,9 @@ if res.vital_token_exchange_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.ExchangeTokenV2LinkCodeExchangePostRequest](../../models/operations/exchangetokenv2linkcodeexchangepostrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `code`             | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -479,11 +462,8 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetRequest(
-    oauth_provider=shared.OAuthProviders.POLAR,
-)
 
-res = s.link.get_oauth_provider(req)
+res = s.link.get_oauth_provider(oauth_provider=shared.OAuthProviders.POLAR)
 
 if res.source is not None:
     # handle response
@@ -492,9 +472,9 @@ if res.source is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetRequest](../../models/operations/getoauthproviderv2linkprovideroauthoauthprovidergetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `oauth_provider`                                               | [shared.OAuthProviders](../../models/shared/oauthproviders.md) | :heavy_check_mark:                                             | An enumeration.                                                |
 
 
 ### Response

@@ -12,8 +12,12 @@ class Insurance:
         self.sdk_configuration = sdk_config
         
     
-    def search_diagnosis(self, request: operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest) -> operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse:
+    def search_diagnosis(self, diagnosis_query: str) -> operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse:
         r"""Search Diagnosis"""
+        request = operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest(
+            diagnosis_query=diagnosis_query,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/v3/insurance/search/diagnosis'

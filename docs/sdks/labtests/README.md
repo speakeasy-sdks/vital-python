@@ -89,12 +89,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetRequest(
-    lab_id=263548,
-    provider_id='Bronze',
-)
 
-res = s.lab_tests.get_marker_by_provider(req)
+res = s.lab_tests.get_marker_by_provider(lab_id=263548, provider_id='East')
 
 if res.client_facing_marker is not None:
     # handle response
@@ -103,9 +99,10 @@ if res.client_facing_marker is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetRequest](../../models/operations/getmarkersbyprovideridv3labtestslabidmarkersprovideridgetrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `lab_id`           | *int*              | :heavy_check_mark: | N/A                |
+| `provider_id`      | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -125,9 +122,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetMarkersV3LabTestsMarkersGetRequest()
 
-res = s.lab_tests.get_markers(req)
+res = s.lab_tests.get_markers(lab_id=614936, name='parse', page=301534, size=44930)
 
 if res.get_markers_response is not None:
     # handle response
@@ -136,9 +132,12 @@ if res.get_markers_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetMarkersV3LabTestsMarkersGetRequest](../../models/operations/getmarkersv3labtestsmarkersgetrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `lab_id`                                                                                       | *Optional[int]*                                                                                | :heavy_minus_sign:                                                                             | The identifier Vital assigned to a lab partner.                                                |
+| `name`                                                                                         | *Optional[str]*                                                                                | :heavy_minus_sign:                                                                             | The name of an individual biomarker or a panel. Used as a fuzzy filter when searching markers. |
+| `page`                                                                                         | *Optional[int]*                                                                                | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `size`                                                                                         | *Optional[int]*                                                                                | :heavy_minus_sign:                                                                             | N/A                                                                                            |
 
 
 ### Response

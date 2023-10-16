@@ -42,12 +42,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetRequest(
-    start_date='blue',
-    user_id='67a20d00-10c6-4df9-a363-b96cbd8acaa7',
-)
 
-res = s.timeseries.get_blood_oxygen(req)
+res = s.timeseries.get_blood_oxygen(start_date='impactful', user_id='167a20d0-010c-46df-9636-3b96cbd8acaa', end_date='Dollar', provider='California')
 
 if res.client_facing_blood_oxygen_timeseries is not None:
     # handle response
@@ -56,9 +52,12 @@ if res.client_facing_blood_oxygen_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridbloodoxygengetrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -78,12 +77,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetRequest(
-    start_date='man Puerto Shoes',
-    user_id='3ea62b59-387d-4e81-9d04-67b189bcd02a',
-)
 
-res = s.timeseries.get_blood_pressure(req)
+res = s.timeseries.get_blood_pressure(start_date='gee', user_id='1b0b644f-7b3e-4a62-b593-87de819d0467', end_date='Silicon', provider='generating')
 
 if res.client_facing_blood_pressure_timeseries is not None:
     # handle response
@@ -92,9 +87,12 @@ if res.client_facing_blood_pressure_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridbloodpressuregetrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -114,12 +112,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetRequest(
-    start_date='Electronic',
-    user_id='3a0eb860-98dc-4c6f-ac35-7cf521cb838d',
-)
 
-res = s.timeseries.get_caffeine(req)
+res = s.timeseries.get_caffeine(start_date='Bike', user_id='0eb86098-dcc6-4f6c-b57c-f521cb838d86', end_date='Ward', provider='Account')
 
 if res.client_facing_caffeine_timeseries is not None:
     # handle response
@@ -128,9 +122,12 @@ if res.client_facing_caffeine_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaffeinegetrequest.md) | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -150,12 +147,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetRequest(
-    start_date='Uranium',
-    user_id='1117e3cf-3f90-4377-abb8-9ae3afbb8a22',
-)
 
-res = s.timeseries.get_calories_active(req)
+res = s.timeseries.get_calories_active(start_date='Federation', user_id='1117e3cf-3f90-4377-abb8-9ae3afbb8a22', end_date='minor', provider='Officer')
 
 if res.client_facing_calories_active_timeseries is not None:
     # handle response
@@ -164,9 +157,12 @@ if res.client_facing_calories_active_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                        | Type                                                                                                                                                                             | Required                                                                                                                                                                         | Description                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                        | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaloriesactivegetrequest.md) | :heavy_check_mark:                                                                                                                                                               | The request object to use for the request.                                                                                                                                       |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -186,12 +182,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetRequest(
-    start_date='Promethium South',
-    user_id='02f0d8b8-0aba-46b9-b347-0ca8035c35e5',
-)
 
-res = s.timeseries.get_calories_basal(req)
+res = s.timeseries.get_calories_basal(start_date='encoding', user_id='ab80902f-0d8b-480a-ba6b-9f3470ca8035', end_date='Cruiser', provider='hm')
 
 if res.client_facing_calories_basal_timeseries is not None:
     # handle response
@@ -200,9 +192,12 @@ if res.client_facing_calories_basal_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaloriesbasalgetrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -222,12 +217,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetRequest(
-    start_date='joule',
-    user_id='c3b209b9-0b59-407c-942b-e3036af69597',
-)
 
-res = s.timeseries.get_cholesterol_all(req)
+res = s.timeseries.get_cholesterol_all(start_date='scale', user_id='6c3b209b-90b5-4907-8d42-be3036af6959', end_date='nulla', provider='deposit')
 
 if res.client_facing_cholesterol_timeseries is not None:
     # handle response
@@ -236,9 +227,12 @@ if res.client_facing_cholesterol_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolgetrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -258,12 +252,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetRequest(
-    start_date='in Van West',
-    user_id='3b2a529f-b1c2-4d8b-a728-20431e439f53',
-)
 
-res = s.timeseries.get_cholesterol_hdl(req)
+res = s.timeseries.get_cholesterol_hdl(start_date='offer', user_id='7d0d0e3b-2a52-49fb-9c2d-8b672820431e', end_date='sticky', provider='Rap')
 
 if res.client_facing_cholesterol_timeseries is not None:
     # handle response
@@ -272,9 +262,12 @@ if res.client_facing_cholesterol_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                        | Type                                                                                                                                                                             | Required                                                                                                                                                                         | Description                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                        | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolhdlgetrequest.md) | :heavy_check_mark:                                                                                                                                                               | The request object to use for the request.                                                                                                                                       |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -294,12 +287,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetRequest(
-    start_date='construe',
-    user_id='6c6985e4-8f6e-44ca-927e-deb29d732916',
-)
 
-res = s.timeseries.get_cholesterol_ldl(req)
+res = s.timeseries.get_cholesterol_ldl(start_date='Shirt', user_id='6985e48f-6e4c-4a12-bede-b29d7329161d', end_date='Fish', provider='Customer')
 
 if res.client_facing_cholesterol_timeseries is not None:
     # handle response
@@ -308,9 +297,12 @@ if res.client_facing_cholesterol_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                        | Type                                                                                                                                                                             | Required                                                                                                                                                                         | Description                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                        | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolldlgetrequest.md) | :heavy_check_mark:                                                                                                                                                               | The request object to use for the request.                                                                                                                                       |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -330,12 +322,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetRequest(
-    start_date='Classical',
-    user_id='b33e7f63-99b8-4f73-869a-8c4ea5f811a6',
-)
 
-res = s.timeseries.get_distance(req)
+res = s.timeseries.get_distance(start_date='Borders', user_id='ab33e7f6-399b-48f7-bc69-a8c4ea5f811a', end_date='secured', provider='capacitor')
 
 if res.client_facing_distance_timeseries is not None:
     # handle response
@@ -344,9 +332,12 @@ if res.client_facing_distance_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                            | Type                                                                                                                                                                 | Required                                                                                                                                                             | Description                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseriddistancegetrequest.md) | :heavy_check_mark:                                                                                                                                                   | The request object to use for the request.                                                                                                                           |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -366,12 +357,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetRequest(
-    start_date='models',
-    user_id='58dc04a1-4779-4d7b-8786-66ff90d3c15d',
-)
 
-res = s.timeseries.get_floors_climbed(req)
+res = s.timeseries.get_floors_climbed(start_date='Framingham', user_id='b58dc04a-1477-49d7-b878-666ff90d3c15', end_date='Mazda', provider='aspernatur')
 
 if res.client_facing_floors_climbed_timeseries is not None:
     # handle response
@@ -380,9 +367,12 @@ if res.client_facing_floors_climbed_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridfloorsclimbedgetrequest.md) | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -402,12 +392,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetRequest(
-    start_date='Syrian explicit',
-    user_id='f4e36361-b988-48a3-bb17-31a7aefffe29',
-)
 
-res = s.timeseries.get_glucose(req)
+res = s.timeseries.get_glucose(start_date='withdrawal', user_id='c755f4e3-6361-4b98-88a3-3b1731a7aeff', end_date='tinker', provider='New')
 
 if res.client_facing_glucose_timeseries is not None:
     # handle response
@@ -416,9 +402,12 @@ if res.client_facing_glucose_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridglucosegetrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -438,12 +427,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetRequest(
-    start_date='Corporate',
-    user_id='4193a7e0-c48f-4711-b293-d439db945171',
-)
 
-res = s.timeseries.get_heartrate(req)
+res = s.timeseries.get_heartrate(start_date='Tuna', user_id='24193a7e-0c48-4f71-9f29-3d439db94517', end_date='Bedfordshire', provider='Burundi')
 
 if res.client_facing_heart_rate_timeseries is not None:
     # handle response
@@ -452,9 +437,12 @@ if res.client_facing_heart_rate_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridheartrategetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -474,12 +462,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetRequest(
-    start_date='Global violet male',
-    user_id='6cf8ac7c-9611-4342-813c-4a095df7f31a',
-)
 
-res = s.timeseries.get_hrv(req)
+res = s.timeseries.get_hrv(start_date='onto', user_id='8c7b86cf-8ac7-4c96-9134-2c13c4a095df', end_date='invoice', provider='Music')
 
 if res.client_facing_hrv_timeseries is not None:
     # handle response
@@ -488,9 +472,12 @@ if res.client_facing_hrv_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridhrvgetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -510,12 +497,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetRequest(
-    start_date='North Kroon',
-    user_id='63f90dda-de35-440c-9806-b114554f66a1',
-)
 
-res = s.timeseries.get_hypnogram(req)
+res = s.timeseries.get_hypnogram(start_date='Agender', user_id='16363f90-ddad-4e35-80c1-806b114554f6', end_date='South', provider='parsing')
 
 if res.client_facing_hypnogram_timeseries is not None:
     # handle response
@@ -524,9 +507,12 @@ if res.client_facing_hypnogram_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridhypnogramgetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -546,12 +532,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetRequest(
-    start_date='Minivan TCP male',
-    user_id='298b6fed-30c6-4813-b66b-e805e5cc66a9',
-)
 
-res = s.timeseries.get_ige(req)
+res = s.timeseries.get_ige(start_date='gosh', user_id='97cbc298-b6fe-4d30-8681-3b66be805e5c', end_date='maroon', provider='Rupee')
 
 if res.client_facing_ige_timeseries is not None:
     # handle response
@@ -560,9 +542,12 @@ if res.client_facing_ige_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridigegetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -582,12 +567,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetRequest(
-    start_date='compressing pink',
-    user_id='4a70b28d-95ef-4798-89cf-8e7ce7fd8dbc',
-)
 
-res = s.timeseries.get_igg(req)
+res = s.timeseries.get_igg(start_date='orchestrate', user_id='54a70b28-d95e-4f79-8c9c-f8e7ce7fd8db', end_date='Recumbent', provider='Classical')
 
 if res.client_facing_igg_timeseries is not None:
     # handle response
@@ -596,9 +577,12 @@ if res.client_facing_igg_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridigggetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -618,12 +602,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetRequest(
-    start_date='emigrate Ohio fuchsia',
-    user_id='30f79dd6-64ec-4ae0-a26e-e2b9de9e3e65',
-)
 
-res = s.timeseries.get_mindfulness_minutes(req)
+res = s.timeseries.get_mindfulness_minutes(start_date='win', user_id='42bcd30f-79dd-4664-acae-0a26ee2b9de9', end_date='equally', provider='humming')
 
 if res.client_facing_mindfulness_minutes_timeseries is not None:
     # handle response
@@ -632,9 +612,12 @@ if res.client_facing_mindfulness_minutes_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                | Type                                                                                                                                                                                     | Required                                                                                                                                                                                 | Description                                                                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridmindfulnessminutesgetrequest.md) | :heavy_check_mark:                                                                                                                                                                       | The request object to use for the request.                                                                                                                                               |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -654,12 +637,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetRequest(
-    start_date='systematic Division Intersex',
-    user_id='a55ea3cc-b2e2-4169-b40d-62dfeb102d68',
-)
 
-res = s.timeseries.get_respiratory_rate(req)
+res = s.timeseries.get_respiratory_rate(start_date='circa', user_id='daa7f697-3a55-4ea3-8cb2-e2169f40d62d', end_date='upon', provider='Fluorine')
 
 if res.client_facing_respiratory_rate_timeseries is not None:
     # handle response
@@ -668,9 +647,12 @@ if res.client_facing_respiratory_rate_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                          | Type                                                                                                                                                                               | Required                                                                                                                                                                           | Description                                                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                          | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridrespiratoryrategetrequest.md) | :heavy_check_mark:                                                                                                                                                                 | The request object to use for the request.                                                                                                                                         |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -690,12 +672,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetRequest(
-    start_date='Sausages Surinam tan',
-    user_id='ead1ba03-7920-4b80-b82a-067baf7e5286',
-)
 
-res = s.timeseries.get_steps(req)
+res = s.timeseries.get_steps(start_date='copying', user_id='f7b728ea-d1ba-4037-920b-80b82a067baf', end_date='optical', provider='platforms')
 
 if res.client_facing_steps_timeseries is not None:
     # handle response
@@ -704,9 +682,12 @@ if res.client_facing_steps_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridstepsgetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -726,12 +707,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetRequest(
-    start_date='technologies Tricycle accusantium',
-    user_id='0a01395d-12e9-4eeb-a971-547d810cce95',
-)
 
-res = s.timeseries.get_total_cholesterol(req)
+res = s.timeseries.get_total_cholesterol(start_date='Director', user_id='6cf900a0-1395-4d12-a9ee-be971547d810', end_date='farad', provider='partially')
 
 if res.client_facing_cholesterol_timeseries is not None:
     # handle response
@@ -740,9 +717,12 @@ if res.client_facing_cholesterol_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                            | Type                                                                                                                                                                                 | Required                                                                                                                                                                             | Description                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesteroltotalgetrequest.md) | :heavy_check_mark:                                                                                                                                                                   | The request object to use for the request.                                                                                                                                           |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -762,12 +742,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetRequest(
-    start_date='transmit quam',
-    user_id='f143ec93-55c9-466c-9c71-90c8f2e167e9',
-)
 
-res = s.timeseries.get_triglycerides(req)
+res = s.timeseries.get_triglycerides(start_date='Optional', user_id='c97f143e-c935-45c9-a6cd-c7190c8f2e16', end_date='state', provider='female')
 
 if res.client_facing_cholesterol_timeseries is not None:
     # handle response
@@ -776,9 +752,12 @@ if res.client_facing_cholesterol_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                            | Type                                                                                                                                                                                                 | Required                                                                                                                                                                                             | Description                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                            | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesteroltriglyceridesgetrequest.md) | :heavy_check_mark:                                                                                                                                                                                   | The request object to use for the request.                                                                                                                                                           |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -798,11 +777,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetRequest(
-    sleep_id='Rock Southwest',
-)
 
-res = s.timeseries.get_user_sleep_stream(req)
+res = s.timeseries.get_user_sleep_stream(sleep_id='quantify')
 
 if res.client_facing_sleep_stream is not None:
     # handle response
@@ -811,9 +787,9 @@ if res.client_facing_sleep_stream is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetRequest](../../models/operations/getusersleepstreamv2timeseriessleepsleepidstreamgetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `sleep_id`         | *str*              | :heavy_check_mark: | The Vital Sleep ID |
 
 
 ### Response
@@ -833,11 +809,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetRequest(
-    workout_id='bc0edaf0-6098-41f4-a6eb-525d09cc6d26',
-)
 
-res = s.timeseries.get_user_workouts(req)
+res = s.timeseries.get_user_workouts(workout_id='bc0edaf0-6098-41f4-a6eb-525d09cc6d26')
 
 if res.client_facing_stream is not None:
     # handle response
@@ -846,9 +819,9 @@ if res.client_facing_stream is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetRequest](../../models/operations/getuserworkoutsv2timeseriesworkoutsworkoutidstreamgetrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| Parameter                    | Type                         | Required                     | Description                  |
+| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+| `workout_id`                 | *str*                        | :heavy_check_mark:           | The Vital ID for the workout |
 
 
 ### Response
@@ -868,12 +841,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetRequest(
-    start_date='interactive',
-    user_id='0182b86b-75ba-43c6-bd64-c9e6a0a1275f',
-)
 
-res = s.timeseries.get_water(req)
+res = s.timeseries.get_water(start_date='Garden', user_id='80182b86-b75b-4a3c-a7d6-4c9e6a0a1275', end_date='construction', provider='withdrawal')
 
 if res.client_facing_water_timeseries is not None:
     # handle response
@@ -882,9 +851,12 @@ if res.client_facing_water_timeseries is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                      | [operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetRequest](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridwatergetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -904,11 +876,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostRequest(
-    user_id='5d55820e-8c39-4307-91e1-9cdd23720f04',
-)
 
-res = s.timeseries.post_blood_pressure(req)
+res = s.timeseries.post_blood_pressure(user_id='5d55820e-8c39-4307-91e1-9cdd23720f04', x_vital_android_sdk_version='Indium', x_vital_ios_sdk_version='Cab')
 
 if res.response_post_user_blood_pressure_v2_timeseries_user_id_blood_pressure_post is not None:
     # handle response
@@ -917,9 +886,11 @@ if res.response_post_user_blood_pressure_v2_timeseries_user_id_blood_pressure_po
 
 ### Parameters
 
-| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                | [operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostRequest](../../models/operations/postuserbloodpressurev2timeseriesuseridbloodpressurepostrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `user_id`                     | *str*                         | :heavy_check_mark:            | N/A                           |
+| `x_vital_android_sdk_version` | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
+| `x_vital_ios_sdk_version`     | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
 
 
 ### Response
@@ -939,12 +910,8 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.PostUserVitalsV2TimeseriesUserIDResourcePostRequest(
-    resource=shared.IngestibleTimeseriesResource.BLOOD_OXYGEN,
-    user_id='7a0eca13-40ec-46ac-9433-f77edd2bbc91',
-)
 
-res = s.timeseries.post_vitals(req)
+res = s.timeseries.post_vitals(resource=shared.IngestibleTimeseriesResource.BLOOD_OXYGEN, user_id='7a0eca13-40ec-46ac-9433-f77edd2bbc91', x_vital_android_sdk_version='Arkansas', x_vital_ios_sdk_version='perferendis')
 
 if res.response_post_user_vitals_v2_timeseries_user_id_resource_post is not None:
     # handle response
@@ -953,9 +920,12 @@ if res.response_post_user_vitals_v2_timeseries_user_id_resource_post is not None
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.PostUserVitalsV2TimeseriesUserIDResourcePostRequest](../../models/operations/postuservitalsv2timeseriesuseridresourcepostrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `resource`                                                                                 | [shared.IngestibleTimeseriesResource](../../models/shared/ingestibletimeseriesresource.md) | :heavy_check_mark:                                                                         | An enumeration.                                                                            |
+| `user_id`                                                                                  | *str*                                                                                      | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `x_vital_android_sdk_version`                                                              | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
+| `x_vital_ios_sdk_version`                                                                  | *Optional[str]*                                                                            | :heavy_minus_sign:                                                                         | N/A                                                                                        |
 
 
 ### Response

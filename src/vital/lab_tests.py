@@ -82,10 +82,15 @@ class LabTests:
         return res
 
     
-    def get_marker_by_provider(self, request: operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetRequest) -> operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetResponse:
+    def get_marker_by_provider(self, lab_id: int, provider_id: str) -> operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetResponse:
         r"""Get Markers By Provider Id
         GET a specific marker for the given lab and provider_id
         """
+        request = operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetRequest(
+            lab_id=lab_id,
+            provider_id=provider_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetRequest, base_url, '/v3/lab_tests/{lab_id}/markers/{provider_id}', request)
@@ -119,10 +124,17 @@ class LabTests:
         return res
 
     
-    def get_markers(self, request: operations.GetMarkersV3LabTestsMarkersGetRequest) -> operations.GetMarkersV3LabTestsMarkersGetResponse:
+    def get_markers(self, lab_id: Optional[int] = None, name: Optional[str] = None, page: Optional[int] = None, size: Optional[int] = None) -> operations.GetMarkersV3LabTestsMarkersGetResponse:
         r"""Get Markers
         GET all the markers for the given lab.
         """
+        request = operations.GetMarkersV3LabTestsMarkersGetRequest(
+            lab_id=lab_id,
+            name=name,
+            page=page,
+            size=size,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/v3/lab_tests/markers'

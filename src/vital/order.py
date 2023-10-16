@@ -12,10 +12,15 @@ class Order:
         self.sdk_configuration = sdk_config
         
     
-    def book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(self, request: operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest) -> operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostResponse:
+    def book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(self, appointment_booking_request: shared.AppointmentBookingRequest, order_id: str) -> operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostResponse:
         r"""Book Phlebotomy Appointment
         Book an at-home phlebotomy appointment.
         """
+        request = operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest(
+            appointment_booking_request=appointment_booking_request,
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/book', request)
@@ -54,10 +59,14 @@ class Order:
         return res
 
     
-    def cancel_order_v3_order_order_id_cancel_post(self, request: operations.CancelOrderV3OrderOrderIDCancelPostRequest) -> operations.CancelOrderV3OrderOrderIDCancelPostResponse:
+    def cancel_order_v3_order_order_id_cancel_post(self, order_id: str) -> operations.CancelOrderV3OrderOrderIDCancelPostResponse:
         r"""Cancel Order
         POST cancel order
         """
+        request = operations.CancelOrderV3OrderOrderIDCancelPostRequest(
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.CancelOrderV3OrderOrderIDCancelPostRequest, base_url, '/v3/order/{order_id}/cancel', request)
@@ -91,10 +100,15 @@ class Order:
         return res
 
     
-    def cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(self, request: operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest) -> operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchResponse:
+    def cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(self, appointment_cancel_request: shared.AppointmentCancelRequest, order_id: str) -> operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchResponse:
         r"""Cancel Phlebotomy Appointment
         Cancel a previously booked at-home phlebotomy appointment.
         """
+        request = operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest(
+            appointment_cancel_request=appointment_cancel_request,
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/cancel', request)
@@ -244,10 +258,14 @@ class Order:
         return res
 
     
-    def get(self, request: operations.GetOrderV3OrderOrderIDGetRequest) -> operations.GetOrderV3OrderOrderIDGetResponse:
+    def get(self, order_id: str) -> operations.GetOrderV3OrderOrderIDGetResponse:
         r"""Get Order
         GET individual order by ID.
         """
+        request = operations.GetOrderV3OrderOrderIDGetRequest(
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetOrderV3OrderOrderIDGetRequest, base_url, '/v3/order/{order_id}', request)
@@ -281,11 +299,16 @@ class Order:
         return res
 
     
-    def get_appointment_availability(self, request: operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest) -> operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostResponse:
+    def get_appointment_availability(self, order_id: str, request_body: Optional[operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress] = None) -> operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostResponse:
         r"""Get Order Appointment Availability
         Return the available time slots to book an appointment with a phlebotomist
         for the given address and order.
         """
+        request = operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest(
+            order_id=order_id,
+            request_body=request_body,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/availability', request)
@@ -322,13 +345,17 @@ class Order:
         return res
 
     
-    def get_area_info(self, request: operations.GetAreaInfoV3OrderAreaInfoGetRequest) -> operations.GetAreaInfoV3OrderAreaInfoGetResponse:
+    def get_area_info(self, zip_code: str) -> operations.GetAreaInfoV3OrderAreaInfoGetResponse:
         r"""Get Area Info
         GET information about an area with respect to lab-testing.
 
         Information returned:
         * Whether a given zip code is served by our Phlebotomy network.
         """
+        request = operations.GetAreaInfoV3OrderAreaInfoGetRequest(
+            zip_code=zip_code,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/v3/order/area/info'
@@ -363,10 +390,14 @@ class Order:
         return res
 
     
-    def get_lab_test_result(self, request: operations.GetLabTestResultV3OrderOrderIDResultPdfGetRequest) -> operations.GetLabTestResultV3OrderOrderIDResultPdfGetResponse:
+    def get_lab_test_result(self, order_id: str) -> operations.GetLabTestResultV3OrderOrderIDResultPdfGetResponse:
         r"""Get Lab Test Result
         This endpoint returns the lab results for the order.
         """
+        request = operations.GetLabTestResultV3OrderOrderIDResultPdfGetRequest(
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetLabTestResultV3OrderOrderIDResultPdfGetRequest, base_url, '/v3/order/{order_id}/result/pdf', request)
@@ -400,11 +431,15 @@ class Order:
         return res
 
     
-    def get_lab_test_result_metadata(self, request: operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetRequest) -> operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetResponse:
+    def get_lab_test_result_metadata(self, order_id: str) -> operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetResponse:
         r"""Get Lab Test Result Metadata
         Return metadata related to order results, such as lab metadata,
         provider and sample dates.
         """
+        request = operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetRequest(
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetRequest, base_url, '/v3/order/{order_id}/result/metadata', request)
@@ -438,10 +473,14 @@ class Order:
         return res
 
     
-    def get_lab_test_result_raw(self, request: operations.GetLabTestResultRawV3OrderOrderIDResultGetRequest) -> operations.GetLabTestResultRawV3OrderOrderIDResultGetResponse:
+    def get_lab_test_result_raw(self, order_id: str) -> operations.GetLabTestResultRawV3OrderOrderIDResultGetResponse:
         r"""Get Lab Test Result Raw
         Return both metadata and raw json test data
         """
+        request = operations.GetLabTestResultRawV3OrderOrderIDResultGetRequest(
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetLabTestResultRawV3OrderOrderIDResultGetRequest, base_url, '/v3/order/{order_id}/result', request)
@@ -475,10 +514,14 @@ class Order:
         return res
 
     
-    def get_phlebotomy_appointment(self, request: operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetRequest) -> operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetResponse:
+    def get_phlebotomy_appointment(self, order_id: str) -> operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetResponse:
         r"""Get Phlebotomy Appointment
         Get the appointment associated with an order.
         """
+        request = operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetRequest(
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment', request)
@@ -542,10 +585,14 @@ class Order:
         return res
 
     
-    def get_requisition_url(self, request: operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetRequest) -> operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetResponse:
+    def get_requisition_url(self, order_id: str) -> operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetResponse:
         r"""Get Order Requisition Url
         GET requisition pdf for an order
         """
+        request = operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetRequest(
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetRequest, base_url, '/v3/order/{order_id}/requisition/pdf', request)
@@ -579,10 +626,16 @@ class Order:
         return res
 
     
-    def order_process_simulate_v3_order_order_id_test_post(self, request: operations.OrderProcessSimulateV3OrderOrderIDTestPostRequest) -> operations.OrderProcessSimulateV3OrderOrderIDTestPostResponse:
+    def order_process_simulate_v3_order_order_id_test_post(self, order_id: str, delay: Optional[int] = None, final_status: Optional[shared.OrderStatus] = None) -> operations.OrderProcessSimulateV3OrderOrderIDTestPostResponse:
         r"""Order Process Simulate
         Get available test kits.
         """
+        request = operations.OrderProcessSimulateV3OrderOrderIDTestPostRequest(
+            order_id=order_id,
+            delay=delay,
+            final_status=final_status,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.OrderProcessSimulateV3OrderOrderIDTestPostRequest, base_url, '/v3/order/{order_id}/test', request)
@@ -617,10 +670,15 @@ class Order:
         return res
 
     
-    def process_testkit_order_v3_order_testkit_process_team_id_order_id_post(self, request: operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostRequest) -> operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostResponse:
+    def process_testkit_order_v3_order_testkit_process_team_id_order_id_post(self, order_id: str, team_id: str) -> operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostResponse:
         r"""Process Testkit Order
         POST Create shipment for order
         """
+        request = operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostRequest(
+            order_id=order_id,
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostRequest, base_url, '/v3/order/testkit/process/{team_id}/{order_id}', request)
@@ -732,10 +790,15 @@ class Order:
         return res
 
     
-    def reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(self, request: operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest) -> operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchResponse:
+    def reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(self, appointment_reschedule_request: shared.AppointmentRescheduleRequest, order_id: str) -> operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchResponse:
         r"""Reschedule Phlebotomy Appointment
         Reschedule a previously booked at-home phlebotomy appointment.
         """
+        request = operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest(
+            appointment_reschedule_request=appointment_reschedule_request,
+            order_id=order_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/reschedule', request)

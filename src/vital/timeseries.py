@@ -12,10 +12,17 @@ class Timeseries:
         self.sdk_configuration = sdk_config
         
     
-    def get_blood_oxygen(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetResponse:
+    def get_blood_oxygen(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetRequest, base_url, '/v2/timeseries/{user_id}/blood_oxygen', request)
@@ -50,10 +57,17 @@ class Timeseries:
         return res
 
     
-    def get_blood_pressure(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetResponse:
+    def get_blood_pressure(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetRequest, base_url, '/v2/timeseries/{user_id}/blood_pressure', request)
@@ -88,10 +102,17 @@ class Timeseries:
         return res
 
     
-    def get_caffeine(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetResponse:
+    def get_caffeine(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetRequest, base_url, '/v2/timeseries/{user_id}/caffeine', request)
@@ -126,10 +147,17 @@ class Timeseries:
         return res
 
     
-    def get_calories_active(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetResponse:
+    def get_calories_active(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetRequest, base_url, '/v2/timeseries/{user_id}/calories_active', request)
@@ -164,10 +192,17 @@ class Timeseries:
         return res
 
     
-    def get_calories_basal(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetResponse:
+    def get_calories_basal(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetRequest, base_url, '/v2/timeseries/{user_id}/calories_basal', request)
@@ -202,10 +237,17 @@ class Timeseries:
         return res
 
     
-    def get_cholesterol_all(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetResponse:
+    def get_cholesterol_all(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetRequest, base_url, '/v2/timeseries/{user_id}/cholesterol', request)
@@ -240,10 +282,17 @@ class Timeseries:
         return res
 
     
-    def get_cholesterol_hdl(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetResponse:
+    def get_cholesterol_hdl(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetRequest, base_url, '/v2/timeseries/{user_id}/cholesterol/hdl', request)
@@ -278,10 +327,17 @@ class Timeseries:
         return res
 
     
-    def get_cholesterol_ldl(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetResponse:
+    def get_cholesterol_ldl(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetRequest, base_url, '/v2/timeseries/{user_id}/cholesterol/ldl', request)
@@ -316,10 +372,17 @@ class Timeseries:
         return res
 
     
-    def get_distance(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetResponse:
+    def get_distance(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetRequest, base_url, '/v2/timeseries/{user_id}/distance', request)
@@ -354,10 +417,17 @@ class Timeseries:
         return res
 
     
-    def get_floors_climbed(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetResponse:
+    def get_floors_climbed(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetRequest, base_url, '/v2/timeseries/{user_id}/floors_climbed', request)
@@ -392,10 +462,17 @@ class Timeseries:
         return res
 
     
-    def get_glucose(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetResponse:
+    def get_glucose(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetRequest, base_url, '/v2/timeseries/{user_id}/glucose', request)
@@ -430,10 +507,17 @@ class Timeseries:
         return res
 
     
-    def get_heartrate(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetResponse:
+    def get_heartrate(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetRequest, base_url, '/v2/timeseries/{user_id}/heartrate', request)
@@ -468,10 +552,17 @@ class Timeseries:
         return res
 
     
-    def get_hrv(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetResponse:
+    def get_hrv(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetRequest, base_url, '/v2/timeseries/{user_id}/hrv', request)
@@ -506,10 +597,17 @@ class Timeseries:
         return res
 
     
-    def get_hypnogram(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetResponse:
+    def get_hypnogram(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetRequest, base_url, '/v2/timeseries/{user_id}/hypnogram', request)
@@ -544,10 +642,17 @@ class Timeseries:
         return res
 
     
-    def get_ige(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetResponse:
+    def get_ige(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetRequest, base_url, '/v2/timeseries/{user_id}/ige', request)
@@ -582,10 +687,17 @@ class Timeseries:
         return res
 
     
-    def get_igg(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetResponse:
+    def get_igg(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetRequest, base_url, '/v2/timeseries/{user_id}/igg', request)
@@ -620,10 +732,17 @@ class Timeseries:
         return res
 
     
-    def get_mindfulness_minutes(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetResponse:
+    def get_mindfulness_minutes(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetRequest, base_url, '/v2/timeseries/{user_id}/mindfulness_minutes', request)
@@ -658,10 +777,17 @@ class Timeseries:
         return res
 
     
-    def get_respiratory_rate(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetResponse:
+    def get_respiratory_rate(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetRequest, base_url, '/v2/timeseries/{user_id}/respiratory_rate', request)
@@ -696,10 +822,17 @@ class Timeseries:
         return res
 
     
-    def get_steps(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetResponse:
+    def get_steps(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetRequest, base_url, '/v2/timeseries/{user_id}/steps', request)
@@ -734,10 +867,17 @@ class Timeseries:
         return res
 
     
-    def get_total_cholesterol(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetResponse:
+    def get_total_cholesterol(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetRequest, base_url, '/v2/timeseries/{user_id}/cholesterol/total', request)
@@ -772,10 +912,17 @@ class Timeseries:
         return res
 
     
-    def get_triglycerides(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetResponse:
+    def get_triglycerides(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetRequest, base_url, '/v2/timeseries/{user_id}/cholesterol/triglycerides', request)
@@ -810,10 +957,14 @@ class Timeseries:
         return res
 
     
-    def get_user_sleep_stream(self, request: operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetRequest) -> operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetResponse:
+    def get_user_sleep_stream(self, sleep_id: str) -> operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetResponse:
         r"""Get User Sleep Stream
         Get Sleep stream for a user_id
         """
+        request = operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetRequest(
+            sleep_id=sleep_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetRequest, base_url, '/v2/timeseries/sleep/{sleep_id}/stream', request)
@@ -847,8 +998,12 @@ class Timeseries:
         return res
 
     
-    def get_user_workouts(self, request: operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetRequest) -> operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetResponse:
+    def get_user_workouts(self, workout_id: str) -> operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetResponse:
         r"""Get User Workouts"""
+        request = operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetRequest(
+            workout_id=workout_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetRequest, base_url, '/v2/timeseries/workouts/{workout_id}/stream', request)
@@ -882,10 +1037,17 @@ class Timeseries:
         return res
 
     
-    def get_water(self, request: operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetRequest) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetResponse:
+    def get_water(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
         """
+        request = operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetRequest, base_url, '/v2/timeseries/{user_id}/water', request)
@@ -920,8 +1082,14 @@ class Timeseries:
         return res
 
     
-    def post_blood_pressure(self, request: operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostRequest) -> operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostResponse:
+    def post_blood_pressure(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostResponse:
         r"""Post User Blood Pressure"""
+        request = operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostRequest(
+            user_id=user_id,
+            x_vital_android_sdk_version=x_vital_android_sdk_version,
+            x_vital_ios_sdk_version=x_vital_ios_sdk_version,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostRequest, base_url, '/v2/timeseries/{user_id}/blood_pressure', request)
@@ -954,8 +1122,15 @@ class Timeseries:
         return res
 
     
-    def post_vitals(self, request: operations.PostUserVitalsV2TimeseriesUserIDResourcePostRequest) -> operations.PostUserVitalsV2TimeseriesUserIDResourcePostResponse:
+    def post_vitals(self, resource: shared.IngestibleTimeseriesResource, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserVitalsV2TimeseriesUserIDResourcePostResponse:
         r"""Post User Vitals"""
+        request = operations.PostUserVitalsV2TimeseriesUserIDResourcePostRequest(
+            resource=resource,
+            user_id=user_id,
+            x_vital_android_sdk_version=x_vital_android_sdk_version,
+            x_vital_ios_sdk_version=x_vital_ios_sdk_version,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostUserVitalsV2TimeseriesUserIDResourcePostRequest, base_url, '/v2/timeseries/{user_id}/{resource}', request)

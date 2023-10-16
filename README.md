@@ -7,7 +7,7 @@
 </div>
 
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
 ```bash
 pip install git+https://github.com/speakeasy-sdks/vital-python.git
@@ -16,8 +16,6 @@ pip install git+https://github.com/speakeasy-sdks/vital-python.git
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```python
 import vital
 
@@ -34,18 +32,18 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [Vital SDK](docs/sdks/vital/README.md)
+### [Vital SDK](docs/sdks/vital/README.md)
 
 * [robots_robots_txt_get](docs/sdks/vital/README.md#robots_robots_txt_get) - Robots
 
-## [insurance](docs/sdks/insurance/README.md)
+### [insurance](docs/sdks/insurance/README.md)
 
 * [search_diagnosis](docs/sdks/insurance/README.md#search_diagnosis) - Search Diagnosis
 * [search_insurance_payor_info](docs/sdks/insurance/README.md#search_insurance_payor_info) - Search Insurance Payor Information
 
-## [lab_tests](docs/sdks/labtests/README.md)
+### [lab_tests](docs/sdks/labtests/README.md)
 
 * [create](docs/sdks/labtests/README.md#create) - Create Lab Test For Team
 * [get_labs](docs/sdks/labtests/README.md#get_labs) - Get Labs
@@ -53,7 +51,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [get_markers](docs/sdks/labtests/README.md#get_markers) - Get Markers
 * [list](docs/sdks/labtests/README.md#list) - Get Lab Tests For Team
 
-## [link](docs/sdks/link/README.md)
+### [link](docs/sdks/link/README.md)
 
 * [check_token_state](docs/sdks/link/README.md#check_token_state) - Check Link Token State
 * [check_token_validity](docs/sdks/link/README.md#check_token_validity) - Check Token Valid
@@ -71,7 +69,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [get_providers](docs/sdks/link/README.md#get_providers) - Get Providers
 * [start_connect_process](docs/sdks/link/README.md#start_connect_process) - Start Connect Process
 
-## [order](docs/sdks/order/README.md)
+### [order](docs/sdks/order/README.md)
 
 * [book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post](docs/sdks/order/README.md#book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post) - Book Phlebotomy Appointment
 * [cancel_order_v3_order_order_id_cancel_post](docs/sdks/order/README.md#cancel_order_v3_order_order_id_cancel_post) - Cancel Order
@@ -95,19 +93,19 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch](docs/sdks/order/README.md#reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch) - Reschedule Phlebotomy Appointment
 * [sync_testkit_order_status_v3_order_testkit_status_post](docs/sdks/order/README.md#sync_testkit_order_status_v3_order_testkit_status_post) - Sync Testkit Order Status
 
-## [orders](docs/sdks/orders/README.md)
+### [orders](docs/sdks/orders/README.md)
 
 * [list](docs/sdks/orders/README.md#list) - Get Orders
 
-## [physician](docs/sdks/physician/README.md)
+### [physician](docs/sdks/physician/README.md)
 
 * [review_openloop_v2_physician_review_openloop_post](docs/sdks/physician/README.md#review_openloop_v2_physician_review_openloop_post) - Review Openloop
 
-## [providers](docs/sdks/providers/README.md)
+### [providers](docs/sdks/providers/README.md)
 
 * [list](docs/sdks/providers/README.md#list) - Get List Of Providers
 
-## [summary](docs/sdks/summary/README.md)
+### [summary](docs/sdks/summary/README.md)
 
 * [get_meals](docs/sdks/summary/README.md#get_meals) - Get Meals
 * [get_user_activity](docs/sdks/summary/README.md#get_user_activity) - Get User Activity
@@ -128,7 +126,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [post_user_sleep](docs/sdks/summary/README.md#post_user_sleep) - Post User Sleep
 * [post_user_workout](docs/sdks/summary/README.md#post_user_workout) - Post User Workout
 
-## [team](docs/sdks/team/README.md)
+### [team](docs/sdks/team/README.md)
 
 * [create](docs/sdks/team/README.md#create) - Create Team
 * [create_api_key](docs/sdks/team/README.md#create_api_key) - Create Api Key
@@ -146,7 +144,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [update_source_priorities_v2_team_source_priorities_patch](docs/sdks/team/README.md#update_source_priorities_v2_team_source_priorities_patch) - Update Source Priorities
 * [update_team_v2_team_team_id_patch](docs/sdks/team/README.md#update_team_v2_team_team_id_patch) - Update Team
 
-## [timeseries](docs/sdks/timeseries/README.md)
+### [timeseries](docs/sdks/timeseries/README.md)
 
 * [get_blood_oxygen](docs/sdks/timeseries/README.md#get_blood_oxygen) - Get Timeseries Resource Data
 * [get_blood_pressure](docs/sdks/timeseries/README.md#get_blood_pressure) - Get Timeseries Resource Data
@@ -175,7 +173,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [post_blood_pressure](docs/sdks/timeseries/README.md#post_blood_pressure) - Post User Blood Pressure
 * [post_vitals](docs/sdks/timeseries/README.md#post_vitals) - Post User Vitals
 
-## [user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [create_user](docs/sdks/user/README.md#create_user) - Create User
 * [delete](docs/sdks/user/README.md#delete) - Delete User
@@ -191,8 +189,6 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 

@@ -34,12 +34,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetMealsV2SummaryMealUserIDGetRequest(
-    start_date='Steel relative',
-    user_id='67cc4de4-d24b-45e3-a073-000b0a593dec',
-)
 
-res = s.summary.get_meals(req)
+res = s.summary.get_meals(start_date='Money', user_id='fb67cc4d-e4d2-44b5-a3e0-73000b0a593d', end_date='whenever', provider='black')
 
 if res.client_facing_meal_response is not None:
     # handle response
@@ -48,9 +44,12 @@ if res.client_facing_meal_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.GetMealsV2SummaryMealUserIDGetRequest](../../models/operations/getmealsv2summarymealuseridgetrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -70,12 +69,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserActivityV2SummaryActivityUserIDGetRequest(
-    start_date='unde',
-    user_id='94eda1c8-12f3-4633-bdcb-5592eeffbfef',
-)
 
-res = s.summary.get_user_activity(req)
+res = s.summary.get_user_activity(start_date='salmon', user_id='994eda1c-812f-4363-bbdc-b5592eeffbfe', end_date='sonata', provider='Fantastic')
 
 if res.client_activity_response is not None:
     # handle response
@@ -84,9 +79,12 @@ if res.client_activity_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUserActivityV2SummaryActivityUserIDGetRequest](../../models/operations/getuseractivityv2summaryactivityuseridgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -106,12 +104,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserActivityRawV2SummaryActivityUserIDRawGetRequest(
-    start_date='HEX black indexing',
-    user_id='b77c7c61-ed1e-4e88-9ef0-bdc3cdae1f4a',
-)
 
-res = s.summary.get_user_activity_raw(req)
+res = s.summary.get_user_activity_raw(start_date='turquoise', user_id='52487b77-c7c6-41ed-9ee8-85ef0bdc3cda', end_date='blah', provider='enforcement')
 
 if res.raw_activity is not None:
     # handle response
@@ -120,9 +114,12 @@ if res.raw_activity is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetUserActivityRawV2SummaryActivityUserIDRawGetRequest](../../models/operations/getuseractivityrawv2summaryactivityuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -142,12 +139,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserBodyV2SummaryBodyUserIDGetRequest(
-    start_date='Northwest West',
-    user_id='aa1c702d-4a96-4539-a8a9-e6e4eae9b476',
-)
 
-res = s.summary.get_user_body(req)
+res = s.summary.get_user_body(start_date='hack', user_id='70daa1c7-02d4-4a96-939a-8a9e6e4eae9b', end_date='magnetic', provider='local')
 
 if res.client_body_response is not None:
     # handle response
@@ -158,7 +151,10 @@ if res.client_body_response is not None:
 
 | Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.GetUserBodyV2SummaryBodyUserIDGetRequest](../../models/operations/getuserbodyv2summarybodyuseridgetrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -178,12 +174,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserBodyRawV2SummaryBodyUserIDRawGetRequest(
-    start_date='Southeast',
-    user_id='730e01d9-9c94-457d-a8e7-2c19854893e6',
-)
 
-res = s.summary.get_user_body_raw(req)
+res = s.summary.get_user_body_raw(start_date='Computer', user_id='8730e01d-99c9-4457-968e-72c19854893e', end_date='Credit', provider='South')
 
 if res.raw_body is not None:
     # handle response
@@ -192,9 +184,12 @@ if res.raw_body is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetUserBodyRawV2SummaryBodyUserIDRawGetRequest](../../models/operations/getuserbodyrawv2summarybodyuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -214,11 +209,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetRequest(
-    user_id='d3afcead-cf24-4987-97fa-74fe26009852',
-)
 
-res = s.summary.get_user_devices_raw(req)
+res = s.summary.get_user_devices_raw(user_id='d3afcead-cf24-4987-97fa-74fe26009852', provider='Kwacha')
 
 if res.raw_devices is not None:
     # handle response
@@ -227,9 +219,10 @@ if res.raw_devices is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetRequest](../../models/operations/getuserdevicesrawv2summarydevicesuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                | Type                     | Required                 | Description              |
+| ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| `user_id`                | *str*                    | :heavy_check_mark:       | N/A                      |
+| `provider`               | *Optional[str]*          | :heavy_minus_sign:       | Provider oura/strava etc |
 
 
 ### Response
@@ -249,11 +242,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserProfileV2SummaryProfileUserIDGetRequest(
-    user_id='1e03319e-ca0e-4660-8784-a0581ebdd19f',
-)
 
-res = s.summary.get_user_profile(req)
+res = s.summary.get_user_profile(user_id='1e03319e-ca0e-4660-8784-a0581ebdd19f', provider='Unbranded')
 
 if res.client_facing_profile is not None:
     # handle response
@@ -262,9 +252,10 @@ if res.client_facing_profile is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetUserProfileV2SummaryProfileUserIDGetRequest](../../models/operations/getuserprofilev2summaryprofileuseridgetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter                | Type                     | Required                 | Description              |
+| ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| `user_id`                | *str*                    | :heavy_check_mark:       | N/A                      |
+| `provider`               | *Optional[str]*          | :heavy_minus_sign:       | Provider oura/strava etc |
 
 
 ### Response
@@ -284,11 +275,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserProfileRawV2SummaryProfileUserIDRawGetRequest(
-    user_id='ae101aa4-8797-4dc6-bac7-aa9d64e72a37',
-)
 
-res = s.summary.get_user_profile_raw(req)
+res = s.summary.get_user_profile_raw(user_id='ae101aa4-8797-4dc6-bac7-aa9d64e72a37', provider='Liberia')
 
 if res.raw_profile is not None:
     # handle response
@@ -297,9 +285,10 @@ if res.raw_profile is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetUserProfileRawV2SummaryProfileUserIDRawGetRequest](../../models/operations/getuserprofilerawv2summaryprofileuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter                | Type                     | Required                 | Description              |
+| ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| `user_id`                | *str*                    | :heavy_check_mark:       | N/A                      |
+| `provider`               | *Optional[str]*          | :heavy_minus_sign:       | Provider oura/strava etc |
 
 
 ### Response
@@ -319,12 +308,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserSleepV2SummarySleepUserIDGetRequest(
-    start_date='Corporate quirkily',
-    user_id='429e1c88-ab24-43bc-aa94-c896bba7aa1a',
-)
 
-res = s.summary.get_user_sleep(req)
+res = s.summary.get_user_sleep(start_date='Pakistan', user_id='ea429e1c-88ab-4243-bc6a-94c896bba7aa', end_date='Southeast', provider='wireless')
 
 if res.client_sleep_response is not None:
     # handle response
@@ -333,9 +318,12 @@ if res.client_sleep_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.GetUserSleepV2SummarySleepUserIDGetRequest](../../models/operations/getusersleepv2summarysleepuseridgetrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -355,12 +343,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserSleepRawV2SummarySleepUserIDRawGetRequest(
-    start_date='Clothing Agent Account',
-    user_id='f41f3fc0-77ea-4e72-85ab-9bb882f3ab0f',
-)
 
-res = s.summary.get_user_sleep_raw(req)
+res = s.summary.get_user_sleep_raw(start_date='Titanium', user_id='ba77ed68-ff41-4f3f-8077-eae7285ab9bb', end_date='generate', provider='Point')
 
 if res.raw_sleep is not None:
     # handle response
@@ -369,9 +353,12 @@ if res.raw_sleep is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUserSleepRawV2SummarySleepUserIDRawGetRequest](../../models/operations/getusersleeprawv2summarysleepuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -391,12 +378,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetRequest(
-    start_date='Rock Southwest',
-    user_id='35295037-bc4a-4b08-90f3-0d313cc6ef2c',
-)
 
-res = s.summary.get_user_sleep_stream(req)
+res = s.summary.get_user_sleep_stream(start_date='quantify', user_id='05f1c352-9503-47bc-8ab0-890f30d313cc', end_date='Account', provider='Dakota')
 
 if res.client_sleep_response is not None:
     # handle response
@@ -405,9 +388,12 @@ if res.client_sleep_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetRequest](../../models/operations/getusersleepstreamv2summarysleepuseridstreamgetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -427,12 +413,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetRequest(
-    start_date='green whereas Principal',
-    user_id='060981f4-a6eb-4525-909c-c6d2663c92f9',
-)
 
-res = s.summary.get_user_workouts(req)
+res = s.summary.get_user_workouts(start_date='Plutonium', user_id='0edaf060-981f-44a6-ab52-5d09cc6d2663', end_date='Recumbent', provider='next')
 
 if res.client_workout_response is not None:
     # handle response
@@ -441,9 +423,12 @@ if res.client_workout_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetRequest](../../models/operations/getuserworkoutsv2summaryworkoutsuseridgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -463,12 +448,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetRequest(
-    start_date='card',
-    user_id='3d65358a-d8c0-474b-9c21-9bac589e4fc0',
-)
 
-res = s.summary.get_user_workouts_raw(req)
+res = s.summary.get_user_workouts_raw(start_date='Bike', user_id='65358ad8-c074-4b1c-a19b-ac589e4fc044', end_date='Auto', provider='Legacy')
 
 if res.raw_workout is not None:
     # handle response
@@ -477,9 +458,12 @@ if res.raw_workout is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetRequest](../../models/operations/getuserworkoutsrawv2summaryworkoutsuseridrawgetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `start_date`                                                                                                               | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | Date from in YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 00:00:00 |
+| `user_id`                                                                                                                  | *str*                                                                                                                      | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `end_date`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Date to YYYY-MM-DD or ISO formatted date time. If a date is provided without a time, the time will be set to 23:59:59      |
+| `provider`                                                                                                                 | *Optional[str]*                                                                                                            | :heavy_minus_sign:                                                                                                         | Provider oura/strava etc                                                                                                   |
 
 
 ### Response
@@ -499,11 +483,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.PostUserActivityV2SummaryActivityUserIDPostRequest(
-    user_id='0e4724f5-d113-41c1-bf58-cd7168d06d0c',
-)
 
-res = s.summary.post_user_activity(req)
+res = s.summary.post_user_activity(user_id='0e4724f5-d113-41c1-bf58-cd7168d06d0c', x_vital_android_sdk_version='primary', x_vital_ios_sdk_version='tesla')
 
 if res.response_post_user_activity_v2_summary_activity_user_id_post is not None:
     # handle response
@@ -512,9 +493,11 @@ if res.response_post_user_activity_v2_summary_activity_user_id_post is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.PostUserActivityV2SummaryActivityUserIDPostRequest](../../models/operations/postuseractivityv2summaryactivityuseridpostrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `user_id`                     | *str*                         | :heavy_check_mark:            | N/A                           |
+| `x_vital_android_sdk_version` | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
+| `x_vital_ios_sdk_version`     | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
 
 
 ### Response
@@ -534,11 +517,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.PostUserBodyV2SummaryBodyUserIDPostRequest(
-    user_id='2aac64a8-1a4b-47b9-b083-c6d33a9beb02',
-)
 
-res = s.summary.post_user_body(req)
+res = s.summary.post_user_body(user_id='2aac64a8-1a4b-47b9-b083-c6d33a9beb02', x_vital_android_sdk_version='dicta', x_vital_ios_sdk_version='Cambridgeshire')
 
 if res.response_post_user_body_v2_summary_body_user_id_post is not None:
     # handle response
@@ -547,9 +527,11 @@ if res.response_post_user_body_v2_summary_body_user_id_post is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.PostUserBodyV2SummaryBodyUserIDPostRequest](../../models/operations/postuserbodyv2summarybodyuseridpostrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `user_id`                     | *str*                         | :heavy_check_mark:            | N/A                           |
+| `x_vital_android_sdk_version` | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
+| `x_vital_ios_sdk_version`     | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
 
 
 ### Response
@@ -569,11 +551,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.PostUserProfileV2SummaryProfileUserIDPostRequest(
-    user_id='343ee935-de73-408c-a15e-4782d3b864c4',
-)
 
-res = s.summary.post_user_profile(req)
+res = s.summary.post_user_profile(user_id='343ee935-de73-408c-a15e-4782d3b864c4', x_vital_android_sdk_version='purple', x_vital_ios_sdk_version='foreground')
 
 if res.response_post_user_profile_v2_summary_profile_user_id_post is not None:
     # handle response
@@ -582,9 +561,11 @@ if res.response_post_user_profile_v2_summary_profile_user_id_post is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.PostUserProfileV2SummaryProfileUserIDPostRequest](../../models/operations/postuserprofilev2summaryprofileuseridpostrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `user_id`                     | *str*                         | :heavy_check_mark:            | N/A                           |
+| `x_vital_android_sdk_version` | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
+| `x_vital_ios_sdk_version`     | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
 
 
 ### Response
@@ -604,11 +585,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.PostUserSleepV2SummarySleepUserIDPostRequest(
-    user_id='4332e922-db99-44ec-bd9d-77a063c520e5',
-)
 
-res = s.summary.post_user_sleep(req)
+res = s.summary.post_user_sleep(user_id='4332e922-db99-44ec-bd9d-77a063c520e5', x_vital_android_sdk_version='Tasty', x_vital_ios_sdk_version='South')
 
 if res.response_post_user_sleep_v2_summary_sleep_user_id_post is not None:
     # handle response
@@ -617,9 +595,11 @@ if res.response_post_user_sleep_v2_summary_sleep_user_id_post is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.PostUserSleepV2SummarySleepUserIDPostRequest](../../models/operations/postusersleepv2summarysleepuseridpostrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `user_id`                     | *str*                         | :heavy_check_mark:            | N/A                           |
+| `x_vital_android_sdk_version` | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
+| `x_vital_ios_sdk_version`     | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
 
 
 ### Response
@@ -639,11 +619,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostRequest(
-    user_id='63a9d635-f084-45f5-a781-131420d3a83b',
-)
 
-res = s.summary.post_user_workout(req)
+res = s.summary.post_user_workout(user_id='63a9d635-f084-45f5-a781-131420d3a83b', x_vital_android_sdk_version='compress', x_vital_ios_sdk_version='Unbranded')
 
 if res.response_post_user_workout_v2_summary_workouts_user_id_post is not None:
     # handle response
@@ -652,9 +629,11 @@ if res.response_post_user_workout_v2_summary_workouts_user_id_post is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostRequest](../../models/operations/postuserworkoutv2summaryworkoutsuseridpostrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `user_id`                     | *str*                         | :heavy_check_mark:            | N/A                           |
+| `x_vital_android_sdk_version` | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
+| `x_vital_ios_sdk_version`     | *Optional[str]*               | :heavy_minus_sign:            | N/A                           |
 
 
 ### Response

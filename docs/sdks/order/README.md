@@ -37,14 +37,10 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest(
-    appointment_booking_request=shared.AppointmentBookingRequest(
-        booking_key='how index Electric',
-    ),
-    order_id='0b1d8151-82e6-4c0e-bd72-ca79bcf3d5ba',
-)
 
-res = s.order.book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(req)
+res = s.order.book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(appointment_booking_request=shared.AppointmentBookingRequest(
+    booking_key='how index Electric',
+), order_id='0b1d8151-82e6-4c0e-bd72-ca79bcf3d5ba')
 
 if res.client_facing_appointment is not None:
     # handle response
@@ -53,9 +49,10 @@ if res.client_facing_appointment is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                        | Type                                                                                                                                                                                             | Required                                                                                                                                                                                         | Description                                                                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                                        | [operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest](../../models/operations/bookphlebotomyappointmentv3orderorderidphlebotomyappointmentbookpostrequest.md) | :heavy_check_mark:                                                                                                                                                                               | The request object to use for the request.                                                                                                                                                       |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `appointment_booking_request`                                                        | [shared.AppointmentBookingRequest](../../models/shared/appointmentbookingrequest.md) | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `order_id`                                                                           | *str*                                                                                | :heavy_check_mark:                                                                   | Your Order ID.                                                                       |
 
 
 ### Response
@@ -75,11 +72,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.CancelOrderV3OrderOrderIDCancelPostRequest(
-    order_id='b9d919c2-b9aa-4759-bba5-fb974a744f9a',
-)
 
-res = s.order.cancel_order_v3_order_order_id_cancel_post(req)
+res = s.order.cancel_order_v3_order_order_id_cancel_post(order_id='b9d919c2-b9aa-4759-bba5-fb974a744f9a')
 
 if res.post_order_response is not None:
     # handle response
@@ -88,9 +82,9 @@ if res.post_order_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.CancelOrderV3OrderOrderIDCancelPostRequest](../../models/operations/cancelorderv3orderorderidcancelpostrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | Your Order ID.     |
 
 
 ### Response
@@ -110,14 +104,10 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest(
-    appointment_cancel_request=shared.AppointmentCancelRequest(
-        cancellation_reason_id='Sandy Minivan',
-    ),
-    order_id='528ddb0d-27a7-4e90-9ccf-3b9448c5e365',
-)
 
-res = s.order.cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(req)
+res = s.order.cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(appointment_cancel_request=shared.AppointmentCancelRequest(
+    cancellation_reason_id='Sandy Minivan',
+), order_id='528ddb0d-27a7-4e90-9ccf-3b9448c5e365')
 
 if res.client_facing_appointment is not None:
     # handle response
@@ -126,9 +116,10 @@ if res.client_facing_appointment is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                  | Type                                                                                                                                                                                                       | Required                                                                                                                                                                                                   | Description                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                                  | [operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest](../../models/operations/cancelphlebotomyappointmentv3orderorderidphlebotomyappointmentcancelpatchrequest.md) | :heavy_check_mark:                                                                                                                                                                                         | The request object to use for the request.                                                                                                                                                                 |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `appointment_cancel_request`                                                       | [shared.AppointmentCancelRequest](../../models/shared/appointmentcancelrequest.md) | :heavy_check_mark:                                                                 | N/A                                                                                |
+| `order_id`                                                                         | *str*                                                                              | :heavy_check_mark:                                                                 | Your Order ID.                                                                     |
 
 
 ### Response
@@ -317,11 +308,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetOrderV3OrderOrderIDGetRequest(
-    order_id='b18d8d81-fd7b-4764-a31e-475cb1f36591',
-)
 
-res = s.order.get(req)
+res = s.order.get(order_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
 
 if res.client_facing_order is not None:
     # handle response
@@ -330,9 +318,9 @@ if res.client_facing_order is not None:
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.GetOrderV3OrderOrderIDGetRequest](../../models/operations/getorderv3orderorderidgetrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | Your Order ID.     |
 
 
 ### Response
@@ -353,17 +341,13 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest(
-    request_body=operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress(
-        city='Beierfurt',
-        first_line='Gasoline',
-        state='quietly',
-        zip_code='90180-6043',
-    ),
-    order_id='be1f658f-f11c-4cd4-b893-8a333321e842',
-)
 
-res = s.order.get_appointment_availability(req)
+res = s.order.get_appointment_availability(order_id='c094c82e-a8e0-42d1-a065-be1f658ff11c', request_body=operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress(
+    city='Shanahanboro',
+    first_line='generating',
+    state='calculate',
+    zip_code='21210',
+))
 
 if res.appointment_availability_slots is not None:
     # handle response
@@ -372,9 +356,10 @@ if res.appointment_availability_slots is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                                    | Type                                                                                                                                                                                                                         | Required                                                                                                                                                                                                                     | Description                                                                                                                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                                                    | [operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest](../../models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostrequest.md) | :heavy_check_mark:                                                                                                                                                                                                           | The request object to use for the request.                                                                                                                                                                                   |
+| Parameter                                                                                                                                                                                                                                  | Type                                                                                                                                                                                                                                       | Required                                                                                                                                                                                                                                   | Description                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `order_id`                                                                                                                                                                                                                                 | *str*                                                                                                                                                                                                                                      | :heavy_check_mark:                                                                                                                                                                                                                         | Your Order ID.                                                                                                                                                                                                                             |
+| `request_body`                                                                                                                                                                                                                             | [Optional[operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress]](../../models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostusaddress.md) | :heavy_minus_sign:                                                                                                                                                                                                                         | N/A                                                                                                                                                                                                                                        |
 
 
 ### Response
@@ -397,11 +382,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetAreaInfoV3OrderAreaInfoGetRequest(
-    zip_code='94836',
-)
 
-res = s.order.get_area_info(req)
+res = s.order.get_area_info(zip_code='Tuvalu')
 
 if res.area_info is not None:
     # handle response
@@ -410,9 +392,9 @@ if res.area_info is not None:
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.GetAreaInfoV3OrderAreaInfoGetRequest](../../models/operations/getareainfov3orderareainfogetrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `zip_code`                    | *str*                         | :heavy_check_mark:            | Zip code of the area to check |
 
 
 ### Response
@@ -432,11 +414,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetLabTestResultV3OrderOrderIDResultPdfGetRequest(
-    order_id='c9229487-8f86-47ef-848e-7eb7243713ad',
-)
 
-res = s.order.get_lab_test_result(req)
+res = s.order.get_lab_test_result(order_id='c9229487-8f86-47ef-848e-7eb7243713ad')
 
 if res.response_get_lab_test_result_v3_order_order_id_result_pdf_get is not None:
     # handle response
@@ -445,9 +424,9 @@ if res.response_get_lab_test_result_v3_order_order_id_result_pdf_get is not None
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.GetLabTestResultV3OrderOrderIDResultPdfGetRequest](../../models/operations/getlabtestresultv3orderorderidresultpdfgetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -468,11 +447,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetRequest(
-    order_id='daf5fdc5-7c54-4772-826b-69600571af0f',
-)
 
-res = s.order.get_lab_test_result_metadata(req)
+res = s.order.get_lab_test_result_metadata(order_id='daf5fdc5-7c54-4772-826b-69600571af0f')
 
 if res.lab_results_metadata is not None:
     # handle response
@@ -481,9 +457,9 @@ if res.lab_results_metadata is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetRequest](../../models/operations/getlabtestresultmetadatav3orderorderidresultmetadatagetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -503,11 +479,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetLabTestResultRawV3OrderOrderIDResultGetRequest(
-    order_id='2cfa7265-4a8d-45d9-b8ea-42e844b02385',
-)
 
-res = s.order.get_lab_test_result_raw(req)
+res = s.order.get_lab_test_result_raw(order_id='2cfa7265-4a8d-45d9-b8ea-42e844b02385')
 
 if res.lab_results_raw is not None:
     # handle response
@@ -516,9 +489,9 @@ if res.lab_results_raw is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.GetLabTestResultRawV3OrderOrderIDResultGetRequest](../../models/operations/getlabtestresultrawv3orderorderidresultgetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -538,11 +511,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetRequest(
-    order_id='3e95493c-2969-4eab-9aaf-61adbf59533c',
-)
 
-res = s.order.get_phlebotomy_appointment(req)
+res = s.order.get_phlebotomy_appointment(order_id='3e95493c-2969-4eab-9aaf-61adbf59533c')
 
 if res.client_facing_appointment is not None:
     # handle response
@@ -551,9 +521,9 @@ if res.client_facing_appointment is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                            | Type                                                                                                                                                                                 | Required                                                                                                                                                                             | Description                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                            | [operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetRequest](../../models/operations/getphlebotomyappointmentv3orderorderidphlebotomyappointmentgetrequest.md) | :heavy_check_mark:                                                                                                                                                                   | The request object to use for the request.                                                                                                                                           |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | Your Order ID.     |
 
 
 ### Response
@@ -599,11 +569,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetRequest(
-    order_id='bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335',
-)
 
-res = s.order.get_requisition_url(req)
+res = s.order.get_requisition_url(order_id='bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335')
 
 if res.get_order_requisition_url_v3_order_order_id_requisition_pdf_get_200_application_json_any is not None:
     # handle response
@@ -612,9 +579,9 @@ if res.get_order_requisition_url_v3_order_order_id_requisition_pdf_get_200_appli
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetRequest](../../models/operations/getorderrequisitionurlv3orderorderidrequisitionpdfgetrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | Your Order ID.     |
 
 
 ### Response
@@ -634,11 +601,8 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.OrderProcessSimulateV3OrderOrderIDTestPostRequest(
-    order_id='03c5e046-8598-4154-ab3e-444d34fe425a',
-)
 
-res = s.order.order_process_simulate_v3_order_order_id_test_post(req)
+res = s.order.order_process_simulate_v3_order_order_id_test_post(order_id='03c5e046-8598-4154-ab3e-444d34fe425a', delay=560672, final_status=shared.OrderStatus.COLLECTING_SAMPLE_AT_HOME_PHLEBOTOMY_APPOINTMENT_SCHEDULED)
 
 if res.response_order_process_simulate_v3_order_order_id_test_post is not None:
     # handle response
@@ -647,9 +611,11 @@ if res.response_order_process_simulate_v3_order_order_id_test_post is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.OrderProcessSimulateV3OrderOrderIDTestPostRequest](../../models/operations/orderprocesssimulatev3orderorderidtestpostrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `order_id`                                                         | *str*                                                              | :heavy_check_mark:                                                 | N/A                                                                |
+| `delay`                                                            | *Optional[int]*                                                    | :heavy_minus_sign:                                                 | N/A                                                                |
+| `final_status`                                                     | [Optional[shared.OrderStatus]](../../models/shared/orderstatus.md) | :heavy_minus_sign:                                                 | An enumeration.                                                    |
 
 
 ### Response
@@ -669,12 +635,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostRequest(
-    order_id='21061e75-f548-42fd-90f0-d372d63dff6e',
-    team_id='26a256a9-b0f5-4854-8814-40907e852835',
-)
 
-res = s.order.process_testkit_order_v3_order_testkit_process_team_id_order_id_post(req)
+res = s.order.process_testkit_order_v3_order_testkit_process_team_id_order_id_post(order_id='21061e75-f548-42fd-90f0-d372d63dff6e', team_id='26a256a9-b0f5-4854-8814-40907e852835')
 
 if res.response_process_testkit_order_v3_order_testkit_process_team_id_order_id_post is not None:
     # handle response
@@ -683,9 +645,10 @@ if res.response_process_testkit_order_v3_order_testkit_process_team_id_order_id_
 
 ### Parameters
 
-| Parameter                                                                                                                                                                  | Type                                                                                                                                                                       | Required                                                                                                                                                                   | Description                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                  | [operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostRequest](../../models/operations/processtestkitorderv3ordertestkitprocessteamidorderidpostrequest.md) | :heavy_check_mark:                                                                                                                                                         | The request object to use for the request.                                                                                                                                 |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `order_id`         | *str*              | :heavy_check_mark: | N/A                |
+| `team_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -809,14 +772,10 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest(
-    appointment_reschedule_request=shared.AppointmentRescheduleRequest(
-        booking_key='Shoes',
-    ),
-    order_id='372e4ddd-b832-434a-962c-b3ddc204a698',
-)
 
-res = s.order.reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(req)
+res = s.order.reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(appointment_reschedule_request=shared.AppointmentRescheduleRequest(
+    booking_key='Shoes',
+), order_id='372e4ddd-b832-434a-962c-b3ddc204a698')
 
 if res.client_facing_appointment is not None:
     # handle response
@@ -825,9 +784,10 @@ if res.client_facing_appointment is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                                  | Type                                                                                                                                                                                                                       | Required                                                                                                                                                                                                                   | Description                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                                                                                  | [operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest](../../models/operations/reschedulephlebotomyappointmentv3orderorderidphlebotomyappointmentreschedulepatchrequest.md) | :heavy_check_mark:                                                                                                                                                                                                         | The request object to use for the request.                                                                                                                                                                                 |
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `appointment_reschedule_request`                                                           | [shared.AppointmentRescheduleRequest](../../models/shared/appointmentreschedulerequest.md) | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `order_id`                                                                                 | *str*                                                                                      | :heavy_check_mark:                                                                         | Your Order ID.                                                                             |
 
 
 ### Response

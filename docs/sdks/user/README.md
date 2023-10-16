@@ -62,11 +62,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.DeleteUserV2UserUserIDDeleteRequest(
-    user_id='8db863f6-ef9b-413a-8a70-cb816b33de6b',
-)
 
-res = s.user.delete(req)
+res = s.user.delete(user_id='8db863f6-ef9b-413a-8a70-cb816b33de6b')
 
 if res.user_success_response is not None:
     # handle response
@@ -75,9 +72,9 @@ if res.user_success_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.DeleteUserV2UserUserIDDeleteRequest](../../models/operations/deleteuserv2useruseriddeleterequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `user_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -97,12 +94,8 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.DeregisterProviderV2UserUserIDProviderDeleteRequest(
-    provider=shared.Providers.GARMIN,
-    user_id='6d48b1ec-267e-4530-bcf8-b4f041e375ee',
-)
 
-res = s.user.deregister_provider_v2_user_user_id_provider_delete(req)
+res = s.user.deregister_provider_v2_user_user_id_provider_delete(provider=shared.Providers.GARMIN, user_id='6d48b1ec-267e-4530-bcf8-b4f041e375ee')
 
 if res.user_success_response is not None:
     # handle response
@@ -111,9 +104,10 @@ if res.user_success_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.DeregisterProviderV2UserUserIDProviderDeleteRequest](../../models/operations/deregisterproviderv2useruseridproviderdeleterequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter                                            | Type                                                 | Required                                             | Description                                          |
+| ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| `provider`                                           | [shared.Providers](../../models/shared/providers.md) | :heavy_check_mark:                                   | Provider slug. e.g., `oura`, `fitbit`, `garmin`.     |
+| `user_id`                                            | *str*                                                | :heavy_check_mark:                                   | N/A                                                  |
 
 
 ### Response
@@ -133,11 +127,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserV2UserUserIDGetRequest(
-    user_id='b18d8d81-fd7b-4764-a31e-475cb1f36591',
-)
 
-res = s.user.get(req)
+res = s.user.get(user_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
 
 if res.client_facing_user is not None:
     # handle response
@@ -146,9 +137,9 @@ if res.client_facing_user is not None:
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetUserV2UserUserIDGetRequest](../../models/operations/getuserv2useruseridgetrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `user_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -168,9 +159,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTeamsUsersV2UserGetRequest()
 
-res = s.user.get_all(req)
+res = s.user.get_all(limit=178225, offset=64345)
 
 if res.paginated_users_response is not None:
     # handle response
@@ -179,9 +169,10 @@ if res.paginated_users_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetTeamsUsersV2UserGetRequest](../../models/operations/getteamsusersv2usergetrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `limit`            | *Optional[int]*    | :heavy_minus_sign: | N/A                |
+| `offset`           | *Optional[int]*    | :heavy_minus_sign: | N/A                |
 
 
 ### Response
@@ -201,11 +192,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetConnectedProvidersV2UserProvidersUserIDGetRequest(
-    user_id='30ef9033-9974-45c7-af5c-ddc9369dd7a0',
-)
 
-res = s.user.get_connected_providers(req)
+res = s.user.get_connected_providers(user_id='30ef9033-9974-45c7-af5c-ddc9369dd7a0')
 
 if res.response_get_connected_providers_v2_user_providers_user_id_get is not None:
     # handle response
@@ -214,9 +202,9 @@ if res.response_get_connected_providers_v2_user_providers_user_id_get is not Non
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetConnectedProvidersV2UserProvidersUserIDGetRequest](../../models/operations/getconnectedprovidersv2userprovidersuseridgetrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `user_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -262,11 +250,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserSignInTokenV2UserUserIDSignInTokenPostRequest(
-    user_id='d738147a-606f-41ac-a296-81a3993405ee',
-)
 
-res = s.user.get_sign_in_token(req)
+res = s.user.get_sign_in_token(user_id='d738147a-606f-41ac-a296-81a3993405ee')
 
 if res.user_sign_in_token_response is not None:
     # handle response
@@ -275,9 +260,9 @@ if res.user_sign_in_token_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.GetUserSignInTokenV2UserUserIDSignInTokenPostRequest](../../models/operations/getusersignintokenv2useruseridsignintokenpostrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `user_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -297,12 +282,8 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.PatchUserV2UserUserIDPatchRequest(
-    user_patch_body=shared.UserPatchBody(),
-    user_id='02c6960d-b280-4a76-8c76-467d647deb43',
-)
 
-res = s.user.patch_user_v2_user_user_id_patch(req)
+res = s.user.patch_user_v2_user_user_id_patch(user_patch_body=shared.UserPatchBody(), user_id='02c6960d-b280-4a76-8c76-467d647deb43')
 
 if res.status_code == 200:
     # handle response
@@ -311,9 +292,10 @@ if res.status_code == 200:
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.PatchUserV2UserUserIDPatchRequest](../../models/operations/patchuserv2useruseridpatchrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `user_patch_body`                                            | [shared.UserPatchBody](../../models/shared/userpatchbody.md) | :heavy_check_mark:                                           | N/A                                                          |
+| `user_id`                                                    | *str*                                                        | :heavy_check_mark:                                           | N/A                                                          |
 
 
 ### Response
@@ -333,11 +315,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.RefreshUserIDV2UserRefreshUserIDPostRequest(
-    user_id='1d35a855-b124-4dda-9838-fdeec970978f',
-)
 
-res = s.user.refresh_user_id_v2_user_refresh_user_id_post(req)
+res = s.user.refresh_user_id_v2_user_refresh_user_id_post(user_id='1d35a855-b124-4dda-9838-fdeec970978f')
 
 if res.user_refresh_success_response is not None:
     # handle response
@@ -346,9 +325,9 @@ if res.user_refresh_success_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.RefreshUserIDV2UserRefreshUserIDPostRequest](../../models/operations/refreshuseridv2userrefreshuseridpostrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `user_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -368,11 +347,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetUserByClientUserIDV2UserResolveClientUserIDGetRequest(
-    client_user_id='Granite whiteboard excluding',
-)
 
-res = s.user.resolve_by_user_id(req)
+res = s.user.resolve_by_user_id(client_user_id='Bicycle')
 
 if res.client_facing_user is not None:
     # handle response
@@ -381,9 +357,9 @@ if res.client_facing_user is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.GetUserByClientUserIDV2UserResolveClientUserIDGetRequest](../../models/operations/getuserbyclientuseridv2userresolveclientuseridgetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| Parameter                                                                                                                                                                                                                      | Type                                                                                                                                                                                                                           | Required                                                                                                                                                                                                                       | Description                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `client_user_id`                                                                                                                                                                                                               | *str*                                                                                                                                                                                                                          | :heavy_check_mark:                                                                                                                                                                                                             | A unique ID representing the end user. Typically this will be a user ID number from your application. Personally identifiable information, such as an email address or phone number, should not be used in the client_user_id. |
 
 
 ### Response

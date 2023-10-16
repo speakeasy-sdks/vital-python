@@ -73,14 +73,10 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.CreateAPIKeyV2TeamTeamIDApikeyPostRequest(
-    create_api_key_body=shared.CreateAPIKeyBody(
-        label='deposit API',
-    ),
-    team_id='Sudan',
-)
 
-res = s.team.create_api_key(req)
+res = s.team.create_api_key(create_api_key_body=shared.CreateAPIKeyBody(
+    label='deposit API',
+), team_id='Avon')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -89,9 +85,10 @@ if res.api_key_in_db is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.CreateAPIKeyV2TeamTeamIDApikeyPostRequest](../../models/operations/createapikeyv2teamteamidapikeypostrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `create_api_key_body`                                              | [shared.CreateAPIKeyBody](../../models/shared/createapikeybody.md) | :heavy_check_mark:                                                 | N/A                                                                |
+| `team_id`                                                          | *str*                                                              | :heavy_check_mark:                                                 | N/A                                                                |
 
 
 ### Response
@@ -111,16 +108,12 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.CreatePriorityV2TeamTeamIDPriorityPostRequest(
-    priority_create=shared.PriorityCreate(
-        priority=548209,
-        source_id=168326,
-        team_id='0d4e3a38-5a06-40f0-b144-d921de79168b',
-    ),
-    team_id='Pants Summerville',
-)
 
-res = s.team.create_priority(req)
+res = s.team.create_priority(priority_create=shared.PriorityCreate(
+    priority=548209,
+    source_id=168326,
+    team_id='0d4e3a38-5a06-40f0-b144-d921de79168b',
+), team_id='compressing')
 
 if res.priority is not None:
     # handle response
@@ -129,9 +122,10 @@ if res.priority is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.CreatePriorityV2TeamTeamIDPriorityPostRequest](../../models/operations/createpriorityv2teamteamidprioritypostrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `priority_create`                                              | [shared.PriorityCreate](../../models/shared/prioritycreate.md) | :heavy_check_mark:                                             | N/A                                                            |
+| `team_id`                                                      | *str*                                                          | :heavy_check_mark:                                             | N/A                                                            |
 
 
 ### Response
@@ -151,12 +145,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteRequest(
-    api_key_id='sans',
-    team_id='Minivan orchid knee',
-)
 
-res = s.team.delete_api_key(req)
+res = s.team.delete_api_key(api_key_id='Weston', team_id='Bicycle')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -165,9 +155,10 @@ if res.api_key_in_db is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteRequest](../../models/operations/deleteapikeyv2teamteamidapikeyapikeyiddeleterequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `api_key_id`       | *str*              | :heavy_check_mark: | N/A                |
+| `team_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -187,11 +178,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTeamV2TeamTeamIDGetRequest(
-    team_id='b18d8d81-fd7b-4764-a31e-475cb1f36591',
-)
 
-res = s.team.get(req)
+res = s.team.get(team_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
 
 if res.client_facing_team is not None:
     # handle response
@@ -200,9 +188,9 @@ if res.client_facing_team is not None:
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.GetTeamV2TeamTeamIDGetRequest](../../models/operations/getteamv2teamteamidgetrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `team_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -222,11 +210,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetRequest(
-    team_id='South',
-)
 
-res = s.team.get_api_keys(req)
+res = s.team.get_api_keys(team_id='Computer')
 
 if res.api_key_in_dbs is not None:
     # handle response
@@ -235,9 +220,9 @@ if res.api_key_in_dbs is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetRequest](../../models/operations/getapikeysforteamv2teamteamidapikeysgetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `team_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -283,9 +268,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest()
 
-res = s.team.get_source_priorities(req)
+res = s.team.get_source_priorities(data_type='deposit')
 
 if res.get_source_priorities_v2_team_source_priorities_get_200_application_json_objects is not None:
     # handle response
@@ -294,9 +278,9 @@ if res.get_source_priorities_v2_team_source_priorities_get_200_application_json_
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest](../../models/operations/getsourceprioritiesv2teamsourceprioritiesgetrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `data_type`        | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 
 
 ### Response
@@ -316,11 +300,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetTeamUserCountV2TeamTeamIDUsersCountGetRequest(
-    team_id='3021769b-866d-4c37-8307-789796d71ace',
-)
 
-res = s.team.get_user_count(req)
+res = s.team.get_user_count(team_id='3021769b-866d-4c37-8307-789796d71ace')
 
 if res.response_get_team_user_count_v2_team_team_id_users_count_get is not None:
     # handle response
@@ -329,9 +310,9 @@ if res.response_get_team_user_count_v2_team_team_id_users_count_get is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.GetTeamUserCountV2TeamTeamIDUsersCountGetRequest](../../models/operations/getteamusercountv2teamteamiduserscountgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `team_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -377,12 +358,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchRequest(
-    api_key_id='ah Buckinghamshire Computer',
-    team_id='Associate Developer Director',
-)
 
-res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(req)
+res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(api_key_id='lux', team_id='optimize')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -391,9 +368,10 @@ if res.api_key_in_db is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchRequest](../../models/operations/rotateapikeyv2teamteamidapikeyapikeyidrotatepatchrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `api_key_id`       | *str*              | :heavy_check_mark: | N/A                |
+| `team_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -413,9 +391,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetRequest()
 
-res = s.team.search_users_by_uuid(req)
+res = s.team.search_users_by_uuid(query_id='North')
 
 if res.client_facing_users is not None:
     # handle response
@@ -424,9 +401,9 @@ if res.client_facing_users is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                              | [operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetRequest](../../models/operations/searchteamusersbyuuidorclientuseridv2teamuserssearchgetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `query_id`         | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 
 
 ### Response
@@ -446,15 +423,10 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest(
-    update_api_key_body=shared.UpdateAPIKeyBody(
-        label='architectures District',
-    ),
-    api_key_id='Security',
-    team_id='dolor',
-)
 
-res = s.team.update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(req)
+res = s.team.update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(update_api_key_body=shared.UpdateAPIKeyBody(
+    label='architectures District',
+), api_key_id='South', team_id='South')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -463,9 +435,11 @@ if res.api_key_in_db is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest](../../models/operations/updateapikeylabelv2teamteamidapikeyapikeyidpatchrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
+| Parameter                                                          | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `update_api_key_body`                                              | [shared.UpdateAPIKeyBody](../../models/shared/updateapikeybody.md) | :heavy_check_mark:                                                 | N/A                                                                |
+| `api_key_id`                                                       | *str*                                                              | :heavy_check_mark:                                                 | N/A                                                                |
+| `team_id`                                                          | *str*                                                              | :heavy_check_mark:                                                 | N/A                                                                |
 
 
 ### Response
@@ -485,11 +459,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest(
-    team_id='purple male incidentally',
-)
 
-res = s.team.update_source_priorities_v2_team_source_priorities_patch(req)
+res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='phew')
 
 if res.update_source_priorities_v2_team_source_priorities_patch_200_application_json_objects is not None:
     # handle response
@@ -498,9 +469,9 @@ if res.update_source_priorities_v2_team_source_priorities_patch_200_application_
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest](../../models/operations/updatesourceprioritiesv2teamsourceprioritiespatchrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `team_id`          | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response
@@ -520,12 +491,8 @@ from vital.models import operations, shared
 
 s = vital.Vital()
 
-req = operations.UpdateTeamV2TeamTeamIDPatchRequest(
-    team_update=shared.TeamUpdate(),
-    team_id='Virginia Decentralized Diesel',
-)
 
-res = s.team.update_team_v2_team_team_id_patch(req)
+res = s.team.update_team_v2_team_team_id_patch(team_update=shared.TeamUpdate(), team_id='Supervisor')
 
 if res.team_in_db is not None:
     # handle response
@@ -534,9 +501,10 @@ if res.team_in_db is not None:
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.UpdateTeamV2TeamTeamIDPatchRequest](../../models/operations/updateteamv2teamteamidpatchrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| Parameter                                              | Type                                                   | Required                                               | Description                                            |
+| ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------------------ |
+| `team_update`                                          | [shared.TeamUpdate](../../models/shared/teamupdate.md) | :heavy_check_mark:                                     | N/A                                                    |
+| `team_id`                                              | *str*                                                  | :heavy_check_mark:                                     | N/A                                                    |
 
 
 ### Response

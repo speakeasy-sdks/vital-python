@@ -54,10 +54,15 @@ class Team:
         return res
 
     
-    def create_api_key(self, request: operations.CreateAPIKeyV2TeamTeamIDApikeyPostRequest) -> operations.CreateAPIKeyV2TeamTeamIDApikeyPostResponse:
+    def create_api_key(self, create_api_key_body: shared.CreateAPIKeyBody, team_id: str) -> operations.CreateAPIKeyV2TeamTeamIDApikeyPostResponse:
         r"""Create Api Key
         Create api key.
         """
+        request = operations.CreateAPIKeyV2TeamTeamIDApikeyPostRequest(
+            create_api_key_body=create_api_key_body,
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.CreateAPIKeyV2TeamTeamIDApikeyPostRequest, base_url, '/v2/team/{team_id}/apikey', request)
@@ -96,10 +101,15 @@ class Team:
         return res
 
     
-    def create_priority(self, request: operations.CreatePriorityV2TeamTeamIDPriorityPostRequest) -> operations.CreatePriorityV2TeamTeamIDPriorityPostResponse:
+    def create_priority(self, priority_create: shared.PriorityCreate, team_id: str) -> operations.CreatePriorityV2TeamTeamIDPriorityPostResponse:
         r"""Create Priority
         Add Team priority row for source
         """
+        request = operations.CreatePriorityV2TeamTeamIDPriorityPostRequest(
+            priority_create=priority_create,
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.CreatePriorityV2TeamTeamIDPriorityPostRequest, base_url, '/v2/team/{team_id}/priority', request)
@@ -138,10 +148,15 @@ class Team:
         return res
 
     
-    def delete_api_key(self, request: operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteRequest) -> operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteResponse:
+    def delete_api_key(self, api_key_id: str, team_id: str) -> operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteResponse:
         r"""Delete Api Key
         Invalidate api key by key value.
         """
+        request = operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteRequest(
+            api_key_id=api_key_id,
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteRequest, base_url, '/v2/team/{team_id}/apikey/{api_key_id}', request)
@@ -175,10 +190,14 @@ class Team:
         return res
 
     
-    def get(self, request: operations.GetTeamV2TeamTeamIDGetRequest) -> operations.GetTeamV2TeamTeamIDGetResponse:
+    def get(self, team_id: str) -> operations.GetTeamV2TeamTeamIDGetResponse:
         r"""Get Team
         Get team.
         """
+        request = operations.GetTeamV2TeamTeamIDGetRequest(
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTeamV2TeamTeamIDGetRequest, base_url, '/v2/team/{team_id}', request)
@@ -212,10 +231,14 @@ class Team:
         return res
 
     
-    def get_api_keys(self, request: operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetRequest) -> operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetResponse:
+    def get_api_keys(self, team_id: str) -> operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetResponse:
         r"""Get Api Keys For Team
         Invalidate api key by key value.
         """
+        request = operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetRequest(
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetRequest, base_url, '/v2/team/{team_id}/apikeys', request)
@@ -279,10 +302,14 @@ class Team:
         return res
 
     
-    def get_source_priorities(self, request: operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest) -> operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse:
+    def get_source_priorities(self, data_type: Optional[str] = None) -> operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse:
         r"""Get Source Priorities
         GET source priorities.
         """
+        request = operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest(
+            data_type=data_type,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/v2/team/source/priorities'
@@ -317,10 +344,14 @@ class Team:
         return res
 
     
-    def get_user_count(self, request: operations.GetTeamUserCountV2TeamTeamIDUsersCountGetRequest) -> operations.GetTeamUserCountV2TeamTeamIDUsersCountGetResponse:
+    def get_user_count(self, team_id: str) -> operations.GetTeamUserCountV2TeamTeamIDUsersCountGetResponse:
         r"""Get Team User Count
         Get the current user count for a team.
         """
+        request = operations.GetTeamUserCountV2TeamTeamIDUsersCountGetRequest(
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetTeamUserCountV2TeamTeamIDUsersCountGetRequest, base_url, '/v2/team/{team_id}/users/count', request)
@@ -382,10 +413,15 @@ class Team:
         return res
 
     
-    def rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(self, request: operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchRequest) -> operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchResponse:
+    def rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(self, api_key_id: str, team_id: str) -> operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchResponse:
         r"""Rotate Api Key
         Deprecated. Rotate api key.
         """
+        request = operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchRequest(
+            api_key_id=api_key_id,
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchRequest, base_url, '/v2/team/{team_id}/apikey/{api_key_id}/rotate', request)
@@ -419,10 +455,14 @@ class Team:
         return res
 
     
-    def search_users_by_uuid(self, request: operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetRequest) -> operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetResponse:
+    def search_users_by_uuid(self, query_id: Optional[str] = None) -> operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetResponse:
         r"""Search Team Users By Uuid Or Client User Id
         Search team users by user_id
         """
+        request = operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetRequest(
+            query_id=query_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/v2/team/users/search'
@@ -457,10 +497,16 @@ class Team:
         return res
 
     
-    def update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(self, request: operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest) -> operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchResponse:
+    def update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(self, update_api_key_body: shared.UpdateAPIKeyBody, api_key_id: str, team_id: str) -> operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchResponse:
         r"""Update Api Key Label
         Update API key label.
         """
+        request = operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest(
+            update_api_key_body=update_api_key_body,
+            api_key_id=api_key_id,
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest, base_url, '/v2/team/{team_id}/apikey/{api_key_id}', request)
@@ -499,10 +545,14 @@ class Team:
         return res
 
     
-    def update_source_priorities_v2_team_source_priorities_patch(self, request: operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest) -> operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse:
+    def update_source_priorities_v2_team_source_priorities_patch(self, team_id: str) -> operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse:
         r"""Update Source Priorities
         Patch source priorities.
         """
+        request = operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest(
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/v2/team/source/priorities'
@@ -537,10 +587,15 @@ class Team:
         return res
 
     
-    def update_team_v2_team_team_id_patch(self, request: operations.UpdateTeamV2TeamTeamIDPatchRequest) -> operations.UpdateTeamV2TeamTeamIDPatchResponse:
+    def update_team_v2_team_team_id_patch(self, team_update: shared.TeamUpdate, team_id: str) -> operations.UpdateTeamV2TeamTeamIDPatchResponse:
         r"""Update Team
         Update team.
         """
+        request = operations.UpdateTeamV2TeamTeamIDPatchRequest(
+            team_update=team_update,
+            team_id=team_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.UpdateTeamV2TeamTeamIDPatchRequest, base_url, '/v2/team/{team_id}', request)

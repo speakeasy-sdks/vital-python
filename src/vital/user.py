@@ -54,8 +54,12 @@ class User:
         return res
 
     
-    def delete(self, request: operations.DeleteUserV2UserUserIDDeleteRequest) -> operations.DeleteUserV2UserUserIDDeleteResponse:
+    def delete(self, user_id: str) -> operations.DeleteUserV2UserUserIDDeleteResponse:
         r"""Delete User"""
+        request = operations.DeleteUserV2UserUserIDDeleteRequest(
+            user_id=user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.DeleteUserV2UserUserIDDeleteRequest, base_url, '/v2/user/{user_id}', request)
@@ -89,8 +93,13 @@ class User:
         return res
 
     
-    def deregister_provider_v2_user_user_id_provider_delete(self, request: operations.DeregisterProviderV2UserUserIDProviderDeleteRequest) -> operations.DeregisterProviderV2UserUserIDProviderDeleteResponse:
+    def deregister_provider_v2_user_user_id_provider_delete(self, provider: shared.Providers, user_id: str) -> operations.DeregisterProviderV2UserUserIDProviderDeleteResponse:
         r"""Deregister Provider"""
+        request = operations.DeregisterProviderV2UserUserIDProviderDeleteRequest(
+            provider=provider,
+            user_id=user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.DeregisterProviderV2UserUserIDProviderDeleteRequest, base_url, '/v2/user/{user_id}/{provider}', request)
@@ -124,10 +133,14 @@ class User:
         return res
 
     
-    def get(self, request: operations.GetUserV2UserUserIDGetRequest) -> operations.GetUserV2UserUserIDGetResponse:
+    def get(self, user_id: str) -> operations.GetUserV2UserUserIDGetResponse:
         r"""Get User
         GET User details given the user_id.
         """
+        request = operations.GetUserV2UserUserIDGetRequest(
+            user_id=user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserV2UserUserIDGetRequest, base_url, '/v2/user/{user_id}', request)
@@ -161,10 +174,15 @@ class User:
         return res
 
     
-    def get_all(self, request: operations.GetTeamsUsersV2UserGetRequest) -> operations.GetTeamsUsersV2UserGetResponse:
+    def get_all(self, limit: Optional[int] = None, offset: Optional[int] = None) -> operations.GetTeamsUsersV2UserGetResponse:
         r"""Get Teams Users
         GET All users for team.
         """
+        request = operations.GetTeamsUsersV2UserGetRequest(
+            limit=limit,
+            offset=offset,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = base_url + '/v2/user'
@@ -199,10 +217,14 @@ class User:
         return res
 
     
-    def get_connected_providers(self, request: operations.GetConnectedProvidersV2UserProvidersUserIDGetRequest) -> operations.GetConnectedProvidersV2UserProvidersUserIDGetResponse:
+    def get_connected_providers(self, user_id: str) -> operations.GetConnectedProvidersV2UserProvidersUserIDGetResponse:
         r"""Get Connected Providers
         GET Users connected providers
         """
+        request = operations.GetConnectedProvidersV2UserProvidersUserIDGetRequest(
+            user_id=user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetConnectedProvidersV2UserProvidersUserIDGetRequest, base_url, '/v2/user/providers/{user_id}', request)
@@ -266,8 +288,12 @@ class User:
         return res
 
     
-    def get_sign_in_token(self, request: operations.GetUserSignInTokenV2UserUserIDSignInTokenPostRequest) -> operations.GetUserSignInTokenV2UserUserIDSignInTokenPostResponse:
+    def get_sign_in_token(self, user_id: str) -> operations.GetUserSignInTokenV2UserUserIDSignInTokenPostResponse:
         r"""Get User Sign In Token"""
+        request = operations.GetUserSignInTokenV2UserUserIDSignInTokenPostRequest(
+            user_id=user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserSignInTokenV2UserUserIDSignInTokenPostRequest, base_url, '/v2/user/{user_id}/sign_in_token', request)
@@ -301,8 +327,13 @@ class User:
         return res
 
     
-    def patch_user_v2_user_user_id_patch(self, request: operations.PatchUserV2UserUserIDPatchRequest) -> operations.PatchUserV2UserUserIDPatchResponse:
+    def patch_user_v2_user_user_id_patch(self, user_patch_body: shared.UserPatchBody, user_id: str) -> operations.PatchUserV2UserUserIDPatchResponse:
         r"""Patch User"""
+        request = operations.PatchUserV2UserUserIDPatchRequest(
+            user_patch_body=user_patch_body,
+            user_id=user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PatchUserV2UserUserIDPatchRequest, base_url, '/v2/user/{user_id}', request)
@@ -337,10 +368,14 @@ class User:
         return res
 
     
-    def refresh_user_id_v2_user_refresh_user_id_post(self, request: operations.RefreshUserIDV2UserRefreshUserIDPostRequest) -> operations.RefreshUserIDV2UserRefreshUserIDPostResponse:
+    def refresh_user_id_v2_user_refresh_user_id_post(self, user_id: str) -> operations.RefreshUserIDV2UserRefreshUserIDPostResponse:
         r"""Refresh User Id
         Trigger a manual refresh for a specific user
         """
+        request = operations.RefreshUserIDV2UserRefreshUserIDPostRequest(
+            user_id=user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.RefreshUserIDV2UserRefreshUserIDPostRequest, base_url, '/v2/user/refresh/{user_id}', request)
@@ -381,10 +416,14 @@ class User:
         return res
 
     
-    def resolve_by_user_id(self, request: operations.GetUserByClientUserIDV2UserResolveClientUserIDGetRequest) -> operations.GetUserByClientUserIDV2UserResolveClientUserIDGetResponse:
+    def resolve_by_user_id(self, client_user_id: str) -> operations.GetUserByClientUserIDV2UserResolveClientUserIDGetResponse:
         r"""Get User By Client User Id
         GET user_id from client_user_id.
         """
+        request = operations.GetUserByClientUserIDV2UserResolveClientUserIDGetRequest(
+            client_user_id=client_user_id,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserByClientUserIDV2UserResolveClientUserIDGetRequest, base_url, '/v2/user/resolve/{client_user_id}', request)

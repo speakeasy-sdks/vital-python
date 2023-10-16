@@ -18,11 +18,8 @@ from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest(
-    diagnosis_query='deposit Car',
-)
 
-res = s.insurance.search_diagnosis(req)
+res = s.insurance.search_diagnosis(diagnosis_query='JBOD')
 
 if res.client_facing_diagnosis_informations is not None:
     # handle response
@@ -31,9 +28,9 @@ if res.client_facing_diagnosis_informations is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest](../../models/operations/searchdiagnosisv3insurancesearchdiagnosisgetrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| Parameter          | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `diagnosis_query`  | *str*              | :heavy_check_mark: | N/A                |
 
 
 ### Response

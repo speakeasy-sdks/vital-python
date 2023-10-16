@@ -12,10 +12,17 @@ class Summary:
         self.sdk_configuration = sdk_config
         
     
-    def get_meals(self, request: operations.GetMealsV2SummaryMealUserIDGetRequest) -> operations.GetMealsV2SummaryMealUserIDGetResponse:
+    def get_meals(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetMealsV2SummaryMealUserIDGetResponse:
         r"""Get Meals
         Get user's meals
         """
+        request = operations.GetMealsV2SummaryMealUserIDGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetMealsV2SummaryMealUserIDGetRequest, base_url, '/v2/summary/meal/{user_id}', request)
@@ -50,10 +57,17 @@ class Summary:
         return res
 
     
-    def get_user_activity(self, request: operations.GetUserActivityV2SummaryActivityUserIDGetRequest) -> operations.GetUserActivityV2SummaryActivityUserIDGetResponse:
+    def get_user_activity(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserActivityV2SummaryActivityUserIDGetResponse:
         r"""Get User Activity
         Get Daily Activity for user_id
         """
+        request = operations.GetUserActivityV2SummaryActivityUserIDGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserActivityV2SummaryActivityUserIDGetRequest, base_url, '/v2/summary/activity/{user_id}', request)
@@ -88,10 +102,17 @@ class Summary:
         return res
 
     
-    def get_user_activity_raw(self, request: operations.GetUserActivityRawV2SummaryActivityUserIDRawGetRequest) -> operations.GetUserActivityRawV2SummaryActivityUserIDRawGetResponse:
+    def get_user_activity_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserActivityRawV2SummaryActivityUserIDRawGetResponse:
         r"""Get User Activity Raw
         Get Daily Activity for user_id
         """
+        request = operations.GetUserActivityRawV2SummaryActivityUserIDRawGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserActivityRawV2SummaryActivityUserIDRawGetRequest, base_url, '/v2/summary/activity/{user_id}/raw', request)
@@ -126,10 +147,17 @@ class Summary:
         return res
 
     
-    def get_user_body(self, request: operations.GetUserBodyV2SummaryBodyUserIDGetRequest) -> operations.GetUserBodyV2SummaryBodyUserIDGetResponse:
+    def get_user_body(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserBodyV2SummaryBodyUserIDGetResponse:
         r"""Get User Body
         Get Daily Body data for user_id
         """
+        request = operations.GetUserBodyV2SummaryBodyUserIDGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserBodyV2SummaryBodyUserIDGetRequest, base_url, '/v2/summary/body/{user_id}', request)
@@ -164,10 +192,17 @@ class Summary:
         return res
 
     
-    def get_user_body_raw(self, request: operations.GetUserBodyRawV2SummaryBodyUserIDRawGetRequest) -> operations.GetUserBodyRawV2SummaryBodyUserIDRawGetResponse:
+    def get_user_body_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserBodyRawV2SummaryBodyUserIDRawGetResponse:
         r"""Get User Body Raw
         Get Daily Body data for user_id
         """
+        request = operations.GetUserBodyRawV2SummaryBodyUserIDRawGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserBodyRawV2SummaryBodyUserIDRawGetRequest, base_url, '/v2/summary/body/{user_id}/raw', request)
@@ -202,10 +237,15 @@ class Summary:
         return res
 
     
-    def get_user_devices_raw(self, request: operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetRequest) -> operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetResponse:
+    def get_user_devices_raw(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetResponse:
         r"""Get User Devices Raw
         Get Devices for user_id
         """
+        request = operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetRequest(
+            user_id=user_id,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetRequest, base_url, '/v2/summary/devices/{user_id}/raw', request)
@@ -240,10 +280,15 @@ class Summary:
         return res
 
     
-    def get_user_profile(self, request: operations.GetUserProfileV2SummaryProfileUserIDGetRequest) -> operations.GetUserProfileV2SummaryProfileUserIDGetResponse:
+    def get_user_profile(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserProfileV2SummaryProfileUserIDGetResponse:
         r"""Get User Profile
         Get Daily profile for user_id
         """
+        request = operations.GetUserProfileV2SummaryProfileUserIDGetRequest(
+            user_id=user_id,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserProfileV2SummaryProfileUserIDGetRequest, base_url, '/v2/summary/profile/{user_id}', request)
@@ -278,10 +323,15 @@ class Summary:
         return res
 
     
-    def get_user_profile_raw(self, request: operations.GetUserProfileRawV2SummaryProfileUserIDRawGetRequest) -> operations.GetUserProfileRawV2SummaryProfileUserIDRawGetResponse:
+    def get_user_profile_raw(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserProfileRawV2SummaryProfileUserIDRawGetResponse:
         r"""Get User Profile Raw
         Get Daily profile for user_id
         """
+        request = operations.GetUserProfileRawV2SummaryProfileUserIDRawGetRequest(
+            user_id=user_id,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserProfileRawV2SummaryProfileUserIDRawGetRequest, base_url, '/v2/summary/profile/{user_id}/raw', request)
@@ -316,10 +366,17 @@ class Summary:
         return res
 
     
-    def get_user_sleep(self, request: operations.GetUserSleepV2SummarySleepUserIDGetRequest) -> operations.GetUserSleepV2SummarySleepUserIDGetResponse:
+    def get_user_sleep(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepV2SummarySleepUserIDGetResponse:
         r"""Get User Sleep
         Get Daily sleep for user_id
         """
+        request = operations.GetUserSleepV2SummarySleepUserIDGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserSleepV2SummarySleepUserIDGetRequest, base_url, '/v2/summary/sleep/{user_id}', request)
@@ -354,10 +411,17 @@ class Summary:
         return res
 
     
-    def get_user_sleep_raw(self, request: operations.GetUserSleepRawV2SummarySleepUserIDRawGetRequest) -> operations.GetUserSleepRawV2SummarySleepUserIDRawGetResponse:
+    def get_user_sleep_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepRawV2SummarySleepUserIDRawGetResponse:
         r"""Get User Sleep Raw
         Get Daily sleep for user_id
         """
+        request = operations.GetUserSleepRawV2SummarySleepUserIDRawGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserSleepRawV2SummarySleepUserIDRawGetRequest, base_url, '/v2/summary/sleep/{user_id}/raw', request)
@@ -392,10 +456,17 @@ class Summary:
         return res
 
     
-    def get_user_sleep_stream(self, request: operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetRequest) -> operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetResponse:
+    def get_user_sleep_stream(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetResponse:
         r"""Get User Sleep Stream
         Get Daily sleep stream for user_id
         """
+        request = operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetRequest, base_url, '/v2/summary/sleep/{user_id}/stream', request)
@@ -430,10 +501,17 @@ class Summary:
         return res
 
     
-    def get_user_workouts(self, request: operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetRequest) -> operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetResponse:
+    def get_user_workouts(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetResponse:
         r"""Get User Workouts
         Get Daily workout for user_id
         """
+        request = operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetRequest, base_url, '/v2/summary/workouts/{user_id}', request)
@@ -468,10 +546,17 @@ class Summary:
         return res
 
     
-    def get_user_workouts_raw(self, request: operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetRequest) -> operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetResponse:
+    def get_user_workouts_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetResponse:
         r"""Get User Workouts Raw
         Get Daily workout for user_id
         """
+        request = operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetRequest(
+            start_date=start_date,
+            user_id=user_id,
+            end_date=end_date,
+            provider=provider,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetRequest, base_url, '/v2/summary/workouts/{user_id}/raw', request)
@@ -506,8 +591,14 @@ class Summary:
         return res
 
     
-    def post_user_activity(self, request: operations.PostUserActivityV2SummaryActivityUserIDPostRequest) -> operations.PostUserActivityV2SummaryActivityUserIDPostResponse:
+    def post_user_activity(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserActivityV2SummaryActivityUserIDPostResponse:
         r"""Post User Activity"""
+        request = operations.PostUserActivityV2SummaryActivityUserIDPostRequest(
+            user_id=user_id,
+            x_vital_android_sdk_version=x_vital_android_sdk_version,
+            x_vital_ios_sdk_version=x_vital_ios_sdk_version,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostUserActivityV2SummaryActivityUserIDPostRequest, base_url, '/v2/summary/activity/{user_id}', request)
@@ -540,8 +631,14 @@ class Summary:
         return res
 
     
-    def post_user_body(self, request: operations.PostUserBodyV2SummaryBodyUserIDPostRequest) -> operations.PostUserBodyV2SummaryBodyUserIDPostResponse:
+    def post_user_body(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserBodyV2SummaryBodyUserIDPostResponse:
         r"""Post User Body"""
+        request = operations.PostUserBodyV2SummaryBodyUserIDPostRequest(
+            user_id=user_id,
+            x_vital_android_sdk_version=x_vital_android_sdk_version,
+            x_vital_ios_sdk_version=x_vital_ios_sdk_version,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostUserBodyV2SummaryBodyUserIDPostRequest, base_url, '/v2/summary/body/{user_id}', request)
@@ -574,8 +671,14 @@ class Summary:
         return res
 
     
-    def post_user_profile(self, request: operations.PostUserProfileV2SummaryProfileUserIDPostRequest) -> operations.PostUserProfileV2SummaryProfileUserIDPostResponse:
+    def post_user_profile(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserProfileV2SummaryProfileUserIDPostResponse:
         r"""Post User Profile"""
+        request = operations.PostUserProfileV2SummaryProfileUserIDPostRequest(
+            user_id=user_id,
+            x_vital_android_sdk_version=x_vital_android_sdk_version,
+            x_vital_ios_sdk_version=x_vital_ios_sdk_version,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostUserProfileV2SummaryProfileUserIDPostRequest, base_url, '/v2/summary/profile/{user_id}', request)
@@ -608,8 +711,14 @@ class Summary:
         return res
 
     
-    def post_user_sleep(self, request: operations.PostUserSleepV2SummarySleepUserIDPostRequest) -> operations.PostUserSleepV2SummarySleepUserIDPostResponse:
+    def post_user_sleep(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserSleepV2SummarySleepUserIDPostResponse:
         r"""Post User Sleep"""
+        request = operations.PostUserSleepV2SummarySleepUserIDPostRequest(
+            user_id=user_id,
+            x_vital_android_sdk_version=x_vital_android_sdk_version,
+            x_vital_ios_sdk_version=x_vital_ios_sdk_version,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostUserSleepV2SummarySleepUserIDPostRequest, base_url, '/v2/summary/sleep/{user_id}', request)
@@ -642,8 +751,14 @@ class Summary:
         return res
 
     
-    def post_user_workout(self, request: operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostRequest) -> operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostResponse:
+    def post_user_workout(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostResponse:
         r"""Post User Workout"""
+        request = operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostRequest(
+            user_id=user_id,
+            x_vital_android_sdk_version=x_vital_android_sdk_version,
+            x_vital_ios_sdk_version=x_vital_ios_sdk_version,
+        )
+        
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
         url = utils.generate_url(operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostRequest, base_url, '/v2/summary/workouts/{user_id}', request)
