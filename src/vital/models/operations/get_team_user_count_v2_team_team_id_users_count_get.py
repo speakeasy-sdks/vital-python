@@ -6,7 +6,6 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTeamUserCountV2TeamTeamIDUsersCountGetRequest:
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
@@ -14,12 +13,10 @@ class GetTeamUserCountV2TeamTeamIDUsersCountGetRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetTeamUserCountV2TeamTeamIDUsersCountGetResponseGetTeamUserCountV2TeamTeamIDUsersCountGet:
     r"""Successful Response"""
     
-
 
 
 

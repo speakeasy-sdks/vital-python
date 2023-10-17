@@ -6,14 +6,12 @@ from dataclasses_json import Undefined, dataclass_json
 from vital import utils
 
 
-
 @dataclasses.dataclass
 class LibreConfigPracticeID:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class LibreConfig:
     practice_id: LibreConfigPracticeID = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('practice_id') }})

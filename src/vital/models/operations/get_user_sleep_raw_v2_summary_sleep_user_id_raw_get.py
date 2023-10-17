@@ -7,7 +7,6 @@ from ..shared import rawsleep as shared_rawsleep
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserSleepRawV2SummarySleepUserIDRawGetRequest:
     start_date: str = dataclasses.field(metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
@@ -18,7 +17,6 @@ class GetUserSleepRawV2SummarySleepUserIDRawGetRequest:
     provider: Optional[str] = dataclasses.field(default='', metadata={'query_param': { 'field_name': 'provider', 'style': 'form', 'explode': True }})
     r"""Provider oura/strava etc"""
     
-
 
 
 

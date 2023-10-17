@@ -5,9 +5,8 @@ import dataclasses
 from ..shared import jpeg as shared_jpeg
 from ..shared import png as shared_png
 from dataclasses_json import Undefined, dataclass_json
-from typing import Optional, Union
+from typing import List, Optional, Union
 from vital import utils
-
 
 
 @dataclasses.dataclass
@@ -16,14 +15,13 @@ class PhysicianCreateRequestSignatureImage:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PhysicianCreateRequest:
     first_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('first_name') }})
     last_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_name') }})
     npi: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('npi') }})
     email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email'), 'exclude': lambda f: f is None }})
-    licensed_states: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('licensed_states'), 'exclude': lambda f: f is None }})
+    licensed_states: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('licensed_states'), 'exclude': lambda f: f is None }})
     signature_image: Optional[Union[shared_jpeg.Jpeg, shared_png.Png]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('signature_image'), 'exclude': lambda f: f is None }})
     r"""An image of the physician signature for health insurance billing"""
     

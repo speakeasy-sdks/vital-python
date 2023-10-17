@@ -5,7 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import manualconnectiondata as shared_manualconnectiondata
 from enum import Enum
-from typing import Optional
+from typing import Dict, Optional
 
 class ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders(str, Enum):
     r"""An enumeration."""
@@ -20,14 +20,12 @@ class ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders(
     HEALTH_CONNECT = 'health_connect'
 
 
-
 @dataclasses.dataclass
 class ConnectBleProviderV2LinkProviderManualProviderPostRequest:
     manual_connection_data: shared_manualconnectiondata.ManualConnectionData = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     
-
 
 
 
@@ -39,7 +37,7 @@ class ConnectBleProviderV2LinkProviderManualProviderPostResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    response_connect_ble_provider_v2_link_provider_manual_provider_post: Optional[dict[str, bool]] = dataclasses.field(default=None)
+    response_connect_ble_provider_v2_link_provider_manual_provider_post: Optional[Dict[str, bool]] = dataclasses.field(default=None)
     r"""Successful Response"""
     
 

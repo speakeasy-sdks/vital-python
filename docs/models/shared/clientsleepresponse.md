@@ -5,4 +5,4 @@
 
 | Field                                                               | Type                                                                | Required                                                            | Description                                                         |
 | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `sleep`                                                             | list[[ClientFacingSleep](../../models/shared/clientfacingsleep.md)] | :heavy_check_mark:                                                  | N/A                                                                 |
+| `sleep`                                                             | List[[ClientFacingSleep](../../models/shared/clientfacingsleep.md)] | :heavy_check_mark:                                                  | N/A                                                                 |

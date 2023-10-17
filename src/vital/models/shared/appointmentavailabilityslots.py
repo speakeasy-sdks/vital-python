@@ -4,15 +4,14 @@ from __future__ import annotations
 import dataclasses
 from ..shared import dayslots as shared_dayslots
 from dataclasses_json import Undefined, dataclass_json
-from typing import Optional
+from typing import List, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppointmentAvailabilitySlots:
-    slots: list[shared_dayslots.DaySlots] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('slots') }})
+    slots: List[shared_dayslots.DaySlots] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('slots') }})
     timezone: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone'), 'exclude': lambda f: f is None }})
     
 

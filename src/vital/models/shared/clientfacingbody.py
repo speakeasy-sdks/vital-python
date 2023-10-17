@@ -11,7 +11,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingBody:
     calendar_date: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calendar_date'), 'encoder': utils.dateisoformat(False), 'decoder': utils.datefromisoformat }})

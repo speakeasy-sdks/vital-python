@@ -19,9 +19,7 @@ Create Lab Test For Team
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.CreateLabTestRequest(
     description='Multi-tiered human-resource model',
@@ -61,11 +59,9 @@ GET all the labs.
 
 ```python
 import vital
-from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+
+s = vital.Vital()
 
 
 res = s.lab_tests.get_labs()
@@ -89,11 +85,9 @@ GET a specific marker for the given lab and provider_id
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.lab_tests.get_marker_by_provider(lab_id=263548, provider_id='East')
@@ -124,11 +118,9 @@ GET all the markers for the given lab.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.lab_tests.get_markers(lab_id=614936, name='parse', page=301534, size=44930)
@@ -161,11 +153,9 @@ GET all the lab tests the team has access to.
 
 ```python
 import vital
-from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+
+s = vital.Vital()
 
 
 res = s.lab_tests.list()

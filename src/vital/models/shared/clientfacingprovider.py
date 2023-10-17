@@ -7,7 +7,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingProvider:
     r"""A vendor, a service, or a platform which Vital can connect with."""

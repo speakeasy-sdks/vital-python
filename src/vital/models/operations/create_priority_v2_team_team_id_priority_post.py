@@ -8,13 +8,11 @@ from ..shared import prioritycreate as shared_prioritycreate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreatePriorityV2TeamTeamIDPriorityPostRequest:
     priority_create: shared_prioritycreate.PriorityCreate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

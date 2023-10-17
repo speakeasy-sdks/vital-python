@@ -7,7 +7,6 @@ from ..shared import postorderresponse as shared_postorderresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RegisterTestkitV3OrderTestkitRegisterPostResponse:
     content_type: str = dataclasses.field()

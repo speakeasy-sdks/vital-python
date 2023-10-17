@@ -7,12 +7,11 @@ from ..shared import clientfacingmarker as shared_clientfacingmarker
 from ..shared import labtestcollectionmethod as shared_labtestcollectionmethod
 from ..shared import labtestsampletype as shared_labtestsampletype
 from dataclasses_json import Undefined, dataclass_json
-from typing import Optional
+from typing import List, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingLabTest:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -29,6 +28,6 @@ class ClientFacingLabTest:
     is_delegated: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_delegated'), 'exclude': lambda f: f is None }})
     r"""Denotes whether a lab test requires using non-Vital physician networks. If it does then it's delegated - no otherwise."""
     lab: Optional[shared_clientfacinglab.ClientFacingLab] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab'), 'exclude': lambda f: f is None }})
-    markers: Optional[list[shared_clientfacingmarker.ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
+    markers: Optional[List[shared_clientfacingmarker.ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
     
 

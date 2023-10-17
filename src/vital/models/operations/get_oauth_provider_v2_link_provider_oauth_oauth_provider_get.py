@@ -8,13 +8,11 @@ from ..shared import source as shared_source
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetOauthProviderV2LinkProviderOauthOauthProviderGetRequest:
     oauth_provider: shared_oauthproviders.OAuthProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'oauth_provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     
-
 
 
 

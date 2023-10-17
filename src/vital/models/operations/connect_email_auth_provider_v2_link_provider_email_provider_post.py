@@ -13,14 +13,12 @@ class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProvid
     FREESTYLE_LIBRE = 'freestyle_libre'
 
 
-
 @dataclasses.dataclass
 class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest:
     email_provider_auth_link: shared_emailproviderauthlink.EmailProviderAuthLink = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     provider: ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     
-
 
 
 

@@ -4,13 +4,13 @@ from __future__ import annotations
 import dataclasses
 from ..shared import sleepv2indb as shared_sleepv2indb
 from dataclasses_json import Undefined, dataclass_json
+from typing import List
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RawSleep:
-    sleep: list[shared_sleepv2indb.SleepV2InDB] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sleep') }})
+    sleep: List[shared_sleepv2indb.SleepV2InDB] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sleep') }})
     
 

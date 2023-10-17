@@ -7,13 +7,11 @@ from ..shared import clientfacingappointment as shared_clientfacingappointment
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetRequest:
     order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'order_id', 'style': 'simple', 'explode': False }})
     r"""Your Order ID."""
     
-
 
 
 

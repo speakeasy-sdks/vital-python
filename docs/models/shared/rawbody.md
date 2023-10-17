@@ -5,4 +5,4 @@
 
 | Field                                                 | Type                                                  | Required                                              | Description                                           |
 | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
-| `body`                                                | list[[BodyV2InDB](../../models/shared/bodyv2indb.md)] | :heavy_check_mark:                                    | N/A                                                   |
+| `body`                                                | List[[BodyV2InDB](../../models/shared/bodyv2indb.md)] | :heavy_check_mark:                                    | N/A                                                   |

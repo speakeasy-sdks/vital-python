@@ -9,7 +9,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingWalkInTestOrder:
     r"""Schema for a walk-in test order in the client facing API.

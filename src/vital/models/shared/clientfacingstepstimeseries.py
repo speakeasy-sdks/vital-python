@@ -15,7 +15,6 @@ class ClientFacingStepsTimeseriesUnit(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingStepsTimeseries:
     end: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('end'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})

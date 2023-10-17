@@ -7,7 +7,6 @@ from ..shared import getmarkersresponse as shared_getmarkersresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetMarkersV3LabTestsMarkersGetRequest:
     lab_id: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'lab_id', 'style': 'form', 'explode': True }})
@@ -17,7 +16,6 @@ class GetMarkersV3LabTestsMarkersGetRequest:
     page: Optional[int] = dataclasses.field(default=1, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     size: Optional[int] = dataclasses.field(default=50, metadata={'query_param': { 'field_name': 'size', 'style': 'form', 'explode': True }})
     
-
 
 
 

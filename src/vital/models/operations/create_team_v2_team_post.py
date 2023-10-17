@@ -7,7 +7,6 @@ from ..shared import teamindb as shared_teamindb
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateTeamV2TeamPostResponse:
     content_type: str = dataclasses.field()

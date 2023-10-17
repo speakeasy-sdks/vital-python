@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTeamConfigV2TeamLinkConfigGetResponseGetTeamConfigV2TeamLinkConfigGet:
     r"""Successful Response"""
     
-
 
 
 

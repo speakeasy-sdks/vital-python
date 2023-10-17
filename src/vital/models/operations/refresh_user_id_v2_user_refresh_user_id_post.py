@@ -7,12 +7,10 @@ from ..shared import userrefreshsuccessresponse as shared_userrefreshsuccessresp
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RefreshUserIDV2UserRefreshUserIDPostRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 
