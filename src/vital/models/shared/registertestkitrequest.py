@@ -7,19 +7,18 @@ from ..shared import patientaddresscompatible as shared_patientaddresscompatible
 from ..shared import patientdetails as shared_patientdetails
 from ..shared import physiciancreaterequestbase as shared_physiciancreaterequestbase
 from dataclasses_json import Undefined, dataclass_json
-from typing import Optional
+from typing import List, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RegisterTestkitRequest:
     patient_address: shared_patientaddresscompatible.PatientAddressCompatible = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('patient_address') }})
     patient_details: shared_patientdetails.PatientDetails = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('patient_details') }})
     sample_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sample_id') }})
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
-    consents: Optional[list[shared_consent.Consent]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consents'), 'exclude': lambda f: f is None }})
+    consents: Optional[List[shared_consent.Consent]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consents'), 'exclude': lambda f: f is None }})
     physician: Optional[shared_physiciancreaterequestbase.PhysicianCreateRequestBase] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('physician'), 'exclude': lambda f: f is None }})
     
 

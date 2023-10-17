@@ -7,12 +7,10 @@ from ..shared import usersuccessresponse as shared_usersuccessresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeleteUserV2UserUserIDDeleteRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

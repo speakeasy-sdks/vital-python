@@ -17,11 +17,9 @@ Robots
 
 ```python
 import vital
-from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+
+s = vital.Vital()
 
 
 res = s.vital.robots_robots_txt_get()

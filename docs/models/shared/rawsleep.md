@@ -5,4 +5,4 @@
 
 | Field                                                   | Type                                                    | Required                                                | Description                                             |
 | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| `sleep`                                                 | list[[SleepV2InDB](../../models/shared/sleepv2indb.md)] | :heavy_check_mark:                                      | N/A                                                     |
+| `sleep`                                                 | List[[SleepV2InDB](../../models/shared/sleepv2indb.md)] | :heavy_check_mark:                                      | N/A                                                     |

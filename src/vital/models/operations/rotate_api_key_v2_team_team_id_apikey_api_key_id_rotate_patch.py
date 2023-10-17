@@ -7,13 +7,11 @@ from ..shared import apikeyindb as shared_apikeyindb
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchRequest:
     api_key_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api_key_id', 'style': 'simple', 'explode': False }})
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

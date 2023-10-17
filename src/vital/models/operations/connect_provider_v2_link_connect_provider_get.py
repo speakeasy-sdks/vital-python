@@ -6,7 +6,6 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ConnectProviderV2LinkConnectProviderGetRequest:
     provider: str = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
@@ -16,12 +15,10 @@ class ConnectProviderV2LinkConnectProviderGetRequest:
 
 
 
-
 @dataclasses.dataclass
 class ConnectProviderV2LinkConnectProviderGetResponseConnectProviderV2LinkConnectProviderGet:
     r"""Successful Response"""
     
-
 
 
 

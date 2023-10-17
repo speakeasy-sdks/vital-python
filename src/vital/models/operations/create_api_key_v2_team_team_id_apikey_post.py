@@ -8,13 +8,11 @@ from ..shared import createapikeybody as shared_createapikeybody
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateAPIKeyV2TeamTeamIDApikeyPostRequest:
     create_api_key_body: shared_createapikeybody.CreateAPIKeyBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

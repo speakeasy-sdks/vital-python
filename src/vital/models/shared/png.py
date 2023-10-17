@@ -11,7 +11,6 @@ class PngContentType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Png:
     r"""An image of the back of the patient insurance card."""

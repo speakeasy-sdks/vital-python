@@ -11,7 +11,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingSleepSource:
     r"""Source summarizes where a sample or a summary is sourced from.
@@ -43,7 +42,6 @@ class ClientFacingSleepSource:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingSleep:
     awake: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('awake') }})

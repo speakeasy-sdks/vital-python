@@ -7,13 +7,11 @@ from ..shared import userpatchbody as shared_userpatchbody
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PatchUserV2UserUserIDPatchRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     user_patch_body: shared_userpatchbody.UserPatchBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

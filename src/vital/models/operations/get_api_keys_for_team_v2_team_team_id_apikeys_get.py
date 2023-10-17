@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import apikeyindb as shared_apikeyindb
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,14 +14,13 @@ class GetAPIKeysForTeamV2TeamTeamIDApikeysGetRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetAPIKeysForTeamV2TeamTeamIDApikeysGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    api_key_in_dbs: Optional[list[shared_apikeyindb.APIKeyInDB]] = dataclasses.field(default=None)
+    api_key_in_dbs: Optional[List[shared_apikeyindb.APIKeyInDB]] = dataclasses.field(default=None)
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

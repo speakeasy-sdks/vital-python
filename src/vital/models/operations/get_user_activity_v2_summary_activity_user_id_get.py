@@ -7,7 +7,6 @@ from ..shared import clientactivityresponse as shared_clientactivityresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserActivityV2SummaryActivityUserIDGetRequest:
     start_date: str = dataclasses.field(metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
@@ -18,7 +17,6 @@ class GetUserActivityV2SummaryActivityUserIDGetRequest:
     provider: Optional[str] = dataclasses.field(default='', metadata={'query_param': { 'field_name': 'provider', 'style': 'form', 'explode': True }})
     r"""Provider oura/strava etc"""
     
-
 
 
 

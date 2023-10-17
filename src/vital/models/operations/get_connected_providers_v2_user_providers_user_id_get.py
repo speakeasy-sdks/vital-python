@@ -4,15 +4,13 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import clientfacingproviderwithstatus as shared_clientfacingproviderwithstatus
-from typing import Optional
-
+from typing import Dict, List, Optional
 
 
 @dataclasses.dataclass
 class GetConnectedProvidersV2UserProvidersUserIDGetRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 
@@ -24,7 +22,7 @@ class GetConnectedProvidersV2UserProvidersUserIDGetResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    response_get_connected_providers_v2_user_providers_user_id_get: Optional[dict[str, list[shared_clientfacingproviderwithstatus.ClientFacingProviderWithStatus]]] = dataclasses.field(default=None)
+    response_get_connected_providers_v2_user_providers_user_id_get: Optional[Dict[str, List[shared_clientfacingproviderwithstatus.ClientFacingProviderWithStatus]]] = dataclasses.field(default=None)
     r"""Successful Response"""
     
 

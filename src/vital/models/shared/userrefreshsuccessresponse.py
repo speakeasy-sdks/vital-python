@@ -3,15 +3,15 @@
 from __future__ import annotations
 import dataclasses
 from dataclasses_json import Undefined, dataclass_json
+from typing import List
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UserRefreshSuccessResponse:
-    failed_sources: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failed_sources') }})
-    refreshed_sources: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refreshed_sources') }})
+    failed_sources: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('failed_sources') }})
+    refreshed_sources: List[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refreshed_sources') }})
     success: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('success') }})
     r"""Whether operation was successful or not"""
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})

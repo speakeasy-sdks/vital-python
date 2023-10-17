@@ -8,13 +8,11 @@ from ..shared import passwordauthlink as shared_passwordauthlink
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ConnectPasswordAuthV2LinkAuthPostRequest:
     password_auth_link: shared_passwordauthlink.PasswordAuthLink = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     x_vital_link_client_region: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-link-client-region', 'style': 'simple', 'explode': False }})
     
-
 
 
 

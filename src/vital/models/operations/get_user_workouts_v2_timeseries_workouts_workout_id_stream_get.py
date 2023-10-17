@@ -7,13 +7,11 @@ from ..shared import clientfacingstream as shared_clientfacingstream
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetRequest:
     workout_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'workout_id', 'style': 'simple', 'explode': False }})
     r"""The Vital ID for the workout"""
     
-
 
 
 

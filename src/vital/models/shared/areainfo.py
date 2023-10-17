@@ -8,7 +8,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AreaInfo:
     phlebotomy: shared_phlebotomyareainfo.PhlebotomyAreaInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phlebotomy') }})

@@ -6,14 +6,12 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostUserWorkoutV2SummaryWorkoutsUserIDPostRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     x_vital_android_sdk_version: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-android-sdk-version', 'style': 'simple', 'explode': False }})
     x_vital_ios_sdk_version: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-ios-sdk-version', 'style': 'simple', 'explode': False }})
     
-
 
 
 

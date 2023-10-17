@@ -5,4 +5,4 @@
 
 | Field                                                     | Type                                                      | Required                                                  | Description                                               |
 | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------------- |
-| `devices`                                                 | list[[DeviceV2InDB](../../models/shared/devicev2indb.md)] | :heavy_check_mark:                                        | N/A                                                       |
+| `devices`                                                 | List[[DeviceV2InDB](../../models/shared/devicev2indb.md)] | :heavy_check_mark:                                        | N/A                                                       |

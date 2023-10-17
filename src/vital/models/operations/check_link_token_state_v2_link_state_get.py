@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CheckLinkTokenStateV2LinkStateGetResponseCheckLinkTokenStateV2LinkStateGet:
     r"""Successful Response"""
     
-
 
 
 

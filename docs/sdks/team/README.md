@@ -29,9 +29,7 @@ Create Team.
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.TeamCreate(
     brand_information=shared.BrandInformation(
@@ -73,9 +71,7 @@ Create api key.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.create_api_key(create_api_key_body=shared.CreateAPIKeyBody(
@@ -110,9 +106,7 @@ Add Team priority row for source
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.create_priority(priority_create=shared.PriorityCreate(
@@ -147,11 +141,9 @@ Invalidate api key by key value.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.delete_api_key(api_key_id='Weston', team_id='Bicycle')
@@ -182,11 +174,9 @@ Get team.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.get(team_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
@@ -216,11 +206,9 @@ Invalidate api key by key value.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.get_api_keys(team_id='Computer')
@@ -250,11 +238,9 @@ Post teams.
 
 ```python
 import vital
-from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+
+s = vital.Vital()
 
 
 res = s.team.get_config()
@@ -278,11 +264,9 @@ GET source priorities.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.get_source_priorities(data_type='deposit')
@@ -312,11 +296,9 @@ Get the current user count for a team.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.get_user_count(team_id='3021769b-866d-4c37-8307-789796d71ace')
@@ -346,11 +328,9 @@ Get Svix Webhook Url
 
 ```python
 import vital
-from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+
+s = vital.Vital()
 
 
 res = s.team.get_webhook_url()
@@ -374,11 +354,9 @@ Deprecated. Rotate api key.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(api_key_id='lux', team_id='optimize')
@@ -409,11 +387,9 @@ Search team users by user_id
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.search_users_by_uuid(query_id='North')
@@ -445,9 +421,7 @@ Update API key label.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(update_api_key_body=shared.UpdateAPIKeyBody(
@@ -481,11 +455,9 @@ Patch source priorities.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='phew')
@@ -517,9 +489,7 @@ Update team.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.team.update_team_v2_team_team_id_patch(team_update=shared.TeamUpdate(), team_id='Supervisor')

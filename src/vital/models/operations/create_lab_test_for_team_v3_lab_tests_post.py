@@ -7,7 +7,6 @@ from ..shared import clientfacinglabtest as shared_clientfacinglabtest
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateLabTestForTeamV3LabTestsPostResponse:
     content_type: str = dataclasses.field()

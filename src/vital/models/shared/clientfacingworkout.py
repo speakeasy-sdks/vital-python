@@ -5,9 +5,8 @@ import dataclasses
 import dateutil.parser
 from dataclasses_json import Undefined, dataclass_json
 from datetime import date, datetime
-from typing import Optional
+from typing import List, Optional
 from vital import utils
-
 
 
 @dataclasses.dataclass
@@ -18,7 +17,6 @@ class ClientFacingWorkoutMap:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingWorkoutSource:
     r"""Source summarizes where a sample or a summary is sourced from.
@@ -50,7 +48,6 @@ class ClientFacingWorkoutSource:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingWorkoutClientFacingSport:
     r"""Sport's name"""
@@ -64,7 +61,6 @@ class ClientFacingWorkoutClientFacingSport:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingWorkout:
     calendar_date: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calendar_date'), 'encoder': utils.dateisoformat(False), 'decoder': utils.datefromisoformat }})
@@ -96,7 +92,7 @@ class ClientFacingWorkout:
     r"""Highest point of elevation::meters"""
     elev_low: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('elev_low'), 'exclude': lambda f: f is None }})
     r"""Lowest point of elevation::meters"""
-    hr_zones: Optional[list[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hr_zones'), 'exclude': lambda f: f is None }})
+    hr_zones: Optional[List[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hr_zones'), 'exclude': lambda f: f is None }})
     r"""Time in seconds spent in different heart rate zones <50%, 50-60%, 60-70%, 70-80%, 80-90%, 90%+. Due to rounding errors, it's possible that summing all values is different than the total time of the workout. Not available for all providers::seconds"""
     map: Optional[ClientFacingWorkoutMap] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('map'), 'exclude': lambda f: f is None }})
     r"""Map of workouts encoded as polyline"""

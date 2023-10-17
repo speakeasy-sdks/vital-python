@@ -9,13 +9,11 @@ from datetime import datetime
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateTokenV2LinkCodeCreatePostRequest:
     user_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': True }})
     expires_at: Optional[datetime] = dataclasses.field(default=dateutil.parser.isoparse('2023-10-11T13:41:29.554841+00:00'), metadata={'query_param': { 'field_name': 'expires_at', 'style': 'form', 'explode': True }})
     
-
 
 
 

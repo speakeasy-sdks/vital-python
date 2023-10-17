@@ -7,13 +7,11 @@ from ..shared import clientfacingmarker as shared_clientfacingmarker
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetRequest:
     lab_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'lab_id', 'style': 'simple', 'explode': False }})
     provider_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'provider_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

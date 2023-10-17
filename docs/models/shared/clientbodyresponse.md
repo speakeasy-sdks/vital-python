@@ -5,4 +5,4 @@
 
 | Field                                                             | Type                                                              | Required                                                          | Description                                                       |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `body`                                                            | list[[ClientFacingBody](../../models/shared/clientfacingbody.md)] | :heavy_check_mark:                                                | N/A                                                               |
+| `body`                                                            | List[[ClientFacingBody](../../models/shared/clientfacingbody.md)] | :heavy_check_mark:                                                | N/A                                                               |

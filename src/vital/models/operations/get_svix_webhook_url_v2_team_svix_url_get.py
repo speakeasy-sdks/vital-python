@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetSvixWebhookURLV2TeamSvixURLGetResponseGetSvixWebhookURLV2TeamSvixURLGet:
     r"""Successful Response"""
     
-
 
 
 
