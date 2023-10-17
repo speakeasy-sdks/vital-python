@@ -6,7 +6,6 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SyncTestkitOrderStatusV3OrderTestkitStatusPostResponse:
     content_type: str = dataclasses.field()

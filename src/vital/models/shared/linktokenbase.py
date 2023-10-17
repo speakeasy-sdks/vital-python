@@ -7,14 +7,12 @@ from typing import Optional
 from vital import utils
 
 
-
 @dataclasses.dataclass
 class LinkTokenBaseOauthInfo:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class LinkTokenBase:
     token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token') }})

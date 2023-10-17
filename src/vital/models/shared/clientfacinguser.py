@@ -6,12 +6,11 @@ import dateutil.parser
 from ..shared import connectedsourceclientfacing as shared_connectedsourceclientfacing
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingUserFallbackTimeZone:
     r"""Fallback time zone of the user, in the form of a valid IANA tzdatabase identifier (e.g., `Europe/London` or `America/Los_Angeles`).
@@ -29,12 +28,11 @@ class ClientFacingUserFallbackTimeZone:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingUser:
     client_user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client_user_id') }})
     r"""A unique ID representing the end user. Typically this will be a user ID from your application. Personally identifiable information, such as an email address or phone number, should not be used in the client_user_id."""
-    connected_sources: list[shared_connectedsourceclientfacing.ConnectedSourceClientFacing] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connected_sources') }})
+    connected_sources: List[shared_connectedsourceclientfacing.ConnectedSourceClientFacing] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connected_sources') }})
     r"""A list of the users connected sources."""
     created_on: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_on'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""When your item is created"""

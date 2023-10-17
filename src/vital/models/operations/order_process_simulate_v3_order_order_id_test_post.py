@@ -7,7 +7,6 @@ from ..shared import orderstatus as shared_orderstatus
 from typing import Any, Optional
 
 
-
 @dataclasses.dataclass
 class OrderProcessSimulateV3OrderOrderIDTestPostRequest:
     order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'order_id', 'style': 'simple', 'explode': False }})
@@ -15,7 +14,6 @@ class OrderProcessSimulateV3OrderOrderIDTestPostRequest:
     final_status: Optional[shared_orderstatus.OrderStatus] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'final_status', 'style': 'form', 'explode': True }})
     r"""An enumeration."""
     
-
 
 
 

@@ -7,7 +7,6 @@ from ..shared import clientfacinguserkey as shared_clientfacinguserkey
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateUserV2UserPostResponse:
     content_type: str = dataclasses.field()

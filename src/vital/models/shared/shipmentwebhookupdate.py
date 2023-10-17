@@ -12,7 +12,6 @@ class ShipmentWebhookUpdateWebhookType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ShipmentWebhookUpdate:
     r"""example: {

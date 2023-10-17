@@ -8,7 +8,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingSource:
     r"""Source summarizes where a sample or a summary is sourced from.

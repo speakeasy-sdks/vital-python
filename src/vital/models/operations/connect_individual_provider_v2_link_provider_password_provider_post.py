@@ -21,7 +21,6 @@ class ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswor
     MY_FITNESS_PAL = 'my_fitness_pal'
 
 
-
 @dataclasses.dataclass
 class ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest:
     individual_provider_data: shared_individualproviderdata.IndividualProviderData = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -29,7 +28,6 @@ class ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest:
     r"""An enumeration."""
     x_vital_link_client_region: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-link-client-region', 'style': 'simple', 'explode': False }})
     
-
 
 
 

@@ -10,12 +10,11 @@ from ..shared import macros as shared_macros
 from ..shared import micros as shared_micros
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
-from typing import Optional
+from typing import Dict, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MealInDBBaseClientFacingSource:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
@@ -31,7 +30,7 @@ class MealInDBBaseClientFacingSource:
     timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
-    data: Optional[dict[str, shared_clientfacingfood.ClientFacingFood]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    data: Optional[Dict[str, shared_clientfacingfood.ClientFacingFood]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     energy: Optional[shared_energy.Energy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('energy'), 'exclude': lambda f: f is None }})
     macros: Optional[shared_macros.Macros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('macros'), 'exclude': lambda f: f is None }})
     micros: Optional[shared_micros.Micros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('micros'), 'exclude': lambda f: f is None }})

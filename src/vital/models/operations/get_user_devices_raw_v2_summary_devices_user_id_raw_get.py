@@ -7,14 +7,12 @@ from ..shared import rawdevices as shared_rawdevices
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserDevicesRawV2SummaryDevicesUserIDRawGetRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     provider: Optional[str] = dataclasses.field(default='', metadata={'query_param': { 'field_name': 'provider', 'style': 'form', 'explode': True }})
     r"""Provider oura/strava etc"""
     
-
 
 
 

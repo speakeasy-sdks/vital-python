@@ -15,9 +15,7 @@ Review Openloop
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.OpenLoopEvent(
     event_type=shared.OpenLoopWebhookType.PAYMENT_DELETED,

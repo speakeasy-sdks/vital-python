@@ -6,13 +6,11 @@ import requests as requests_http
 from typing import Any, Optional
 
 
-
 @dataclasses.dataclass
 class GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetRequest:
     order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'order_id', 'style': 'simple', 'explode': False }})
     r"""Your Order ID."""
     
-
 
 
 

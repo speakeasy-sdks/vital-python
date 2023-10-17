@@ -7,7 +7,6 @@ from ..shared import clientworkoutresponse as shared_clientworkoutresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserWorkoutsV2SummaryWorkoutsUserIDGetRequest:
     start_date: str = dataclasses.field(metadata={'query_param': { 'field_name': 'start_date', 'style': 'form', 'explode': True }})
@@ -18,7 +17,6 @@ class GetUserWorkoutsV2SummaryWorkoutsUserIDGetRequest:
     provider: Optional[str] = dataclasses.field(default='', metadata={'query_param': { 'field_name': 'provider', 'style': 'form', 'explode': True }})
     r"""Provider oura/strava etc"""
     
-
 
 
 

@@ -10,7 +10,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress:
     r"""At-home phlebotomy appointment address. If None, the address given at the time of placing the order is used."""
@@ -24,14 +23,12 @@ class GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabi
 
 
 
-
 @dataclasses.dataclass
 class GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest:
     order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'order_id', 'style': 'simple', 'explode': False }})
     r"""Your Order ID."""
     request_body: Optional[GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

@@ -5,15 +5,13 @@ import dataclasses
 from ..shared import biomarkerresult as shared_biomarkerresult
 from ..shared import labresultsmetadata as shared_labresultsmetadata
 from dataclasses_json import Undefined, dataclass_json
-from typing import Union
+from typing import List, Union
 from vital import utils
-
 
 
 @dataclasses.dataclass
 class LabResultsRawResultsResults:
     pass
-
 
 
 @dataclasses.dataclass
@@ -22,10 +20,9 @@ class LabResultsRawResults:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class LabResultsRaw:
     metadata: shared_labresultsmetadata.LabResultsMetadata = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
-    results: Union[list[shared_biomarkerresult.BiomarkerResult], LabResultsRawResultsResults] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results') }})
+    results: Union[List[shared_biomarkerresult.BiomarkerResult], LabResultsRawResultsResults] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results') }})
     
 

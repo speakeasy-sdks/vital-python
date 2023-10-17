@@ -11,7 +11,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingFood:
     energy: Optional[shared_energy.Energy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('energy'), 'exclude': lambda f: f is None }})

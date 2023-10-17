@@ -7,12 +7,10 @@ from ..shared import labresultsraw as shared_labresultsraw
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetLabTestResultRawV3OrderOrderIDResultGetRequest:
     order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'order_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

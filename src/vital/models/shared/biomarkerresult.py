@@ -11,7 +11,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BiomarkerResult:
     r"""Represent the schema for an individual biomarker result."""

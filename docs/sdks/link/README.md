@@ -28,11 +28,9 @@ Check link token state - can be hit continuously used as heartbeat
 
 ```python
 import vital
-from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+
+s = vital.Vital()
 
 
 res = s.link.check_token_state()
@@ -58,9 +56,7 @@ Check Token Valid
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.LinkTokenBase(
     oauth_info=shared.LinkTokenBaseOauthInfo(),
@@ -98,9 +94,7 @@ This connects auth providers that are password based.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.connect_ble_provider(manual_connection_data=shared.ManualConnectionData(
@@ -137,9 +131,7 @@ This function is hit by vital-link to authenticate a email provider.
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.EmailAuthLink(
     auth_type=shared.AuthType.PASSWORD,
@@ -176,9 +168,7 @@ This connects auth providers that are email based.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.connect_email_provider(email_provider_auth_link=shared.EmailProviderAuthLink(
@@ -213,9 +203,7 @@ This connects auth providers that are password based.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.connect_individual_provider(individual_provider_data=shared.IndividualProviderData(
@@ -254,9 +242,7 @@ This function is hit by vital-link to authenticate a password provider.
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.connect_password_auth(password_auth_link=shared.PasswordAuthLink(
@@ -294,11 +280,9 @@ Connect oauth providers
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.connect_provider(provider='smoothly', x_vital_sdk_no_redirect='revolutionize')
@@ -331,9 +315,7 @@ POST Connect the given Vital user to a demo provider.
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.DemoConnectionCreationPayload(
     provider=shared.DemoProviders.APPLE_HEALTH_KIT,
@@ -368,11 +350,9 @@ Generate a token to invite a user of Vital mobile app to your team
 ```python
 import vital
 import dateutil.parser
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.create_token(user_id='2795b4e3-bfe4-4e25-a003-d249bbaf85eb', expires_at=dateutil.parser.isoparse('2021-12-10T10:53:22.771Z'))
@@ -403,11 +383,9 @@ Redeem an invite token for an api key
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import operations
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.exchange_token(code='Sierra')
@@ -444,9 +422,7 @@ pass in your own custom redirect_url parameter.
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.LinkTokenExchange(
     filter_on_providers=[
@@ -484,9 +460,7 @@ This endpoint generates an OAuth link for oauth provider
 import vital
 from vital.models import operations, shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 
 res = s.link.get_oauth_provider(oauth_provider=shared.OAuthProviders.POLAR)
@@ -516,11 +490,9 @@ GET List of all available providers given the generated link token.
 
 ```python
 import vital
-from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+
+s = vital.Vital()
 
 
 res = s.link.get_providers()
@@ -547,9 +519,7 @@ Start link token process
 import vital
 from vital.models import shared
 
-s = vital.Vital(
-    api_key="<YOUR-API-KEY>",
-)
+s = vital.Vital()
 
 req = shared.BeginLinkTokenRequest(
     link_token='Electric',

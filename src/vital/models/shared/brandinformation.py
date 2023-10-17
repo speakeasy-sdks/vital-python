@@ -7,7 +7,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BrandInformation:
     brand_color: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand_color') }})

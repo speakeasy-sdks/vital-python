@@ -8,14 +8,12 @@ from ..shared import clientfacingappointment as shared_clientfacingappointment
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest:
     appointment_booking_request: shared_appointmentbookingrequest.AppointmentBookingRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'order_id', 'style': 'simple', 'explode': False }})
     r"""Your Order ID."""
     
-
 
 
 

@@ -6,7 +6,7 @@
 ### 
 
 ```python
-labResultsRawResults: list[shared.BiomarkerResult] = /* values here */
+labResultsRawResults: List[shared.BiomarkerResult] = /* values here */
 ```
 
 ### LabResultsRawResultsResults

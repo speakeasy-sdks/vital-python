@@ -8,7 +8,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class MacrosFats:
     r"""Details of fat content"""
@@ -29,7 +28,6 @@ class MacrosFats:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Macros:
     alcohol: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('alcohol'), 'exclude': lambda f: f is None }})

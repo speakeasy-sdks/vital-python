@@ -7,12 +7,10 @@ from ..shared import vitaltokenexchangeresponse as shared_vitaltokenexchangeresp
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ExchangeTokenV2LinkCodeExchangePostRequest:
     code: str = dataclasses.field(metadata={'query_param': { 'field_name': 'code', 'style': 'form', 'explode': True }})
     
-
 
 
 

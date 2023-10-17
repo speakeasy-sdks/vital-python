@@ -8,13 +8,11 @@ from ..shared import teamupdate as shared_teamupdate
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateTeamV2TeamTeamIDPatchRequest:
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     team_update: shared_teamupdate.TeamUpdate = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

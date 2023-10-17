@@ -10,7 +10,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingTestkitOrderClientFacingShipment:
     r"""Schema for a Shipment in the client facing API.
@@ -38,7 +37,6 @@ class ClientFacingTestkitOrderClientFacingShipment:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingTestkitOrder:
     r"""Schema for a testkit order in the client facing API.

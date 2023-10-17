@@ -7,12 +7,10 @@ from ..shared import usersignintokenresponse as shared_usersignintokenresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserSignInTokenV2UserUserIDSignInTokenPostRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

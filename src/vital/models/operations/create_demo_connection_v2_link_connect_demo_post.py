@@ -7,7 +7,6 @@ from ..shared import democonnectionstatus as shared_democonnectionstatus
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateDemoConnectionV2LinkConnectDemoPostResponse:
     content_type: str = dataclasses.field()

@@ -10,7 +10,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingActivityHeartRate:
     r"""Heart rate daily summary."""
@@ -27,7 +26,6 @@ class ClientFacingActivityHeartRate:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingActivitySource:
     r"""Source summarizes where a sample or a summary is sourced from.
@@ -59,7 +57,6 @@ class ClientFacingActivitySource:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingActivity:
     calendar_date: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calendar_date'), 'encoder': utils.dateisoformat(False), 'decoder': utils.datefromisoformat }})
