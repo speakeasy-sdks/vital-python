@@ -13,6 +13,7 @@ from .summary import Summary
 from .team import Team
 from .timeseries import Timeseries
 from .user import User
+from typing import Dict, Optional
 from vital import utils
 from vital.models import errors, operations, shared
 
@@ -36,7 +37,7 @@ class Vital:
                  api_key: str,
                  server_idx: int = None,
                  server_url: str = None,
-                 url_params: dict[str, str] = None,
+                 url_params: Dict[str, str] = None,
                  client: requests_http.Session = None,
                  retry_config: utils.RetryConfig = None
                  ) -> None:
@@ -49,7 +50,7 @@ class Vital:
         :param server_url: The server URL to use for all operations
         :type server_url: str
         :param url_params: Parameters to optionally template the server URL with
-        :type url_params: dict[str, str]
+        :type url_params: Dict[str, str]
         :param client: The requests.Session HTTP client to use for all operations
         :type client: requests_http.Session
         :param retry_config: The utils.RetryConfig to use globally
@@ -83,7 +84,7 @@ class Vital:
         self.timeseries = Timeseries(self.sdk_configuration)
         self.user = User(self.sdk_configuration)
     
-    def robots_robots_txt_get(self) -> operations.RobotsRobotsTxtGetResponse:
+    def robots_robots_txt_get(self, retries: Optional[utils.RetryConfig] = None) -> operations.RobotsRobotsTxtGetResponse:
         r"""Robots"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -94,7 +95,20 @@ class Vital:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RobotsRobotsTxtGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

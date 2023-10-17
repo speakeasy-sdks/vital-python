@@ -9,7 +9,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ConnectedSourceClientFacingProvider:
     r"""A vendor, a service, or a platform which Vital can connect with."""
@@ -24,7 +23,6 @@ class ConnectedSourceClientFacingProvider:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ConnectedSourceClientFacing:
     created_on: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_on'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})

@@ -7,13 +7,11 @@ from ..shared import areainfo as shared_areainfo
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetAreaInfoV3OrderAreaInfoGetRequest:
     zip_code: str = dataclasses.field(metadata={'query_param': { 'field_name': 'zip_code', 'style': 'form', 'explode': True }})
     r"""Zip code of the area to check"""
     
-
 
 
 

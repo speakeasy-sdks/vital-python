@@ -6,12 +6,10 @@ import requests as requests_http
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class StartConnectProcessV2LinkStartPostResponseStartConnectProcessV2LinkStartPost:
     r"""Successful Response"""
     
-
 
 
 

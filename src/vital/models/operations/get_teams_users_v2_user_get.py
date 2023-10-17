@@ -7,13 +7,11 @@ from ..shared import paginatedusersresponse as shared_paginatedusersresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTeamsUsersV2UserGetRequest:
     limit: Optional[int] = dataclasses.field(default=100, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     offset: Optional[int] = dataclasses.field(default=0, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     
-
 
 
 

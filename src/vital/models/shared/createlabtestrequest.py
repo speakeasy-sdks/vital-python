@@ -5,17 +5,16 @@ import dataclasses
 from ..shared import labtestcollectionmethod as shared_labtestcollectionmethod
 from ..shared import labtestsampletype as shared_labtestsampletype
 from dataclasses_json import Undefined, dataclass_json
-from typing import Optional
+from typing import List, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CreateLabTestRequest:
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     lab_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab_id') }})
-    marker_ids: list[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('marker_ids') }})
+    marker_ids: List[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('marker_ids') }})
     method: shared_labtestcollectionmethod.LabTestCollectionMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
     r"""The method used to perform a lab test."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})

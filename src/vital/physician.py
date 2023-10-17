@@ -12,7 +12,7 @@ class Physician:
         self.sdk_configuration = sdk_config
         
     
-    def review_openloop_v2_physician_review_openloop_post(self, request: shared.OpenLoopEvent) -> operations.ReviewOpenloopV2PhysicianReviewOpenloopPostResponse:
+    def review_openloop_v2_physician_review_openloop_post(self, request: shared.OpenLoopEvent, retries: Optional[utils.RetryConfig] = None) -> operations.ReviewOpenloopV2PhysicianReviewOpenloopPostResponse:
         r"""Review Openloop"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -28,7 +28,20 @@ class Physician:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ReviewOpenloopV2PhysicianReviewOpenloopPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

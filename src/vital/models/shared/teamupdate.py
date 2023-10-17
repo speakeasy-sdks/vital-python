@@ -8,7 +8,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TeamUpdate:
     lab_tests_patient_communication_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab_tests_patient_communication_enabled'), 'exclude': lambda f: f is None }})

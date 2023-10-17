@@ -7,7 +7,6 @@ from ..shared import linktokenexchangeresponse as shared_linktokenexchangerespon
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GenerateVitalLinkTokenV2LinkTokenPostResponse:
     content_type: str = dataclasses.field()

@@ -11,7 +11,6 @@ class JpegContentType(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Jpeg:
     r"""An image of the back of the patient insurance card."""

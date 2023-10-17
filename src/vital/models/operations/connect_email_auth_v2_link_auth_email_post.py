@@ -7,7 +7,6 @@ from ..shared import connectionstatus as shared_connectionstatus
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ConnectEmailAuthV2LinkAuthEmailPostResponse:
     content_type: str = dataclasses.field()

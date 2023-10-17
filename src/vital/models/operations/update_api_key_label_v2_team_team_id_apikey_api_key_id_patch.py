@@ -8,14 +8,12 @@ from ..shared import updateapikeybody as shared_updateapikeybody
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest:
     api_key_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api_key_id', 'style': 'simple', 'explode': False }})
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     update_api_key_body: shared_updateapikeybody.UpdateAPIKeyBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

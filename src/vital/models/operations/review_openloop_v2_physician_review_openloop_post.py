@@ -6,7 +6,6 @@ import requests as requests_http
 from typing import Any, Optional
 
 
-
 @dataclasses.dataclass
 class ReviewOpenloopV2PhysicianReviewOpenloopPostResponse:
     content_type: str = dataclasses.field()

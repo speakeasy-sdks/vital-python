@@ -8,7 +8,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingPayorSearchResponseAddress:
     r"""Insurance business address returned for the insurance information required by Labcorp."""
@@ -23,7 +22,6 @@ class ClientFacingPayorSearchResponseAddress:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingPayorSearchResponse:
     code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})

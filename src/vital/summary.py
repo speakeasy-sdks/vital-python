@@ -12,7 +12,7 @@ class Summary:
         self.sdk_configuration = sdk_config
         
     
-    def get_meals(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetMealsV2SummaryMealUserIDGetResponse:
+    def get_meals(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetMealsV2SummaryMealUserIDGetResponse:
         r"""Get Meals
         Get user's meals
         """
@@ -33,7 +33,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetMealsV2SummaryMealUserIDGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -57,7 +70,7 @@ class Summary:
         return res
 
     
-    def get_user_activity(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserActivityV2SummaryActivityUserIDGetResponse:
+    def get_user_activity(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserActivityV2SummaryActivityUserIDGetResponse:
         r"""Get User Activity
         Get Daily Activity for user_id
         """
@@ -78,7 +91,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserActivityV2SummaryActivityUserIDGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -102,7 +128,7 @@ class Summary:
         return res
 
     
-    def get_user_activity_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserActivityRawV2SummaryActivityUserIDRawGetResponse:
+    def get_user_activity_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserActivityRawV2SummaryActivityUserIDRawGetResponse:
         r"""Get User Activity Raw
         Get Daily Activity for user_id
         """
@@ -123,7 +149,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserActivityRawV2SummaryActivityUserIDRawGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -147,7 +186,7 @@ class Summary:
         return res
 
     
-    def get_user_body(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserBodyV2SummaryBodyUserIDGetResponse:
+    def get_user_body(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserBodyV2SummaryBodyUserIDGetResponse:
         r"""Get User Body
         Get Daily Body data for user_id
         """
@@ -168,7 +207,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserBodyV2SummaryBodyUserIDGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -192,7 +244,7 @@ class Summary:
         return res
 
     
-    def get_user_body_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserBodyRawV2SummaryBodyUserIDRawGetResponse:
+    def get_user_body_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserBodyRawV2SummaryBodyUserIDRawGetResponse:
         r"""Get User Body Raw
         Get Daily Body data for user_id
         """
@@ -213,7 +265,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserBodyRawV2SummaryBodyUserIDRawGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -237,7 +302,7 @@ class Summary:
         return res
 
     
-    def get_user_devices_raw(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetResponse:
+    def get_user_devices_raw(self, user_id: str, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetResponse:
         r"""Get User Devices Raw
         Get Devices for user_id
         """
@@ -256,7 +321,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -280,7 +358,7 @@ class Summary:
         return res
 
     
-    def get_user_profile(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserProfileV2SummaryProfileUserIDGetResponse:
+    def get_user_profile(self, user_id: str, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserProfileV2SummaryProfileUserIDGetResponse:
         r"""Get User Profile
         Get Daily profile for user_id
         """
@@ -299,7 +377,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserProfileV2SummaryProfileUserIDGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -323,7 +414,7 @@ class Summary:
         return res
 
     
-    def get_user_profile_raw(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserProfileRawV2SummaryProfileUserIDRawGetResponse:
+    def get_user_profile_raw(self, user_id: str, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserProfileRawV2SummaryProfileUserIDRawGetResponse:
         r"""Get User Profile Raw
         Get Daily profile for user_id
         """
@@ -342,7 +433,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserProfileRawV2SummaryProfileUserIDRawGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -366,7 +470,7 @@ class Summary:
         return res
 
     
-    def get_user_sleep(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepV2SummarySleepUserIDGetResponse:
+    def get_user_sleep(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserSleepV2SummarySleepUserIDGetResponse:
         r"""Get User Sleep
         Get Daily sleep for user_id
         """
@@ -387,7 +491,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserSleepV2SummarySleepUserIDGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -411,7 +528,7 @@ class Summary:
         return res
 
     
-    def get_user_sleep_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepRawV2SummarySleepUserIDRawGetResponse:
+    def get_user_sleep_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserSleepRawV2SummarySleepUserIDRawGetResponse:
         r"""Get User Sleep Raw
         Get Daily sleep for user_id
         """
@@ -432,7 +549,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserSleepRawV2SummarySleepUserIDRawGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -456,7 +586,7 @@ class Summary:
         return res
 
     
-    def get_user_sleep_stream(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetResponse:
+    def get_user_sleep_stream(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetResponse:
         r"""Get User Sleep Stream
         Get Daily sleep stream for user_id
         """
@@ -477,7 +607,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -501,7 +644,7 @@ class Summary:
         return res
 
     
-    def get_user_workouts(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetResponse:
+    def get_user_workouts(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetResponse:
         r"""Get User Workouts
         Get Daily workout for user_id
         """
@@ -522,7 +665,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -546,7 +702,7 @@ class Summary:
         return res
 
     
-    def get_user_workouts_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetResponse:
+    def get_user_workouts_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetResponse:
         r"""Get User Workouts Raw
         Get Daily workout for user_id
         """
@@ -567,7 +723,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -591,7 +760,7 @@ class Summary:
         return res
 
     
-    def post_user_activity(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserActivityV2SummaryActivityUserIDPostResponse:
+    def post_user_activity(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.PostUserActivityV2SummaryActivityUserIDPostResponse:
         r"""Post User Activity"""
         request = operations.PostUserActivityV2SummaryActivityUserIDPostRequest(
             user_id=user_id,
@@ -608,7 +777,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PostUserActivityV2SummaryActivityUserIDPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -631,7 +813,7 @@ class Summary:
         return res
 
     
-    def post_user_body(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserBodyV2SummaryBodyUserIDPostResponse:
+    def post_user_body(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.PostUserBodyV2SummaryBodyUserIDPostResponse:
         r"""Post User Body"""
         request = operations.PostUserBodyV2SummaryBodyUserIDPostRequest(
             user_id=user_id,
@@ -648,7 +830,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PostUserBodyV2SummaryBodyUserIDPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -671,7 +866,7 @@ class Summary:
         return res
 
     
-    def post_user_profile(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserProfileV2SummaryProfileUserIDPostResponse:
+    def post_user_profile(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.PostUserProfileV2SummaryProfileUserIDPostResponse:
         r"""Post User Profile"""
         request = operations.PostUserProfileV2SummaryProfileUserIDPostRequest(
             user_id=user_id,
@@ -688,7 +883,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PostUserProfileV2SummaryProfileUserIDPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -711,7 +919,7 @@ class Summary:
         return res
 
     
-    def post_user_sleep(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserSleepV2SummarySleepUserIDPostResponse:
+    def post_user_sleep(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.PostUserSleepV2SummarySleepUserIDPostResponse:
         r"""Post User Sleep"""
         request = operations.PostUserSleepV2SummarySleepUserIDPostRequest(
             user_id=user_id,
@@ -728,7 +936,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PostUserSleepV2SummarySleepUserIDPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -751,7 +972,7 @@ class Summary:
         return res
 
     
-    def post_user_workout(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostResponse:
+    def post_user_workout(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostResponse:
         r"""Post User Workout"""
         request = operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostRequest(
             user_id=user_id,
@@ -768,7 +989,20 @@ class Summary:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

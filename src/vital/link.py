@@ -2,7 +2,7 @@
 
 from .sdkconfiguration import SDKConfiguration
 from datetime import datetime
-from typing import Optional
+from typing import Dict, List, Optional
 from vital import utils
 from vital.models import errors, operations, shared
 
@@ -13,7 +13,7 @@ class Link:
         self.sdk_configuration = sdk_config
         
     
-    def check_token_state(self) -> operations.CheckLinkTokenStateV2LinkStateGetResponse:
+    def check_token_state(self, retries: Optional[utils.RetryConfig] = None) -> operations.CheckLinkTokenStateV2LinkStateGetResponse:
         r"""Check Link Token State
         REQUEST_SOURCE: VITAL-LINK
         Check link token state - can be hit continuously used as heartbeat
@@ -27,7 +27,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CheckLinkTokenStateV2LinkStateGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -44,7 +57,7 @@ class Link:
         return res
 
     
-    def check_token_validity(self, request: shared.LinkTokenBase) -> operations.CheckTokenValidV2LinkTokenIsValidPostResponse:
+    def check_token_validity(self, request: shared.LinkTokenBase, retries: Optional[utils.RetryConfig] = None) -> operations.CheckTokenValidV2LinkTokenIsValidPostResponse:
         r"""Check Token Valid"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         
@@ -60,7 +73,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CheckTokenValidV2LinkTokenIsValidPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -84,7 +110,7 @@ class Link:
         return res
 
     
-    def connect_ble_provider(self, manual_connection_data: shared.ManualConnectionData, provider: operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders) -> operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse:
+    def connect_ble_provider(self, manual_connection_data: shared.ManualConnectionData, provider: operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders, retries: Optional[utils.RetryConfig] = None) -> operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse:
         r"""Connect Ble Provider
         REQUEST_SOURCE: CUSTOMER
         PROVIDER_TYPE: MANUAL-PROVIDER
@@ -109,14 +135,27 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[dict[str, bool]])
+                out = utils.unmarshal_json(http_res.text, Optional[Dict[str, bool]])
                 res.response_connect_ble_provider_v2_link_provider_manual_provider_post = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -133,7 +172,7 @@ class Link:
         return res
 
     
-    def connect_email_auth(self, request: shared.EmailAuthLink) -> operations.ConnectEmailAuthV2LinkAuthEmailPostResponse:
+    def connect_email_auth(self, request: shared.EmailAuthLink, retries: Optional[utils.RetryConfig] = None) -> operations.ConnectEmailAuthV2LinkAuthEmailPostResponse:
         r"""Connect Email Auth
         REQUEST_SOURCE: VITAL-LINK
         PROVIDER_TYPE: EMAIL-AUTH
@@ -153,7 +192,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ConnectEmailAuthV2LinkAuthEmailPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -177,7 +229,7 @@ class Link:
         return res
 
     
-    def connect_email_provider(self, email_provider_auth_link: shared.EmailProviderAuthLink, provider: operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders) -> operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse:
+    def connect_email_provider(self, email_provider_auth_link: shared.EmailProviderAuthLink, provider: operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders, retries: Optional[utils.RetryConfig] = None) -> operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse:
         r"""Connect Email Auth Provider
         This connects auth providers that are email based.
         """
@@ -200,7 +252,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -224,7 +289,7 @@ class Link:
         return res
 
     
-    def connect_individual_provider(self, individual_provider_data: shared.IndividualProviderData, provider: operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse:
+    def connect_individual_provider(self, individual_provider_data: shared.IndividualProviderData, provider: operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders, x_vital_link_client_region: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse:
         r"""Connect Individual Provider
         This connects auth providers that are password based.
         """
@@ -248,7 +313,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -272,7 +350,7 @@ class Link:
         return res
 
     
-    def connect_password_auth(self, password_auth_link: shared.PasswordAuthLink, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectPasswordAuthV2LinkAuthPostResponse:
+    def connect_password_auth(self, password_auth_link: shared.PasswordAuthLink, x_vital_link_client_region: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.ConnectPasswordAuthV2LinkAuthPostResponse:
         r"""Connect Password Auth
         REQUEST_SOURCE: VITAL-LINK
         PROVIDER_TYPE: PASSWORD-AUTH
@@ -297,7 +375,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ConnectPasswordAuthV2LinkAuthPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -321,7 +412,7 @@ class Link:
         return res
 
     
-    def connect_provider(self, provider: str, x_vital_sdk_no_redirect: Optional[str] = None) -> operations.ConnectProviderV2LinkConnectProviderGetResponse:
+    def connect_provider(self, provider: str, x_vital_sdk_no_redirect: Optional[str] = None, retries: Optional[utils.RetryConfig] = None) -> operations.ConnectProviderV2LinkConnectProviderGetResponse:
         r"""Connect Provider
         REQUEST_SOURCE: VITAL-LINK
         PROVIDER_TYPE: OAUTH
@@ -341,7 +432,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ConnectProviderV2LinkConnectProviderGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -365,7 +469,7 @@ class Link:
         return res
 
     
-    def create_demo_connection(self, request: shared.DemoConnectionCreationPayload) -> operations.CreateDemoConnectionV2LinkConnectDemoPostResponse:
+    def create_demo_connection(self, request: shared.DemoConnectionCreationPayload, retries: Optional[utils.RetryConfig] = None) -> operations.CreateDemoConnectionV2LinkConnectDemoPostResponse:
         r"""Create Demo Connection
         POST Connect the given Vital user to a demo provider.
         """
@@ -383,7 +487,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateDemoConnectionV2LinkConnectDemoPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -407,7 +524,7 @@ class Link:
         return res
 
     
-    def create_token(self, user_id: str, expires_at: Optional[datetime] = None) -> operations.CreateTokenV2LinkCodeCreatePostResponse:
+    def create_token(self, user_id: str, expires_at: Optional[datetime] = None, retries: Optional[utils.RetryConfig] = None) -> operations.CreateTokenV2LinkCodeCreatePostResponse:
         r"""Create Token
         Generate a token to invite a user of Vital mobile app to your team
         """
@@ -426,7 +543,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.CreateTokenV2LinkCodeCreatePostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -450,7 +580,7 @@ class Link:
         return res
 
     
-    def exchange_token(self, code: str) -> operations.ExchangeTokenV2LinkCodeExchangePostResponse:
+    def exchange_token(self, code: str, retries: Optional[utils.RetryConfig] = None) -> operations.ExchangeTokenV2LinkCodeExchangePostResponse:
         r"""Exchange Token
         Redeem an invite token for an api key
         """
@@ -468,7 +598,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ExchangeTokenV2LinkCodeExchangePostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -492,7 +635,7 @@ class Link:
         return res
 
     
-    def generate(self, request: shared.LinkTokenExchange) -> operations.GenerateVitalLinkTokenV2LinkTokenPostResponse:
+    def generate(self, request: shared.LinkTokenExchange, retries: Optional[utils.RetryConfig] = None) -> operations.GenerateVitalLinkTokenV2LinkTokenPostResponse:
         r"""Generate Vital Link Token
         Endpoint to generate a user link token, to be used throughout the vital
         link process. The vital link token is a one time use token, that
@@ -515,7 +658,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GenerateVitalLinkTokenV2LinkTokenPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -539,7 +695,7 @@ class Link:
         return res
 
     
-    def get_oauth_provider(self, oauth_provider: shared.OAuthProviders) -> operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetResponse:
+    def get_oauth_provider(self, oauth_provider: shared.OAuthProviders, retries: Optional[utils.RetryConfig] = None) -> operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetResponse:
         r"""Get Oauth Provider
         This endpoint generates an OAuth link for oauth provider
         """
@@ -556,7 +712,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -580,7 +749,7 @@ class Link:
         return res
 
     
-    def get_providers(self) -> operations.GetProvidersV2LinkProvidersGetResponse:
+    def get_providers(self, retries: Optional[utils.RetryConfig] = None) -> operations.GetProvidersV2LinkProvidersGetResponse:
         r"""Get Providers
         GET List of all available providers given the generated link token.
         """
@@ -593,14 +762,27 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetProvidersV2LinkProvidersGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[list[shared.SourceLink]])
+                out = utils.unmarshal_json(http_res.text, Optional[List[shared.SourceLink]])
                 res.source_links = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
@@ -610,7 +792,7 @@ class Link:
         return res
 
     
-    def start_connect_process(self, request: shared.BeginLinkTokenRequest) -> operations.StartConnectProcessV2LinkStartPostResponse:
+    def start_connect_process(self, request: shared.BeginLinkTokenRequest, retries: Optional[utils.RetryConfig] = None) -> operations.StartConnectProcessV2LinkStartPostResponse:
         r"""Start Connect Process
         REQUEST_SOURCE: VITAL-LINK
         Start link token process
@@ -629,7 +811,20 @@ class Link:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('POST', url, data=data, files=form, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('POST', url, data=data, files=form, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.StartConnectProcessV2LinkStartPostResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

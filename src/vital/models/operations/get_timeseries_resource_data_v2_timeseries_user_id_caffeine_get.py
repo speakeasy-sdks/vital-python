@@ -4,8 +4,7 @@ from __future__ import annotations
 import dataclasses
 import requests as requests_http
 from ..shared import clientfacingcaffeinetimeseries as shared_clientfacingcaffeinetimeseries
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -21,14 +20,13 @@ class GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetRequest:
 
 
 
-
 @dataclasses.dataclass
 class GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    client_facing_caffeine_timeseries: Optional[list[shared_clientfacingcaffeinetimeseries.ClientFacingCaffeineTimeseries]] = dataclasses.field(default=None)
+    client_facing_caffeine_timeseries: Optional[List[shared_clientfacingcaffeinetimeseries.ClientFacingCaffeineTimeseries]] = dataclasses.field(default=None)
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

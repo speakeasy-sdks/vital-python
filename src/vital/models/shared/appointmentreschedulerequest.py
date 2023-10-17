@@ -7,7 +7,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class AppointmentRescheduleRequest:
     r"""Pydantic BaseModel that supports `hidden` field property.

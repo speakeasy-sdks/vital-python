@@ -8,14 +8,12 @@ from ..shared import usersuccessresponse as shared_usersuccessresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DeregisterProviderV2UserUserIDProviderDeleteRequest:
     provider: shared_providers.Providers = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""Provider slug. e.g., `oura`, `fitbit`, `garmin`."""
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

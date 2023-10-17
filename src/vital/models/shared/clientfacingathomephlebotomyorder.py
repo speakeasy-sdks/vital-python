@@ -10,7 +10,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingAtHomePhlebotomyOrder:
     r"""Schema for a at-home-phlebotomy test order in the client facing API.

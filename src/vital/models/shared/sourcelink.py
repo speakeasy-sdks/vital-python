@@ -18,14 +18,12 @@ class SourceLinkSourceAuthType(str, Enum):
     UNKNOWN = ''
 
 
-
 @dataclasses.dataclass
 class SourceLinkFormComponents:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class SourceLink:
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})

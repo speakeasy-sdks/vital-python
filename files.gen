@@ -755,6 +755,7 @@ docs/models/errors/httpvalidationerror.md
 docs/models/errors/validationerrorloc.md
 docs/models/errors/validationerror.md
 docs/models/errors/userrefresherrorresponse.md
+docs/models/utils/retryconfig.md
 docs/sdks/vital/README.md
 docs/sdks/insurance/README.md
 docs/sdks/labtests/README.md

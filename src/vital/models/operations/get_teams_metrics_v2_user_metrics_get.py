@@ -7,7 +7,6 @@ from ..shared import metricsresult as shared_metricsresult
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTeamsMetricsV2UserMetricsGetResponse:
     content_type: str = dataclasses.field()

@@ -5,14 +5,14 @@ import dataclasses
 from ..shared import timeslot as shared_timeslot
 from dataclasses_json import Undefined, dataclass_json
 from datetime import date
+from typing import List
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DaySlots:
     date_: date = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('date'), 'encoder': utils.dateisoformat(False), 'decoder': utils.datefromisoformat }})
-    slots: list[shared_timeslot.TimeSlot] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('slots') }})
+    slots: List[shared_timeslot.TimeSlot] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('slots') }})
     
 

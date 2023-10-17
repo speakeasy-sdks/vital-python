@@ -15,9 +15,8 @@ from ..shared import ordertoplevelstatus as shared_ordertoplevelstatus
 from ..shared import physicianclientfacing as shared_physicianclientfacing
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
-from typing import Optional, Union
+from typing import List, Optional, Union
 from vital import utils
-
 
 
 @dataclasses.dataclass
@@ -26,7 +25,6 @@ class ClientFacingOrderDetails:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingOrderClientFacingLabTest:
     r"""The Vital Test associated with the order"""
@@ -44,13 +42,12 @@ class ClientFacingOrderClientFacingLabTest:
     is_delegated: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_delegated'), 'exclude': lambda f: f is None }})
     r"""Denotes whether a lab test requires using non-Vital physician networks. If it does then it's delegated - no otherwise."""
     lab: Optional[shared_clientfacinglab.ClientFacingLab] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab'), 'exclude': lambda f: f is None }})
-    markers: Optional[list[shared_clientfacingmarker.ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
+    markers: Optional[List[shared_clientfacingmarker.ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
     
 
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingOrderPatientAddressCompatible:
     r"""Patient Address"""
@@ -67,7 +64,6 @@ class ClientFacingOrderPatientAddressCompatible:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingOrderClientFacingPatientDetailsCompatible:
     r"""Patient Details"""
@@ -82,7 +78,6 @@ class ClientFacingOrderClientFacingPatientDetailsCompatible:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingOrderShippingAddress:
     r"""Shipping Details. For unregistered testkit orders."""
@@ -99,13 +94,12 @@ class ClientFacingOrderShippingAddress:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingOrder:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""When your order was created"""
     details: Union[shared_clientfacingwalkinorderdetails.ClientFacingWalkInOrderDetails, shared_clientfacingtestkitorderdetails.ClientFacingTestKitOrderDetails, shared_clientfacingathomephlebotomyorderdetails.ClientFacingAtHomePhlebotomyOrderDetails] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('details') }})
-    events: list[shared_clientfacingorderevent.ClientFacingOrderEvent] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
+    events: List[shared_clientfacingorderevent.ClientFacingOrderEvent] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""The Vital Order ID"""
     lab_test: ClientFacingOrderClientFacingLabTest = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab_test') }})

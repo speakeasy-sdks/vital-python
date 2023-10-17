@@ -4,16 +4,16 @@ from __future__ import annotations
 import dataclasses
 from ..shared import clientfacinguser as shared_clientfacinguser
 from dataclasses_json import Undefined, dataclass_json
+from typing import List
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class PaginatedUsersResponse:
     limit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit') }})
     offset: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offset') }})
     total: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total') }})
-    users: list[shared_clientfacinguser.ClientFacingUser] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('users') }})
+    users: List[shared_clientfacinguser.ClientFacingUser] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('users') }})
     
 

@@ -4,13 +4,13 @@ from __future__ import annotations
 import dataclasses
 from ..shared import activityv2indb as shared_activityv2indb
 from dataclasses_json import Undefined, dataclass_json
+from typing import List
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RawActivity:
-    activity: list[shared_activityv2indb.ActivityV2InDB] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('activity') }})
+    activity: List[shared_activityv2indb.ActivityV2InDB] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('activity') }})
     
 

@@ -5,12 +5,11 @@ import dataclasses
 from ..shared import clientfacingapikey as shared_clientfacingapikey
 from ..shared import teamconfig as shared_teamconfig
 from dataclasses_json import Undefined, dataclass_json
-from typing import Optional
+from typing import List, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingTeam:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
@@ -23,7 +22,7 @@ class ClientFacingTeam:
     airtable_api_key: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('airtable_api_key'), 'exclude': lambda f: f is None }})
     airtable_base_id: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('airtable_base_id'), 'exclude': lambda f: f is None }})
     api_key: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_key'), 'exclude': lambda f: f is None }})
-    api_keys: Optional[list[shared_clientfacingapikey.ClientFacingAPIKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_keys'), 'exclude': lambda f: f is None }})
+    api_keys: Optional[List[shared_clientfacingapikey.ClientFacingAPIKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_keys'), 'exclude': lambda f: f is None }})
     client_id: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client_id'), 'exclude': lambda f: f is None }})
     client_secret: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client_secret'), 'exclude': lambda f: f is None }})
     configuration: Optional[shared_teamconfig.TeamConfig] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configuration'), 'exclude': lambda f: f is None }})

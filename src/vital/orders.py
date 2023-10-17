@@ -12,7 +12,7 @@ class Orders:
         self.sdk_configuration = sdk_config
         
     
-    def list(self, request: operations.GetOrdersV3OrdersGetRequest) -> operations.GetOrdersV3OrdersGetResponse:
+    def list(self, request: operations.GetOrdersV3OrdersGetRequest, retries: Optional[utils.RetryConfig] = None) -> operations.GetOrdersV3OrdersGetResponse:
         r"""Get Orders
         GET many orders with filters.
         """
@@ -26,7 +26,20 @@ class Orders:
         
         client = self.sdk_configuration.security_client
         
-        http_res = client.request('GET', url, params=query_params, headers=headers)
+        global_retry_config = self.sdk_configuration.retry_config
+        retry_config = retries
+        if retry_config is None:
+            if global_retry_config:
+                retry_config = global_retry_config
+            else:
+                retry_config = utils.RetryConfig('backoff', utils.BackoffStrategy(500, 60000, 1.5, 3600000), True)
+
+        def do_request():
+            return client.request('GET', url, params=query_params, headers=headers)
+
+        http_res = utils.retry(do_request, utils.Retries(retry_config, [
+            '5XX'
+        ]))
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.GetOrdersV3OrdersGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

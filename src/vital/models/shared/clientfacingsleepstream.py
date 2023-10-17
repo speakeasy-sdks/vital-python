@@ -7,17 +7,16 @@ from ..shared import clientfacinghrvtimeseries as shared_clientfacinghrvtimeseri
 from ..shared import clientfacinghypnogramtimeseries as shared_clientfacinghypnogramtimeseries
 from ..shared import clientfacingrespiratoryratetimeseries as shared_clientfacingrespiratoryratetimeseries
 from dataclasses_json import Undefined, dataclass_json
-from typing import Optional
+from typing import List, Optional
 from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ClientFacingSleepStream:
-    heartrate: Optional[list[shared_clientfacingheartratetimeseries.ClientFacingHeartRateTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('heartrate'), 'exclude': lambda f: f is None }})
-    hrv: Optional[list[shared_clientfacinghrvtimeseries.ClientFacingHRVTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hrv'), 'exclude': lambda f: f is None }})
-    hypnogram: Optional[list[shared_clientfacinghypnogramtimeseries.ClientFacingHypnogramTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hypnogram'), 'exclude': lambda f: f is None }})
-    respiratory_rate: Optional[list[shared_clientfacingrespiratoryratetimeseries.ClientFacingRespiratoryRateTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('respiratory_rate'), 'exclude': lambda f: f is None }})
+    heartrate: Optional[List[shared_clientfacingheartratetimeseries.ClientFacingHeartRateTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('heartrate'), 'exclude': lambda f: f is None }})
+    hrv: Optional[List[shared_clientfacinghrvtimeseries.ClientFacingHRVTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hrv'), 'exclude': lambda f: f is None }})
+    hypnogram: Optional[List[shared_clientfacinghypnogramtimeseries.ClientFacingHypnogramTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hypnogram'), 'exclude': lambda f: f is None }})
+    respiratory_rate: Optional[List[shared_clientfacingrespiratoryratetimeseries.ClientFacingRespiratoryRateTimeseries]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('respiratory_rate'), 'exclude': lambda f: f is None }})
     
 

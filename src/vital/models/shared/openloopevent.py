@@ -9,7 +9,6 @@ from vital import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class OpenLoopEvent:
     event_type: shared_openloopwebhooktype.OpenLoopWebhookType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event_type') }})

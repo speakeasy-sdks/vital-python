@@ -7,13 +7,11 @@ from ..shared import clientfacingsleepstream as shared_clientfacingsleepstream
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetRequest:
     sleep_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'sleep_id', 'style': 'simple', 'explode': False }})
     r"""The Vital Sleep ID"""
     
-
 
 
 

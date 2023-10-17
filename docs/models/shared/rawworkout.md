@@ -5,4 +5,4 @@
 
 | Field                                                       | Type                                                        | Required                                                    | Description                                                 |
 | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
-| `workouts`                                                  | list[[WorkoutV2InDB](../../models/shared/workoutv2indb.md)] | :heavy_check_mark:                                          | N/A                                                         |
+| `workouts`                                                  | List[[WorkoutV2InDB](../../models/shared/workoutv2indb.md)] | :heavy_check_mark:                                          | N/A                                                         |

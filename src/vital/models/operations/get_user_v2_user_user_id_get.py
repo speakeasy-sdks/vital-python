@@ -7,12 +7,10 @@ from ..shared import clientfacinguser as shared_clientfacinguser
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetUserV2UserUserIDGetRequest:
     user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 

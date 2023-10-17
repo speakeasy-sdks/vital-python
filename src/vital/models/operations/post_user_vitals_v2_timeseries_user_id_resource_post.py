@@ -7,7 +7,6 @@ from ..shared import ingestibletimeseriesresource as shared_ingestibletimeseries
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class PostUserVitalsV2TimeseriesUserIDResourcePostRequest:
     resource: shared_ingestibletimeseriesresource.IngestibleTimeseriesResource = dataclasses.field(metadata={'path_param': { 'field_name': 'resource', 'style': 'simple', 'explode': False }})
@@ -16,7 +15,6 @@ class PostUserVitalsV2TimeseriesUserIDResourcePostRequest:
     x_vital_android_sdk_version: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-android-sdk-version', 'style': 'simple', 'explode': False }})
     x_vital_ios_sdk_version: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-ios-sdk-version', 'style': 'simple', 'explode': False }})
     
-
 
 
 

@@ -7,9 +7,8 @@ from ..shared import brandinformation as shared_brandinformation
 from ..shared import priorityindb as shared_priorityindb
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
-from typing import Optional
+from typing import List, Optional
 from vital import utils
-
 
 
 @dataclasses.dataclass
@@ -23,7 +22,6 @@ class TeamInDBPhysicianNetworkT(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class TeamInDB:
     configuration: TeamInDBConfiguration = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('configuration') }})
@@ -34,7 +32,7 @@ class TeamInDB:
     airtable_api_key: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('airtable_api_key'), 'exclude': lambda f: f is None }})
     airtable_base_id: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('airtable_base_id'), 'exclude': lambda f: f is None }})
     api_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_key'), 'exclude': lambda f: f is None }})
-    api_keys: Optional[list[shared_apikeyindb.APIKeyInDB]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_keys'), 'exclude': lambda f: f is None }})
+    api_keys: Optional[List[shared_apikeyindb.APIKeyInDB]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_keys'), 'exclude': lambda f: f is None }})
     brand_information: Optional[shared_brandinformation.BrandInformation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand_information'), 'exclude': lambda f: f is None }})
     client_id: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client_id'), 'exclude': lambda f: f is None }})
     client_secret: Optional[str] = dataclasses.field(default='', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client_secret'), 'exclude': lambda f: f is None }})
@@ -45,7 +43,7 @@ class TeamInDB:
     logo_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logo_url'), 'exclude': lambda f: f is None }})
     message_templates_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message_templates_url'), 'exclude': lambda f: f is None }})
     physician_network: Optional[TeamInDBPhysicianNetworkT] = dataclasses.field(default=TeamInDBPhysicianNetworkT.OPENLOOP, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('physician_network'), 'exclude': lambda f: f is None }})
-    priorities: Optional[list[shared_priorityindb.PriorityInDB]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priorities'), 'exclude': lambda f: f is None }})
+    priorities: Optional[List[shared_priorityindb.PriorityInDB]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priorities'), 'exclude': lambda f: f is None }})
     subscription_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('subscription_status'), 'exclude': lambda f: f is None }})
     svix_app_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('svix_app_id'), 'exclude': lambda f: f is None }})
     webhook_secret: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_secret'), 'exclude': lambda f: f is None }})

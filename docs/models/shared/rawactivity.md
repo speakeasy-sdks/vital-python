@@ -5,4 +5,4 @@
 
 | Field                                                         | Type                                                          | Required                                                      | Description                                                   |
 | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
-| `activity`                                                    | list[[ActivityV2InDB](../../models/shared/activityv2indb.md)] | :heavy_check_mark:                                            | N/A                                                           |
+| `activity`                                                    | List[[ActivityV2InDB](../../models/shared/activityv2indb.md)] | :heavy_check_mark:                                            | N/A                                                           |

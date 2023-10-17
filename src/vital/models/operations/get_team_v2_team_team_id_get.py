@@ -7,12 +7,10 @@ from ..shared import clientfacingteam as shared_clientfacingteam
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class GetTeamV2TeamTeamIDGetRequest:
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
     
-
 
 
 
