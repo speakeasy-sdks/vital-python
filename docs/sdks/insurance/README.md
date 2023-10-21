@@ -19,7 +19,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.insurance.search_diagnosis(diagnosis_query='JBOD')
+res = s.insurance.search_diagnosis(diagnosis_query='string')
 
 if res.client_facing_diagnosis_informations is not None:
     # handle response
@@ -51,7 +51,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.PayorSearchRequest(
-    insurance_name='South entry Bicycle',
+    insurance_name='string',
 )
 
 res = s.insurance.search_insurance_payor_info(req)

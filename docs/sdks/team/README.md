@@ -33,13 +33,13 @@ s = vital.Vital()
 
 req = shared.TeamCreate(
     brand_information=shared.BrandInformation(
-        brand_color='bluetooth Extended',
-        company_address='blue',
-        company_name='Schinner, Hodkiewicz and Wiegand',
-        company_website='East orange Northwest',
-        support_email='Russel_Schumm@hotmail.com',
+        brand_color='string',
+        company_address='string',
+        company_name='Kuhn - Nienow',
+        company_website='string',
+        support_email='Haylie78@hotmail.com',
     ),
-    name='volt physical Ameliorated',
+    name='string',
 )
 
 res = s.team.create(req)
@@ -75,8 +75,8 @@ s = vital.Vital()
 
 
 res = s.team.create_api_key(create_api_key_body=shared.CreateAPIKeyBody(
-    label='deposit API',
-), team_id='Avon')
+    label='string',
+), team_id='string')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -113,7 +113,7 @@ res = s.team.create_priority(priority_create=shared.PriorityCreate(
     priority=548209,
     source_id=168326,
     team_id='0d4e3a38-5a06-40f0-b144-d921de79168b',
-), team_id='compressing')
+), team_id='string')
 
 if res.priority is not None:
     # handle response
@@ -146,7 +146,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.team.delete_api_key(api_key_id='Weston', team_id='Bicycle')
+res = s.team.delete_api_key(api_key_id='string', team_id='string')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -211,7 +211,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.team.get_api_keys(team_id='Computer')
+res = s.team.get_api_keys(team_id='string')
 
 if res.api_key_in_dbs is not None:
     # handle response
@@ -269,7 +269,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.team.get_source_priorities(data_type='deposit')
+res = s.team.get_source_priorities(data_type='string')
 
 if res.get_source_priorities_v2_team_source_priorities_get_200_application_json_objects is not None:
     # handle response
@@ -359,7 +359,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(api_key_id='lux', team_id='optimize')
+res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(api_key_id='string', team_id='string')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -392,7 +392,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.team.search_users_by_uuid(query_id='North')
+res = s.team.search_users_by_uuid(query_id='string')
 
 if res.client_facing_users is not None:
     # handle response
@@ -425,8 +425,8 @@ s = vital.Vital()
 
 
 res = s.team.update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(update_api_key_body=shared.UpdateAPIKeyBody(
-    label='architectures District',
-), api_key_id='South', team_id='South')
+    label='string',
+), api_key_id='string', team_id='string')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -460,7 +460,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='phew')
+res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='string')
 
 if res.update_source_priorities_v2_team_source_priorities_patch_200_application_json_objects is not None:
     # handle response
@@ -492,7 +492,7 @@ from vital.models import operations, shared
 s = vital.Vital()
 
 
-res = s.team.update_team_v2_team_team_id_patch(team_update=shared.TeamUpdate(), team_id='Supervisor')
+res = s.team.update_team_v2_team_team_id_patch(team_update=shared.TeamUpdate(), team_id='string')
 
 if res.team_in_db is not None:
     # handle response

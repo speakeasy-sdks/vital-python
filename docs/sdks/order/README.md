@@ -39,8 +39,8 @@ s = vital.Vital()
 
 
 res = s.order.book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(appointment_booking_request=shared.AppointmentBookingRequest(
-    booking_key='how index Electric',
-), order_id='0b1d8151-82e6-4c0e-bd72-ca79bcf3d5ba')
+    booking_key='string',
+), order_id='ce486d40-b1d8-4151-82e6-c0e7d72ca79b')
 
 if res.client_facing_appointment is not None:
     # handle response
@@ -106,8 +106,8 @@ s = vital.Vital()
 
 
 res = s.order.cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(appointment_cancel_request=shared.AppointmentCancelRequest(
-    cancellation_reason_id='Sandy Minivan',
-), order_id='528ddb0d-27a7-4e90-9ccf-3b9448c5e365')
+    cancellation_reason_id='string',
+), order_id='a0cd9528-ddb0-4d27-a7e9-01ccf3b9448c')
 
 if res.client_facing_appointment is not None:
     # handle response
@@ -152,58 +152,58 @@ req = shared.CreateOrderRequestCompatible(
             content_type=shared.JpegContentType.IMAGE_JPEG,
         ),
         diagnosis_codes=[
-            'technology',
+            'string',
         ],
-        shared.Jpeg(
-            content='K0=)cjplTW'.encode(),
-            content_type=shared.JpegContentType.IMAGE_JPEG,
+        shared.Png(
+            content='s!K0=)cjpl'.encode(),
+            content_type=shared.PngContentType.IMAGE_PNG,
         ),
         shared.Png(
-            content='fNz^B#9t"Q'.encode(),
+            content='WmfNz^B#9t'.encode(),
             content_type=shared.PngContentType.IMAGE_PNG,
         ),
         responsible_details=shared.HealthInsuranceCreateRequestPersonDetails(
             address=shared.Address(
-                city='East Cory',
-                country='Portugal',
-                first_line='Fiat',
-                state='Grocery Borders Northwest',
-                zip='Kentucky animated',
+                city='New Darenberg',
+                country='Cote d\'Ivoire',
+                first_line='string',
+                state='string',
+                zip='string',
             ),
-            first_name='Roosevelt',
-            last_name='Mueller',
-            phone_number='Senior Mouse West',
+            first_name='Micah',
+            last_name='Bergnaum',
+            phone_number='string',
         ),
     ),
-    lab_test_id='8504aa8c-e67b-47c4-9cf2-4bdebcfc23e7',
+    lab_test_id='d5e26191-5a25-4d0d-9ea1-320e8504aa8c',
     patient_address=shared.PatientAddressCompatible(
-        city='Jefferson City',
-        country='Zimbabwe',
-        state='Electronic digital',
-        street='Arne Via',
-        zip='Mongolia Maine sexy',
+        city='Jacksonville',
+        country='Kazakhstan',
+        state='string',
+        street='Kunze Shoals',
+        zip='string',
     ),
     patient_details=shared.PatientDetails(
-        dob=dateutil.parser.isoparse('2022-10-01T18:30:31.591Z'),
-        email='Josiane81@yahoo.com',
-        first_name='Hailee',
-        gender=shared.Gender.OTHER,
-        last_name='Bradtke',
-        phone_number='Toys Electric readily',
+        dob=dateutil.parser.isoparse('2021-10-12T10:48:28.067Z'),
+        email='Otho27@yahoo.com',
+        first_name='Mazie',
+        gender=shared.Gender.UNKNOWN,
+        last_name='Waelchi',
+        phone_number='string',
     ),
     physician=shared.PhysicianCreateRequest(
-        first_name='Abner',
-        last_name='Steuber',
+        first_name='Myrtice',
+        last_name='Sauer',
         licensed_states=[
-            'yet',
+            'string',
         ],
-        npi='modest aged Account',
+        npi='string',
         shared.Png(
-            content='_A`H,`:\'+q'.encode(),
+            content='g.5uJqH}W9'.encode(),
             content_type=shared.PngContentType.IMAGE_PNG,
         ),
     ),
-    user_id='6fd9e403-c67b-4cfa-9731-944d98437394',
+    user_id='15747251-ef09-4254-8958-35d6b1b39d7e',
 )
 
 res = s.order.create(req)
@@ -242,13 +242,13 @@ req = shared.CreateRegistrableTestkitOrderRequest(
     shipping_details=shared.ShippingAddress(
         city='West Esmeraldaborough',
         country='Antarctica (the territory South of 60 deg S)',
-        first_line='Bedfordshire Research',
-        phone_number='reinvent',
-        receiver_name='Minivan',
-        state='Soul plus',
-        zip='kookily capacitor er',
+        first_line='string',
+        phone_number='string',
+        receiver_name='string',
+        state='string',
+        zip='string',
     ),
-    user_id='df371333-0afb-4f06-a4cd-2f36154eee26',
+    user_id='6c614a14-431d-4979-8fbf-e68efedf3713',
 )
 
 res = s.order.create_testkit(req)
@@ -344,9 +344,9 @@ s = vital.Vital()
 
 res = s.order.get_appointment_availability(order_id='c094c82e-a8e0-42d1-a065-be1f658ff11c', request_body=operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress(
     city='Shanahanboro',
-    first_line='generating',
-    state='calculate',
-    zip_code='21210',
+    first_line='string',
+    state='string',
+    zip_code='56156',
 ))
 
 if res.appointment_availability_slots is not None:
@@ -383,7 +383,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.order.get_area_info(zip_code='Tuvalu')
+res = s.order.get_area_info(zip_code='string')
 
 if res.area_info is not None:
     # handle response
@@ -670,8 +670,8 @@ s = vital.Vital()
 
 req = shared.ShipmentWebhookUpdate(
     fulfillment=shared.Fulfillment(
-        order_number='Shoals',
-        order_uuid='City Southeast',
+        order_number='string',
+        order_uuid='string',
     ),
     webhook_type=shared.ShipmentWebhookUpdateWebhookType.SHIPMENT_UPDATE,
 )
@@ -717,28 +717,28 @@ req = shared.RegisterTestkitRequest(
     patient_address=shared.PatientAddressCompatible(
         city='Phoenix',
         country='Netherlands',
-        state='software',
-        street='Cole Motorway',
-        zip='olive plagiarism visualize',
+        state='string',
+        street='Gloria Stream',
+        zip='string',
     ),
     patient_details=shared.PatientDetails(
-        dob=dateutil.parser.isoparse('2021-03-31T18:31:24.365Z'),
-        email='Sylvan86@yahoo.com',
-        first_name='Johnny',
-        gender=shared.Gender.FEMALE,
-        last_name='Armstrong',
-        phone_number='Constantin',
+        dob=dateutil.parser.isoparse('2022-10-13T05:29:20.564Z'),
+        email='Keanu_Schoen95@gmail.com',
+        first_name='Manley',
+        gender=shared.Gender.MALE,
+        last_name='Pouros',
+        phone_number='string',
     ),
     physician=shared.PhysicianCreateRequestBase(
-        first_name='Dina',
-        last_name='Koss',
+        first_name='Arne',
+        last_name='Keeling',
         licensed_states=[
-            'female',
+            'string',
         ],
-        npi='Gasoline Developer',
+        npi='string',
     ),
-    sample_id='ruler Cerium',
-    user_id='ed536a4e-3800-4791-aee9-d389c73aa02f',
+    sample_id='string',
+    user_id='e51d8103-2436-4747-b05c-ba39bbafcb7e',
 )
 
 res = s.order.register_testkit_v3_order_testkit_register_post(req)
@@ -774,8 +774,8 @@ s = vital.Vital()
 
 
 res = s.order.reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(appointment_reschedule_request=shared.AppointmentRescheduleRequest(
-    booking_key='Shoes',
-), order_id='372e4ddd-b832-434a-962c-b3ddc204a698')
+    booking_key='string',
+), order_id='337372e4-dddb-4832-b4a5-62cb3ddc204a')
 
 if res.client_facing_appointment is not None:
     # handle response

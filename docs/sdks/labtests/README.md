@@ -28,8 +28,8 @@ req = shared.CreateLabTestRequest(
         417458,
     ],
     method=shared.LabTestCollectionMethod.TESTKIT,
-    name='blue',
-    sample_type=shared.LabTestSampleType.URINE,
+    name='string',
+    sample_type=shared.LabTestSampleType.DRIED_BLOOD_SPOT,
 )
 
 res = s.lab_tests.create(req)
@@ -90,7 +90,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.lab_tests.get_marker_by_provider(lab_id=263548, provider_id='East')
+res = s.lab_tests.get_marker_by_provider(lab_id=263548, provider_id='string')
 
 if res.client_facing_marker is not None:
     # handle response
@@ -123,7 +123,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.lab_tests.get_markers(lab_id=614936, name='parse', page=301534, size=44930)
+res = s.lab_tests.get_markers(lab_id=614936, name='string', page=549571, size=962743)
 
 if res.get_markers_response is not None:
     # handle response

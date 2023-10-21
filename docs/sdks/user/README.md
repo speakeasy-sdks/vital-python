@@ -28,7 +28,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.UserCreateBody(
-    client_user_id='dicta Forward',
+    client_user_id='string',
 )
 
 res = s.user.create_user(req)
@@ -348,7 +348,7 @@ from vital.models import operations
 s = vital.Vital()
 
 
-res = s.user.resolve_by_user_id(client_user_id='Bicycle')
+res = s.user.resolve_by_user_id(client_user_id='string')
 
 if res.client_facing_user is not None:
     # handle response

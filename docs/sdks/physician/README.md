@@ -19,8 +19,8 @@ s = vital.Vital()
 
 req = shared.OpenLoopEvent(
     event_type=shared.OpenLoopWebhookType.PAYMENT_DELETED,
-    resource_id='soak',
-    resource_id_type=shared.OpenLoopResourceIDType.NOTE,
+    resource_id='string',
+    resource_id_type=shared.OpenLoopResourceIDType.APPOINTMENT,
 )
 
 res = s.physician.review_openloop_v2_physician_review_openloop_post(req)
