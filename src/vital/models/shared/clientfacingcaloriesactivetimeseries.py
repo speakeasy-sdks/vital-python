@@ -9,7 +9,7 @@ from enum import Enum
 from typing import Any, Optional
 from vital import utils
 
-class ClientFacingCaloriesActiveTimeseriesUnit(str, Enum):
+class Unit(str, Enum):
     r"""Measured in kilocalories (kcal)"""
     KCAL = 'kcal'
 
@@ -23,7 +23,7 @@ class ClientFacingCaloriesActiveTimeseries:
     r"""The start time (inclusive) of the interval."""
     timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""Depracated. The start time (inclusive) of the interval."""
-    unit: ClientFacingCaloriesActiveTimeseriesUnit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
+    unit: Unit = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
     r"""Measured in kilocalories (kcal)"""
     value: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})
     r"""Energy consumption caused by the physical activity at the time or interval::kilocalories"""

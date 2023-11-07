@@ -1,4 +1,4 @@
-# ClientFacingAtHomePhlebotomyOrderDetailsType
+# Type
 
 
 ## Values

@@ -2,21 +2,21 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingathomephlebotomyorder as shared_clientfacingathomephlebotomyorder
+from .clientfacingathomephlebotomyorder import ClientFacingAtHomePhlebotomyOrder
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
 from vital import utils
 
-class ClientFacingAtHomePhlebotomyOrderDetailsType(str, Enum):
+class Type(str, Enum):
     AT_HOME_PHLEBOTOMY = 'at_home_phlebotomy'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientFacingAtHomePhlebotomyOrderDetails:
-    type: ClientFacingAtHomePhlebotomyOrderDetailsType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    data: Optional[shared_clientfacingathomephlebotomyorder.ClientFacingAtHomePhlebotomyOrder] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    type: Type = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    data: Optional[ClientFacingAtHomePhlebotomyOrder] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     r"""Schema for a at-home-phlebotomy test order in the client facing API.
 
     To be used as part of a ClientFacingOrder.

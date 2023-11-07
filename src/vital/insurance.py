@@ -36,7 +36,7 @@ class Insurance:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingDiagnosisInformation]])
-                res.client_facing_diagnosis_informations = out
+                res.response_search_diagnosis_v3_insurance_search_diagnosis_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -76,7 +76,7 @@ class Insurance:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingPayorSearchResponse]])
-                res.client_facing_payor_search_responses = out
+                res.response_search_insurance_payor_information_v3_insurance_search_payor_post = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:

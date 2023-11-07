@@ -14,7 +14,7 @@ class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchRequest:
 
 
 @dataclasses.dataclass
-class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSON:
+class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody:
     pass
 
 
@@ -26,7 +26,7 @@ class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    update_source_priorities_v2_team_source_priorities_patch_200_application_json_objects: Optional[List[UpdateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSON]] = dataclasses.field(default=None)
+    response_update_source_priorities_v2_team_source_priorities_patch: Optional[List[UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody]] = dataclasses.field(default=None)
     r"""Successful Response"""
     
 

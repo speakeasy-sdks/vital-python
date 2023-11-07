@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import getmarkersresponse as shared_getmarkersresponse
+from ...models.shared import getmarkersresponse as shared_getmarkersresponse
 from typing import Optional
 
 

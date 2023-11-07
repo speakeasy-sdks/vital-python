@@ -1,5 +1,5 @@
 # Insurance
-(*insurance*)
+(*.insurance*)
 
 ### Available Operations
 
@@ -21,7 +21,7 @@ s = vital.Vital()
 
 res = s.insurance.search_diagnosis(diagnosis_query='string')
 
-if res.client_facing_diagnosis_informations is not None:
+if res.response_search_diagnosis_v3_insurance_search_diagnosis_get is not None:
     # handle response
     pass
 ```
@@ -56,7 +56,7 @@ req = shared.PayorSearchRequest(
 
 res = s.insurance.search_insurance_payor_info(req)
 
-if res.client_facing_payor_search_responses is not None:
+if res.response_search_insurance_payor_information_v3_insurance_search_payor_post is not None:
     # handle response
     pass
 ```

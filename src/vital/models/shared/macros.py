@@ -9,7 +9,7 @@ from vital import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class MacrosFats:
+class Fats:
     r"""Details of fat content"""
     monounsaturated: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('monounsaturated'), 'exclude': lambda f: f is None }})
     r"""Amount of monounsaturated fats in grams (g)"""
@@ -34,7 +34,7 @@ class Macros:
     r"""Amount of alcohol in grams (g)"""
     carbs: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('carbs'), 'exclude': lambda f: f is None }})
     r"""Amount of carbohydrates in grams (g)"""
-    fats: Optional[MacrosFats] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fats'), 'exclude': lambda f: f is None }})
+    fats: Optional[Fats] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fats'), 'exclude': lambda f: f is None }})
     r"""Details of fat content"""
     fibre: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fibre'), 'exclude': lambda f: f is None }})
     r"""Amount of dietary fiber in grams (g)"""

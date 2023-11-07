@@ -1,4 +1,4 @@
-# ClientFacingTestkitOrderClientFacingShipment
+# ClientFacingShipment
 
 Schema for a Shipment in the client facing API.
 

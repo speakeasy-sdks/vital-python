@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import phlebotomyareainfo as shared_phlebotomyareainfo
+from .phlebotomyareainfo import PhlebotomyAreaInfo
 from dataclasses_json import Undefined, dataclass_json
 from vital import utils
 
@@ -10,7 +10,7 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AreaInfo:
-    phlebotomy: shared_phlebotomyareainfo.PhlebotomyAreaInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phlebotomy') }})
+    phlebotomy: PhlebotomyAreaInfo = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('phlebotomy') }})
     zip_code: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('zip_code') }})
     
 

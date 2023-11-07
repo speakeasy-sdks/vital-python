@@ -1,5 +1,5 @@
 # Summary
-(*summary*)
+(*.summary*)
 
 ### Available Operations
 

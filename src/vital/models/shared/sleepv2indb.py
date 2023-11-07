@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import clientfacingprovider as shared_clientfacingprovider
+from .clientfacingprovider import ClientFacingProvider
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Optional
@@ -15,7 +15,7 @@ from vital import utils
 class SleepV2InDB:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     provider_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider_id') }})
-    source: shared_clientfacingprovider.ClientFacingProvider = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
+    source: ClientFacingProvider = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
     r"""A vendor, a service, or a platform which Vital can connect with."""
     source_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source_id') }})
     timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})

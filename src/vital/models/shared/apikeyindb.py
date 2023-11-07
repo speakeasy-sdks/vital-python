@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import apikeyrole as shared_apikeyrole
+from .apikeyrole import APIKeyRole
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Optional
@@ -17,7 +17,7 @@ class APIKeyInDB:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     in_app: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('in_app') }})
     label: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('label') }})
-    role: shared_apikeyrole.APIKeyRole = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
+    role: APIKeyRole = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role') }})
     r"""An enumeration."""
     team_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('team_id') }})
     value: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})

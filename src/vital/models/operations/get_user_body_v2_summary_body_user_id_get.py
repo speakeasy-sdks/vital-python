@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientbodyresponse as shared_clientbodyresponse
+from ...models.shared import clientbodyresponse as shared_clientbodyresponse
 from typing import Optional
 
 

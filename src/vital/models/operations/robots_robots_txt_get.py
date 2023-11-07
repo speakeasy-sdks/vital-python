@@ -14,7 +14,7 @@ class RobotsRobotsTxtGetResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    robots_robots_txt_get_200_text_plain_string: Optional[str] = dataclasses.field(default=None)
+    res: Optional[str] = dataclasses.field(default=None)
     r"""Successful Response"""
     
 

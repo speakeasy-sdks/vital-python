@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientfacinglab as shared_clientfacinglab
+from ...models.shared import clientfacinglab as shared_clientfacinglab
 from typing import List, Optional
 
 
@@ -13,9 +13,9 @@ class GetLabsV3LabTestsLabsGetResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    client_facing_labs: Optional[List[shared_clientfacinglab.ClientFacingLab]] = dataclasses.field(default=None)
-    r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    response_get_labs_v3_lab_tests_labs_get: Optional[List[shared_clientfacinglab.ClientFacingLab]] = dataclasses.field(default=None)
+    r"""Successful Response"""
     
 

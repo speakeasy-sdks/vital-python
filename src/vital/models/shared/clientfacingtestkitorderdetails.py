@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingtestkitorder as shared_clientfacingtestkitorder
+from .clientfacingtestkitorder import ClientFacingTestkitOrder
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
@@ -16,7 +16,7 @@ class ClientFacingTestKitOrderDetailsType(str, Enum):
 @dataclasses.dataclass
 class ClientFacingTestKitOrderDetails:
     type: ClientFacingTestKitOrderDetailsType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    data: Optional[shared_clientfacingtestkitorder.ClientFacingTestkitOrder] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    data: Optional[ClientFacingTestkitOrder] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     r"""Schema for a testkit order in the client facing API.
 
     To be used as part of a ClientFacingOrder.

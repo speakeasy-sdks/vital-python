@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingbody as shared_clientfacingbody
+from .clientfacingbody import ClientFacingBody
 from dataclasses_json import Undefined, dataclass_json
 from typing import List
 from vital import utils
@@ -11,6 +11,6 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientBodyResponse:
-    body: List[shared_clientfacingbody.ClientFacingBody] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('body') }})
+    body: List[ClientFacingBody] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('body') }})
     
 

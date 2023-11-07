@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientfacingmarker as shared_clientfacingmarker
+from ...models.shared import clientfacingmarker as shared_clientfacingmarker
 from typing import Optional
 
 

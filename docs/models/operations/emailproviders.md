@@ -1,4 +1,4 @@
-# ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders
+# EmailProviders
 
 An enumeration.
 

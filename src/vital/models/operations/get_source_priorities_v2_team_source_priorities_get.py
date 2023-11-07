@@ -14,7 +14,7 @@ class GetSourcePrioritiesV2TeamSourcePrioritiesGetRequest:
 
 
 @dataclasses.dataclass
-class GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON:
+class ResponseBody:
     pass
 
 
@@ -24,9 +24,9 @@ class GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    get_source_priorities_v2_team_source_priorities_get_200_application_json_objects: Optional[List[GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON]] = dataclasses.field(default=None)
-    r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    response_get_source_priorities_v2_team_source_priorities_get: Optional[List[ResponseBody]] = dataclasses.field(default=None)
+    r"""Successful Response"""
     
 

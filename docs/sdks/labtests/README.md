@@ -1,5 +1,5 @@
 # LabTests
-(*lab_tests*)
+(*.lab_tests*)
 
 ### Available Operations
 
@@ -60,13 +60,12 @@ GET all the labs.
 ```python
 import vital
 
-
 s = vital.Vital()
 
 
 res = s.lab_tests.get_labs()
 
-if res.client_facing_labs is not None:
+if res.response_get_labs_v3_lab_tests_labs_get is not None:
     # handle response
     pass
 ```
@@ -154,13 +153,12 @@ GET all the lab tests the team has access to.
 ```python
 import vital
 
-
 s = vital.Vital()
 
 
 res = s.lab_tests.list()
 
-if res.client_facing_lab_tests is not None:
+if res.response_get_lab_tests_for_team_v3_lab_tests_get is not None:
     # handle response
     pass
 ```

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import labresultsraw as shared_labresultsraw
+from ...models.shared import labresultsraw as shared_labresultsraw
 from typing import Optional
 
 

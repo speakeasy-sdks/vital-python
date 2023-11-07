@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import connectedsourceclientfacing as shared_connectedsourceclientfacing
+from .connectedsourceclientfacing import ConnectedSourceClientFacing
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import List, Optional
@@ -12,7 +12,7 @@ from vital import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ClientFacingUserFallbackTimeZone:
+class FallbackTimeZone:
     r"""Fallback time zone of the user, in the form of a valid IANA tzdatabase identifier (e.g., `Europe/London` or `America/Los_Angeles`).
         Used when pulling data from sources that are completely time zone agnostic (e.g., all time is relative to UTC clock, without any time zone attributions on data points).
     """
@@ -32,7 +32,7 @@ class ClientFacingUserFallbackTimeZone:
 class ClientFacingUser:
     client_user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('client_user_id') }})
     r"""A unique ID representing the end user. Typically this will be a user ID from your application. Personally identifiable information, such as an email address or phone number, should not be used in the client_user_id."""
-    connected_sources: List[shared_connectedsourceclientfacing.ConnectedSourceClientFacing] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connected_sources') }})
+    connected_sources: List[ConnectedSourceClientFacing] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connected_sources') }})
     r"""A list of the users connected sources."""
     created_on: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_on'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""When your item is created"""
@@ -40,7 +40,7 @@ class ClientFacingUser:
     r"""Your team id."""
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     r"""User id returned by vital create user request. This id should be stored in your database against the user and used for all interactions with the vital api."""
-    fallback_time_zone: Optional[ClientFacingUserFallbackTimeZone] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fallback_time_zone'), 'exclude': lambda f: f is None }})
+    fallback_time_zone: Optional[FallbackTimeZone] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fallback_time_zone'), 'exclude': lambda f: f is None }})
     r"""Fallback time zone of the user, in the form of a valid IANA tzdatabase identifier (e.g., `Europe/London` or `America/Los_Angeles`).
         Used when pulling data from sources that are completely time zone agnostic (e.g., all time is relative to UTC clock, without any time zone attributions on data points).
     """

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingorder as shared_clientfacingorder
+from .clientfacingorder import ClientFacingOrder
 from dataclasses_json import Undefined, dataclass_json
 from typing import List
 from vital import utils
@@ -11,7 +11,7 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class GetOrdersResponse:
-    orders: List[shared_clientfacingorder.ClientFacingOrder] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('orders') }})
+    orders: List[ClientFacingOrder] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('orders') }})
     page: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('page') }})
     size: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('size') }})
     total: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total') }})

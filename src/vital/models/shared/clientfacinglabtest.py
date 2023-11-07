@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacinglab as shared_clientfacinglab
-from ..shared import clientfacingmarker as shared_clientfacingmarker
-from ..shared import labtestcollectionmethod as shared_labtestcollectionmethod
-from ..shared import labtestsampletype as shared_labtestsampletype
+from .clientfacinglab import ClientFacingLab
+from .clientfacingmarker import ClientFacingMarker
+from .labtestcollectionmethod import LabTestCollectionMethod
+from .labtestsampletype import LabTestSampleType
 from dataclasses_json import Undefined, dataclass_json
 from typing import List, Optional
 from vital import utils
@@ -16,18 +16,18 @@ from vital import utils
 class ClientFacingLabTest:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     is_active: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_active') }})
-    method: shared_labtestcollectionmethod.LabTestCollectionMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
+    method: LabTestCollectionMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
     r"""The method used to perform a lab test."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     price: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('price') }})
-    sample_type: shared_labtestsampletype.LabTestSampleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sample_type') }})
+    sample_type: LabTestSampleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sample_type') }})
     r"""The type of sample used to perform a lab test."""
     slug: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('slug') }})
     fasting: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fasting'), 'exclude': lambda f: f is None }})
     r"""Defines whether a lab test requires fasting. Only available for Labcorp."""
     is_delegated: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_delegated'), 'exclude': lambda f: f is None }})
     r"""Denotes whether a lab test requires using non-Vital physician networks. If it does then it's delegated - no otherwise."""
-    lab: Optional[shared_clientfacinglab.ClientFacingLab] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab'), 'exclude': lambda f: f is None }})
-    markers: Optional[List[shared_clientfacingmarker.ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
+    lab: Optional[ClientFacingLab] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab'), 'exclude': lambda f: f is None }})
+    markers: Optional[List[ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
     
 

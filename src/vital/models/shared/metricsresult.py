@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import timeseriesmetricpoint as shared_timeseriesmetricpoint
+from .timeseriesmetricpoint import TimeseriesMetricPoint
 from dataclasses_json import Undefined, dataclass_json
 from typing import List, Optional
 from vital import utils
@@ -13,7 +13,7 @@ from vital import utils
 class MetricsResult:
     team_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('team_id') }})
     number_of_connected_sources: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_connected_sources'), 'exclude': lambda f: f is None }})
-    number_of_connected_sources_by_week: Optional[List[shared_timeseriesmetricpoint.TimeseriesMetricPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_connected_sources_by_week'), 'exclude': lambda f: f is None }})
+    number_of_connected_sources_by_week: Optional[List[TimeseriesMetricPoint]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_connected_sources_by_week'), 'exclude': lambda f: f is None }})
     number_of_errored_connected_sources: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_errored_connected_sources'), 'exclude': lambda f: f is None }})
     number_of_ordered_tests: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_ordered_tests'), 'exclude': lambda f: f is None }})
     number_of_users: Optional[int] = dataclasses.field(default=0, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('number_of_users'), 'exclude': lambda f: f is None }})

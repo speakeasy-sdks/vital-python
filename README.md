@@ -19,13 +19,12 @@ pip install git+https://github.com/speakeasy-sdks/vital-python.git
 ```python
 import vital
 
-
 s = vital.Vital()
 
 
-res = s.vital.robots_robots_txt_get()
+res = s.robots_robots_txt_get()
 
-if res.robots_robots_txt_get_200_text_plain_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -38,20 +37,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 
 * [robots_robots_txt_get](docs/sdks/vital/README.md#robots_robots_txt_get) - Robots
 
-### [insurance](docs/sdks/insurance/README.md)
-
-* [search_diagnosis](docs/sdks/insurance/README.md#search_diagnosis) - Search Diagnosis
-* [search_insurance_payor_info](docs/sdks/insurance/README.md#search_insurance_payor_info) - Search Insurance Payor Information
-
-### [lab_tests](docs/sdks/labtests/README.md)
-
-* [create](docs/sdks/labtests/README.md#create) - Create Lab Test For Team
-* [get_labs](docs/sdks/labtests/README.md#get_labs) - Get Labs
-* [get_marker_by_provider](docs/sdks/labtests/README.md#get_marker_by_provider) - Get Markers By Provider Id
-* [get_markers](docs/sdks/labtests/README.md#get_markers) - Get Markers
-* [list](docs/sdks/labtests/README.md#list) - Get Lab Tests For Team
-
-### [link](docs/sdks/link/README.md)
+### [.link](docs/sdks/link/README.md)
 
 * [check_token_state](docs/sdks/link/README.md#check_token_state) - Check Link Token State
 * [check_token_validity](docs/sdks/link/README.md#check_token_validity) - Check Token Valid
@@ -69,43 +55,15 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [get_providers](docs/sdks/link/README.md#get_providers) - Get Providers
 * [start_connect_process](docs/sdks/link/README.md#start_connect_process) - Start Connect Process
 
-### [order](docs/sdks/order/README.md)
-
-* [book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post](docs/sdks/order/README.md#book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post) - Book Phlebotomy Appointment
-* [cancel_order_v3_order_order_id_cancel_post](docs/sdks/order/README.md#cancel_order_v3_order_order_id_cancel_post) - Cancel Order
-* [cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch](docs/sdks/order/README.md#cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch) - Cancel Phlebotomy Appointment
-* [create](docs/sdks/order/README.md#create) - Create Order
-* [create_testkit](docs/sdks/order/README.md#create_testkit) - Create Testkit Order
-* [dispatch_status](docs/sdks/order/README.md#dispatch_status) - Dispatch Order Status
-* [get](docs/sdks/order/README.md#get) - Get Order
-* [get_appointment_availability](docs/sdks/order/README.md#get_appointment_availability) - Get Order Appointment Availability
-* [get_area_info](docs/sdks/order/README.md#get_area_info) - Get Area Info
-* [get_lab_test_result](docs/sdks/order/README.md#get_lab_test_result) - Get Lab Test Result
-* [get_lab_test_result_metadata](docs/sdks/order/README.md#get_lab_test_result_metadata) - Get Lab Test Result Metadata
-* [get_lab_test_result_raw](docs/sdks/order/README.md#get_lab_test_result_raw) - Get Lab Test Result Raw
-* [get_phlebotomy_appointment](docs/sdks/order/README.md#get_phlebotomy_appointment) - Get Phlebotomy Appointment
-* [get_phlebotomy_cancellation_reasons](docs/sdks/order/README.md#get_phlebotomy_cancellation_reasons) - Get Phlebotomy Appointment Cancellation Reasons
-* [get_requisition_url](docs/sdks/order/README.md#get_requisition_url) - Get Order Requisition Url
-* [order_process_simulate_v3_order_order_id_test_post](docs/sdks/order/README.md#order_process_simulate_v3_order_order_id_test_post) - Order Process Simulate
-* [process_testkit_order_v3_order_testkit_process_team_id_order_id_post](docs/sdks/order/README.md#process_testkit_order_v3_order_testkit_process_team_id_order_id_post) - Process Testkit Order
-* [process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post](docs/sdks/order/README.md#process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post) - Process Testkit Ship Hero Order Shipped
-* [register_testkit_v3_order_testkit_register_post](docs/sdks/order/README.md#register_testkit_v3_order_testkit_register_post) - Register Testkit
-* [reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch](docs/sdks/order/README.md#reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch) - Reschedule Phlebotomy Appointment
-* [sync_testkit_order_status_v3_order_testkit_status_post](docs/sdks/order/README.md#sync_testkit_order_status_v3_order_testkit_status_post) - Sync Testkit Order Status
-
-### [orders](docs/sdks/orders/README.md)
-
-* [list](docs/sdks/orders/README.md#list) - Get Orders
-
-### [physician](docs/sdks/physician/README.md)
+### [.physician](docs/sdks/physician/README.md)
 
 * [review_openloop_v2_physician_review_openloop_post](docs/sdks/physician/README.md#review_openloop_v2_physician_review_openloop_post) - Review Openloop
 
-### [providers](docs/sdks/providers/README.md)
+### [.providers](docs/sdks/providers/README.md)
 
 * [list](docs/sdks/providers/README.md#list) - Get List Of Providers
 
-### [summary](docs/sdks/summary/README.md)
+### [.summary](docs/sdks/summary/README.md)
 
 * [get_meals](docs/sdks/summary/README.md#get_meals) - Get Meals
 * [get_user_activity](docs/sdks/summary/README.md#get_user_activity) - Get User Activity
@@ -126,7 +84,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [post_user_sleep](docs/sdks/summary/README.md#post_user_sleep) - Post User Sleep
 * [post_user_workout](docs/sdks/summary/README.md#post_user_workout) - Post User Workout
 
-### [team](docs/sdks/team/README.md)
+### [.team](docs/sdks/team/README.md)
 
 * [create](docs/sdks/team/README.md#create) - Create Team
 * [create_api_key](docs/sdks/team/README.md#create_api_key) - Create Api Key
@@ -144,7 +102,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [update_source_priorities_v2_team_source_priorities_patch](docs/sdks/team/README.md#update_source_priorities_v2_team_source_priorities_patch) - Update Source Priorities
 * [update_team_v2_team_team_id_patch](docs/sdks/team/README.md#update_team_v2_team_team_id_patch) - Update Team
 
-### [timeseries](docs/sdks/timeseries/README.md)
+### [.timeseries](docs/sdks/timeseries/README.md)
 
 * [get_blood_oxygen](docs/sdks/timeseries/README.md#get_blood_oxygen) - Get Timeseries Resource Data
 * [get_blood_pressure](docs/sdks/timeseries/README.md#get_blood_pressure) - Get Timeseries Resource Data
@@ -173,7 +131,7 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [post_blood_pressure](docs/sdks/timeseries/README.md#post_blood_pressure) - Post User Blood Pressure
 * [post_vitals](docs/sdks/timeseries/README.md#post_vitals) - Post User Vitals
 
-### [user](docs/sdks/user/README.md)
+### [.user](docs/sdks/user/README.md)
 
 * [create_user](docs/sdks/user/README.md#create_user) - Create User
 * [delete](docs/sdks/user/README.md#delete) - Delete User
@@ -186,6 +144,47 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 * [patch_user_v2_user_user_id_patch](docs/sdks/user/README.md#patch_user_v2_user_user_id_patch) - Patch User
 * [refresh_user_id_v2_user_refresh_user_id_post](docs/sdks/user/README.md#refresh_user_id_v2_user_refresh_user_id_post) - Refresh User Id
 * [resolve_by_user_id](docs/sdks/user/README.md#resolve_by_user_id) - Get User By Client User Id
+
+### [.insurance](docs/sdks/insurance/README.md)
+
+* [search_diagnosis](docs/sdks/insurance/README.md#search_diagnosis) - Search Diagnosis
+* [search_insurance_payor_info](docs/sdks/insurance/README.md#search_insurance_payor_info) - Search Insurance Payor Information
+
+### [.lab_tests](docs/sdks/labtests/README.md)
+
+* [create](docs/sdks/labtests/README.md#create) - Create Lab Test For Team
+* [get_labs](docs/sdks/labtests/README.md#get_labs) - Get Labs
+* [get_marker_by_provider](docs/sdks/labtests/README.md#get_marker_by_provider) - Get Markers By Provider Id
+* [get_markers](docs/sdks/labtests/README.md#get_markers) - Get Markers
+* [list](docs/sdks/labtests/README.md#list) - Get Lab Tests For Team
+
+### [.order](docs/sdks/order/README.md)
+
+* [book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post](docs/sdks/order/README.md#book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post) - Book Phlebotomy Appointment
+* [cancel_order_v3_order_order_id_cancel_post](docs/sdks/order/README.md#cancel_order_v3_order_order_id_cancel_post) - Cancel Order
+* [cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch](docs/sdks/order/README.md#cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch) - Cancel Phlebotomy Appointment
+* [create](docs/sdks/order/README.md#create) - Create Order
+* [create_testkit](docs/sdks/order/README.md#create_testkit) - Create Testkit Order
+* [dispatch_status](docs/sdks/order/README.md#dispatch_status) - Dispatch Order Status
+* [get](docs/sdks/order/README.md#get) - Get Order
+* [get_appointment_availability](docs/sdks/order/README.md#get_appointment_availability) - Get Order Appointment Availability
+* [get_area_info](docs/sdks/order/README.md#get_area_info) - Get Area Info
+* [get_lab_test_result](docs/sdks/order/README.md#get_lab_test_result) - Get Lab Test Result
+* [get_lab_test_result_metadata](docs/sdks/order/README.md#get_lab_test_result_metadata) - Get Lab Test Result Metadata
+* [get_lab_test_result_raw](docs/sdks/order/README.md#get_lab_test_result_raw) - Get Lab Test Result Raw
+* [get_phlebotomy_appointment](docs/sdks/order/README.md#get_phlebotomy_appointment) - Get Phlebotomy Appointment
+* [get_phlebotomy_cancellation_reasons](docs/sdks/order/README.md#get_phlebotomy_cancellation_reasons) - Get Phlebotomy Appointment Cancellation Reasons
+* [get_requisition_url](docs/sdks/order/README.md#get_requisition_url) - Get Order Requisition Url
+* [order_process_simulate_v3_order_order_id_test_post](docs/sdks/order/README.md#order_process_simulate_v3_order_order_id_test_post) - Order Process Simulate
+* [process_testkit_order_v3_order_testkit_process_team_id_order_id_post](docs/sdks/order/README.md#process_testkit_order_v3_order_testkit_process_team_id_order_id_post) - Process Testkit Order
+* [process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post](docs/sdks/order/README.md#process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post) - Process Testkit Ship Hero Order Shipped
+* [register_testkit_v3_order_testkit_register_post](docs/sdks/order/README.md#register_testkit_v3_order_testkit_register_post) - Register Testkit
+* [reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch](docs/sdks/order/README.md#reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch) - Reschedule Phlebotomy Appointment
+* [sync_testkit_order_status_v3_order_testkit_status_post](docs/sdks/order/README.md#sync_testkit_order_status_v3_order_testkit_status_post) - Sync Testkit Order Status
+
+### [.orders](docs/sdks/orders/README.md)
+
+* [list](docs/sdks/orders/README.md#list) - Get Orders
 <!-- End SDK Available Operations -->
 
 <!-- Start Dev Containers -->
@@ -204,20 +203,24 @@ Handling errors in your SDK should largely match your expectations.  All operati
 
 ```python
 import vital
-from vital.models import operations
+from vital.models import shared
 
 s = vital.Vital()
 
+req = shared.LinkTokenBase(
+    oauth_info=shared.OauthInfo(),
+    token='string',
+)
 
 res = None
 try:
-    res = s.insurance.search_diagnosis(diagnosis_query='string')
+    res = s.link.check_token_validity(req)
 
 except (HTTPValidationError) as e:
     print(e) # handle exception
 
 
-if res.client_facing_diagnosis_informations is not None:
+if res.response_check_token_valid_v2_link_token_isvalid_post is not None:
     # handle response
     pass
 ```
@@ -238,19 +241,17 @@ You can override the default server globally by passing a server index to the `s
 
 For example:
 
-
 ```python
 import vital
 
-
 s = vital.Vital(
-    server_idx=0
+    server_idx=0,
 )
 
 
-res = s.vital.robots_robots_txt_get()
+res = s.robots_robots_txt_get()
 
-if res.robots_robots_txt_get_200_text_plain_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -260,19 +261,17 @@ if res.robots_robots_txt_get_200_text_plain_string is not None:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 
-
 ```python
 import vital
 
-
 s = vital.Vital(
-    server_url="https://api.tryvital.io"
+    server_url="https://api.tryvital.io",
 )
 
 
-res = s.vital.robots_robots_txt_get()
+res = s.robots_robots_txt_get()
 
-if res.robots_robots_txt_get_200_text_plain_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```
@@ -296,8 +295,6 @@ http_client = requests.Session()
 http_client.headers.update({'x-custom-header': 'someValue'})
 s = vital.Vital(client: http_client)
 ```
-
-
 <!-- End Custom HTTP Client -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->

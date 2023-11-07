@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import userrefreshsuccessresponse as shared_userrefreshsuccessresponse
+from ...models.shared import userrefreshsuccessresponse as shared_userrefreshsuccessresponse
 from typing import Optional
 
 

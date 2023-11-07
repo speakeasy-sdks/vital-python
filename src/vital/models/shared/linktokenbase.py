@@ -8,7 +8,7 @@ from vital import utils
 
 
 @dataclasses.dataclass
-class LinkTokenBaseOauthInfo:
+class OauthInfo:
     pass
 
 
@@ -17,6 +17,6 @@ class LinkTokenBaseOauthInfo:
 class LinkTokenBase:
     token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token') }})
     is_used: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_used'), 'exclude': lambda f: f is None }})
-    oauth_info: Optional[LinkTokenBaseOauthInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauth_info'), 'exclude': lambda f: f is None }})
+    oauth_info: Optional[OauthInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauth_info'), 'exclude': lambda f: f is None }})
     
 

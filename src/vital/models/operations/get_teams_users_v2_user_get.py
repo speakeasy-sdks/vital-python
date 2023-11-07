@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import paginatedusersresponse as shared_paginatedusersresponse
+from ...models.shared import paginatedusersresponse as shared_paginatedusersresponse
 from typing import Optional
 
 

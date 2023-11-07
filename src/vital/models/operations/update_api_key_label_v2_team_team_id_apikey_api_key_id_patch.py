@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apikeyindb as shared_apikeyindb
-from ..shared import updateapikeybody as shared_updateapikeybody
+from ...models.shared import apikeyindb as shared_apikeyindb
+from ...models.shared import updateapikeybody as shared_updateapikeybody
 from typing import Optional
 
 

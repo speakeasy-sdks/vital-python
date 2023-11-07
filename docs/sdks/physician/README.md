@@ -1,5 +1,5 @@
 # Physician
-(*physician*)
+(*.physician*)
 
 ### Available Operations
 

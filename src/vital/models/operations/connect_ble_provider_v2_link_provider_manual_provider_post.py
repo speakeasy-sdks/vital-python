@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import manualconnectiondata as shared_manualconnectiondata
+from ...models.shared import manualconnectiondata as shared_manualconnectiondata
 from enum import Enum
 from typing import Dict, Optional
 
-class ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders(str, Enum):
+class ManualProviders(str, Enum):
     r"""An enumeration."""
     BEURER_BLE = 'beurer_ble'
     OMRON_BLE = 'omron_ble'
@@ -23,7 +23,7 @@ class ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders(
 @dataclasses.dataclass
 class ConnectBleProviderV2LinkProviderManualProviderPostRequest:
     manual_connection_data: shared_manualconnectiondata.ManualConnectionData = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    provider: ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: ManualProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     
 

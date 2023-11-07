@@ -41,7 +41,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingBloodOxygenTimeseries]])
-                res.client_facing_blood_oxygen_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_oxygen_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -86,7 +86,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingBloodPressureTimeseries]])
-                res.client_facing_blood_pressure_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_pressure_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -131,7 +131,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCaffeineTimeseries]])
-                res.client_facing_caffeine_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_caffeine_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -176,7 +176,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCaloriesActiveTimeseries]])
-                res.client_facing_calories_active_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_active_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -221,7 +221,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCaloriesBasalTimeseries]])
-                res.client_facing_calories_basal_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_basal_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -266,7 +266,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCholesterolTimeseries]])
-                res.client_facing_cholesterol_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -311,7 +311,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCholesterolTimeseries]])
-                res.client_facing_cholesterol_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_hdl_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -356,7 +356,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCholesterolTimeseries]])
-                res.client_facing_cholesterol_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_ldl_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -401,7 +401,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingDistanceTimeseries]])
-                res.client_facing_distance_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_distance_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -446,7 +446,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingFloorsClimbedTimeseries]])
-                res.client_facing_floors_climbed_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_floors_climbed_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -491,7 +491,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingGlucoseTimeseries]])
-                res.client_facing_glucose_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_glucose_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -536,7 +536,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingHeartRateTimeseries]])
-                res.client_facing_heart_rate_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_heartrate_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -581,7 +581,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingHRVTimeseries]])
-                res.client_facing_hrv_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_hrv_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -626,7 +626,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingHypnogramTimeseries]])
-                res.client_facing_hypnogram_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_hypnogram_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -671,7 +671,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingIgeTimeseries]])
-                res.client_facing_ige_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_ige_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -716,7 +716,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingIggTimeseries]])
-                res.client_facing_igg_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_igg_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -761,7 +761,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingMindfulnessMinutesTimeseries]])
-                res.client_facing_mindfulness_minutes_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_mindfulness_minutes_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -806,7 +806,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingRespiratoryRateTimeseries]])
-                res.client_facing_respiratory_rate_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_respiratory_rate_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -851,7 +851,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingStepsTimeseries]])
-                res.client_facing_steps_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_steps_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -896,7 +896,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCholesterolTimeseries]])
-                res.client_facing_cholesterol_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_total_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -941,7 +941,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingCholesterolTimeseries]])
-                res.client_facing_cholesterol_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_triglycerides_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -1066,7 +1066,7 @@ class Timeseries:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingWaterTimeseries]])
-                res.client_facing_water_timeseries = out
+                res.response_get_timeseries_resource_data_v2_timeseries_user_id_water_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:

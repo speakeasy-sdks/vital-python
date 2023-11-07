@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import sourcelink as shared_sourcelink
+from ...models.shared import sourcelink as shared_sourcelink
 from typing import List, Optional
 
 
@@ -15,7 +15,7 @@ class GetProvidersV2LinkProvidersGetResponse:
     r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
-    source_links: Optional[List[shared_sourcelink.SourceLink]] = dataclasses.field(default=None)
+    response_get_providers_v2_link_providers_get: Optional[List[shared_sourcelink.SourceLink]] = dataclasses.field(default=None)
     r"""Successful Response"""
     
 

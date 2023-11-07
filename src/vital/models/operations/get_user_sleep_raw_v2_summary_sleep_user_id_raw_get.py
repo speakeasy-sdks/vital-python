@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import rawsleep as shared_rawsleep
+from ...models.shared import rawsleep as shared_rawsleep
 from typing import Optional
 
 

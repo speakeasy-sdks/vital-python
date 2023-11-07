@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import userpatchbody as shared_userpatchbody
+from ...models.shared import userpatchbody as shared_userpatchbody
 from typing import Optional
 
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import orderstatus as shared_orderstatus
+from .orderstatus import OrderStatus
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from vital import utils
@@ -14,7 +14,7 @@ from vital import utils
 class ClientFacingOrderEvent:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-    status: shared_orderstatus.OrderStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
+    status: OrderStatus = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     r"""An enumeration."""
     
 

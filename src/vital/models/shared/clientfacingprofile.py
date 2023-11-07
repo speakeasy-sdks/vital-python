@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingsource as shared_clientfacingsource
+from .clientfacingsource import ClientFacingSource
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from vital import utils
@@ -12,7 +12,7 @@ from vital import utils
 @dataclasses.dataclass
 class ClientFacingProfile:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-    source: shared_clientfacingsource.ClientFacingSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
+    source: ClientFacingSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
     r"""Source summarizes where a sample or a summary is sourced from.
     At minimum, the source provider is always included.
     """

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import rawbody as shared_rawbody
+from ...models.shared import rawbody as shared_rawbody
 from typing import Optional
 
 

@@ -3,11 +3,11 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import clientfacingfood as shared_clientfacingfood
-from ..shared import clientfacingsource as shared_clientfacingsource
-from ..shared import energy as shared_energy
-from ..shared import macros as shared_macros
-from ..shared import micros as shared_micros
+from .clientfacingfood import ClientFacingFood
+from .clientfacingsource import ClientFacingSource
+from .energy import Energy
+from .macros import Macros
+from .micros import Micros
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Dict, Optional
@@ -22,7 +22,7 @@ class MealInDBBaseClientFacingSource:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     priority_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priority_id') }})
     provider_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider_id') }})
-    source: shared_clientfacingsource.ClientFacingSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
+    source: ClientFacingSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
     r"""Source summarizes where a sample or a summary is sourced from.
     At minimum, the source provider is always included.
     """
@@ -30,9 +30,9 @@ class MealInDBBaseClientFacingSource:
     timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
-    data: Optional[Dict[str, shared_clientfacingfood.ClientFacingFood]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-    energy: Optional[shared_energy.Energy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('energy'), 'exclude': lambda f: f is None }})
-    macros: Optional[shared_macros.Macros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('macros'), 'exclude': lambda f: f is None }})
-    micros: Optional[shared_micros.Micros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('micros'), 'exclude': lambda f: f is None }})
+    data: Optional[Dict[str, ClientFacingFood]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    energy: Optional[Energy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('energy'), 'exclude': lambda f: f is None }})
+    macros: Optional[Macros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('macros'), 'exclude': lambda f: f is None }})
+    micros: Optional[Micros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('micros'), 'exclude': lambda f: f is None }})
     
 

@@ -1,5 +1,5 @@
 # Order
-(*order*)
+(*.order*)
 
 ### Available Operations
 
@@ -134,8 +134,8 @@ POST create new order
 ### Example Usage
 
 ```python
-import vital
 import dateutil.parser
+import vital
 from vital.models import shared
 
 s = vital.Vital()
@@ -148,21 +148,21 @@ req = shared.CreateOrderRequestCompatible(
     ],
     health_insurance=shared.HealthInsuranceCreateRequest(
         shared.Jpeg(
-            content='\pG;-j\'}kD'.encode(),
-            content_type=shared.JpegContentType.IMAGE_JPEG,
+            content='0xeC962B1FB8'.encode(),
+            content_type=shared.ContentType.IMAGE_JPEG,
         ),
         diagnosis_codes=[
             'string',
         ],
         shared.Png(
-            content='s!K0=)cjpl'.encode(),
+            content='0xD0a361fBCB'.encode(),
             content_type=shared.PngContentType.IMAGE_PNG,
         ),
         shared.Png(
-            content='WmfNz^B#9t'.encode(),
+            content='0xcCAaFe705D'.encode(),
             content_type=shared.PngContentType.IMAGE_PNG,
         ),
-        responsible_details=shared.HealthInsuranceCreateRequestPersonDetails(
+        responsible_details=shared.PersonDetails(
             address=shared.Address(
                 city='New Darenberg',
                 country='Cote d\'Ivoire',
@@ -199,7 +199,7 @@ req = shared.CreateOrderRequestCompatible(
         ],
         npi='string',
         shared.Png(
-            content='g.5uJqH}W9'.encode(),
+            content='0xA34D9D9Fc5'.encode(),
             content_type=shared.PngContentType.IMAGE_PNG,
         ),
     ),
@@ -278,7 +278,6 @@ Dispatch Order Status
 
 ```python
 import vital
-
 
 s = vital.Vital()
 
@@ -540,13 +539,12 @@ Get the list of reasons for cancelling an at-home phlebotomy appointment.
 ```python
 import vital
 
-
 s = vital.Vital()
 
 
 res = s.order.get_phlebotomy_cancellation_reasons()
 
-if res.client_facing_appointment_cancellation_reasons is not None:
+if res.response_get_phlebotomy_appointment_cancellation_reasons_v3_order_phlebotomy_appointment_cancellation_reasons_get is not None:
     # handle response
     pass
 ```
@@ -572,7 +570,7 @@ s = vital.Vital()
 
 res = s.order.get_requisition_url(order_id='bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335')
 
-if res.get_order_requisition_url_v3_order_order_id_requisition_pdf_get_200_application_json_any is not None:
+if res.any is not None:
     # handle response
     pass
 ```
@@ -673,7 +671,7 @@ req = shared.ShipmentWebhookUpdate(
         order_number='string',
         order_uuid='string',
     ),
-    webhook_type=shared.ShipmentWebhookUpdateWebhookType.SHIPMENT_UPDATE,
+    webhook_type=shared.WebhookType.SHIPMENT_UPDATE,
 )
 
 res = s.order.process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post(req)
@@ -702,8 +700,8 @@ Register Testkit
 ### Example Usage
 
 ```python
-import vital
 import dateutil.parser
+import vital
 from vital.models import shared
 
 s = vital.Vital()
@@ -807,7 +805,6 @@ is sent to the respective team.
 
 ```python
 import vital
-
 
 s = vital.Vital()
 

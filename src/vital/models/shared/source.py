@@ -17,7 +17,7 @@ class SourceSourceAuthType(str, Enum):
     APP = 'app'
     UNKNOWN = ''
 
-class SourceSourceType(str, Enum):
+class SourceType(str, Enum):
     r"""An enumeration."""
     APP = 'app'
     BLE = 'ble'
@@ -39,6 +39,6 @@ class Source:
     group: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('group'), 'exclude': lambda f: f is None }})
     is_active: Optional[bool] = dataclasses.field(default=True, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_active'), 'exclude': lambda f: f is None }})
     oauth_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauth_url'), 'exclude': lambda f: f is None }})
-    source_type: Optional[SourceSourceType] = dataclasses.field(default=SourceSourceType.DEVICE, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source_type'), 'exclude': lambda f: f is None }})
+    source_type: Optional[SourceType] = dataclasses.field(default=SourceType.DEVICE, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source_type'), 'exclude': lambda f: f is None }})
     
 

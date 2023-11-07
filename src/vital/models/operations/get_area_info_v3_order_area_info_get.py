@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import areainfo as shared_areainfo
+from ...models.shared import areainfo as shared_areainfo
 from typing import Optional
 
 

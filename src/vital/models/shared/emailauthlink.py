@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import authtype as shared_authtype
-from ..shared import providers as shared_providers
-from ..shared import region as shared_region
+from .authtype import AuthType
+from .providers import Providers
+from .region import Region
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from vital import utils
@@ -13,12 +13,12 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class EmailAuthLink:
-    auth_type: shared_authtype.AuthType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_type') }})
+    auth_type: AuthType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_type') }})
     r"""An enumeration."""
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
-    provider: shared_providers.Providers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
+    provider: Providers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
     r"""An enumeration."""
-    region: Optional[shared_region.Region] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('region'), 'exclude': lambda f: f is None }})
+    region: Optional[Region] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('region'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     
 

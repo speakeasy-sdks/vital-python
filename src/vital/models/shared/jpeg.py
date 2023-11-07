@@ -6,7 +6,7 @@ from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from vital import utils
 
-class JpegContentType(str, Enum):
+class ContentType(str, Enum):
     IMAGE_JPEG = 'image/jpeg'
 
 
@@ -15,6 +15,6 @@ class JpegContentType(str, Enum):
 class Jpeg:
     r"""An image of the back of the patient insurance card."""
     content: bytes = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content') }})
-    content_type: JpegContentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content_type') }})
+    content_type: ContentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content_type') }})
     
 

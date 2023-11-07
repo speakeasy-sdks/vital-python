@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientfacingteam as shared_clientfacingteam
+from ...models.shared import clientfacingteam as shared_clientfacingteam
 from typing import Optional
 
 

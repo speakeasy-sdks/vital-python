@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import ingestibletimeseriesresource as shared_ingestibletimeseriesresource
+from ...models.shared import ingestibletimeseriesresource as shared_ingestibletimeseriesresource
 from typing import Optional
 
 

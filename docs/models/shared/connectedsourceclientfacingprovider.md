@@ -1,6 +1,8 @@
-# ConnectedSourceClientFacingProvider
+# ~~ConnectedSourceClientFacingProvider~~
 
 A vendor, a service, or a platform which Vital can connect with.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 
 ## Fields

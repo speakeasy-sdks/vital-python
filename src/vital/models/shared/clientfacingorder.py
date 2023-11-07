@@ -3,16 +3,16 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import clientfacingathomephlebotomyorderdetails as shared_clientfacingathomephlebotomyorderdetails
-from ..shared import clientfacinglab as shared_clientfacinglab
-from ..shared import clientfacingmarker as shared_clientfacingmarker
-from ..shared import clientfacingorderevent as shared_clientfacingorderevent
-from ..shared import clientfacingtestkitorderdetails as shared_clientfacingtestkitorderdetails
-from ..shared import clientfacingwalkinorderdetails as shared_clientfacingwalkinorderdetails
-from ..shared import labtestcollectionmethod as shared_labtestcollectionmethod
-from ..shared import labtestsampletype as shared_labtestsampletype
-from ..shared import ordertoplevelstatus as shared_ordertoplevelstatus
-from ..shared import physicianclientfacing as shared_physicianclientfacing
+from .clientfacingathomephlebotomyorderdetails import ClientFacingAtHomePhlebotomyOrderDetails
+from .clientfacinglab import ClientFacingLab
+from .clientfacingmarker import ClientFacingMarker
+from .clientfacingorderevent import ClientFacingOrderEvent
+from .clientfacingtestkitorderdetails import ClientFacingTestKitOrderDetails
+from .clientfacingwalkinorderdetails import ClientFacingWalkInOrderDetails
+from .labtestcollectionmethod import LabTestCollectionMethod
+from .labtestsampletype import LabTestSampleType
+from .ordertoplevelstatus import OrderTopLevelStatus
+from .physicianclientfacing import PhysicianClientFacing
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import List, Optional, Union
@@ -20,7 +20,7 @@ from vital import utils
 
 
 @dataclasses.dataclass
-class ClientFacingOrderDetails:
+class Details:
     pass
 
 
@@ -30,19 +30,19 @@ class ClientFacingOrderClientFacingLabTest:
     r"""The Vital Test associated with the order"""
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     is_active: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_active') }})
-    method: shared_labtestcollectionmethod.LabTestCollectionMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
+    method: LabTestCollectionMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
     r"""The method used to perform a lab test."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     price: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('price') }})
-    sample_type: shared_labtestsampletype.LabTestSampleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sample_type') }})
+    sample_type: LabTestSampleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sample_type') }})
     r"""The type of sample used to perform a lab test."""
     slug: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('slug') }})
     fasting: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fasting'), 'exclude': lambda f: f is None }})
     r"""Defines whether a lab test requires fasting. Only available for Labcorp."""
     is_delegated: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('is_delegated'), 'exclude': lambda f: f is None }})
     r"""Denotes whether a lab test requires using non-Vital physician networks. If it does then it's delegated - no otherwise."""
-    lab: Optional[shared_clientfacinglab.ClientFacingLab] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab'), 'exclude': lambda f: f is None }})
-    markers: Optional[List[shared_clientfacingmarker.ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
+    lab: Optional[ClientFacingLab] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab'), 'exclude': lambda f: f is None }})
+    markers: Optional[List[ClientFacingMarker]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('markers'), 'exclude': lambda f: f is None }})
     
 
 
@@ -65,7 +65,7 @@ class ClientFacingOrderPatientAddressCompatible:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ClientFacingOrderClientFacingPatientDetailsCompatible:
+class ClientFacingPatientDetailsCompatible:
     r"""Patient Details"""
     dob: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dob'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     gender: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('gender') }})
@@ -98,8 +98,8 @@ class ClientFacingOrderShippingAddress:
 class ClientFacingOrder:
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     r"""When your order was created"""
-    details: Union[shared_clientfacingwalkinorderdetails.ClientFacingWalkInOrderDetails, shared_clientfacingtestkitorderdetails.ClientFacingTestKitOrderDetails, shared_clientfacingathomephlebotomyorderdetails.ClientFacingAtHomePhlebotomyOrderDetails] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('details') }})
-    events: List[shared_clientfacingorderevent.ClientFacingOrderEvent] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
+    details: Union[ClientFacingWalkInOrderDetails, ClientFacingTestKitOrderDetails, ClientFacingAtHomePhlebotomyOrderDetails] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('details') }})
+    events: List[ClientFacingOrderEvent] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('events') }})
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""The Vital Order ID"""
     lab_test: ClientFacingOrderClientFacingLabTest = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab_test') }})
@@ -116,9 +116,9 @@ class ClientFacingOrder:
     r"""Notes associated with the order"""
     patient_address: Optional[ClientFacingOrderPatientAddressCompatible] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('patient_address'), 'exclude': lambda f: f is None }})
     r"""Patient Address"""
-    patient_details: Optional[ClientFacingOrderClientFacingPatientDetailsCompatible] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('patient_details'), 'exclude': lambda f: f is None }})
+    patient_details: Optional[ClientFacingPatientDetailsCompatible] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('patient_details'), 'exclude': lambda f: f is None }})
     r"""Patient Details"""
-    physician: Optional[shared_physicianclientfacing.PhysicianClientFacing] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('physician'), 'exclude': lambda f: f is None }})
+    physician: Optional[PhysicianClientFacing] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('physician'), 'exclude': lambda f: f is None }})
     priority: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priority'), 'exclude': lambda f: f is None }})
     r"""Defines whether order is priority or not. Only available for Labcorp. For Labcorp, this corresponds to a STAT order."""
     requisition_form_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('requisition_form_url'), 'exclude': lambda f: f is None }})
@@ -127,7 +127,7 @@ class ClientFacingOrder:
     r"""Sample ID"""
     shipping_details: Optional[ClientFacingOrderShippingAddress] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shipping_details'), 'exclude': lambda f: f is None }})
     r"""Shipping Details. For unregistered testkit orders."""
-    status: Optional[shared_ordertoplevelstatus.OrderTopLevelStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
+    status: Optional[OrderTopLevelStatus] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     
 

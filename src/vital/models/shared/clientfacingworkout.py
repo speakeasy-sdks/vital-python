@@ -10,7 +10,7 @@ from vital import utils
 
 
 @dataclasses.dataclass
-class ClientFacingWorkoutMap:
+class Map:
     r"""Map of workouts encoded as polyline"""
     
 
@@ -94,7 +94,7 @@ class ClientFacingWorkout:
     r"""Lowest point of elevation::meters"""
     hr_zones: Optional[List[int]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hr_zones'), 'exclude': lambda f: f is None }})
     r"""Time in seconds spent in different heart rate zones <50%, 50-60%, 60-70%, 70-80%, 80-90%, 90%+. Due to rounding errors, it's possible that summing all values is different than the total time of the workout. Not available for all providers::seconds"""
-    map: Optional[ClientFacingWorkoutMap] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('map'), 'exclude': lambda f: f is None }})
+    map: Optional[Map] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('map'), 'exclude': lambda f: f is None }})
     r"""Map of workouts encoded as polyline"""
     max_hr: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_hr'), 'exclude': lambda f: f is None }})
     r"""Max heart rate during workout::bpm"""

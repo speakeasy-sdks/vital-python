@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientfacingglucosetimeseries as shared_clientfacingglucosetimeseries
+from ...models.shared import clientfacingglucosetimeseries as shared_clientfacingglucosetimeseries
 from typing import List, Optional
 
 
@@ -26,9 +26,9 @@ class GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    client_facing_glucose_timeseries: Optional[List[shared_clientfacingglucosetimeseries.ClientFacingGlucoseTimeseries]] = dataclasses.field(default=None)
-    r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    response_get_timeseries_resource_data_v2_timeseries_user_id_glucose_get: Optional[List[shared_clientfacingglucosetimeseries.ClientFacingGlucoseTimeseries]] = dataclasses.field(default=None)
+    r"""Successful Response"""
     
 

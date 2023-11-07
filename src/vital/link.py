@@ -84,7 +84,7 @@ class Link:
         return res
 
     
-    def connect_ble_provider(self, manual_connection_data: shared.ManualConnectionData, provider: operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders) -> operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse:
+    def connect_ble_provider(self, manual_connection_data: shared.ManualConnectionData, provider: operations.ManualProviders) -> operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse:
         r"""Connect Ble Provider
         REQUEST_SOURCE: CUSTOMER
         PROVIDER_TYPE: MANUAL-PROVIDER
@@ -177,7 +177,7 @@ class Link:
         return res
 
     
-    def connect_email_provider(self, email_provider_auth_link: shared.EmailProviderAuthLink, provider: operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders) -> operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse:
+    def connect_email_provider(self, email_provider_auth_link: shared.EmailProviderAuthLink, provider: operations.EmailProviders) -> operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse:
         r"""Connect Email Auth Provider
         This connects auth providers that are email based.
         """
@@ -224,7 +224,7 @@ class Link:
         return res
 
     
-    def connect_individual_provider(self, individual_provider_data: shared.IndividualProviderData, provider: operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse:
+    def connect_individual_provider(self, individual_provider_data: shared.IndividualProviderData, provider: operations.PasswordProviders, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse:
         r"""Connect Individual Provider
         This connects auth providers that are password based.
         """
@@ -601,7 +601,7 @@ class Link:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.SourceLink]])
-                res.source_links = out
+                res.response_get_providers_v2_link_providers_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

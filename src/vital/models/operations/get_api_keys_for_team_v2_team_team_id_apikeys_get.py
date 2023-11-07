@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import apikeyindb as shared_apikeyindb
+from ...models.shared import apikeyindb as shared_apikeyindb
 from typing import List, Optional
 
 
@@ -20,9 +20,9 @@ class GetAPIKeysForTeamV2TeamTeamIDApikeysGetResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    api_key_in_dbs: Optional[List[shared_apikeyindb.APIKeyInDB]] = dataclasses.field(default=None)
-    r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    response_get_api_keys_for_team_v2_team_team_id_apikeys_get: Optional[List[shared_apikeyindb.APIKeyInDB]] = dataclasses.field(default=None)
+    r"""Successful Response"""
     
 

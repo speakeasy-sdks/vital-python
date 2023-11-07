@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import clientfacingsleepstream as shared_clientfacingsleepstream
+from .clientfacingsleepstream import ClientFacingSleepStream
 from dataclasses_json import Undefined, dataclass_json
 from datetime import date, datetime
 from typing import Optional
@@ -88,7 +88,7 @@ class ClientFacingSleep:
     r"""A value between 1 and 100 representing how well the user slept. Currently only available for Withings, Oura, Whoop and Garmin::scalar"""
     skin_temperature: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('skin_temperature'), 'exclude': lambda f: f is None }})
     r"""The skin temperature::celcius"""
-    sleep_stream: Optional[shared_clientfacingsleepstream.ClientFacingSleepStream] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sleep_stream'), 'exclude': lambda f: f is None }})
+    sleep_stream: Optional[ClientFacingSleepStream] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sleep_stream'), 'exclude': lambda f: f is None }})
     temperature_delta: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('temperature_delta'), 'exclude': lambda f: f is None }})
     r"""Skin temperature deviation from the long-term temperature average::celcius"""
     timezone_offset: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone_offset'), 'exclude': lambda f: f is None }})

@@ -20,7 +20,7 @@ class GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    get_order_requisition_url_v3_order_order_id_requisition_pdf_get_200_application_json_any: Optional[Any] = dataclasses.field(default=None)
+    any: Optional[Any] = dataclasses.field(default=None)
     r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""

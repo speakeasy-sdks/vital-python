@@ -256,7 +256,7 @@ class Team:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.APIKeyInDB]])
-                res.api_key_in_dbs = out
+                res.response_get_api_keys_for_team_v2_team_team_id_apikeys_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -327,8 +327,8 @@ class Team:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[List[operations.GetSourcePrioritiesV2TeamSourcePrioritiesGet200ApplicationJSON]])
-                res.get_source_priorities_v2_team_source_priorities_get_200_application_json_objects = out
+                out = utils.unmarshal_json(http_res.text, Optional[List[operations.ResponseBody]])
+                res.response_get_source_priorities_v2_team_source_priorities_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -481,7 +481,7 @@ class Team:
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
                 out = utils.unmarshal_json(http_res.text, Optional[List[shared.ClientFacingUser]])
-                res.client_facing_users = out
+                res.response_search_team_users_by_uuid_or_client_user_id_v2_team_users_search_get = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:
@@ -570,8 +570,8 @@ class Team:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[List[operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatch200ApplicationJSON]])
-                res.update_source_priorities_v2_team_source_priorities_patch_200_application_json_objects = out
+                out = utils.unmarshal_json(http_res.text, Optional[List[operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody]])
+                res.response_update_source_priorities_v2_team_source_priorities_patch = out
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code == 422:

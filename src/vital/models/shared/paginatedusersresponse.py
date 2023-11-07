@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacinguser as shared_clientfacinguser
+from .clientfacinguser import ClientFacingUser
 from dataclasses_json import Undefined, dataclass_json
 from typing import List
 from vital import utils
@@ -14,6 +14,6 @@ class PaginatedUsersResponse:
     limit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit') }})
     offset: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offset') }})
     total: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total') }})
-    users: List[shared_clientfacinguser.ClientFacingUser] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('users') }})
+    users: List[ClientFacingUser] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('users') }})
     
 

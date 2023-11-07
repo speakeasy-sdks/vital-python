@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import oauthproviders as shared_oauthproviders
-from ..shared import source as shared_source
+from ...models.shared import oauthproviders as shared_oauthproviders
+from ...models.shared import source as shared_source
 from typing import Optional
 
 

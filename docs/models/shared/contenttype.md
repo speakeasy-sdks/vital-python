@@ -1,4 +1,4 @@
-# JpegContentType
+# ContentType
 
 
 ## Values

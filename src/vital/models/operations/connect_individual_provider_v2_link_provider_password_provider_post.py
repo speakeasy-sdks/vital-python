@@ -3,12 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import individualproviderdata as shared_individualproviderdata
-from ..shared import providerlinkresponse as shared_providerlinkresponse
+from ...models.shared import individualproviderdata as shared_individualproviderdata
+from ...models.shared import providerlinkresponse as shared_providerlinkresponse
 from enum import Enum
 from typing import Optional
 
-class ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders(str, Enum):
+class PasswordProviders(str, Enum):
     r"""An enumeration."""
     WHOOP = 'whoop'
     RENPHO = 'renpho'
@@ -24,7 +24,7 @@ class ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswor
 @dataclasses.dataclass
 class ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest:
     individual_provider_data: shared_individualproviderdata.IndividualProviderData = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    provider: ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: PasswordProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     x_vital_link_client_region: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-link-client-region', 'style': 'simple', 'explode': False }})
     

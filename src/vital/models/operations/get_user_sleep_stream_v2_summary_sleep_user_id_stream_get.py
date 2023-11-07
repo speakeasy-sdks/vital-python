@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientsleepresponse as shared_clientsleepresponse
+from ...models.shared import clientsleepresponse as shared_clientsleepresponse
 from typing import Optional
 
 

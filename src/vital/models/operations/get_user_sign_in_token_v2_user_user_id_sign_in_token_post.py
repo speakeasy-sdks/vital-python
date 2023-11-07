@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import usersignintokenresponse as shared_usersignintokenresponse
+from ...models.shared import usersignintokenresponse as shared_usersignintokenresponse
 from typing import Optional
 
 

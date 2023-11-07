@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import region as shared_region
-from ..shared import vitaltokenexchangeteamresponse as shared_vitaltokenexchangeteamresponse
+from .region import Region
+from .vitaltokenexchangeteamresponse import VitalTokenExchangeTeamResponse
 from dataclasses_json import Undefined, dataclass_json
 from vital import utils
 
@@ -13,9 +13,9 @@ from vital import utils
 class VitalTokenExchangeResponse:
     api_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('api_key') }})
     environment: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('environment') }})
-    region: shared_region.Region = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('region') }})
+    region: Region = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('region') }})
     r"""An enumeration."""
-    team: shared_vitaltokenexchangeteamresponse.VitalTokenExchangeTeamResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('team') }})
+    team: VitalTokenExchangeTeamResponse = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('team') }})
     user_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_id') }})
     
 

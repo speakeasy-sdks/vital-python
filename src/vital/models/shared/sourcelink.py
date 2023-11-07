@@ -19,7 +19,7 @@ class SourceLinkSourceAuthType(str, Enum):
 
 
 @dataclasses.dataclass
-class SourceLinkFormComponents:
+class FormComponents:
     pass
 
 
@@ -32,7 +32,7 @@ class SourceLink:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     slug: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('slug') }})
     auth_type: Optional[SourceLinkSourceAuthType] = dataclasses.field(default=SourceLinkSourceAuthType.OAUTH, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('auth_type'), 'exclude': lambda f: f is None }})
-    form_components: Optional[SourceLinkFormComponents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form_components'), 'exclude': lambda f: f is None }})
+    form_components: Optional[FormComponents] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('form_components'), 'exclude': lambda f: f is None }})
     oauth_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('oauth_url'), 'exclude': lambda f: f is None }})
     
 

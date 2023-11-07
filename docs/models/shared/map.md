@@ -1,4 +1,4 @@
-# ClientFacingWorkoutMap
+# Map
 
 Map of workouts encoded as polyline
 

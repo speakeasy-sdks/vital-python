@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import providers as shared_providers
+from .providers import Providers
 from dataclasses_json import Undefined, dataclass_json
 from typing import List, Optional
 from vital import utils
@@ -13,8 +13,8 @@ from vital import utils
 class LinkTokenExchange:
     user_key: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('user_key') }})
     r"""User id returned by vital create user request. This id should be stored in your database against the user and used for all interactions with the vital api."""
-    filter_on_providers: Optional[List[shared_providers.Providers]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter_on_providers'), 'exclude': lambda f: f is None }})
-    provider: Optional[shared_providers.Providers] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider'), 'exclude': lambda f: f is None }})
+    filter_on_providers: Optional[List[Providers]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter_on_providers'), 'exclude': lambda f: f is None }})
+    provider: Optional[Providers] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     redirect_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('redirect_url'), 'exclude': lambda f: f is None }})
     

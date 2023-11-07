@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import linktokenexchangeresponse as shared_linktokenexchangeresponse
+from ...models.shared import linktokenexchangeresponse as shared_linktokenexchangeresponse
 from typing import Optional
 
 

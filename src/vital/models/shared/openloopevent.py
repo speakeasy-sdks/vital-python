@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import openloopresourceidtype as shared_openloopresourceidtype
-from ..shared import openloopwebhooktype as shared_openloopwebhooktype
+from .openloopresourceidtype import OpenLoopResourceIDType
+from .openloopwebhooktype import OpenLoopWebhookType
 from dataclasses_json import Undefined, dataclass_json
 from vital import utils
 
@@ -11,10 +11,10 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class OpenLoopEvent:
-    event_type: shared_openloopwebhooktype.OpenLoopWebhookType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event_type') }})
+    event_type: OpenLoopWebhookType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('event_type') }})
     r"""An enumeration."""
     resource_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resource_id') }})
-    resource_id_type: shared_openloopresourceidtype.OpenLoopResourceIDType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resource_id_type') }})
+    resource_id_type: OpenLoopResourceIDType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resource_id_type') }})
     r"""An enumeration."""
     
 

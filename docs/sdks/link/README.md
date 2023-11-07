@@ -1,5 +1,5 @@
 # Link
-(*link*)
+(*.link*)
 
 ### Available Operations
 
@@ -28,7 +28,6 @@ Check link token state - can be hit continuously used as heartbeat
 
 ```python
 import vital
-
 
 s = vital.Vital()
 
@@ -59,7 +58,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.LinkTokenBase(
-    oauth_info=shared.LinkTokenBaseOauthInfo(),
+    oauth_info=shared.OauthInfo(),
     token='string',
 )
 
@@ -99,7 +98,7 @@ s = vital.Vital()
 
 res = s.link.connect_ble_provider(manual_connection_data=shared.ManualConnectionData(
     user_id='string',
-), provider=operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders.BEURER_BLE)
+), provider=operations.ManualProviders.BEURER_BLE)
 
 if res.response_connect_ble_provider_v2_link_provider_manual_provider_post is not None:
     # handle response
@@ -108,10 +107,10 @@ if res.response_connect_ble_provider_v2_link_provider_manual_provider_post is no
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                    | Type                                                                                                                                                                                         | Required                                                                                                                                                                                     | Description                                                                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `manual_connection_data`                                                                                                                                                                     | [shared.ManualConnectionData](../../models/shared/manualconnectiondata.md)                                                                                                                   | :heavy_check_mark:                                                                                                                                                                           | N/A                                                                                                                                                                                          |
-| `provider`                                                                                                                                                                                   | [operations.ConnectBleProviderV2LinkProviderManualProviderPostProviderManualProviders](../../models/operations/connectbleproviderv2linkprovidermanualproviderpostprovidermanualproviders.md) | :heavy_check_mark:                                                                                                                                                                           | An enumeration.                                                                                                                                                                              |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `manual_connection_data`                                                   | [shared.ManualConnectionData](../../models/shared/manualconnectiondata.md) | :heavy_check_mark:                                                         | N/A                                                                        |
+| `provider`                                                                 | [operations.ManualProviders](../../models/operations/manualproviders.md)   | :heavy_check_mark:                                                         | An enumeration.                                                            |
 
 
 ### Response
@@ -173,7 +172,7 @@ s = vital.Vital()
 
 res = s.link.connect_email_provider(email_provider_auth_link=shared.EmailProviderAuthLink(
     email='Mabelle_Medhurst23@gmail.com',
-), provider=operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders.FREESTYLE_LIBRE)
+), provider=operations.EmailProviders.FREESTYLE_LIBRE)
 
 if res.connection_status is not None:
     # handle response
@@ -182,10 +181,10 @@ if res.connection_status is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                            | Type                                                                                                                                                                                                 | Required                                                                                                                                                                                             | Description                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `email_provider_auth_link`                                                                                                                                                                           | [shared.EmailProviderAuthLink](../../models/shared/emailproviderauthlink.md)                                                                                                                         | :heavy_check_mark:                                                                                                                                                                                   | N/A                                                                                                                                                                                                  |
-| `provider`                                                                                                                                                                                           | [operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders](../../models/operations/connectemailauthproviderv2linkprovideremailproviderpostprovideremailproviders.md) | :heavy_check_mark:                                                                                                                                                                                   | An enumeration.                                                                                                                                                                                      |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `email_provider_auth_link`                                                   | [shared.EmailProviderAuthLink](../../models/shared/emailproviderauthlink.md) | :heavy_check_mark:                                                           | N/A                                                                          |
+| `provider`                                                                   | [operations.EmailProviders](../../models/operations/emailproviders.md)       | :heavy_check_mark:                                                           | An enumeration.                                                              |
 
 
 ### Response
@@ -209,7 +208,7 @@ s = vital.Vital()
 res = s.link.connect_individual_provider(individual_provider_data=shared.IndividualProviderData(
     password='U7xJdvB5pT6rvW2',
     username='Chanel73',
-), provider=operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders.RENPHO, x_vital_link_client_region='string')
+), provider=operations.PasswordProviders.RENPHO, x_vital_link_client_region='string')
 
 if res.provider_link_response is not None:
     # handle response
@@ -218,11 +217,11 @@ if res.provider_link_response is not None:
 
 ### Parameters
 
-| Parameter                                                                                                                                                                                                          | Type                                                                                                                                                                                                               | Required                                                                                                                                                                                                           | Description                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `individual_provider_data`                                                                                                                                                                                         | [shared.IndividualProviderData](../../models/shared/individualproviderdata.md)                                                                                                                                     | :heavy_check_mark:                                                                                                                                                                                                 | N/A                                                                                                                                                                                                                |
-| `provider`                                                                                                                                                                                                         | [operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostProviderPasswordProviders](../../models/operations/connectindividualproviderv2linkproviderpasswordproviderpostproviderpasswordproviders.md) | :heavy_check_mark:                                                                                                                                                                                                 | An enumeration.                                                                                                                                                                                                    |
-| `x_vital_link_client_region`                                                                                                                                                                                       | *Optional[str]*                                                                                                                                                                                                    | :heavy_minus_sign:                                                                                                                                                                                                 | N/A                                                                                                                                                                                                                |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `individual_provider_data`                                                     | [shared.IndividualProviderData](../../models/shared/individualproviderdata.md) | :heavy_check_mark:                                                             | N/A                                                                            |
+| `provider`                                                                     | [operations.PasswordProviders](../../models/operations/passwordproviders.md)   | :heavy_check_mark:                                                             | An enumeration.                                                                |
+| `x_vital_link_client_region`                                                   | *Optional[str]*                                                                | :heavy_minus_sign:                                                             | N/A                                                                            |
 
 
 ### Response
@@ -348,8 +347,8 @@ Generate a token to invite a user of Vital mobile app to your team
 ### Example Usage
 
 ```python
-import vital
 import dateutil.parser
+import vital
 from vital.models import operations
 
 s = vital.Vital()
@@ -491,13 +490,12 @@ GET List of all available providers given the generated link token.
 ```python
 import vital
 
-
 s = vital.Vital()
 
 
 res = s.link.get_providers()
 
-if res.source_links is not None:
+if res.response_get_providers_v2_link_providers_get is not None:
     # handle response
     pass
 ```

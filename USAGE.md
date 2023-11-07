@@ -4,13 +4,12 @@
 ```python
 import vital
 
-
 s = vital.Vital()
 
 
-res = s.vital.robots_robots_txt_get()
+res = s.robots_robots_txt_get()
 
-if res.robots_robots_txt_get_200_text_plain_string is not None:
+if res.res is not None:
     # handle response
     pass
 ```

@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import priority as shared_priority
-from ..shared import prioritycreate as shared_prioritycreate
+from ...models.shared import priority as shared_priority
+from ...models.shared import prioritycreate as shared_prioritycreate
 from typing import Optional
 
 

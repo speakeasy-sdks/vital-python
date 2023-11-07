@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import providers as shared_providers
+from .providers import Providers
 from dataclasses_json import Undefined, dataclass_json
 from vital import utils
 
@@ -11,7 +11,7 @@ from vital import utils
 @dataclasses.dataclass
 class BeginLinkTokenRequest:
     link_token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('link_token') }})
-    provider: shared_providers.Providers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
+    provider: Providers = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
     r"""An enumeration."""
     
 

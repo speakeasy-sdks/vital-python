@@ -1,5 +1,5 @@
 # User
-(*user*)
+(*.user*)
 
 ### Available Operations
 
@@ -220,7 +220,6 @@ GET metrics for team.
 
 ```python
 import vital
-
 
 s = vital.Vital()
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingactivity as shared_clientfacingactivity
+from .clientfacingactivity import ClientFacingActivity
 from dataclasses_json import Undefined, dataclass_json
 from typing import List
 from vital import utils
@@ -11,6 +11,6 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientActivityResponse:
-    activity: List[shared_clientfacingactivity.ClientFacingActivity] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('activity') }})
+    activity: List[ClientFacingActivity] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('activity') }})
     
 

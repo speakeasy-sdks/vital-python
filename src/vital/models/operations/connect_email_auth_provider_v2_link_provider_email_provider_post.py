@@ -3,12 +3,12 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import connectionstatus as shared_connectionstatus
-from ..shared import emailproviderauthlink as shared_emailproviderauthlink
+from ...models.shared import connectionstatus as shared_connectionstatus
+from ...models.shared import emailproviderauthlink as shared_emailproviderauthlink
 from enum import Enum
 from typing import Optional
 
-class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders(str, Enum):
+class EmailProviders(str, Enum):
     r"""An enumeration."""
     FREESTYLE_LIBRE = 'freestyle_libre'
 
@@ -16,7 +16,7 @@ class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProvid
 @dataclasses.dataclass
 class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest:
     email_provider_auth_link: shared_emailproviderauthlink.EmailProviderAuthLink = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    provider: ConnectEmailAuthProviderV2LinkProviderEmailProviderPostProviderEmailProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: EmailProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     
 

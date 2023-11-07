@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingorder as shared_clientfacingorder
+from .clientfacingorder import ClientFacingOrder
 from dataclasses_json import Undefined, dataclass_json
 from vital import utils
 
@@ -11,7 +11,7 @@ from vital import utils
 @dataclasses.dataclass
 class PostOrderResponse:
     message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message') }})
-    order: shared_clientfacingorder.ClientFacingOrder = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('order') }})
+    order: ClientFacingOrder = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('order') }})
     status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import clientfacingwalkintestorder as shared_clientfacingwalkintestorder
+from .clientfacingwalkintestorder import ClientFacingWalkInTestOrder
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from typing import Optional
@@ -16,7 +16,7 @@ class ClientFacingWalkInOrderDetailsType(str, Enum):
 @dataclasses.dataclass
 class ClientFacingWalkInOrderDetails:
     type: ClientFacingWalkInOrderDetailsType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
-    data: Optional[shared_clientfacingwalkintestorder.ClientFacingWalkInTestOrder] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    data: Optional[ClientFacingWalkInTestOrder] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     r"""Schema for a walk-in test order in the client facing API.
 
     To be used as part of a ClientFacingOrder.

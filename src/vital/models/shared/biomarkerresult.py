@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import resulttype as shared_resulttype
+from .resulttype import ResultType
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Optional
@@ -16,7 +16,7 @@ class BiomarkerResult:
     r"""Represent the schema for an individual biomarker result."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     result: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result') }})
-    type: shared_resulttype.ResultType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
+    type: ResultType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""An enumeration."""
     value: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value') }})
     interpretation: Optional[str] = dataclasses.field(default='normal', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('interpretation'), 'exclude': lambda f: f is None }})

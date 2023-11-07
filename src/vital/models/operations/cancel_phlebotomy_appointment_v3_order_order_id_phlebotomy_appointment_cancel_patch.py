@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import appointmentcancelrequest as shared_appointmentcancelrequest
-from ..shared import clientfacingappointment as shared_clientfacingappointment
+from ...models.shared import appointmentcancelrequest as shared_appointmentcancelrequest
+from ...models.shared import clientfacingappointment as shared_clientfacingappointment
 from typing import Optional
 
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import clientfacingdiagnosisinformation as shared_clientfacingdiagnosisinformation
+from ...models.shared import clientfacingdiagnosisinformation as shared_clientfacingdiagnosisinformation
 from typing import List, Optional
 
 
@@ -20,9 +20,9 @@ class SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse:
     r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    client_facing_diagnosis_informations: Optional[List[shared_clientfacingdiagnosisinformation.ClientFacingDiagnosisInformation]] = dataclasses.field(default=None)
-    r"""Successful Response"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     r"""Raw HTTP response; suitable for custom response parsing"""
+    response_search_diagnosis_v3_insurance_search_diagnosis_get: Optional[List[shared_clientfacingdiagnosisinformation.ClientFacingDiagnosisInformation]] = dataclasses.field(default=None)
+    r"""Successful Response"""
     
 

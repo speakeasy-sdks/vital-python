@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import _fulfillment as shared__fulfillment
+from ._fulfillment import Fulfillment
 from dataclasses_json import Undefined, dataclass_json
 from enum import Enum
 from vital import utils
 
-class ShipmentWebhookUpdateWebhookType(str, Enum):
+class WebhookType(str, Enum):
     SHIPMENT_UPDATE = 'Shipment Update'
 
 
@@ -66,7 +66,7 @@ class ShipmentWebhookUpdate:
         }
     }
     """
-    fulfillment: shared__fulfillment.Fulfillment = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fulfillment') }})
-    webhook_type: ShipmentWebhookUpdateWebhookType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type') }})
+    fulfillment: Fulfillment = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fulfillment') }})
+    webhook_type: WebhookType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('webhook_type') }})
     
 

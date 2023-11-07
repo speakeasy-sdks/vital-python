@@ -1,17 +1,7 @@
 # LabResultsRawResults
 
 
-## Supported Types
+## Fields
 
-### 
-
-```python
-labResultsRawResults: List[shared.BiomarkerResult] = /* values here */
-```
-
-### LabResultsRawResultsResults
-
-```python
-labResultsRawResults: shared.LabResultsRawResultsResults = /* values here */
-```
-
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

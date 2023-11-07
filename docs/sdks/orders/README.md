@@ -1,5 +1,5 @@
 # Orders
-(*orders*)
+(*.orders*)
 
 ### Available Operations
 
@@ -12,8 +12,8 @@ GET many orders with filters.
 ### Example Usage
 
 ```python
-import vital
 import dateutil.parser
+import vital
 from vital.models import operations
 
 s = vital.Vital()

@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import teamindb as shared_teamindb
-from ..shared import teamupdate as shared_teamupdate
+from ...models.shared import teamindb as shared_teamindb
+from ...models.shared import teamupdate as shared_teamupdate
 from typing import Optional
 
 

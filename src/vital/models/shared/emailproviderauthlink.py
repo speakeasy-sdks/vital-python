@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import providers as shared_providers
-from ..shared import region as shared_region
+from .providers import Providers
+from .region import Region
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from vital import utils
@@ -13,9 +13,9 @@ from vital import utils
 @dataclasses.dataclass
 class EmailProviderAuthLink:
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
-    provider: Optional[shared_providers.Providers] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider'), 'exclude': lambda f: f is None }})
+    provider: Optional[Providers] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
-    region: Optional[shared_region.Region] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('region'), 'exclude': lambda f: f is None }})
+    region: Optional[Region] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('region'), 'exclude': lambda f: f is None }})
     r"""An enumeration."""
     
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import vitaltokenexchangeresponse as shared_vitaltokenexchangeresponse
+from ...models.shared import vitaltokenexchangeresponse as shared_vitaltokenexchangeresponse
 from typing import Optional
 
 

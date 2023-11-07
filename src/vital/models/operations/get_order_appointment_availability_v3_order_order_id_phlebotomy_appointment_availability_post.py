@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import appointmentavailabilityslots as shared_appointmentavailabilityslots
+from ...models.shared import appointmentavailabilityslots as shared_appointmentavailabilityslots
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from vital import utils

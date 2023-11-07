@@ -2,9 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import energy as shared_energy
-from ..shared import macros as shared_macros
-from ..shared import micros as shared_micros
+from .energy import Energy
+from .macros import Macros
+from .micros import Micros
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from vital import utils
@@ -13,8 +13,8 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientFacingFood:
-    energy: Optional[shared_energy.Energy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('energy'), 'exclude': lambda f: f is None }})
-    macros: Optional[shared_macros.Macros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('macros'), 'exclude': lambda f: f is None }})
-    micros: Optional[shared_micros.Micros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('micros'), 'exclude': lambda f: f is None }})
+    energy: Optional[Energy] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('energy'), 'exclude': lambda f: f is None }})
+    macros: Optional[Macros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('macros'), 'exclude': lambda f: f is None }})
+    micros: Optional[Micros] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('micros'), 'exclude': lambda f: f is None }})
     
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import rawworkout as shared_rawworkout
+from ...models.shared import rawworkout as shared_rawworkout
 from typing import Optional
 
 

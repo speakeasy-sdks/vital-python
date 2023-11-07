@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import passwordproviders as shared_passwordproviders
+from .passwordproviders import PasswordProviders
 from dataclasses_json import Undefined, dataclass_json
 from typing import Optional
 from vital import utils
@@ -12,7 +12,7 @@ from vital import utils
 @dataclasses.dataclass
 class ProviderLinkResponse:
     connected: bool = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connected') }})
-    provider: shared_passwordproviders.PasswordProviders = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
+    provider: PasswordProviders = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
     r"""An enumeration."""
     provider_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider_id'), 'exclude': lambda f: f is None }})
     

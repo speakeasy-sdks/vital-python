@@ -1,4 +1,4 @@
-# LinkTokenBaseOauthInfo
+# UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody
 
 
 ## Fields

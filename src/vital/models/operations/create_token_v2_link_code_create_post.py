@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 import dateutil.parser
 import requests as requests_http
-from ..shared import vitaltokencreatedresponse as shared_vitaltokencreatedresponse
+from ...models.shared import vitaltokencreatedresponse as shared_vitaltokencreatedresponse
 from datetime import datetime
 from typing import Optional
 

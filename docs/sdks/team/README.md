@@ -1,5 +1,5 @@
 # Team
-(*team*)
+(*.team*)
 
 ### Available Operations
 
@@ -213,7 +213,7 @@ s = vital.Vital()
 
 res = s.team.get_api_keys(team_id='string')
 
-if res.api_key_in_dbs is not None:
+if res.response_get_api_keys_for_team_v2_team_team_id_apikeys_get is not None:
     # handle response
     pass
 ```
@@ -238,7 +238,6 @@ Post teams.
 
 ```python
 import vital
-
 
 s = vital.Vital()
 
@@ -271,7 +270,7 @@ s = vital.Vital()
 
 res = s.team.get_source_priorities(data_type='string')
 
-if res.get_source_priorities_v2_team_source_priorities_get_200_application_json_objects is not None:
+if res.response_get_source_priorities_v2_team_source_priorities_get is not None:
     # handle response
     pass
 ```
@@ -328,7 +327,6 @@ Get Svix Webhook Url
 
 ```python
 import vital
-
 
 s = vital.Vital()
 
@@ -394,7 +392,7 @@ s = vital.Vital()
 
 res = s.team.search_users_by_uuid(query_id='string')
 
-if res.client_facing_users is not None:
+if res.response_search_team_users_by_uuid_or_client_user_id_v2_team_users_search_get is not None:
     # handle response
     pass
 ```
@@ -462,7 +460,7 @@ s = vital.Vital()
 
 res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='string')
 
-if res.update_source_priorities_v2_team_source_priorities_patch_200_application_json_objects is not None:
+if res.response_update_source_priorities_v2_team_source_priorities_patch is not None:
     # handle response
     pass
 ```

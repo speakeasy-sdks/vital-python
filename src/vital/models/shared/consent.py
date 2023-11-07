@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import consenttype as shared_consenttype
+from .consenttype import ConsentType
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Optional
@@ -13,7 +13,7 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Consent:
-    consent_type: shared_consenttype.ConsentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consentType') }})
+    consent_type: ConsentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('consentType') }})
     r"""An enumeration."""
     time_of_consent: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeOfConsent'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'exclude': lambda f: f is None }})
     version: Optional[str] = dataclasses.field(default='1.0', metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('version'), 'exclude': lambda f: f is None }})

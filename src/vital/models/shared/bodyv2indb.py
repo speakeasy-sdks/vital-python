@@ -3,7 +3,7 @@
 from __future__ import annotations
 import dataclasses
 import dateutil.parser
-from ..shared import clientfacingprovider as shared_clientfacingprovider
+from .clientfacingprovider import ClientFacingProvider
 from dataclasses_json import Undefined, dataclass_json
 from datetime import datetime
 from typing import Optional
@@ -21,7 +21,7 @@ class BodyV2InDB:
     data: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     priority: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priority'), 'exclude': lambda f: f is None }})
     priority_id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('priority_id'), 'exclude': lambda f: f is None }})
-    source: Optional[shared_clientfacingprovider.ClientFacingProvider] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
+    source: Optional[ClientFacingProvider] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source'), 'exclude': lambda f: f is None }})
     r"""A vendor, a service, or a platform which Vital can connect with."""
     
 

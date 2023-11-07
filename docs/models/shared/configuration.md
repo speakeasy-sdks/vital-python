@@ -1,4 +1,4 @@
-# LabResultsRawResultsResults
+# Configuration
 
 
 ## Fields

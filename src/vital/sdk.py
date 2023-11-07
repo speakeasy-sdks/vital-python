@@ -19,17 +19,17 @@ from vital.models import errors, operations
 
 class Vital:
     r"""Vital API: API for at-home health Wearables and Lab test API for digital health companies."""
-    insurance: Insurance
-    lab_tests: LabTests
     link: Link
-    order: Order
-    orders: Orders
     physician: Physician
     providers: Providers
     summary: Summary
     team: Team
     timeseries: Timeseries
     user: User
+    insurance: Insurance
+    lab_tests: LabTests
+    order: Order
+    orders: Orders
 
     sdk_configuration: SDKConfiguration
 
@@ -67,17 +67,17 @@ class Vital:
         self._init_sdks()
     
     def _init_sdks(self):
-        self.insurance = Insurance(self.sdk_configuration)
-        self.lab_tests = LabTests(self.sdk_configuration)
         self.link = Link(self.sdk_configuration)
-        self.order = Order(self.sdk_configuration)
-        self.orders = Orders(self.sdk_configuration)
         self.physician = Physician(self.sdk_configuration)
         self.providers = Providers(self.sdk_configuration)
         self.summary = Summary(self.sdk_configuration)
         self.team = Team(self.sdk_configuration)
         self.timeseries = Timeseries(self.sdk_configuration)
         self.user = User(self.sdk_configuration)
+        self.insurance = Insurance(self.sdk_configuration)
+        self.lab_tests = LabTests(self.sdk_configuration)
+        self.order = Order(self.sdk_configuration)
+        self.orders = Orders(self.sdk_configuration)
     
     def robots_robots_txt_get(self) -> operations.RobotsRobotsTxtGetResponse:
         r"""Robots"""
@@ -97,7 +97,7 @@ class Vital:
         
         if http_res.status_code == 200:
             if utils.match_content_type(content_type, 'text/plain'):
-                res.robots_robots_txt_get_200_text_plain_string = http_res.content
+                res.res = http_res.content
             else:
                 raise errors.SDKError(f'unknown content-type received: {content_type}', http_res.status_code, http_res.text, http_res)
         elif http_res.status_code >= 400 and http_res.status_code < 500 or http_res.status_code >= 500 and http_res.status_code < 600:

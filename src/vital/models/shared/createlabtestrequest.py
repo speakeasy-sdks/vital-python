@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import labtestcollectionmethod as shared_labtestcollectionmethod
-from ..shared import labtestsampletype as shared_labtestsampletype
+from .labtestcollectionmethod import LabTestCollectionMethod
+from .labtestsampletype import LabTestSampleType
 from dataclasses_json import Undefined, dataclass_json
 from typing import List, Optional
 from vital import utils
@@ -15,10 +15,10 @@ class CreateLabTestRequest:
     description: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description') }})
     lab_id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lab_id') }})
     marker_ids: List[int] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('marker_ids') }})
-    method: shared_labtestcollectionmethod.LabTestCollectionMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
+    method: LabTestCollectionMethod = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('method') }})
     r"""The method used to perform a lab test."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
-    sample_type: shared_labtestsampletype.LabTestSampleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sample_type') }})
+    sample_type: LabTestSampleType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sample_type') }})
     r"""The type of sample used to perform a lab test."""
     fasting: Optional[bool] = dataclasses.field(default=False, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fasting'), 'exclude': lambda f: f is None }})
     

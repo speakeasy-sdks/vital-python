@@ -11,7 +11,7 @@ from vital import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ClientFacingActivityHeartRate:
+class HeartRate:
     r"""Heart rate daily summary."""
     avg_bpm: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('avg_bpm'), 'exclude': lambda f: f is None }})
     r"""Average heart rate::bpm"""
@@ -84,7 +84,7 @@ class ClientFacingActivity:
     r"""Distance traveled during activities throughout the day::meters"""
     floors_climbed: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('floors_climbed'), 'exclude': lambda f: f is None }})
     r"""Number of floors climbed by the user::count"""
-    heart_rate: Optional[ClientFacingActivityHeartRate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('heart_rate'), 'exclude': lambda f: f is None }})
+    heart_rate: Optional[HeartRate] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('heart_rate'), 'exclude': lambda f: f is None }})
     r"""Heart rate daily summary."""
     high: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('high'), 'exclude': lambda f: f is None }})
     r"""Number of minutes during the day with high intensity activity (e.g. running)::minutes"""

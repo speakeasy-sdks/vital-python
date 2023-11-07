@@ -1,4 +1,4 @@
-# ShipmentWebhookUpdateWebhookType
+# WebhookType
 
 
 ## Values
