@@ -12,6 +12,7 @@ class Summary:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_meals(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetMealsV2SummaryMealUserIDGetResponse:
         r"""Get Meals
         Get user's meals
@@ -56,6 +57,7 @@ class Summary:
 
         return res
 
+    
     
     def get_user_activity(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserActivityV2SummaryActivityUserIDGetResponse:
         r"""Get User Activity
@@ -102,6 +104,7 @@ class Summary:
         return res
 
     
+    
     def get_user_activity_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserActivityRawV2SummaryActivityUserIDRawGetResponse:
         r"""Get User Activity Raw
         Get Daily Activity for user_id
@@ -146,6 +149,7 @@ class Summary:
 
         return res
 
+    
     
     def get_user_body(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserBodyV2SummaryBodyUserIDGetResponse:
         r"""Get User Body
@@ -192,6 +196,7 @@ class Summary:
         return res
 
     
+    
     def get_user_body_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserBodyRawV2SummaryBodyUserIDRawGetResponse:
         r"""Get User Body Raw
         Get Daily Body data for user_id
@@ -237,6 +242,7 @@ class Summary:
         return res
 
     
+    
     def get_user_devices_raw(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetResponse:
         r"""Get User Devices Raw
         Get Devices for user_id
@@ -279,6 +285,7 @@ class Summary:
 
         return res
 
+    
     
     def get_user_profile(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserProfileV2SummaryProfileUserIDGetResponse:
         r"""Get User Profile
@@ -323,6 +330,7 @@ class Summary:
         return res
 
     
+    
     def get_user_profile_raw(self, user_id: str, provider: Optional[str] = None) -> operations.GetUserProfileRawV2SummaryProfileUserIDRawGetResponse:
         r"""Get User Profile Raw
         Get Daily profile for user_id
@@ -365,6 +373,7 @@ class Summary:
 
         return res
 
+    
     
     def get_user_sleep(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepV2SummarySleepUserIDGetResponse:
         r"""Get User Sleep
@@ -411,6 +420,7 @@ class Summary:
         return res
 
     
+    
     def get_user_sleep_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepRawV2SummarySleepUserIDRawGetResponse:
         r"""Get User Sleep Raw
         Get Daily sleep for user_id
@@ -455,6 +465,7 @@ class Summary:
 
         return res
 
+    
     
     def get_user_sleep_stream(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetResponse:
         r"""Get User Sleep Stream
@@ -501,6 +512,7 @@ class Summary:
         return res
 
     
+    
     def get_user_workouts(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetResponse:
         r"""Get User Workouts
         Get Daily workout for user_id
@@ -545,6 +557,7 @@ class Summary:
 
         return res
 
+    
     
     def get_user_workouts_raw(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetResponse:
         r"""Get User Workouts Raw
@@ -591,6 +604,7 @@ class Summary:
         return res
 
     
+    
     def post_user_activity(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserActivityV2SummaryActivityUserIDPostResponse:
         r"""Post User Activity"""
         request = operations.PostUserActivityV2SummaryActivityUserIDPostRequest(
@@ -630,6 +644,7 @@ class Summary:
 
         return res
 
+    
     
     def post_user_body(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserBodyV2SummaryBodyUserIDPostResponse:
         r"""Post User Body"""
@@ -671,6 +686,7 @@ class Summary:
         return res
 
     
+    
     def post_user_profile(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserProfileV2SummaryProfileUserIDPostResponse:
         r"""Post User Profile"""
         request = operations.PostUserProfileV2SummaryProfileUserIDPostRequest(
@@ -711,6 +727,7 @@ class Summary:
         return res
 
     
+    
     def post_user_sleep(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserSleepV2SummarySleepUserIDPostResponse:
         r"""Post User Sleep"""
         request = operations.PostUserSleepV2SummarySleepUserIDPostRequest(
@@ -750,6 +767,7 @@ class Summary:
 
         return res
 
+    
     
     def post_user_workout(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostResponse:
         r"""Post User Workout"""

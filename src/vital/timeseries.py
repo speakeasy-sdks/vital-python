@@ -12,6 +12,7 @@ class Timeseries:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_blood_oxygen(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -56,6 +57,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_blood_pressure(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetResponse:
         r"""Get Timeseries Resource Data
@@ -102,6 +104,7 @@ class Timeseries:
         return res
 
     
+    
     def get_caffeine(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -146,6 +149,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_calories_active(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetResponse:
         r"""Get Timeseries Resource Data
@@ -192,6 +196,7 @@ class Timeseries:
         return res
 
     
+    
     def get_calories_basal(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -236,6 +241,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_cholesterol_all(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetResponse:
         r"""Get Timeseries Resource Data
@@ -282,6 +288,7 @@ class Timeseries:
         return res
 
     
+    
     def get_cholesterol_hdl(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -326,6 +333,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_cholesterol_ldl(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetResponse:
         r"""Get Timeseries Resource Data
@@ -372,6 +380,7 @@ class Timeseries:
         return res
 
     
+    
     def get_distance(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -416,6 +425,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_floors_climbed(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetResponse:
         r"""Get Timeseries Resource Data
@@ -462,6 +472,7 @@ class Timeseries:
         return res
 
     
+    
     def get_glucose(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -506,6 +517,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_heartrate(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetResponse:
         r"""Get Timeseries Resource Data
@@ -552,6 +564,7 @@ class Timeseries:
         return res
 
     
+    
     def get_hrv(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -596,6 +609,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_hypnogram(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetResponse:
         r"""Get Timeseries Resource Data
@@ -642,6 +656,7 @@ class Timeseries:
         return res
 
     
+    
     def get_ige(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -686,6 +701,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_igg(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetResponse:
         r"""Get Timeseries Resource Data
@@ -732,6 +748,7 @@ class Timeseries:
         return res
 
     
+    
     def get_mindfulness_minutes(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -776,6 +793,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_respiratory_rate(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetResponse:
         r"""Get Timeseries Resource Data
@@ -822,6 +840,7 @@ class Timeseries:
         return res
 
     
+    
     def get_steps(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -866,6 +885,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_total_cholesterol(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetResponse:
         r"""Get Timeseries Resource Data
@@ -912,6 +932,7 @@ class Timeseries:
         return res
 
     
+    
     def get_triglycerides(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetResponse:
         r"""Get Timeseries Resource Data
         Get timeseries data for user
@@ -957,6 +978,7 @@ class Timeseries:
         return res
 
     
+    
     def get_user_sleep_stream(self, sleep_id: str) -> operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetResponse:
         r"""Get User Sleep Stream
         Get Sleep stream for a user_id
@@ -998,6 +1020,7 @@ class Timeseries:
         return res
 
     
+    
     def get_user_workouts(self, workout_id: str) -> operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetResponse:
         r"""Get User Workouts"""
         request = operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetRequest(
@@ -1036,6 +1059,7 @@ class Timeseries:
 
         return res
 
+    
     
     def get_water(self, start_date: str, user_id: str, end_date: Optional[str] = None, provider: Optional[str] = None) -> operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetResponse:
         r"""Get Timeseries Resource Data
@@ -1082,6 +1106,7 @@ class Timeseries:
         return res
 
     
+    
     def post_blood_pressure(self, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostResponse:
         r"""Post User Blood Pressure"""
         request = operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostRequest(
@@ -1121,6 +1146,7 @@ class Timeseries:
 
         return res
 
+    
     
     def post_vitals(self, resource: shared.IngestibleTimeseriesResource, user_id: str, x_vital_android_sdk_version: Optional[str] = None, x_vital_ios_sdk_version: Optional[str] = None) -> operations.PostUserVitalsV2TimeseriesUserIDResourcePostResponse:
         r"""Post User Vitals"""

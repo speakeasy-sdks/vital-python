@@ -37,7 +37,7 @@ if res.res is not None:
 
 * [robots_robots_txt_get](docs/sdks/vital/README.md#robots_robots_txt_get) - Robots
 
-### [.link](docs/sdks/link/README.md)
+### [link](docs/sdks/link/README.md)
 
 * [check_token_state](docs/sdks/link/README.md#check_token_state) - Check Link Token State
 * [check_token_validity](docs/sdks/link/README.md#check_token_validity) - Check Token Valid
@@ -55,15 +55,15 @@ if res.res is not None:
 * [get_providers](docs/sdks/link/README.md#get_providers) - Get Providers
 * [start_connect_process](docs/sdks/link/README.md#start_connect_process) - Start Connect Process
 
-### [.physician](docs/sdks/physician/README.md)
+### [physician](docs/sdks/physician/README.md)
 
 * [review_openloop_v2_physician_review_openloop_post](docs/sdks/physician/README.md#review_openloop_v2_physician_review_openloop_post) - Review Openloop
 
-### [.providers](docs/sdks/providers/README.md)
+### [providers](docs/sdks/providers/README.md)
 
 * [list](docs/sdks/providers/README.md#list) - Get List Of Providers
 
-### [.summary](docs/sdks/summary/README.md)
+### [summary](docs/sdks/summary/README.md)
 
 * [get_meals](docs/sdks/summary/README.md#get_meals) - Get Meals
 * [get_user_activity](docs/sdks/summary/README.md#get_user_activity) - Get User Activity
@@ -84,7 +84,7 @@ if res.res is not None:
 * [post_user_sleep](docs/sdks/summary/README.md#post_user_sleep) - Post User Sleep
 * [post_user_workout](docs/sdks/summary/README.md#post_user_workout) - Post User Workout
 
-### [.team](docs/sdks/team/README.md)
+### [team](docs/sdks/team/README.md)
 
 * [create](docs/sdks/team/README.md#create) - Create Team
 * [create_api_key](docs/sdks/team/README.md#create_api_key) - Create Api Key
@@ -102,7 +102,7 @@ if res.res is not None:
 * [update_source_priorities_v2_team_source_priorities_patch](docs/sdks/team/README.md#update_source_priorities_v2_team_source_priorities_patch) - Update Source Priorities
 * [update_team_v2_team_team_id_patch](docs/sdks/team/README.md#update_team_v2_team_team_id_patch) - Update Team
 
-### [.timeseries](docs/sdks/timeseries/README.md)
+### [timeseries](docs/sdks/timeseries/README.md)
 
 * [get_blood_oxygen](docs/sdks/timeseries/README.md#get_blood_oxygen) - Get Timeseries Resource Data
 * [get_blood_pressure](docs/sdks/timeseries/README.md#get_blood_pressure) - Get Timeseries Resource Data
@@ -131,7 +131,7 @@ if res.res is not None:
 * [post_blood_pressure](docs/sdks/timeseries/README.md#post_blood_pressure) - Post User Blood Pressure
 * [post_vitals](docs/sdks/timeseries/README.md#post_vitals) - Post User Vitals
 
-### [.user](docs/sdks/user/README.md)
+### [user](docs/sdks/user/README.md)
 
 * [create_user](docs/sdks/user/README.md#create_user) - Create User
 * [delete](docs/sdks/user/README.md#delete) - Delete User
@@ -145,12 +145,12 @@ if res.res is not None:
 * [refresh_user_id_v2_user_refresh_user_id_post](docs/sdks/user/README.md#refresh_user_id_v2_user_refresh_user_id_post) - Refresh User Id
 * [resolve_by_user_id](docs/sdks/user/README.md#resolve_by_user_id) - Get User By Client User Id
 
-### [.insurance](docs/sdks/insurance/README.md)
+### [insurance](docs/sdks/insurance/README.md)
 
 * [search_diagnosis](docs/sdks/insurance/README.md#search_diagnosis) - Search Diagnosis
 * [search_insurance_payor_info](docs/sdks/insurance/README.md#search_insurance_payor_info) - Search Insurance Payor Information
 
-### [.lab_tests](docs/sdks/labtests/README.md)
+### [lab_tests](docs/sdks/labtests/README.md)
 
 * [create](docs/sdks/labtests/README.md#create) - Create Lab Test For Team
 * [get_labs](docs/sdks/labtests/README.md#get_labs) - Get Labs
@@ -158,7 +158,7 @@ if res.res is not None:
 * [get_markers](docs/sdks/labtests/README.md#get_markers) - Get Markers
 * [list](docs/sdks/labtests/README.md#list) - Get Lab Tests For Team
 
-### [.order](docs/sdks/order/README.md)
+### [order](docs/sdks/order/README.md)
 
 * [book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post](docs/sdks/order/README.md#book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post) - Book Phlebotomy Appointment
 * [cancel_order_v3_order_order_id_cancel_post](docs/sdks/order/README.md#cancel_order_v3_order_order_id_cancel_post) - Cancel Order
@@ -182,7 +182,7 @@ if res.res is not None:
 * [reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch](docs/sdks/order/README.md#reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch) - Reschedule Phlebotomy Appointment
 * [sync_testkit_order_status_v3_order_testkit_status_post](docs/sdks/order/README.md#sync_testkit_order_status_v3_order_testkit_status_post) - Sync Testkit Order Status
 
-### [.orders](docs/sdks/orders/README.md)
+### [orders](docs/sdks/orders/README.md)
 
 * [list](docs/sdks/orders/README.md#list) - Get Orders
 <!-- End SDK Available Operations -->
@@ -196,7 +196,12 @@ if res.res is not None:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
+
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 
 ## Example
@@ -215,8 +220,10 @@ req = shared.LinkTokenBase(
 res = None
 try:
     res = s.link.check_token_validity(req)
+except (errors.HTTPValidationError) as e:
+    print(e) # handle exception
 
-except (HTTPValidationError) as e:
+except (errors.SDKError) as e:
     print(e) # handle exception
 
 
@@ -285,7 +292,7 @@ if res.res is not None:
 The Python SDK makes API calls using the (requests)[https://pypi.org/project/requests/] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
 
 
-For example, you could specify a header for every request that your sdk makes as follows:
+For example, you could specify a header for every request that this sdk makes as follows:
 
 ```python
 import vital

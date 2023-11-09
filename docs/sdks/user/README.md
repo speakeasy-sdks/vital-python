@@ -1,5 +1,5 @@
 # User
-(*.user*)
+(*user*)
 
 ### Available Operations
 
@@ -48,7 +48,12 @@ if res.client_facing_user_key is not None:
 ### Response
 
 **[operations.CreateUserV2UserPostResponse](../../models/operations/createuserv2userpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## delete
 
@@ -80,7 +85,12 @@ if res.user_success_response is not None:
 ### Response
 
 **[operations.DeleteUserV2UserUserIDDeleteResponse](../../models/operations/deleteuserv2useruseriddeleteresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## deregister_provider_v2_user_user_id_provider_delete
 
@@ -113,7 +123,12 @@ if res.user_success_response is not None:
 ### Response
 
 **[operations.DeregisterProviderV2UserUserIDProviderDeleteResponse](../../models/operations/deregisterproviderv2useruseridproviderdeleteresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get
 
@@ -145,7 +160,12 @@ if res.client_facing_user is not None:
 ### Response
 
 **[operations.GetUserV2UserUserIDGetResponse](../../models/operations/getuserv2useruseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_all
 
@@ -178,7 +198,12 @@ if res.paginated_users_response is not None:
 ### Response
 
 **[operations.GetTeamsUsersV2UserGetResponse](../../models/operations/getteamsusersv2usergetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_connected_providers
 
@@ -210,7 +235,12 @@ if res.response_get_connected_providers_v2_user_providers_user_id_get is not Non
 ### Response
 
 **[operations.GetConnectedProvidersV2UserProvidersUserIDGetResponse](../../models/operations/getconnectedprovidersv2userprovidersuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_metrics
 
@@ -235,7 +265,11 @@ if res.metrics_result is not None:
 ### Response
 
 **[operations.GetTeamsMetricsV2UserMetricsGetResponse](../../models/operations/getteamsmetricsv2usermetricsgetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_sign_in_token
 
@@ -267,7 +301,12 @@ if res.user_sign_in_token_response is not None:
 ### Response
 
 **[operations.GetUserSignInTokenV2UserUserIDSignInTokenPostResponse](../../models/operations/getusersignintokenv2useruseridsignintokenpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## patch_user_v2_user_user_id_patch
 
@@ -300,7 +339,12 @@ if res.status_code == 200:
 ### Response
 
 **[operations.PatchUserV2UserUserIDPatchResponse](../../models/operations/patchuserv2useruseridpatchresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## refresh_user_id_v2_user_refresh_user_id_post
 
@@ -332,7 +376,13 @@ if res.user_refresh_success_response is not None:
 ### Response
 
 **[operations.RefreshUserIDV2UserRefreshUserIDPostResponse](../../models/operations/refreshuseridv2userrefreshuseridpostresponse.md)**
+### Errors
 
+| Error Object                    | Status Code                     | Content Type                    |
+| ------------------------------- | ------------------------------- | ------------------------------- |
+| errors.UserRefreshErrorResponse | 400                             | application/json                |
+| errors.HTTPValidationError      | 422                             | application/json                |
+| errors.SDKError                 | 400-600                         | */*                             |
 
 ## resolve_by_user_id
 
@@ -364,4 +414,9 @@ if res.client_facing_user is not None:
 ### Response
 
 **[operations.GetUserByClientUserIDV2UserResolveClientUserIDGetResponse](../../models/operations/getuserbyclientuseridv2userresolveclientuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

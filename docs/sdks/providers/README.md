@@ -1,5 +1,5 @@
 # Providers
-(*.providers*)
+(*providers*)
 
 ### Available Operations
 
@@ -28,4 +28,8 @@ if res.response_get_list_of_providers_v2_providers_get is not None:
 ### Response
 
 **[operations.GetListOfProvidersV2ProvidersGetResponse](../../models/operations/getlistofprovidersv2providersgetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

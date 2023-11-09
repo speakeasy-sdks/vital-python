@@ -1,5 +1,5 @@
 # Summary
-(*.summary*)
+(*summary*)
 
 ### Available Operations
 
@@ -55,7 +55,12 @@ if res.client_facing_meal_response is not None:
 ### Response
 
 **[operations.GetMealsV2SummaryMealUserIDGetResponse](../../models/operations/getmealsv2summarymealuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_activity
 
@@ -90,7 +95,12 @@ if res.client_activity_response is not None:
 ### Response
 
 **[operations.GetUserActivityV2SummaryActivityUserIDGetResponse](../../models/operations/getuseractivityv2summaryactivityuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_activity_raw
 
@@ -125,7 +135,12 @@ if res.raw_activity is not None:
 ### Response
 
 **[operations.GetUserActivityRawV2SummaryActivityUserIDRawGetResponse](../../models/operations/getuseractivityrawv2summaryactivityuseridrawgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_body
 
@@ -160,7 +175,12 @@ if res.client_body_response is not None:
 ### Response
 
 **[operations.GetUserBodyV2SummaryBodyUserIDGetResponse](../../models/operations/getuserbodyv2summarybodyuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_body_raw
 
@@ -195,7 +215,12 @@ if res.raw_body is not None:
 ### Response
 
 **[operations.GetUserBodyRawV2SummaryBodyUserIDRawGetResponse](../../models/operations/getuserbodyrawv2summarybodyuseridrawgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_devices_raw
 
@@ -228,7 +253,12 @@ if res.raw_devices is not None:
 ### Response
 
 **[operations.GetUserDevicesRawV2SummaryDevicesUserIDRawGetResponse](../../models/operations/getuserdevicesrawv2summarydevicesuseridrawgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_profile
 
@@ -261,7 +291,12 @@ if res.client_facing_profile is not None:
 ### Response
 
 **[operations.GetUserProfileV2SummaryProfileUserIDGetResponse](../../models/operations/getuserprofilev2summaryprofileuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_profile_raw
 
@@ -294,7 +329,12 @@ if res.raw_profile is not None:
 ### Response
 
 **[operations.GetUserProfileRawV2SummaryProfileUserIDRawGetResponse](../../models/operations/getuserprofilerawv2summaryprofileuseridrawgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_sleep
 
@@ -329,7 +369,12 @@ if res.client_sleep_response is not None:
 ### Response
 
 **[operations.GetUserSleepV2SummarySleepUserIDGetResponse](../../models/operations/getusersleepv2summarysleepuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_sleep_raw
 
@@ -364,7 +409,12 @@ if res.raw_sleep is not None:
 ### Response
 
 **[operations.GetUserSleepRawV2SummarySleepUserIDRawGetResponse](../../models/operations/getusersleeprawv2summarysleepuseridrawgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_sleep_stream
 
@@ -399,7 +449,12 @@ if res.client_sleep_response is not None:
 ### Response
 
 **[operations.GetUserSleepStreamV2SummarySleepUserIDStreamGetResponse](../../models/operations/getusersleepstreamv2summarysleepuseridstreamgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_workouts
 
@@ -434,7 +489,12 @@ if res.client_workout_response is not None:
 ### Response
 
 **[operations.GetUserWorkoutsV2SummaryWorkoutsUserIDGetResponse](../../models/operations/getuserworkoutsv2summaryworkoutsuseridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_workouts_raw
 
@@ -469,7 +529,12 @@ if res.raw_workout is not None:
 ### Response
 
 **[operations.GetUserWorkoutsRawV2SummaryWorkoutsUserIDRawGetResponse](../../models/operations/getuserworkoutsrawv2summaryworkoutsuseridrawgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## post_user_activity
 
@@ -503,7 +568,12 @@ if res.response_post_user_activity_v2_summary_activity_user_id_post is not None:
 ### Response
 
 **[operations.PostUserActivityV2SummaryActivityUserIDPostResponse](../../models/operations/postuseractivityv2summaryactivityuseridpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## post_user_body
 
@@ -537,7 +607,12 @@ if res.response_post_user_body_v2_summary_body_user_id_post is not None:
 ### Response
 
 **[operations.PostUserBodyV2SummaryBodyUserIDPostResponse](../../models/operations/postuserbodyv2summarybodyuseridpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## post_user_profile
 
@@ -571,7 +646,12 @@ if res.response_post_user_profile_v2_summary_profile_user_id_post is not None:
 ### Response
 
 **[operations.PostUserProfileV2SummaryProfileUserIDPostResponse](../../models/operations/postuserprofilev2summaryprofileuseridpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## post_user_sleep
 
@@ -605,7 +685,12 @@ if res.response_post_user_sleep_v2_summary_sleep_user_id_post is not None:
 ### Response
 
 **[operations.PostUserSleepV2SummarySleepUserIDPostResponse](../../models/operations/postusersleepv2summarysleepuseridpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## post_user_workout
 
@@ -639,4 +724,9 @@ if res.response_post_user_workout_v2_summary_workouts_user_id_post is not None:
 ### Response
 
 **[operations.PostUserWorkoutV2SummaryWorkoutsUserIDPostResponse](../../models/operations/postuserworkoutv2summaryworkoutsuseridpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

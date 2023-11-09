@@ -9,11 +9,6 @@ from typing import List, Optional, Union
 from vital import utils
 
 
-@dataclasses.dataclass
-class SignatureImage:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PhysicianCreateRequest:

@@ -1,5 +1,5 @@
 # Order
-(*.order*)
+(*order*)
 
 ### Available Operations
 
@@ -58,7 +58,12 @@ if res.client_facing_appointment is not None:
 ### Response
 
 **[operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostResponse](../../models/operations/bookphlebotomyappointmentv3orderorderidphlebotomyappointmentbookpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## cancel_order_v3_order_order_id_cancel_post
 
@@ -90,7 +95,12 @@ if res.post_order_response is not None:
 ### Response
 
 **[operations.CancelOrderV3OrderOrderIDCancelPostResponse](../../models/operations/cancelorderv3orderorderidcancelpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch
 
@@ -125,7 +135,12 @@ if res.client_facing_appointment is not None:
 ### Response
 
 **[operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchResponse](../../models/operations/cancelphlebotomyappointmentv3orderorderidphlebotomyappointmentcancelpatchresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## create
 
@@ -223,7 +238,12 @@ if res.post_order_response is not None:
 ### Response
 
 **[operations.CreateOrderV3OrderPostResponse](../../models/operations/createorderv3orderpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## create_testkit
 
@@ -268,7 +288,12 @@ if res.post_order_response is not None:
 ### Response
 
 **[operations.CreateTestkitOrderV3OrderTestkitPostResponse](../../models/operations/createtestkitorderv3ordertestkitpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## dispatch_status
 
@@ -293,7 +318,11 @@ if res.response_dispatch_order_status_v3_order_dispatch_status_checks_post is no
 ### Response
 
 **[operations.DispatchOrderStatusV3OrderDispatchStatusChecksPostResponse](../../models/operations/dispatchorderstatusv3orderdispatchstatuscheckspostresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -325,7 +354,12 @@ if res.client_facing_order is not None:
 ### Response
 
 **[operations.GetOrderV3OrderOrderIDGetResponse](../../models/operations/getorderv3orderorderidgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_appointment_availability
 
@@ -364,7 +398,12 @@ if res.appointment_availability_slots is not None:
 ### Response
 
 **[operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostResponse](../../models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_area_info
 
@@ -399,7 +438,12 @@ if res.area_info is not None:
 ### Response
 
 **[operations.GetAreaInfoV3OrderAreaInfoGetResponse](../../models/operations/getareainfov3orderareainfogetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_lab_test_result
 
@@ -431,7 +475,12 @@ if res.response_get_lab_test_result_v3_order_order_id_result_pdf_get is not None
 ### Response
 
 **[operations.GetLabTestResultV3OrderOrderIDResultPdfGetResponse](../../models/operations/getlabtestresultv3orderorderidresultpdfgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_lab_test_result_metadata
 
@@ -464,7 +513,12 @@ if res.lab_results_metadata is not None:
 ### Response
 
 **[operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetResponse](../../models/operations/getlabtestresultmetadatav3orderorderidresultmetadatagetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_lab_test_result_raw
 
@@ -496,7 +550,12 @@ if res.lab_results_raw is not None:
 ### Response
 
 **[operations.GetLabTestResultRawV3OrderOrderIDResultGetResponse](../../models/operations/getlabtestresultrawv3orderorderidresultgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_phlebotomy_appointment
 
@@ -528,7 +587,12 @@ if res.client_facing_appointment is not None:
 ### Response
 
 **[operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetResponse](../../models/operations/getphlebotomyappointmentv3orderorderidphlebotomyappointmentgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_phlebotomy_cancellation_reasons
 
@@ -553,7 +617,11 @@ if res.response_get_phlebotomy_appointment_cancellation_reasons_v3_order_phlebot
 ### Response
 
 **[operations.GetPhlebotomyAppointmentCancellationReasonsV3OrderPhlebotomyAppointmentCancellationReasonsGetResponse](../../models/operations/getphlebotomyappointmentcancellationreasonsv3orderphlebotomyappointmentcancellationreasonsgetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_requisition_url
 
@@ -585,7 +653,12 @@ if res.any is not None:
 ### Response
 
 **[operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetResponse](../../models/operations/getorderrequisitionurlv3orderorderidrequisitionpdfgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## order_process_simulate_v3_order_order_id_test_post
 
@@ -619,7 +692,12 @@ if res.response_order_process_simulate_v3_order_order_id_test_post is not None:
 ### Response
 
 **[operations.OrderProcessSimulateV3OrderOrderIDTestPostResponse](../../models/operations/orderprocesssimulatev3orderorderidtestpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## process_testkit_order_v3_order_testkit_process_team_id_order_id_post
 
@@ -652,7 +730,12 @@ if res.response_process_testkit_order_v3_order_testkit_process_team_id_order_id_
 ### Response
 
 **[operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostResponse](../../models/operations/processtestkitorderv3ordertestkitprocessteamidorderidpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post
 
@@ -691,7 +774,12 @@ if res.response_process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook
 ### Response
 
 **[operations.ProcessTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePostResponse](../../models/operations/processtestkitshipheroordershippedv3ordertestkitwebhookshipheroshipmentupdatepostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## register_testkit_v3_order_testkit_register_post
 
@@ -756,7 +844,12 @@ if res.post_order_response is not None:
 ### Response
 
 **[operations.RegisterTestkitV3OrderTestkitRegisterPostResponse](../../models/operations/registertestkitv3ordertestkitregisterpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch
 
@@ -791,7 +884,12 @@ if res.client_facing_appointment is not None:
 ### Response
 
 **[operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchResponse](../../models/operations/reschedulephlebotomyappointmentv3orderorderidphlebotomyappointmentreschedulepatchresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## sync_testkit_order_status_v3_order_testkit_status_post
 
@@ -820,4 +918,8 @@ if res.response_sync_testkit_order_status_v3_order_testkit_status_post is not No
 ### Response
 
 **[operations.SyncTestkitOrderStatusV3OrderTestkitStatusPostResponse](../../models/operations/synctestkitorderstatusv3ordertestkitstatuspostresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

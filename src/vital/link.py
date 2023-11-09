@@ -13,6 +13,7 @@ class Link:
         self.sdk_configuration = sdk_config
         
     
+    
     def check_token_state(self) -> operations.CheckLinkTokenStateV2LinkStateGetResponse:
         r"""Check Link Token State
         REQUEST_SOURCE: VITAL-LINK
@@ -43,6 +44,7 @@ class Link:
 
         return res
 
+    
     
     def check_token_validity(self, request: shared.LinkTokenBase) -> operations.CheckTokenValidV2LinkTokenIsValidPostResponse:
         r"""Check Token Valid"""
@@ -83,6 +85,7 @@ class Link:
 
         return res
 
+    
     
     def connect_ble_provider(self, manual_connection_data: shared.ManualConnectionData, provider: operations.ManualProviders) -> operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse:
         r"""Connect Ble Provider
@@ -133,6 +136,7 @@ class Link:
         return res
 
     
+    
     def connect_email_auth(self, request: shared.EmailAuthLink) -> operations.ConnectEmailAuthV2LinkAuthEmailPostResponse:
         r"""Connect Email Auth
         REQUEST_SOURCE: VITAL-LINK
@@ -176,6 +180,7 @@ class Link:
 
         return res
 
+    
     
     def connect_email_provider(self, email_provider_auth_link: shared.EmailProviderAuthLink, provider: operations.EmailProviders) -> operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse:
         r"""Connect Email Auth Provider
@@ -224,6 +229,7 @@ class Link:
         return res
 
     
+    
     def connect_individual_provider(self, individual_provider_data: shared.IndividualProviderData, provider: operations.PasswordProviders, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse:
         r"""Connect Individual Provider
         This connects auth providers that are password based.
@@ -271,6 +277,7 @@ class Link:
 
         return res
 
+    
     
     def connect_password_auth(self, password_auth_link: shared.PasswordAuthLink, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectPasswordAuthV2LinkAuthPostResponse:
         r"""Connect Password Auth
@@ -321,6 +328,7 @@ class Link:
         return res
 
     
+    
     def connect_provider(self, provider: str, x_vital_sdk_no_redirect: Optional[str] = None) -> operations.ConnectProviderV2LinkConnectProviderGetResponse:
         r"""Connect Provider
         REQUEST_SOURCE: VITAL-LINK
@@ -365,6 +373,7 @@ class Link:
         return res
 
     
+    
     def create_demo_connection(self, request: shared.DemoConnectionCreationPayload) -> operations.CreateDemoConnectionV2LinkConnectDemoPostResponse:
         r"""Create Demo Connection
         POST Connect the given Vital user to a demo provider.
@@ -406,6 +415,7 @@ class Link:
 
         return res
 
+    
     
     def create_token(self, user_id: str, expires_at: Optional[datetime] = None) -> operations.CreateTokenV2LinkCodeCreatePostResponse:
         r"""Create Token
@@ -450,6 +460,7 @@ class Link:
         return res
 
     
+    
     def exchange_token(self, code: str) -> operations.ExchangeTokenV2LinkCodeExchangePostResponse:
         r"""Exchange Token
         Redeem an invite token for an api key
@@ -491,6 +502,7 @@ class Link:
 
         return res
 
+    
     
     def generate(self, request: shared.LinkTokenExchange) -> operations.GenerateVitalLinkTokenV2LinkTokenPostResponse:
         r"""Generate Vital Link Token
@@ -539,6 +551,7 @@ class Link:
         return res
 
     
+    
     def get_oauth_provider(self, oauth_provider: shared.OAuthProviders) -> operations.GetOauthProviderV2LinkProviderOauthOauthProviderGetResponse:
         r"""Get Oauth Provider
         This endpoint generates an OAuth link for oauth provider
@@ -580,6 +593,7 @@ class Link:
         return res
 
     
+    
     def get_providers(self) -> operations.GetProvidersV2LinkProvidersGetResponse:
         r"""Get Providers
         GET List of all available providers given the generated link token.
@@ -609,6 +623,7 @@ class Link:
 
         return res
 
+    
     
     def start_connect_process(self, request: shared.BeginLinkTokenRequest) -> operations.StartConnectProcessV2LinkStartPostResponse:
         r"""Start Connect Process

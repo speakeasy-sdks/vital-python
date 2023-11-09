@@ -12,6 +12,7 @@ class User:
         self.sdk_configuration = sdk_config
         
     
+    
     def create_user(self, request: shared.UserCreateBody) -> operations.CreateUserV2UserPostResponse:
         r"""Create User
         POST Create a Vital user given a client_user_id and returns the user_id.
@@ -54,6 +55,7 @@ class User:
         return res
 
     
+    
     def delete(self, user_id: str) -> operations.DeleteUserV2UserUserIDDeleteResponse:
         r"""Delete User"""
         request = operations.DeleteUserV2UserUserIDDeleteRequest(
@@ -92,6 +94,7 @@ class User:
 
         return res
 
+    
     
     def deregister_provider_v2_user_user_id_provider_delete(self, provider: shared.Providers, user_id: str) -> operations.DeregisterProviderV2UserUserIDProviderDeleteResponse:
         r"""Deregister Provider"""
@@ -133,6 +136,7 @@ class User:
         return res
 
     
+    
     def get(self, user_id: str) -> operations.GetUserV2UserUserIDGetResponse:
         r"""Get User
         GET User details given the user_id.
@@ -173,6 +177,7 @@ class User:
 
         return res
 
+    
     
     def get_all(self, limit: Optional[int] = None, offset: Optional[int] = None) -> operations.GetTeamsUsersV2UserGetResponse:
         r"""Get Teams Users
@@ -217,6 +222,7 @@ class User:
         return res
 
     
+    
     def get_connected_providers(self, user_id: str) -> operations.GetConnectedProvidersV2UserProvidersUserIDGetResponse:
         r"""Get Connected Providers
         GET Users connected providers
@@ -258,6 +264,7 @@ class User:
         return res
 
     
+    
     def get_metrics(self) -> operations.GetTeamsMetricsV2UserMetricsGetResponse:
         r"""Get Teams Metrics
         GET metrics for team.
@@ -287,6 +294,7 @@ class User:
 
         return res
 
+    
     
     def get_sign_in_token(self, user_id: str) -> operations.GetUserSignInTokenV2UserUserIDSignInTokenPostResponse:
         r"""Get User Sign In Token"""
@@ -326,6 +334,7 @@ class User:
 
         return res
 
+    
     
     def patch_user_v2_user_user_id_patch(self, user_patch_body: shared.UserPatchBody, user_id: str) -> operations.PatchUserV2UserUserIDPatchResponse:
         r"""Patch User"""
@@ -367,6 +376,7 @@ class User:
 
         return res
 
+    
     
     def refresh_user_id_v2_user_refresh_user_id_post(self, user_id: str) -> operations.RefreshUserIDV2UserRefreshUserIDPostResponse:
         r"""Refresh User Id
@@ -415,6 +425,7 @@ class User:
 
         return res
 
+    
     
     def resolve_by_user_id(self, client_user_id: str) -> operations.GetUserByClientUserIDV2UserResolveClientUserIDGetResponse:
         r"""Get User By Client User Id

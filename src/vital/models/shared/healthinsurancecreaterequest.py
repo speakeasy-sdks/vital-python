@@ -11,21 +11,6 @@ from typing import List, Optional, Union
 from vital import utils
 
 
-@dataclasses.dataclass
-class BackImage:
-    pass
-
-
-@dataclasses.dataclass
-class FrontImage:
-    pass
-
-
-@dataclasses.dataclass
-class PatientSignatureImage:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PersonDetails:

@@ -1,5 +1,5 @@
 # Team
-(*.team*)
+(*team*)
 
 ### Available Operations
 
@@ -59,7 +59,12 @@ if res.team_in_db is not None:
 ### Response
 
 **[operations.CreateTeamV2TeamPostResponse](../../models/operations/createteamv2teampostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## create_api_key
 
@@ -94,7 +99,12 @@ if res.api_key_in_db is not None:
 ### Response
 
 **[operations.CreateAPIKeyV2TeamTeamIDApikeyPostResponse](../../models/operations/createapikeyv2teamteamidapikeypostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## create_priority
 
@@ -131,7 +141,12 @@ if res.priority is not None:
 ### Response
 
 **[operations.CreatePriorityV2TeamTeamIDPriorityPostResponse](../../models/operations/createpriorityv2teamteamidprioritypostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## delete_api_key
 
@@ -164,7 +179,12 @@ if res.api_key_in_db is not None:
 ### Response
 
 **[operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteResponse](../../models/operations/deleteapikeyv2teamteamidapikeyapikeyiddeleteresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get
 
@@ -196,7 +216,12 @@ if res.client_facing_team is not None:
 ### Response
 
 **[operations.GetTeamV2TeamTeamIDGetResponse](../../models/operations/getteamv2teamteamidgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_api_keys
 
@@ -228,7 +253,12 @@ if res.response_get_api_keys_for_team_v2_team_team_id_apikeys_get is not None:
 ### Response
 
 **[operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetResponse](../../models/operations/getapikeysforteamv2teamteamidapikeysgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_config
 
@@ -253,7 +283,11 @@ if res.response_get_team_config_v2_team_link_config_get is not None:
 ### Response
 
 **[operations.GetTeamConfigV2TeamLinkConfigGetResponse](../../models/operations/getteamconfigv2teamlinkconfiggetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_source_priorities
 
@@ -285,7 +319,12 @@ if res.response_get_source_priorities_v2_team_source_priorities_get is not None:
 ### Response
 
 **[operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse](../../models/operations/getsourceprioritiesv2teamsourceprioritiesgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_count
 
@@ -317,7 +356,12 @@ if res.response_get_team_user_count_v2_team_team_id_users_count_get is not None:
 ### Response
 
 **[operations.GetTeamUserCountV2TeamTeamIDUsersCountGetResponse](../../models/operations/getteamusercountv2teamteamiduserscountgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_webhook_url
 
@@ -342,7 +386,11 @@ if res.response_get_svix_webhook_url_v2_team_svix_url_get is not None:
 ### Response
 
 **[operations.GetSvixWebhookURLV2TeamSvixURLGetResponse](../../models/operations/getsvixwebhookurlv2teamsvixurlgetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch
 
@@ -375,7 +423,12 @@ if res.api_key_in_db is not None:
 ### Response
 
 **[operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchResponse](../../models/operations/rotateapikeyv2teamteamidapikeyapikeyidrotatepatchresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## search_users_by_uuid
 
@@ -407,7 +460,12 @@ if res.response_search_team_users_by_uuid_or_client_user_id_v2_team_users_search
 ### Response
 
 **[operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetResponse](../../models/operations/searchteamusersbyuuidorclientuseridv2teamuserssearchgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## update_api_key_label_v2_team_team_id_apikey_api_key_id_patch
 
@@ -443,7 +501,12 @@ if res.api_key_in_db is not None:
 ### Response
 
 **[operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchResponse](../../models/operations/updateapikeylabelv2teamteamidapikeyapikeyidpatchresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## update_source_priorities_v2_team_source_priorities_patch
 
@@ -475,7 +538,12 @@ if res.response_update_source_priorities_v2_team_source_priorities_patch is not 
 ### Response
 
 **[operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse](../../models/operations/updatesourceprioritiesv2teamsourceprioritiespatchresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## update_team_v2_team_team_id_patch
 
@@ -508,4 +576,9 @@ if res.team_in_db is not None:
 ### Response
 
 **[operations.UpdateTeamV2TeamTeamIDPatchResponse](../../models/operations/updateteamv2teamteamidpatchresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

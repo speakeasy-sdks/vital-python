@@ -8,11 +8,6 @@ from typing import Union
 from vital import utils
 
 
-@dataclasses.dataclass
-class SignInToken:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class UserSignInTokenResponse:

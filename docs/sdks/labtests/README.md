@@ -1,5 +1,5 @@
 # LabTests
-(*.lab_tests*)
+(*lab_tests*)
 
 ### Available Operations
 
@@ -49,7 +49,12 @@ if res.client_facing_lab_test is not None:
 ### Response
 
 **[operations.CreateLabTestForTeamV3LabTestsPostResponse](../../models/operations/createlabtestforteamv3labtestspostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_labs
 
@@ -74,7 +79,11 @@ if res.response_get_labs_v3_lab_tests_labs_get is not None:
 ### Response
 
 **[operations.GetLabsV3LabTestsLabsGetResponse](../../models/operations/getlabsv3labtestslabsgetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_marker_by_provider
 
@@ -107,7 +116,12 @@ if res.client_facing_marker is not None:
 ### Response
 
 **[operations.GetMarkersByProviderIDV3LabTestsLabIDMarkersProviderIDGetResponse](../../models/operations/getmarkersbyprovideridv3labtestslabidmarkersprovideridgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_markers
 
@@ -142,7 +156,12 @@ if res.get_markers_response is not None:
 ### Response
 
 **[operations.GetMarkersV3LabTestsMarkersGetResponse](../../models/operations/getmarkersv3labtestsmarkersgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## list
 
@@ -167,4 +186,8 @@ if res.response_get_lab_tests_for_team_v3_lab_tests_get is not None:
 ### Response
 
 **[operations.GetLabTestsForTeamV3LabTestsGetResponse](../../models/operations/getlabtestsforteamv3labtestsgetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

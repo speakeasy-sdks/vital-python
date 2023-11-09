@@ -12,6 +12,7 @@ class Orders:
         self.sdk_configuration = sdk_config
         
     
+    
     def list(self, request: operations.GetOrdersV3OrdersGetRequest) -> operations.GetOrdersV3OrdersGetResponse:
         r"""Get Orders
         GET many orders with filters.

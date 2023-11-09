@@ -14,11 +14,6 @@ class LabResultsRawResults:
     pass
 
 
-@dataclasses.dataclass
-class Results:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class LabResultsRaw:

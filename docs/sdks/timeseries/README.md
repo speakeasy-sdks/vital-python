@@ -1,5 +1,5 @@
 # Timeseries
-(*.timeseries*)
+(*timeseries*)
 
 ### Available Operations
 
@@ -63,7 +63,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_oxygen_
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodOxygenGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridbloodoxygengetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_blood_pressure
 
@@ -98,7 +103,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_pressur
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDBloodPressureGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridbloodpressuregetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_caffeine
 
@@ -133,7 +143,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_caffeine_get 
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaffeinegetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_calories_active
 
@@ -168,7 +183,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_acti
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaloriesactivegetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_calories_basal
 
@@ -203,7 +223,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_basa
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesBasalGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcaloriesbasalgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_cholesterol_all
 
@@ -238,7 +263,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_g
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_cholesterol_hdl
 
@@ -273,7 +303,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_h
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolHdlGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolhdlgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_cholesterol_ldl
 
@@ -308,7 +343,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_l
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolLdlGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesterolldlgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_distance
 
@@ -343,7 +383,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_distance_get 
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDDistanceGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseriddistancegetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_floors_climbed
 
@@ -378,7 +423,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_floors_climbe
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDFloorsClimbedGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridfloorsclimbedgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_glucose
 
@@ -413,7 +463,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_glucose_get i
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDGlucoseGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridglucosegetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_heartrate
 
@@ -448,7 +503,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_heartrate_get
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDHeartrateGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridheartrategetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_hrv
 
@@ -483,7 +543,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_hrv_get is no
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDHrvGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridhrvgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_hypnogram
 
@@ -518,7 +583,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_hypnogram_get
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDHypnogramGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridhypnogramgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_ige
 
@@ -553,7 +623,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_ige_get is no
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDIgeGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridigegetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_igg
 
@@ -588,7 +663,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_igg_get is no
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDIggGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridigggetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_mindfulness_minutes
 
@@ -623,7 +703,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_mindfulness_m
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDMindfulnessMinutesGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridmindfulnessminutesgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_respiratory_rate
 
@@ -658,7 +743,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_respiratory_r
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDRespiratoryRateGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridrespiratoryrategetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_steps
 
@@ -693,7 +783,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_steps_get is 
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDStepsGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridstepsgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_total_cholesterol
 
@@ -728,7 +823,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_t
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTotalGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesteroltotalgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_triglycerides
 
@@ -763,7 +863,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_t
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDCholesterolTriglyceridesGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridcholesteroltriglyceridesgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_sleep_stream
 
@@ -795,7 +900,12 @@ if res.client_facing_sleep_stream is not None:
 ### Response
 
 **[operations.GetUserSleepStreamV2TimeseriesSleepSleepIDStreamGetResponse](../../models/operations/getusersleepstreamv2timeseriessleepsleepidstreamgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_user_workouts
 
@@ -827,7 +937,12 @@ if res.client_facing_stream is not None:
 ### Response
 
 **[operations.GetUserWorkoutsV2TimeseriesWorkoutsWorkoutIDStreamGetResponse](../../models/operations/getuserworkoutsv2timeseriesworkoutsworkoutidstreamgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## get_water
 
@@ -862,7 +977,12 @@ if res.response_get_timeseries_resource_data_v2_timeseries_user_id_water_get is 
 ### Response
 
 **[operations.GetTimeseriesResourceDataV2TimeseriesUserIDWaterGetResponse](../../models/operations/gettimeseriesresourcedatav2timeseriesuseridwatergetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## post_blood_pressure
 
@@ -896,7 +1016,12 @@ if res.response_post_user_blood_pressure_v2_timeseries_user_id_blood_pressure_po
 ### Response
 
 **[operations.PostUserBloodPressureV2TimeseriesUserIDBloodPressurePostResponse](../../models/operations/postuserbloodpressurev2timeseriesuseridbloodpressurepostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## post_vitals
 
@@ -931,4 +1056,9 @@ if res.response_post_user_vitals_v2_timeseries_user_id_resource_post is not None
 ### Response
 
 **[operations.PostUserVitalsV2TimeseriesUserIDResourcePostResponse](../../models/operations/postuservitalsv2timeseriesuseridresourcepostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

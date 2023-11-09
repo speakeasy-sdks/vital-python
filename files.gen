@@ -18,6 +18,7 @@ src/vital/utils/__init__.py
 src/vital/utils/retries.py
 src/vital/utils/utils.py
 src/vital/models/errors/sdkerror.py
+src/vital/models/operations/robots_robots_txt_get.py
 src/vital/models/operations/check_link_token_state_v2_link_state_get.py
 src/vital/models/operations/check_token_valid_v2_link_token_isvalid_post.py
 src/vital/models/operations/connect_ble_provider_v2_link_provider_manual_provider_post.py
@@ -134,7 +135,6 @@ src/vital/models/operations/register_testkit_v3_order_testkit_register_post.py
 src/vital/models/operations/reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch.py
 src/vital/models/operations/sync_testkit_order_status_v3_order_testkit_status_post.py
 src/vital/models/operations/get_orders_v3_orders_get.py
-src/vital/models/operations/robots_robots_txt_get.py
 src/vital/models/errors/httpvalidationerror.py
 src/vital/models/errors/validationerror.py
 src/vital/models/errors/userrefresherrorresponse.py
@@ -313,6 +313,7 @@ src/vital/models/errors/__init__.py
 src/vital/models/operations/__init__.py
 src/vital/models/shared/__init__.py
 USAGE.md
+docs/models/operations/robotsrobotstxtgetresponse.md
 docs/models/operations/checklinktokenstatev2linkstategetresponsechecklinktokenstatev2linkstateget.md
 docs/models/operations/checklinktokenstatev2linkstategetresponse.md
 docs/models/operations/checktokenvalidv2linktokenisvalidpostresponsechecktokenvalidv2linktokenisvalidpost.md
@@ -533,7 +534,6 @@ docs/models/operations/reschedulephlebotomyappointmentv3orderorderidphlebotomyap
 docs/models/operations/synctestkitorderstatusv3ordertestkitstatuspostresponse.md
 docs/models/operations/getordersv3ordersgetrequest.md
 docs/models/operations/getordersv3ordersgetresponse.md
-docs/models/operations/robotsrobotstxtgetresponse.md
 docs/models/errors/httpvalidationerror.md
 docs/models/errors/loc.md
 docs/models/errors/validationerror.md

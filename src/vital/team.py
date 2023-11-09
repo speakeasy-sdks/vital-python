@@ -12,6 +12,7 @@ class Team:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.TeamCreate) -> operations.CreateTeamV2TeamPostResponse:
         r"""Create Team
         Create Team.
@@ -53,6 +54,7 @@ class Team:
 
         return res
 
+    
     
     def create_api_key(self, create_api_key_body: shared.CreateAPIKeyBody, team_id: str) -> operations.CreateAPIKeyV2TeamTeamIDApikeyPostResponse:
         r"""Create Api Key
@@ -101,6 +103,7 @@ class Team:
         return res
 
     
+    
     def create_priority(self, priority_create: shared.PriorityCreate, team_id: str) -> operations.CreatePriorityV2TeamTeamIDPriorityPostResponse:
         r"""Create Priority
         Add Team priority row for source
@@ -148,6 +151,7 @@ class Team:
         return res
 
     
+    
     def delete_api_key(self, api_key_id: str, team_id: str) -> operations.DeleteAPIKeyV2TeamTeamIDApikeyAPIKeyIDDeleteResponse:
         r"""Delete Api Key
         Invalidate api key by key value.
@@ -190,6 +194,7 @@ class Team:
         return res
 
     
+    
     def get(self, team_id: str) -> operations.GetTeamV2TeamTeamIDGetResponse:
         r"""Get Team
         Get team.
@@ -230,6 +235,7 @@ class Team:
 
         return res
 
+    
     
     def get_api_keys(self, team_id: str) -> operations.GetAPIKeysForTeamV2TeamTeamIDApikeysGetResponse:
         r"""Get Api Keys For Team
@@ -272,6 +278,7 @@ class Team:
         return res
 
     
+    
     def get_config(self) -> operations.GetTeamConfigV2TeamLinkConfigGetResponse:
         r"""Get Team Config
         Post teams.
@@ -301,6 +308,7 @@ class Team:
 
         return res
 
+    
     
     def get_source_priorities(self, data_type: Optional[str] = None) -> operations.GetSourcePrioritiesV2TeamSourcePrioritiesGetResponse:
         r"""Get Source Priorities
@@ -344,6 +352,7 @@ class Team:
         return res
 
     
+    
     def get_user_count(self, team_id: str) -> operations.GetTeamUserCountV2TeamTeamIDUsersCountGetResponse:
         r"""Get Team User Count
         Get the current user count for a team.
@@ -385,6 +394,7 @@ class Team:
         return res
 
     
+    
     def get_webhook_url(self) -> operations.GetSvixWebhookURLV2TeamSvixURLGetResponse:
         r"""Get Svix Webhook Url"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -412,6 +422,7 @@ class Team:
 
         return res
 
+    
     
     def rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(self, api_key_id: str, team_id: str) -> operations.RotateAPIKeyV2TeamTeamIDApikeyAPIKeyIDRotatePatchResponse:
         r"""Rotate Api Key
@@ -455,6 +466,7 @@ class Team:
         return res
 
     
+    
     def search_users_by_uuid(self, query_id: Optional[str] = None) -> operations.SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetResponse:
         r"""Search Team Users By Uuid Or Client User Id
         Search team users by user_id
@@ -496,6 +508,7 @@ class Team:
 
         return res
 
+    
     
     def update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(self, update_api_key_body: shared.UpdateAPIKeyBody, api_key_id: str, team_id: str) -> operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchResponse:
         r"""Update Api Key Label
@@ -545,6 +558,7 @@ class Team:
         return res
 
     
+    
     def update_source_priorities_v2_team_source_priorities_patch(self, team_id: str) -> operations.UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse:
         r"""Update Source Priorities
         Patch source priorities.
@@ -586,6 +600,7 @@ class Team:
 
         return res
 
+    
     
     def update_team_v2_team_team_id_patch(self, team_update: shared.TeamUpdate, team_id: str) -> operations.UpdateTeamV2TeamTeamIDPatchResponse:
         r"""Update Team

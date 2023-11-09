@@ -1,5 +1,5 @@
 # Physician
-(*.physician*)
+(*physician*)
 
 ### Available Operations
 
@@ -40,4 +40,9 @@ if res.response_review_openloop_v2_physician_review_openloop_post is not None:
 ### Response
 
 **[operations.ReviewOpenloopV2PhysicianReviewOpenloopPostResponse](../../models/operations/reviewopenloopv2physicianreviewopenlooppostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

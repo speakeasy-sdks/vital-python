@@ -1,5 +1,5 @@
 # Orders
-(*.orders*)
+(*orders*)
 
 ### Available Operations
 
@@ -41,4 +41,9 @@ if res.get_orders_response is not None:
 ### Response
 
 **[operations.GetOrdersV3OrdersGetResponse](../../models/operations/getordersv3ordersgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

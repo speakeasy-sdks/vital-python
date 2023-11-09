@@ -1,5 +1,5 @@
 # Insurance
-(*.insurance*)
+(*insurance*)
 
 ### Available Operations
 
@@ -36,7 +36,12 @@ if res.response_search_diagnosis_v3_insurance_search_diagnosis_get is not None:
 ### Response
 
 **[operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse](../../models/operations/searchdiagnosisv3insurancesearchdiagnosisgetresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ## search_insurance_payor_info
 
@@ -71,4 +76,9 @@ if res.response_search_insurance_payor_information_v3_insurance_search_payor_pos
 ### Response
 
 **[operations.SearchInsurancePayorInformationV3InsuranceSearchPayorPostResponse](../../models/operations/searchinsurancepayorinformationv3insurancesearchpayorpostresponse.md)**
+### Errors
 
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |

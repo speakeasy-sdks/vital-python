@@ -12,6 +12,7 @@ class Physician:
         self.sdk_configuration = sdk_config
         
     
+    
     def review_openloop_v2_physician_review_openloop_post(self, request: shared.OpenLoopEvent) -> operations.ReviewOpenloopV2PhysicianReviewOpenloopPostResponse:
         r"""Review Openloop"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

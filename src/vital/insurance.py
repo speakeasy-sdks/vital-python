@@ -12,6 +12,7 @@ class Insurance:
         self.sdk_configuration = sdk_config
         
     
+    
     def search_diagnosis(self, diagnosis_query: str) -> operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetResponse:
         r"""Search Diagnosis"""
         request = operations.SearchDiagnosisV3InsuranceSearchDiagnosisGetRequest(
@@ -51,6 +52,7 @@ class Insurance:
 
         return res
 
+    
     
     def search_insurance_payor_info(self, request: shared.PayorSearchRequest) -> operations.SearchInsurancePayorInformationV3InsuranceSearchPayorPostResponse:
         r"""Search Insurance Payor Information"""

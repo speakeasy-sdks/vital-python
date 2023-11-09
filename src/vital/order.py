@@ -12,6 +12,7 @@ class Order:
         self.sdk_configuration = sdk_config
         
     
+    
     def book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(self, appointment_booking_request: shared.AppointmentBookingRequest, order_id: str) -> operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostResponse:
         r"""Book Phlebotomy Appointment
         Book an at-home phlebotomy appointment.
@@ -59,6 +60,7 @@ class Order:
         return res
 
     
+    
     def cancel_order_v3_order_order_id_cancel_post(self, order_id: str) -> operations.CancelOrderV3OrderOrderIDCancelPostResponse:
         r"""Cancel Order
         POST cancel order
@@ -99,6 +101,7 @@ class Order:
 
         return res
 
+    
     
     def cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(self, appointment_cancel_request: shared.AppointmentCancelRequest, order_id: str) -> operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchResponse:
         r"""Cancel Phlebotomy Appointment
@@ -147,6 +150,7 @@ class Order:
         return res
 
     
+    
     def create(self, request: shared.CreateOrderRequestCompatible) -> operations.CreateOrderV3OrderPostResponse:
         r"""Create Order
         POST create new order
@@ -188,6 +192,7 @@ class Order:
 
         return res
 
+    
     
     def create_testkit(self, request: shared.CreateRegistrableTestkitOrderRequest) -> operations.CreateTestkitOrderV3OrderTestkitPostResponse:
         r"""Create Testkit Order
@@ -231,6 +236,7 @@ class Order:
         return res
 
     
+    
     def dispatch_status(self) -> operations.DispatchOrderStatusV3OrderDispatchStatusChecksPostResponse:
         r"""Dispatch Order Status"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -257,6 +263,7 @@ class Order:
 
         return res
 
+    
     
     def get(self, order_id: str) -> operations.GetOrderV3OrderOrderIDGetResponse:
         r"""Get Order
@@ -298,6 +305,7 @@ class Order:
 
         return res
 
+    
     
     def get_appointment_availability(self, order_id: str, request_body: Optional[operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress] = None) -> operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostResponse:
         r"""Get Order Appointment Availability
@@ -345,6 +353,7 @@ class Order:
         return res
 
     
+    
     def get_area_info(self, zip_code: str) -> operations.GetAreaInfoV3OrderAreaInfoGetResponse:
         r"""Get Area Info
         GET information about an area with respect to lab-testing.
@@ -390,6 +399,7 @@ class Order:
         return res
 
     
+    
     def get_lab_test_result(self, order_id: str) -> operations.GetLabTestResultV3OrderOrderIDResultPdfGetResponse:
         r"""Get Lab Test Result
         This endpoint returns the lab results for the order.
@@ -430,6 +440,7 @@ class Order:
 
         return res
 
+    
     
     def get_lab_test_result_metadata(self, order_id: str) -> operations.GetLabTestResultMetadataV3OrderOrderIDResultMetadataGetResponse:
         r"""Get Lab Test Result Metadata
@@ -473,6 +484,7 @@ class Order:
         return res
 
     
+    
     def get_lab_test_result_raw(self, order_id: str) -> operations.GetLabTestResultRawV3OrderOrderIDResultGetResponse:
         r"""Get Lab Test Result Raw
         Return both metadata and raw json test data
@@ -513,6 +525,7 @@ class Order:
 
         return res
 
+    
     
     def get_phlebotomy_appointment(self, order_id: str) -> operations.GetPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentGetResponse:
         r"""Get Phlebotomy Appointment
@@ -555,6 +568,7 @@ class Order:
         return res
 
     
+    
     def get_phlebotomy_cancellation_reasons(self) -> operations.GetPhlebotomyAppointmentCancellationReasonsV3OrderPhlebotomyAppointmentCancellationReasonsGetResponse:
         r"""Get Phlebotomy Appointment Cancellation Reasons
         Get the list of reasons for cancelling an at-home phlebotomy appointment.
@@ -584,6 +598,7 @@ class Order:
 
         return res
 
+    
     
     def get_requisition_url(self, order_id: str) -> operations.GetOrderRequisitionURLV3OrderOrderIDRequisitionPdfGetResponse:
         r"""Get Order Requisition Url
@@ -625,6 +640,7 @@ class Order:
 
         return res
 
+    
     
     def order_process_simulate_v3_order_order_id_test_post(self, order_id: str, delay: Optional[int] = None, final_status: Optional[shared.OrderStatus] = None) -> operations.OrderProcessSimulateV3OrderOrderIDTestPostResponse:
         r"""Order Process Simulate
@@ -670,6 +686,7 @@ class Order:
         return res
 
     
+    
     def process_testkit_order_v3_order_testkit_process_team_id_order_id_post(self, order_id: str, team_id: str) -> operations.ProcessTestkitOrderV3OrderTestkitProcessTeamIDOrderIDPostResponse:
         r"""Process Testkit Order
         POST Create shipment for order
@@ -711,6 +728,7 @@ class Order:
         return res
 
     
+    
     def process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post(self, request: shared.ShipmentWebhookUpdate) -> operations.ProcessTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePostResponse:
         r"""Process Testkit Ship Hero Order Shipped"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -749,6 +767,7 @@ class Order:
 
         return res
 
+    
     
     def register_testkit_v3_order_testkit_register_post(self, request: shared.RegisterTestkitRequest) -> operations.RegisterTestkitV3OrderTestkitRegisterPostResponse:
         r"""Register Testkit"""
@@ -789,6 +808,7 @@ class Order:
 
         return res
 
+    
     
     def reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(self, appointment_reschedule_request: shared.AppointmentRescheduleRequest, order_id: str) -> operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchResponse:
         r"""Reschedule Phlebotomy Appointment
@@ -836,6 +856,7 @@ class Order:
 
         return res
 
+    
     
     def sync_testkit_order_status_v3_order_testkit_status_post(self) -> operations.SyncTestkitOrderStatusV3OrderTestkitStatusPostResponse:
         r"""Sync Testkit Order Status

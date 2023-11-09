@@ -7,11 +7,6 @@ from typing import List, Union
 from vital import utils
 
 
-@dataclasses.dataclass
-class Loc:
-    pass
-
-
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ValidationError:
