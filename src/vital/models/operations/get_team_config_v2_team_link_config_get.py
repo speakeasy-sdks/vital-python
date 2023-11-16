@@ -17,10 +17,10 @@ class GetTeamConfigV2TeamLinkConfigGetResponseGetTeamConfigV2TeamLinkConfigGet:
 class GetTeamConfigV2TeamLinkConfigGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_team_config_v2_team_link_config_get: Optional[GetTeamConfigV2TeamLinkConfigGetResponseGetTeamConfigV2TeamLinkConfigGet] = dataclasses.field(default=None)
     r"""Successful Response"""
     

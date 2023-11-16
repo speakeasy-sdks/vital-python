@@ -24,10 +24,10 @@ class GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetRequest:
 class GetTimeseriesResourceDataV2TimeseriesUserIDCaffeineGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_timeseries_resource_data_v2_timeseries_user_id_caffeine_get: Optional[List[shared_clientfacingcaffeinetimeseries.ClientFacingCaffeineTimeseries]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

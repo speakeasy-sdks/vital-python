@@ -24,10 +24,10 @@ class GetTeamUserCountV2TeamTeamIDUsersCountGetResponseGetTeamUserCountV2TeamTea
 class GetTeamUserCountV2TeamTeamIDUsersCountGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_team_user_count_v2_team_team_id_users_count_get: Optional[GetTeamUserCountV2TeamTeamIDUsersCountGetResponseGetTeamUserCountV2TeamTeamIDUsersCountGet] = dataclasses.field(default=None)
     r"""Successful Response"""
     

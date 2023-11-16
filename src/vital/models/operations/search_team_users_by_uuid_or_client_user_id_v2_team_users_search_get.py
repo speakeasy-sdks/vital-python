@@ -18,10 +18,10 @@ class SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetRequest:
 class SearchTeamUsersByUUIDOrClientUserIDV2TeamUsersSearchGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     response_search_team_users_by_uuid_or_client_user_id_v2_team_users_search_get: Optional[List[shared_clientfacinguser.ClientFacingUser]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

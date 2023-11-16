@@ -18,10 +18,10 @@ class GetAPIKeysForTeamV2TeamTeamIDApikeysGetRequest:
 class GetAPIKeysForTeamV2TeamTeamIDApikeysGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_api_keys_for_team_v2_team_team_id_apikeys_get: Optional[List[shared_apikeyindb.APIKeyInDB]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

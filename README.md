@@ -16,6 +16,8 @@ pip install git+https://github.com/speakeasy-sdks/vital-python.git
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
+### Example
+
 ```python
 import vital
 
@@ -194,7 +196,7 @@ if res.res is not None:
 
 
 <!-- Start Error Handling -->
-# Error Handling
+## Error Handling
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
 
@@ -203,8 +205,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 | errors.HTTPValidationError | 422                        | application/json           |
 | errors.SDKError            | 400-600                    | */*                        |
 
-
-## Example
+### Example
 
 ```python
 import vital
@@ -236,9 +237,9 @@ if res.response_check_token_valid_v2_link_token_isvalid_post is not None:
 
 
 <!-- Start Server Selection -->
-# Server Selection
+## Server Selection
 
-## Select Server by Index
+### Select Server by Index
 
 You can override the default server globally by passing a server index to the `server_idx: int` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
@@ -246,7 +247,7 @@ You can override the default server globally by passing a server index to the `s
 | - | ------ | --------- |
 | 0 | `https://api.tryvital.io` | None |
 
-For example:
+#### Example
 
 ```python
 import vital
@@ -264,10 +265,9 @@ if res.res is not None:
 ```
 
 
-## Override Server URL Per-Client
+### Override Server URL Per-Client
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
-
 ```python
 import vital
 
@@ -287,13 +287,11 @@ if res.res is not None:
 
 
 <!-- Start Custom HTTP Client -->
-# Custom HTTP Client
+## Custom HTTP Client
 
 The Python SDK makes API calls using the (requests)[https://pypi.org/project/requests/] HTTP library.  In order to provide a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration, you can initialize the SDK client with a custom `requests.Session` object.
 
-
 For example, you could specify a header for every request that this sdk makes as follows:
-
 ```python
 import vital
 import requests

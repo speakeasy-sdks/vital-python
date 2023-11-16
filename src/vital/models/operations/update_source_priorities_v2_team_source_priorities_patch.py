@@ -22,10 +22,10 @@ class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody:
 class UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     response_update_source_priorities_v2_team_source_priorities_patch: Optional[List[UpdateSourcePrioritiesV2TeamSourcePrioritiesPatchResponseBody]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

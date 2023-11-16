@@ -21,11 +21,11 @@ class UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest:
 class UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
     api_key_in_db: Optional[shared_apikeyindb.APIKeyInDB] = dataclasses.field(default=None)
     r"""Successful Response"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     
 
