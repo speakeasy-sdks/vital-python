@@ -162,21 +162,21 @@ req = shared.CreateOrderRequestCompatible(
         ),
     ],
     health_insurance=shared.HealthInsuranceCreateRequest(
-        shared.Jpeg(
-            content='0xeC962B1FB8'.encode(),
-            content_type=shared.ContentType.IMAGE_JPEG,
-        ),
+        back_image=shared.Jpeg(
+        content='0xeC962B1FB8'.encode(),
+        content_type=shared.ContentType.IMAGE_JPEG,
+    ),
         diagnosis_codes=[
             'string',
         ],
-        shared.Png(
-            content='0xD0a361fBCB'.encode(),
-            content_type=shared.PngContentType.IMAGE_PNG,
-        ),
-        shared.Png(
-            content='0xcCAaFe705D'.encode(),
-            content_type=shared.PngContentType.IMAGE_PNG,
-        ),
+        front_image=shared.Png(
+        content='0xD0a361fBCB'.encode(),
+        content_type=shared.PngContentType.IMAGE_PNG,
+    ),
+        patient_signature_image=shared.Png(
+        content='0xcCAaFe705D'.encode(),
+        content_type=shared.PngContentType.IMAGE_PNG,
+    ),
         responsible_details=shared.PersonDetails(
             address=shared.Address(
                 city='New Darenberg',
@@ -213,10 +213,10 @@ req = shared.CreateOrderRequestCompatible(
             'string',
         ],
         npi='string',
-        shared.Png(
-            content='0xA34D9D9Fc5'.encode(),
-            content_type=shared.PngContentType.IMAGE_PNG,
-        ),
+        signature_image=shared.Png(
+        content='0xA34D9D9Fc5'.encode(),
+        content_type=shared.PngContentType.IMAGE_PNG,
+    ),
     ),
     user_id='15747251-ef09-4254-8958-35d6b1b39d7e',
 )

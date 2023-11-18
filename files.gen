@@ -18,6 +18,7 @@ src/vital/utils/__init__.py
 src/vital/utils/retries.py
 src/vital/utils/utils.py
 src/vital/models/errors/sdkerror.py
+tests/helpers.py
 src/vital/models/operations/robots_robots_txt_get.py
 src/vital/models/operations/check_link_token_state_v2_link_state_get.py
 src/vital/models/operations/check_token_valid_v2_link_token_isvalid_post.py
@@ -136,8 +137,8 @@ src/vital/models/operations/reschedule_phlebotomy_appointment_v3_order_order_id_
 src/vital/models/operations/sync_testkit_order_status_v3_order_testkit_status_post.py
 src/vital/models/operations/get_orders_v3_orders_get.py
 src/vital/models/errors/httpvalidationerror.py
-src/vital/models/errors/validationerror.py
 src/vital/models/errors/userrefresherrorresponse.py
+src/vital/models/shared/validationerror.py
 src/vital/models/shared/linktokenbase.py
 src/vital/models/shared/manualconnectiondata.py
 src/vital/models/shared/connectionstatus.py
@@ -535,9 +536,9 @@ docs/models/operations/synctestkitorderstatusv3ordertestkitstatuspostresponse.md
 docs/models/operations/getordersv3ordersgetrequest.md
 docs/models/operations/getordersv3ordersgetresponse.md
 docs/models/errors/httpvalidationerror.md
-docs/models/errors/loc.md
-docs/models/errors/validationerror.md
 docs/models/errors/userrefresherrorresponse.md
+docs/models/shared/loc.md
+docs/models/shared/validationerror.md
 docs/models/shared/oauthinfo.md
 docs/models/shared/linktokenbase.md
 docs/models/shared/manualconnectiondata.md

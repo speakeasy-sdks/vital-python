@@ -1,8 +1,10 @@
 # HTTPValidationError
 
+Validation Error
+
 
 ## Fields
 
 | Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
 | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `detail`                                                               | List[[errors.ValidationError](../../models/errors/validationerror.md)] | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `detail`                                                               | List[[shared.ValidationError](../../models/shared/validationerror.md)] | :heavy_minus_sign:                                                     | N/A                                                                    |
