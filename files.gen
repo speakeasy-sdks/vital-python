@@ -313,7 +313,6 @@ src/vital/models/__init__.py
 src/vital/models/errors/__init__.py
 src/vital/models/operations/__init__.py
 src/vital/models/shared/__init__.py
-USAGE.md
 docs/models/operations/robotsrobotstxtgetresponse.md
 docs/models/operations/checklinktokenstatev2linkstategetresponsechecklinktokenstatev2linkstateget.md
 docs/models/operations/checklinktokenstatev2linkstategetresponse.md
@@ -767,4 +766,5 @@ docs/sdks/insurance/README.md
 docs/sdks/labtests/README.md
 docs/sdks/order/README.md
 docs/sdks/orders/README.md
+USAGE.md
 .gitattributes
