@@ -26,7 +26,7 @@ class Order:
         
         url = utils.generate_url(operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/book', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "appointment_booking_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.BookPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentBookPostRequest, "appointment_booking_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -116,7 +116,7 @@ class Order:
         
         url = utils.generate_url(operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/cancel', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "appointment_cancel_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CancelPhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentCancelPatchRequest, "appointment_cancel_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -159,7 +159,7 @@ class Order:
         
         url = base_url + '/v3/order'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.CreateOrderRequestCompatible, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -202,7 +202,7 @@ class Order:
         
         url = base_url + '/v3/order/testkit'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.CreateRegistrableTestkitOrderRequest, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -321,7 +321,7 @@ class Order:
         
         url = utils.generate_url(operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/availability', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", False, True, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest, "request_body", False, True, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         headers['Accept'] = 'application/json'
@@ -735,7 +735,7 @@ class Order:
         
         url = base_url + '/v3/order/testkit/webhook/shiphero/shipment-update'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.ShipmentWebhookUpdate, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -775,7 +775,7 @@ class Order:
         
         url = base_url + '/v3/order/testkit/register'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.RegisterTestkitRequest, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -823,7 +823,7 @@ class Order:
         
         url = utils.generate_url(operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest, base_url, '/v3/order/{order_id}/phlebotomy/appointment/reschedule', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "appointment_reschedule_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ReschedulePhlebotomyAppointmentV3OrderOrderIDPhlebotomyAppointmentReschedulePatchRequest, "appointment_reschedule_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

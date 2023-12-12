@@ -1,6 +1,6 @@
 # Png
 
-An image of the back of the patient insurance card.
+An image of the physician signature for health insurance billing
 
 
 ## Fields

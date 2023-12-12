@@ -52,7 +52,7 @@ class Link:
         
         url = base_url + '/v2/link/token/isValid'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.LinkTokenBase, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -102,7 +102,7 @@ class Link:
         
         url = utils.generate_url(operations.ConnectBleProviderV2LinkProviderManualProviderPostRequest, base_url, '/v2/link/provider/manual/{provider}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "manual_connection_data", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ConnectBleProviderV2LinkProviderManualProviderPostRequest, "manual_connection_data", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -147,7 +147,7 @@ class Link:
         
         url = base_url + '/v2/link/auth/email'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.EmailAuthLink, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -195,7 +195,7 @@ class Link:
         
         url = utils.generate_url(operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest, base_url, '/v2/link/provider/email/{provider}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "email_provider_auth_link", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest, "email_provider_auth_link", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -244,7 +244,7 @@ class Link:
         
         url = utils.generate_url(operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest, base_url, '/v2/link/provider/password/{provider}', request)
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "individual_provider_data", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest, "individual_provider_data", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -294,7 +294,7 @@ class Link:
         
         url = base_url + '/v2/link/auth'
         headers = utils.get_headers(request)
-        req_content_type, data, form = utils.serialize_request_body(request, "password_auth_link", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ConnectPasswordAuthV2LinkAuthPostRequest, "password_auth_link", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -382,7 +382,7 @@ class Link:
         
         url = base_url + '/v2/link/connect/demo'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.DemoConnectionCreationPayload, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -517,7 +517,7 @@ class Link:
         
         url = base_url + '/v2/link/token'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.LinkTokenExchange, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -634,7 +634,7 @@ class Link:
         
         url = base_url + '/v2/link/start'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.BeginLinkTokenRequest, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

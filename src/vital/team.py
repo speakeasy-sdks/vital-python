@@ -21,7 +21,7 @@ class Team:
         
         url = base_url + '/v2/team'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.TeamCreate, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -69,7 +69,7 @@ class Team:
         
         url = utils.generate_url(operations.CreateAPIKeyV2TeamTeamIDApikeyPostRequest, base_url, '/v2/team/{team_id}/apikey', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_api_key_body", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreateAPIKeyV2TeamTeamIDApikeyPostRequest, "create_api_key_body", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -117,7 +117,7 @@ class Team:
         
         url = utils.generate_url(operations.CreatePriorityV2TeamTeamIDPriorityPostRequest, base_url, '/v2/team/{team_id}/priority', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "priority_create", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CreatePriorityV2TeamTeamIDPriorityPostRequest, "priority_create", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -524,7 +524,7 @@ class Team:
         
         url = utils.generate_url(operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest, base_url, '/v2/team/{team_id}/apikey/{api_key_id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_api_key_body", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest, "update_api_key_body", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -615,7 +615,7 @@ class Team:
         
         url = utils.generate_url(operations.UpdateTeamV2TeamTeamIDPatchRequest, base_url, '/v2/team/{team_id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "team_update", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.UpdateTeamV2TeamTeamIDPatchRequest, "team_update", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

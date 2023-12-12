@@ -21,7 +21,7 @@ class User:
         
         url = base_url + '/v2/user'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.UserCreateBody, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -347,7 +347,7 @@ class User:
         
         url = utils.generate_url(operations.PatchUserV2UserUserIDPatchRequest, base_url, '/v2/user/{user_id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "user_patch_body", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.PatchUserV2UserUserIDPatchRequest, "user_patch_body", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
