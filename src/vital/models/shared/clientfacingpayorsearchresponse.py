@@ -9,7 +9,7 @@ from vital import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ClientFacingPayorSearchResponseAddress:
+class OrgAddress:
     r"""Insurance business address returned for the insurance information required by Labcorp."""
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     country: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('country') }})
@@ -28,7 +28,7 @@ class ClientFacingPayorSearchResponse:
     r"""Payor code returned for the insurance information required by Labcorp."""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     r"""Insurance name returned for the insurance information required by Labcorp."""
-    org_address: ClientFacingPayorSearchResponseAddress = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('org_address') }})
+    org_address: OrgAddress = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('org_address') }})
     r"""Insurance business address returned for the insurance information required by Labcorp."""
     
 

@@ -87,7 +87,7 @@ class Link:
 
     
     
-    def connect_ble_provider(self, manual_connection_data: shared.ManualConnectionData, provider: operations.ManualProviders) -> operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse:
+    def connect_ble_provider(self, manual_connection_data: shared.ManualConnectionData, provider: operations.ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData) -> operations.ConnectBleProviderV2LinkProviderManualProviderPostResponse:
         r"""Connect Ble Provider
         REQUEST_SOURCE: CUSTOMER
         PROVIDER_TYPE: MANUAL-PROVIDER
@@ -182,7 +182,7 @@ class Link:
 
     
     
-    def connect_email_provider(self, email_provider_auth_link: shared.EmailProviderAuthLink, provider: operations.EmailProviders) -> operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse:
+    def connect_email_provider(self, email_provider_auth_link: shared.EmailProviderAuthLink, provider: operations.EmailProvidersThatRequireEmailsFreestyleAuth) -> operations.ConnectEmailAuthProviderV2LinkProviderEmailProviderPostResponse:
         r"""Connect Email Auth Provider
         This connects auth providers that are email based.
         """
@@ -230,7 +230,7 @@ class Link:
 
     
     
-    def connect_individual_provider(self, individual_provider_data: shared.IndividualProviderData, provider: operations.PasswordProviders, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse:
+    def connect_individual_provider(self, individual_provider_data: shared.IndividualProviderData, provider: operations.ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift, x_vital_link_client_region: Optional[str] = None) -> operations.ConnectIndividualProviderV2LinkProviderPasswordProviderPostResponse:
         r"""Connect Individual Provider
         This connects auth providers that are password based.
         """

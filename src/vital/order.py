@@ -307,7 +307,7 @@ class Order:
 
     
     
-    def get_appointment_availability(self, order_id: str, request_body: Optional[operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress] = None) -> operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostResponse:
+    def get_appointment_availability(self, order_id: str, request_body: Optional[operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostAddress] = None) -> operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostResponse:
         r"""Get Order Appointment Availability
         Return the available time slots to book an appointment with a phlebotomist
         for the given address and order.

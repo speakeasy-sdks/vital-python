@@ -8,7 +8,7 @@ from ...models.shared import providerlinkresponse as shared_providerlinkresponse
 from enum import Enum
 from typing import Optional
 
-class PasswordProviders(str, Enum):
+class ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift(str, Enum):
     r"""An enumeration."""
     WHOOP = 'whoop'
     RENPHO = 'renpho'
@@ -24,7 +24,7 @@ class PasswordProviders(str, Enum):
 @dataclasses.dataclass
 class ConnectIndividualProviderV2LinkProviderPasswordProviderPostRequest:
     individual_provider_data: shared_individualproviderdata.IndividualProviderData = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    provider: PasswordProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     x_vital_link_client_region: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'x-vital-link-client-region', 'style': 'simple', 'explode': False }})
     

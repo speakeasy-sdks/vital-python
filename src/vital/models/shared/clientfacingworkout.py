@@ -19,9 +19,7 @@ class Map:
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientFacingWorkoutSource:
-    r"""Source summarizes where a sample or a summary is sourced from.
-    At minimum, the source provider is always included.
-    """
+    r"""Source the data has come from."""
     logo: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logo') }})
     r"""Deprecated.
 
@@ -49,7 +47,7 @@ class ClientFacingWorkoutSource:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ClientFacingWorkoutClientFacingSport:
+class Sport:
     r"""Sport's name"""
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
@@ -104,7 +102,7 @@ class ClientFacingWorkout:
     r"""Max watts burned during exercise::watts"""
     moving_time: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('moving_time'), 'exclude': lambda f: f is None }})
     r"""Time spent active during the workout::seconds"""
-    sport: Optional[ClientFacingWorkoutClientFacingSport] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sport'), 'exclude': lambda f: f is None }})
+    sport: Optional[Sport] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sport'), 'exclude': lambda f: f is None }})
     r"""Sport's name"""
     timezone_offset: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone_offset'), 'exclude': lambda f: f is None }})
     r"""Timezone offset from UTC as seconds. For example, EEST (Eastern European Summer Time, +3h) is 10800. PST (Pacific Standard Time, -8h) is -28800::seconds"""

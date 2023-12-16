@@ -13,7 +13,6 @@ class PngContentType(str, Enum):
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Png:
-    r"""An image of the physician signature for health insurance billing"""
     content: bytes = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content') }})
     content_type: PngContentType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('content_type') }})
     

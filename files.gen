@@ -318,14 +318,14 @@ docs/models/operations/checklinktokenstatev2linkstategetresponsechecklinktokenst
 docs/models/operations/checklinktokenstatev2linkstategetresponse.md
 docs/models/operations/checktokenvalidv2linktokenisvalidpostresponsechecktokenvalidv2linktokenisvalidpost.md
 docs/models/operations/checktokenvalidv2linktokenisvalidpostresponse.md
-docs/models/operations/manualproviders.md
+docs/models/operations/providersthataremanuallyaddeddevicessuchasbledevicesandgenerateddata.md
 docs/models/operations/connectbleproviderv2linkprovidermanualproviderpostrequest.md
 docs/models/operations/connectbleproviderv2linkprovidermanualproviderpostresponse.md
 docs/models/operations/connectemailauthv2linkauthemailpostresponse.md
-docs/models/operations/emailproviders.md
+docs/models/operations/emailprovidersthatrequireemailsfreestyleauth.md
 docs/models/operations/connectemailauthproviderv2linkprovideremailproviderpostrequest.md
 docs/models/operations/connectemailauthproviderv2linkprovideremailproviderpostresponse.md
-docs/models/operations/passwordproviders.md
+docs/models/operations/providersthatrequirepasswordauthwhooprenphopelotonzwift.md
 docs/models/operations/connectindividualproviderv2linkproviderpasswordproviderpostrequest.md
 docs/models/operations/connectindividualproviderv2linkproviderpasswordproviderpostresponse.md
 docs/models/operations/connectpasswordauthv2linkauthpostrequest.md
@@ -507,7 +507,7 @@ docs/models/operations/createtestkitorderv3ordertestkitpostresponse.md
 docs/models/operations/dispatchorderstatusv3orderdispatchstatuscheckspostresponse.md
 docs/models/operations/getorderv3orderorderidgetrequest.md
 docs/models/operations/getorderv3orderorderidgetresponse.md
-docs/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostusaddress.md
+docs/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostaddress.md
 docs/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostrequest.md
 docs/models/operations/getorderappointmentavailabilityv3orderorderidphlebotomyappointmentavailabilitypostresponse.md
 docs/models/operations/getareainfov3orderareainfogetrequest.md
@@ -611,7 +611,7 @@ docs/models/shared/sleepv2indb.md
 docs/models/shared/clientworkoutresponse.md
 docs/models/shared/map.md
 docs/models/shared/clientfacingworkoutsource.md
-docs/models/shared/clientfacingworkoutclientfacingsport.md
+docs/models/shared/sport.md
 docs/models/shared/clientfacingworkout.md
 docs/models/shared/rawworkout.md
 docs/models/shared/workoutv2indb.md
@@ -636,7 +636,7 @@ docs/models/shared/clientfacingapikey.md
 docs/models/shared/fallbacktimezone.md
 docs/models/shared/clientfacinguser.md
 docs/models/shared/provider.md
-docs/models/shared/connectedsourceclientfacingprovider.md
+docs/models/shared/connectedsourceclientfacingsource.md
 docs/models/shared/connectedsourceclientfacing.md
 docs/models/shared/updateapikeybody.md
 docs/models/shared/teamupdate.md
@@ -674,7 +674,7 @@ docs/models/shared/usersignintoken.md
 docs/models/shared/userpatchbody.md
 docs/models/shared/userrefreshsuccessresponse.md
 docs/models/shared/clientfacingdiagnosisinformation.md
-docs/models/shared/clientfacingpayorsearchresponseaddress.md
+docs/models/shared/orgaddress.md
 docs/models/shared/clientfacingpayorsearchresponse.md
 docs/models/shared/payorsearchrequest.md
 docs/models/shared/clientfacinglabtest.md
@@ -694,10 +694,10 @@ docs/models/shared/usaddress.md
 docs/models/shared/appointmentbookingrequest.md
 docs/models/shared/postorderresponse.md
 docs/models/shared/details.md
-docs/models/shared/clientfacingorderclientfacinglabtest.md
-docs/models/shared/clientfacingorderpatientaddresscompatible.md
-docs/models/shared/clientfacingpatientdetailscompatible.md
-docs/models/shared/clientfacingordershippingaddress.md
+docs/models/shared/labtest.md
+docs/models/shared/patientaddress.md
+docs/models/shared/clientfacingorderpatientdetails.md
+docs/models/shared/shippingdetails.md
 docs/models/shared/clientfacingorder.md
 docs/models/shared/ordertoplevelstatus.md
 docs/models/shared/physicianclientfacing.md
@@ -708,7 +708,7 @@ docs/models/shared/clientfacingwalkinorderdetails.md
 docs/models/shared/clientfacingwalkintestorder.md
 docs/models/shared/clientfacingtestkitorderdetailstype.md
 docs/models/shared/clientfacingtestkitorderdetails.md
-docs/models/shared/clientfacingshipment.md
+docs/models/shared/shipment.md
 docs/models/shared/clientfacingtestkitorder.md
 docs/models/shared/type.md
 docs/models/shared/clientfacingathomephlebotomyorderdetails.md
@@ -727,7 +727,7 @@ docs/models/shared/patientaddresscompatible.md
 docs/models/shared/backimage.md
 docs/models/shared/frontimage.md
 docs/models/shared/patientsignatureimage.md
-docs/models/shared/persondetails.md
+docs/models/shared/responsibledetails.md
 docs/models/shared/healthinsurancecreaterequest.md
 docs/models/shared/responsiblerelationship.md
 docs/models/shared/address.md
@@ -741,7 +741,7 @@ docs/models/shared/timeslot.md
 docs/models/shared/areainfo.md
 docs/models/shared/phlebotomyareainfo.md
 docs/models/shared/labresultsmetadata.md
-docs/models/shared/labresultsrawresults.md
+docs/models/shared/two.md
 docs/models/shared/results.md
 docs/models/shared/labresultsraw.md
 docs/models/shared/biomarkerresult.md

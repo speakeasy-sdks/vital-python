@@ -1,5 +1,7 @@
 # SignatureImage
 
+An image of the physician signature for health insurance billing
+
 
 ## Supported Types
 

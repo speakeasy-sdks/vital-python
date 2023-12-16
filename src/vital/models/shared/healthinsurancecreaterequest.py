@@ -13,7 +13,7 @@ from vital import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class PersonDetails:
+class ResponsibleDetails:
     r"""Responsible details when the value of responsible_relationship is not 'Self'."""
     address: Address = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('address') }})
     first_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('first_name') }})
@@ -41,7 +41,7 @@ class HealthInsuranceCreateRequest:
     r"""An image of the patient signature for health insurance billing."""
     payor_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('payor_code'), 'exclude': lambda f: f is None }})
     r"""Unique identifier representing a specific Health Insurance."""
-    responsible_details: Optional[PersonDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('responsible_details'), 'exclude': lambda f: f is None }})
+    responsible_details: Optional[ResponsibleDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('responsible_details'), 'exclude': lambda f: f is None }})
     r"""Responsible details when the value of responsible_relationship is not 'Self'."""
     responsible_relationship: Optional[ResponsibleRelationship] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('responsible_relationship'), 'exclude': lambda f: f is None }})
     r"""Relationship between the patient and the insurance contractor. Values can be (Self, Spouse, Other Relationship)."""

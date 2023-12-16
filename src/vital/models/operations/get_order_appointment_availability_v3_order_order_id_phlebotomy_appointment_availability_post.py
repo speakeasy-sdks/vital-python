@@ -11,7 +11,7 @@ from vital import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress:
+class GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostAddress:
     r"""At-home phlebotomy appointment address. If None, the address given at the time of placing the order is used."""
     city: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('city') }})
     first_line: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('first_line') }})
@@ -27,7 +27,7 @@ class GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabi
 class GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostRequest:
     order_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'order_id', 'style': 'simple', 'explode': False }})
     r"""Your Order ID."""
-    request_body: Optional[GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
+    request_body: Optional[GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostAddress] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
 

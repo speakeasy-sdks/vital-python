@@ -13,9 +13,7 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientFacingSleepSource:
-    r"""Source summarizes where a sample or a summary is sourced from.
-    At minimum, the source provider is always included.
-    """
+    r"""Source the data has come from."""
     logo: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logo') }})
     r"""Deprecated.
 

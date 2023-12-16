@@ -11,11 +11,8 @@ from vital import utils
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ClientFacingShipment:
-    r"""Schema for a Shipment in the client facing API.
-
-    To be used as part of a ClientFacingTestkitOrder.
-    """
+class Shipment:
+    r"""Shipment object"""
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""The Vital Shipment ID"""
     inbound_courier: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inbound_courier'), 'exclude': lambda f: f is None }})
@@ -47,7 +44,7 @@ class ClientFacingTestkitOrder:
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""The Vital TestKit Order ID"""
     updated_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
-    shipment: Optional[ClientFacingShipment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shipment'), 'exclude': lambda f: f is None }})
+    shipment: Optional[Shipment] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shipment'), 'exclude': lambda f: f is None }})
     r"""Shipment object"""
     
 

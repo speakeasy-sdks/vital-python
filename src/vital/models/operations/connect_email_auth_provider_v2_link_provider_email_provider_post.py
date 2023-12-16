@@ -8,7 +8,7 @@ from ...models.shared import emailproviderauthlink as shared_emailproviderauthli
 from enum import Enum
 from typing import Optional
 
-class EmailProviders(str, Enum):
+class EmailProvidersThatRequireEmailsFreestyleAuth(str, Enum):
     r"""An enumeration."""
     FREESTYLE_LIBRE = 'freestyle_libre'
 
@@ -16,7 +16,7 @@ class EmailProviders(str, Enum):
 @dataclasses.dataclass
 class ConnectEmailAuthProviderV2LinkProviderEmailProviderPostRequest:
     email_provider_auth_link: shared_emailproviderauthlink.EmailProviderAuthLink = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    provider: EmailProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: EmailProvidersThatRequireEmailsFreestyleAuth = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     
 

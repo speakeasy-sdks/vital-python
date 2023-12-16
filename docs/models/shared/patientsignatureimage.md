@@ -1,5 +1,7 @@
 # PatientSignatureImage
 
+An image of the patient signature for health insurance billing.
+
 
 ## Supported Types
 

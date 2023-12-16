@@ -10,7 +10,7 @@ from vital import utils
 
 
 @dataclasses.dataclass
-class LabResultsRawResults:
+class Two:
     pass
 
 
@@ -18,6 +18,6 @@ class LabResultsRawResults:
 @dataclasses.dataclass
 class LabResultsRaw:
     metadata: LabResultsMetadata = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata') }})
-    results: Union[List[BiomarkerResult], LabResultsRawResults] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results') }})
+    results: Union[List[BiomarkerResult], Two] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results') }})
     
 

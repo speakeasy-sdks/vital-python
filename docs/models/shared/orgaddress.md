@@ -1,6 +1,6 @@
-# GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostUSAddress
+# OrgAddress
 
-At-home phlebotomy appointment address. If None, the address given at the time of placing the order is used.
+Insurance business address returned for the insurance information required by Labcorp.
 
 
 ## Fields
@@ -8,8 +8,8 @@ At-home phlebotomy appointment address. If None, the address given at the time o
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | `city`             | *str*              | :heavy_check_mark: | N/A                |
+| `country`          | *str*              | :heavy_check_mark: | N/A                |
 | `first_line`       | *str*              | :heavy_check_mark: | N/A                |
 | `second_line`      | *Optional[str]*    | :heavy_minus_sign: | N/A                |
 | `state`            | *str*              | :heavy_check_mark: | N/A                |
-| `unit`             | *Optional[str]*    | :heavy_minus_sign: | N/A                |
-| `zip_code`         | *str*              | :heavy_check_mark: | N/A                |
+| `zip`              | *str*              | :heavy_check_mark: | N/A                |

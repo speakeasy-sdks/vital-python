@@ -1,8 +1,6 @@
-# ClientFacingShipment
+# Shipment
 
-Schema for a Shipment in the client facing API.
-
-To be used as part of a ClientFacingTestkitOrder.
+Shipment object
 
 
 ## Fields

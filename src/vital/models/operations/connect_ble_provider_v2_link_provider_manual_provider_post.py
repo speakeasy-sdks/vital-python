@@ -7,7 +7,7 @@ from ...models.shared import manualconnectiondata as shared_manualconnectiondata
 from enum import Enum
 from typing import Dict, Optional
 
-class ManualProviders(str, Enum):
+class ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData(str, Enum):
     r"""An enumeration."""
     BEURER_BLE = 'beurer_ble'
     OMRON_BLE = 'omron_ble'
@@ -23,7 +23,7 @@ class ManualProviders(str, Enum):
 @dataclasses.dataclass
 class ConnectBleProviderV2LinkProviderManualProviderPostRequest:
     manual_connection_data: shared_manualconnectiondata.ManualConnectionData = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    provider: ManualProviders = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
+    provider: ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData = dataclasses.field(metadata={'path_param': { 'field_name': 'provider', 'style': 'simple', 'explode': False }})
     r"""An enumeration."""
     
 

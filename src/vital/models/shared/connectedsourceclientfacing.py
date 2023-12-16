@@ -11,7 +11,7 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Provider:
-    r"""A vendor, a service, or a platform which Vital can connect with."""
+    r"""The provider of this connected source."""
     logo: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('logo') }})
     r"""URL for source logo"""
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
@@ -24,7 +24,7 @@ class Provider:
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ConnectedSourceClientFacingProvider:
+class ConnectedSourceClientFacingSource:
     r"""A vendor, a service, or a platform which Vital can connect with.
 
     Deprecated class: This will be removed in a future release, please migrate away from it as soon as possible.
@@ -46,7 +46,7 @@ class ConnectedSourceClientFacing:
     r"""When your item is created"""
     provider: Provider = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('provider') }})
     r"""The provider of this connected source."""
-    source: ConnectedSourceClientFacingProvider = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
+    source: ConnectedSourceClientFacingSource = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('source') }})
     r"""Deprecated field: This will be removed in a future release, please migrate away from it as soon as possible."""
     
 

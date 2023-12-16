@@ -1,5 +1,7 @@
 # BackImage
 
+An image of the back of the patient insurance card.
+
 
 ## Supported Types
 

@@ -1,5 +1,7 @@
 # FrontImage
 
+An image of the front of the patient insurance card.
+
 
 ## Supported Types
 

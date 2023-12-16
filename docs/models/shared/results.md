@@ -9,9 +9,9 @@
 results: List[shared.BiomarkerResult] = /* values here */
 ```
 
-### LabResultsRawResults
+### Two
 
 ```python
-results: shared.LabResultsRawResults = /* values here */
+results: shared.Two = /* values here */
 ```
 
