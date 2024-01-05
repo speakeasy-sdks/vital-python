@@ -1,24 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 509bcd91b41d4dc936dfcea383742b0b
-  docVersion: 0.0.0-dev.f0ab7c6
-  speakeasyVersion: 1.126.4
-  generationVersion: 2.214.10
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: vital
-  repoURL: https://github.com/speakeasy-sdks/vital-python.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  python:
-    core: 4.3.1
-    deprecations: 2.81.1
-    flattening: 2.81.1
-    globalServerURLs: 2.82.1
-    nameOverrides: 2.81.1
 python:
   version: 0.7.1
   author: vital-dev
@@ -34,8 +20,6 @@ python:
       shared: models/shared
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/vital-python.git
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: vital-api
-  repoSubDirectory: .

@@ -41,7 +41,7 @@ if res.response_search_diagnosis_v3_insurance_search_diagnosis_get is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## search_insurance_payor_info
 
@@ -81,4 +81,4 @@ if res.response_search_insurance_payor_information_v3_insurance_search_payor_pos
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |

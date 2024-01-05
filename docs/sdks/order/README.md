@@ -63,7 +63,7 @@ if res.client_facing_appointment is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## cancel_order_v3_order_order_id_cancel_post
 
@@ -100,7 +100,7 @@ if res.post_order_response is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch
 
@@ -140,7 +140,7 @@ if res.client_facing_appointment is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## create
 
@@ -199,7 +199,7 @@ req = shared.CreateOrderRequestCompatible(
         zip='string',
     ),
     patient_details=shared.PatientDetails(
-        dob=dateutil.parser.isoparse('2021-10-12T10:48:28.067Z'),
+        dob=dateutil.parser.isoparse('2022-10-12T17:02:32.367Z'),
         email='Otho27@yahoo.com',
         first_name='Mazie',
         gender=shared.Gender.UNKNOWN,
@@ -243,7 +243,7 @@ if res.post_order_response is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## create_testkit
 
@@ -293,7 +293,7 @@ if res.post_order_response is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## dispatch_status
 
@@ -322,7 +322,7 @@ if res.response_dispatch_order_status_v3_order_dispatch_status_checks_post is no
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get
 
@@ -359,7 +359,7 @@ if res.client_facing_order is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_appointment_availability
 
@@ -403,7 +403,7 @@ if res.appointment_availability_slots is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_area_info
 
@@ -443,7 +443,7 @@ if res.area_info is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_lab_test_result
 
@@ -480,7 +480,7 @@ if res.response_get_lab_test_result_v3_order_order_id_result_pdf_get is not None
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_lab_test_result_metadata
 
@@ -518,7 +518,7 @@ if res.lab_results_metadata is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_lab_test_result_raw
 
@@ -555,7 +555,7 @@ if res.lab_results_raw is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_phlebotomy_appointment
 
@@ -592,7 +592,7 @@ if res.client_facing_appointment is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## get_phlebotomy_cancellation_reasons
 
@@ -621,7 +621,7 @@ if res.response_get_phlebotomy_appointment_cancellation_reasons_v3_order_phlebot
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |
 
 ## get_requisition_url
 
@@ -658,7 +658,7 @@ if res.any is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## order_process_simulate_v3_order_order_id_test_post
 
@@ -697,7 +697,7 @@ if res.response_order_process_simulate_v3_order_order_id_test_post is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## process_testkit_order_v3_order_testkit_process_team_id_order_id_post
 
@@ -735,7 +735,7 @@ if res.response_process_testkit_order_v3_order_testkit_process_team_id_order_id_
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post
 
@@ -779,7 +779,7 @@ if res.response_process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## register_testkit_v3_order_testkit_register_post
 
@@ -808,7 +808,7 @@ req = shared.RegisterTestkitRequest(
         zip='string',
     ),
     patient_details=shared.PatientDetails(
-        dob=dateutil.parser.isoparse('2022-10-13T05:29:20.564Z'),
+        dob=dateutil.parser.isoparse('2023-10-13T19:44:26.282Z'),
         email='Keanu_Schoen95@gmail.com',
         first_name='Manley',
         gender=shared.Gender.MALE,
@@ -849,7 +849,7 @@ if res.post_order_response is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch
 
@@ -889,7 +889,7 @@ if res.client_facing_appointment is not None:
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 400-600                    | */*                        |
+| errors.SDKError            | 4x-5xx                     | */*                        |
 
 ## sync_testkit_order_status_v3_order_testkit_status_post
 
@@ -922,4 +922,4 @@ if res.response_sync_testkit_order_status_v3_order_testkit_status_post is not No
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| errors.SDKError | 4x-5xx          | */*             |
