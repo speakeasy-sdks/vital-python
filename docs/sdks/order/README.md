@@ -156,69 +156,69 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.CreateOrderRequestCompatible(
+    lab_test_id='77ad642c-1fc6-4fe0-b241-bcdd89dc7fa5',
+    patient_address=shared.PatientAddressCompatible(
+        city='West Stephanytown',
+        country='Macao',
+        state='string',
+        street='Corbin Expressway',
+        zip='string',
+    ),
+    patient_details=shared.PatientDetails(
+        dob=dateutil.parser.isoparse('2024-02-22T16:05:06.237Z'),
+        email='Ricardo.Hand41@gmail.com',
+        first_name='April',
+        gender=shared.Gender.OTHER,
+        last_name='Bradtke',
+        phone_number='string',
+    ),
+    user_id='5a25d0d9-ea13-420e-8504-aa8ce67b7c49',
     consents=[
         shared.Consent(
-            consent_type=shared.ConsentType.MOBILE_TERMS_AND_CONDITIONS,
+            consent_type=shared.ConsentType.PRIVACY_POLICY,
         ),
     ],
     health_insurance=shared.HealthInsuranceCreateRequest(
-        back_image=shared.Jpeg(
-        content='0xeC962B1FB8'.encode(),
-        content_type=shared.ContentType.IMAGE_JPEG,
+        back_image=shared.Png(
+        content='0x36fCEABFA3'.encode(),
+        content_type=shared.PngContentType.IMAGE_PNG,
     ),
         diagnosis_codes=[
             'string',
         ],
-        front_image=shared.Png(
-        content='0xD0a361fBCB'.encode(),
-        content_type=shared.PngContentType.IMAGE_PNG,
+        front_image=shared.Jpeg(
+        content='0xD9D9Fc527a'.encode(),
+        content_type=shared.ContentType.IMAGE_JPEG,
     ),
-        patient_signature_image=shared.Png(
-        content='0xcCAaFe705D'.encode(),
-        content_type=shared.PngContentType.IMAGE_PNG,
+        patient_signature_image=shared.Jpeg(
+        content='0xa371EF0c27'.encode(),
+        content_type=shared.ContentType.IMAGE_JPEG,
     ),
         responsible_details=shared.ResponsibleDetails(
             address=shared.Address(
-                city='New Darenberg',
-                country='Cote d\'Ivoire',
+                city='New Kristy',
+                country='Guernsey',
                 first_line='string',
                 state='string',
                 zip='string',
             ),
-            first_name='Micah',
-            last_name='Bergnaum',
+            first_name='Josiane',
+            last_name='Dickinson',
             phone_number='string',
         ),
     ),
-    lab_test_id='d5e26191-5a25-4d0d-9ea1-320e8504aa8c',
-    patient_address=shared.PatientAddressCompatible(
-        city='Jacksonville',
-        country='Kazakhstan',
-        state='string',
-        street='Kunze Shoals',
-        zip='string',
-    ),
-    patient_details=shared.PatientDetails(
-        dob=dateutil.parser.isoparse('2022-10-12T17:02:32.367Z'),
-        email='Otho27@yahoo.com',
-        first_name='Mazie',
-        gender=shared.Gender.UNKNOWN,
-        last_name='Waelchi',
-        phone_number='string',
-    ),
     physician=shared.PhysicianCreateRequest(
-        first_name='Myrtice',
-        last_name='Sauer',
+        first_name='Erica',
+        last_name='Schuppe',
+        npi='string',
         licensed_states=[
             'string',
         ],
-        npi='string',
-        signature_image=shared.Png(
-        content='0xA34D9D9Fc5'.encode(),
-        content_type=shared.PngContentType.IMAGE_PNG,
+        signature_image=shared.Jpeg(
+        content='0xA2f4cB9De0'.encode(),
+        content_type=shared.ContentType.IMAGE_JPEG,
     ),
     ),
-    user_id='15747251-ef09-4254-8958-35d6b1b39d7e',
 )
 
 res = s.order.create(req)
@@ -795,13 +795,8 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.RegisterTestkitRequest(
-    consents=[
-        shared.Consent(
-            consent_type=shared.ConsentType.MOBILE_TERMS_AND_CONDITIONS,
-        ),
-    ],
     patient_address=shared.PatientAddressCompatible(
-        city='Phoenix',
+        city='Port Marquise',
         country='Netherlands',
         state='string',
         street='Gloria Stream',
@@ -815,16 +810,21 @@ req = shared.RegisterTestkitRequest(
         last_name='Pouros',
         phone_number='string',
     ),
+    sample_id='string',
+    user_id='16e51d81-0324-4367-87b0-5cba39bbafcb',
+    consents=[
+        shared.Consent(
+            consent_type=shared.ConsentType.MOBILE_TERMS_AND_CONDITIONS,
+        ),
+    ],
     physician=shared.PhysicianCreateRequestBase(
-        first_name='Arne',
-        last_name='Keeling',
+        first_name='Terrell',
+        last_name='Senger',
+        npi='string',
         licensed_states=[
             'string',
         ],
-        npi='string',
     ),
-    sample_id='string',
-    user_id='e51d8103-2436-4747-b05c-ba39bbafcb7e',
 )
 
 res = s.order.register_testkit_v3_order_testkit_register_post(req)

@@ -211,8 +211,8 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.LinkTokenBase(
-    oauth_info=shared.OauthInfo(),
     token='string',
+    oauth_info=shared.OauthInfo(),
 )
 
 res = None

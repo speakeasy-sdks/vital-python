@@ -10,10 +10,10 @@ from typing import Optional
 class ProcessTestkitShipHeroOrderShippedV3OrderTestkitWebhookShipheroShipmentUpdatePostResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post: Optional[str] = dataclasses.field(default=None)
     r"""Successful Response"""
     

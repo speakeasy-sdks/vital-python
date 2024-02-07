@@ -10,9 +10,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest:
+    update_api_key_body: shared_updateapikeybody.UpdateAPIKeyBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     api_key_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'api_key_id', 'style': 'simple', 'explode': False }})
     team_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'team_id', 'style': 'simple', 'explode': False }})
-    update_api_key_body: shared_updateapikeybody.UpdateAPIKeyBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -21,10 +21,10 @@ class UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchRequest:
 class UpdateAPIKeyLabelV2TeamTeamIDApikeyAPIKeyIDPatchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     api_key_in_db: Optional[shared_apikeyindb.APIKeyInDB] = dataclasses.field(default=None)
     r"""Successful Response"""
     

@@ -18,10 +18,10 @@ class GetConnectedProvidersV2UserProvidersUserIDGetRequest:
 class GetConnectedProvidersV2UserProvidersUserIDGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_connected_providers_v2_user_providers_user_id_get: Optional[Dict[str, List[shared_clientfacingproviderwithstatus.ClientFacingProviderWithStatus]]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

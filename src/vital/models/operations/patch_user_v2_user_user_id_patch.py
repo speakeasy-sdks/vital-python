@@ -8,8 +8,8 @@ from ...models.shared import userpatchbody as shared_userpatchbody
 
 @dataclasses.dataclass
 class PatchUserV2UserUserIDPatchRequest:
-    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     user_patch_body: shared_userpatchbody.UserPatchBody = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    user_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'user_id', 'style': 'simple', 'explode': False }})
     
 
 
@@ -18,9 +18,9 @@ class PatchUserV2UserUserIDPatchRequest:
 class PatchUserV2UserUserIDPatchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     
 

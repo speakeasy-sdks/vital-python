@@ -24,10 +24,10 @@ class GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetRequest:
 class GetTimeseriesResourceDataV2TimeseriesUserIDCaloriesActiveGetResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     response_get_timeseries_resource_data_v2_timeseries_user_id_calories_active_get: Optional[List[shared_clientfacingcaloriesactivetimeseries.ClientFacingCaloriesActiveTimeseries]] = dataclasses.field(default=None)
     r"""Successful Response"""
     

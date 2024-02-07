@@ -32,6 +32,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.TeamCreate(
+    name='string',
     brand_information=shared.BrandInformation(
         brand_color='string',
         company_address='string',
@@ -39,7 +40,6 @@ req = shared.TeamCreate(
         company_website='string',
         support_email='Haylie78@hotmail.com',
     ),
-    name='string',
 )
 
 res = s.team.create(req)

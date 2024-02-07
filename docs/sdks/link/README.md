@@ -62,8 +62,8 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.LinkTokenBase(
-    oauth_info=shared.OauthInfo(),
     token='string',
+    oauth_info=shared.OauthInfo(),
 )
 
 res = s.link.check_token_validity(req)
@@ -478,10 +478,10 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.LinkTokenExchange(
+    user_key='b8785044-a13a-4291-82f0-10449531f483',
     filter_on_providers=[
-        shared.Providers.ACCUCHEK_BLE,
+        shared.Providers.CRONOMETER,
     ],
-    user_key='8785044a-13a2-491c-af01-0449531f483f',
 )
 
 res = s.link.generate(req)
