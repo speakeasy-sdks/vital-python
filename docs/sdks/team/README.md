@@ -33,13 +33,6 @@ s = vital.Vital()
 
 req = shared.TeamCreate(
     name='string',
-    brand_information=shared.BrandInformation(
-        brand_color='string',
-        company_address='string',
-        company_name='Kuhn - Nienow',
-        company_website='string',
-        support_email='Haylie78@hotmail.com',
-    ),
 )
 
 res = s.team.create(req)
@@ -74,7 +67,7 @@ Create api key.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -114,7 +107,7 @@ Add Team priority row for source
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -156,7 +149,6 @@ Invalidate api key by key value.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -194,7 +186,6 @@ Get team.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -231,7 +222,6 @@ Invalidate api key by key value.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -297,7 +287,6 @@ GET source priorities.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -334,7 +323,6 @@ Get the current user count for a team.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -400,7 +388,6 @@ Deprecated. Rotate api key.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -438,7 +425,6 @@ Search team users by user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -475,7 +461,7 @@ Update API key label.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -516,7 +502,6 @@ Patch source priorities.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -553,7 +538,7 @@ Update team.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 

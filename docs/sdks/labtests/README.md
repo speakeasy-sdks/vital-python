@@ -93,7 +93,6 @@ GET a specific marker for the given lab and provider_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -131,7 +130,6 @@ GET all the markers for the given lab.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 

@@ -12,12 +12,13 @@ from vital import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ClientFacingBloodPressureTimeseries:
+    UNSET='__SPEAKEASY_UNSET__'
     diastolic: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('diastolic') }})
     systolic: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('systolic') }})
     timestamp: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timestamp'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse }})
     unit: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('unit') }})
     r"""The unit of the value. We use SI units where possible, e.g. mmol/L for glucose/cholesterol, bpm for heart rate, etc."""
-    id: Optional[Any] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
+    id: Optional[Any] = dataclasses.field(default=UNSET, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is ClientFacingBloodPressureTimeseries.UNSET }})
     r"""Deprecated"""
     timezone_offset: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timezone_offset'), 'exclude': lambda f: f is None }})
     r"""Time zone UTC offset in seconds. Positive offset indicates east of UTC; negative offset indicates west of UTC; and null indicates the time zone information is unavailable at source."""

@@ -12,17 +12,12 @@ GET many orders with filters.
 ### Example Usage
 
 ```python
-import dateutil.parser
 import vital
 from vital.models import operations
 
 s = vital.Vital()
 
-req = operations.GetOrdersV3OrdersGetRequest(
-    order_ids=[
-        'c184a429-302e-4aca-80db-f1718b882a50',
-    ],
-)
+req = operations.GetOrdersV3OrdersGetRequest()
 
 res = s.orders.list(req)
 

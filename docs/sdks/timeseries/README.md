@@ -38,7 +38,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -78,7 +77,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -118,7 +116,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -158,7 +155,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -198,7 +194,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -238,7 +233,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -278,7 +272,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -318,7 +311,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -358,7 +350,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -398,7 +389,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -438,7 +428,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -478,7 +467,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -518,7 +506,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -558,7 +545,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -598,7 +584,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -638,7 +623,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -678,7 +662,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -718,7 +701,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -758,7 +740,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -798,7 +779,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -838,7 +818,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -878,7 +857,6 @@ Get Sleep stream for a user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -915,7 +893,6 @@ Get User Workouts
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -952,7 +929,6 @@ Get timeseries data for user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -992,7 +968,6 @@ Post User Blood Pressure
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -1031,7 +1006,7 @@ Post User Vitals
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 

@@ -14,7 +14,6 @@ Search Diagnosis
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 

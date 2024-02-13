@@ -33,7 +33,7 @@ Book an at-home phlebotomy appointment.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -73,7 +73,6 @@ POST cancel order
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -110,7 +109,7 @@ Cancel a previously booked at-home phlebotomy appointment.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -173,52 +172,6 @@ req = shared.CreateOrderRequestCompatible(
         phone_number='string',
     ),
     user_id='5a25d0d9-ea13-420e-8504-aa8ce67b7c49',
-    consents=[
-        shared.Consent(
-            consent_type=shared.ConsentType.PRIVACY_POLICY,
-        ),
-    ],
-    health_insurance=shared.HealthInsuranceCreateRequest(
-        back_image=shared.Png(
-        content='0x36fCEABFA3'.encode(),
-        content_type=shared.PngContentType.IMAGE_PNG,
-    ),
-        diagnosis_codes=[
-            'string',
-        ],
-        front_image=shared.Jpeg(
-        content='0xD9D9Fc527a'.encode(),
-        content_type=shared.ContentType.IMAGE_JPEG,
-    ),
-        patient_signature_image=shared.Jpeg(
-        content='0xa371EF0c27'.encode(),
-        content_type=shared.ContentType.IMAGE_JPEG,
-    ),
-        responsible_details=shared.ResponsibleDetails(
-            address=shared.Address(
-                city='New Kristy',
-                country='Guernsey',
-                first_line='string',
-                state='string',
-                zip='string',
-            ),
-            first_name='Josiane',
-            last_name='Dickinson',
-            phone_number='string',
-        ),
-    ),
-    physician=shared.PhysicianCreateRequest(
-        first_name='Erica',
-        last_name='Schuppe',
-        npi='string',
-        licensed_states=[
-            'string',
-        ],
-        signature_image=shared.Jpeg(
-        content='0xA2f4cB9De0'.encode(),
-        content_type=shared.ContentType.IMAGE_JPEG,
-    ),
-    ),
 )
 
 res = s.order.create(req)
@@ -332,7 +285,6 @@ GET individual order by ID.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -416,7 +368,6 @@ Information returned:
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -453,7 +404,6 @@ This endpoint returns the lab results for the order.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -491,7 +441,6 @@ provider and sample dates.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -528,7 +477,6 @@ Return both metadata and raw json test data
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -565,7 +513,6 @@ Get the appointment associated with an order.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -631,7 +578,6 @@ GET requisition pdf for an order
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -668,7 +614,7 @@ Get available test kits.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -707,7 +653,6 @@ POST Create shipment for order
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -812,19 +757,6 @@ req = shared.RegisterTestkitRequest(
     ),
     sample_id='string',
     user_id='16e51d81-0324-4367-87b0-5cba39bbafcb',
-    consents=[
-        shared.Consent(
-            consent_type=shared.ConsentType.MOBILE_TERMS_AND_CONDITIONS,
-        ),
-    ],
-    physician=shared.PhysicianCreateRequestBase(
-        first_name='Terrell',
-        last_name='Senger',
-        npi='string',
-        licensed_states=[
-            'string',
-        ],
-    ),
 )
 
 res = s.order.register_testkit_v3_order_testkit_register_post(req)
@@ -859,7 +791,7 @@ Reschedule a previously booked at-home phlebotomy appointment.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 

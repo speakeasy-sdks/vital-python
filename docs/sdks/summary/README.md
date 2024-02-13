@@ -30,7 +30,6 @@ Get user's meals
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -70,7 +69,6 @@ Get Daily Activity for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -110,7 +108,6 @@ Get Daily Activity for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -150,7 +147,6 @@ Get Daily Body data for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -190,7 +186,6 @@ Get Daily Body data for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -230,7 +225,6 @@ Get Devices for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -268,7 +262,6 @@ Get Daily profile for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -306,7 +299,6 @@ Get Daily profile for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -344,7 +336,6 @@ Get Daily sleep for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -384,7 +375,6 @@ Get Daily sleep for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -424,7 +414,6 @@ Get Daily sleep stream for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -464,7 +453,6 @@ Get Daily workout for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -504,7 +492,6 @@ Get Daily workout for user_id
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -544,7 +531,6 @@ Post User Activity
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -583,7 +569,6 @@ Post User Body
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -622,7 +607,6 @@ Post User Profile
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -661,7 +645,6 @@ Post User Sleep
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -700,7 +683,6 @@ Post User Workout
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 

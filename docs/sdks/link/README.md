@@ -63,7 +63,6 @@ s = vital.Vital()
 
 req = shared.LinkTokenBase(
     token='string',
-    oauth_info=shared.OauthInfo(),
 )
 
 res = s.link.check_token_validity(req)
@@ -268,7 +267,7 @@ This function is hit by vital-link to authenticate a password provider.
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -313,7 +312,6 @@ Connect oauth providers
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -393,7 +391,6 @@ Generate a token to invite a user of Vital mobile app to your team
 ```python
 import dateutil.parser
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -431,7 +428,6 @@ Redeem an invite token for an api key
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -479,9 +475,6 @@ s = vital.Vital()
 
 req = shared.LinkTokenExchange(
     user_key='b8785044-a13a-4291-82f0-10449531f483',
-    filter_on_providers=[
-        shared.Providers.CRONOMETER,
-    ],
 )
 
 res = s.link.generate(req)
@@ -516,7 +509,7 @@ This endpoint generates an OAuth link for oauth provider
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 

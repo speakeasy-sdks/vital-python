@@ -206,23 +206,22 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import vital
-from vital.models import shared
+from vital.models import errors, shared
 
 s = vital.Vital()
 
 req = shared.LinkTokenBase(
     token='string',
-    oauth_info=shared.OauthInfo(),
 )
 
 res = None
 try:
     res = s.link.check_token_validity(req)
 except errors.HTTPValidationError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.response_check_token_valid_v2_link_token_isvalid_post is not None:

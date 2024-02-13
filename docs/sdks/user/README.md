@@ -63,7 +63,6 @@ Delete User
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -100,7 +99,7 @@ Deregister Provider
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -138,7 +137,6 @@ GET User details given the user_id.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -175,7 +173,6 @@ GET All users for team.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -213,7 +210,6 @@ GET Users connected providers
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -279,7 +275,6 @@ Get User Sign In Token
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -316,7 +311,7 @@ Patch User
 
 ```python
 import vital
-from vital.models import operations, shared
+from vital.models import shared
 
 s = vital.Vital()
 
@@ -354,7 +349,6 @@ Trigger a manual refresh for a specific user
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 
@@ -392,7 +386,6 @@ GET user_id from client_user_id.
 
 ```python
 import vital
-from vital.models import operations
 
 s = vital.Vital()
 

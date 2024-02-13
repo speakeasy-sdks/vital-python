@@ -4,7 +4,7 @@ management:
   docChecksum: 509bcd91b41d4dc936dfcea383742b0b
   docVersion: 0.0.0-dev.f0ab7c6
   speakeasyVersion: internal
-  generationVersion: 2.250.12
+  generationVersion: 2.253.0
   releaseVersion: 0.9.0
   configChecksum: 8f3a030ff32bef3c172d8c28a8859534
   repoURL: https://github.com/speakeasy-sdks/vital-python.git
