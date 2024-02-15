@@ -62,7 +62,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.LinkTokenBase(
-    token='string',
+    token='<value>',
 )
 
 res = s.link.check_token_validity(req)
@@ -105,7 +105,7 @@ s = vital.Vital()
 
 
 res = s.link.connect_ble_provider(manual_connection_data=shared.ManualConnectionData(
-    user_id='string',
+    user_id='<value>',
 ), provider=operations.ProvidersThatAreManuallyAddedDevicesSuchAsBleDevicesAndGeneratedData.BEURER_BLE)
 
 if res.response_connect_ble_provider_v2_link_provider_manual_provider_post is not None:
@@ -231,7 +231,7 @@ s = vital.Vital()
 res = s.link.connect_individual_provider(individual_provider_data=shared.IndividualProviderData(
     password='U7xJdvB5pT6rvW2',
     username='Chanel73',
-), provider=operations.ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift.RENPHO, x_vital_link_client_region='string')
+), provider=operations.ProvidersThatRequirePasswordAuthWhoopRenphoPelotonZwift.RENPHO, x_vital_link_client_region='<value>')
 
 if res.provider_link_response is not None:
     # handle response
@@ -277,7 +277,7 @@ res = s.link.connect_password_auth(password_auth_link=shared.PasswordAuthLink(
     password='HuGgl1Kl3rSJCBn',
     provider=shared.Providers.WAHOO,
     username='Brett32',
-), x_vital_link_client_region='string')
+), x_vital_link_client_region='<value>')
 
 if res.connection_status is not None:
     # handle response
@@ -316,7 +316,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.link.connect_provider(provider='string', x_vital_sdk_no_redirect='string')
+res = s.link.connect_provider(provider='<value>', x_vital_sdk_no_redirect='<value>')
 
 if res.response_connect_provider_v2_link_connect_provider_get is not None:
     # handle response
@@ -355,7 +355,7 @@ s = vital.Vital()
 
 req = shared.DemoConnectionCreationPayload(
     provider=shared.DemoProviders.APPLE_HEALTH_KIT,
-    user_id='string',
+    user_id='<value>',
 )
 
 res = s.link.create_demo_connection(req)
@@ -432,7 +432,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.link.exchange_token(code='string')
+res = s.link.exchange_token(code='<value>')
 
 if res.vital_token_exchange_response is not None:
     # handle response
@@ -581,7 +581,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.BeginLinkTokenRequest(
-    link_token='string',
+    link_token='<value>',
     provider=shared.Providers.PELOTON,
 )
 

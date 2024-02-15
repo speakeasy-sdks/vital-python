@@ -32,7 +32,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.TeamCreate(
-    name='string',
+    name='<value>',
 )
 
 res = s.team.create(req)
@@ -73,8 +73,8 @@ s = vital.Vital()
 
 
 res = s.team.create_api_key(create_api_key_body=shared.CreateAPIKeyBody(
-    label='string',
-), team_id='string')
+    label='<value>',
+), team_id='<value>')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -116,7 +116,7 @@ res = s.team.create_priority(priority_create=shared.PriorityCreate(
     priority=548209,
     source_id=168326,
     team_id='0d4e3a38-5a06-40f0-b144-d921de79168b',
-), team_id='string')
+), team_id='<value>')
 
 if res.priority is not None:
     # handle response
@@ -153,7 +153,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.team.delete_api_key(api_key_id='string', team_id='string')
+res = s.team.delete_api_key(api_key_id='<value>', team_id='<value>')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -226,7 +226,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.team.get_api_keys(team_id='string')
+res = s.team.get_api_keys(team_id='<value>')
 
 if res.response_get_api_keys_for_team_v2_team_team_id_apikeys_get is not None:
     # handle response
@@ -291,7 +291,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.team.get_source_priorities(data_type='string')
+res = s.team.get_source_priorities(data_type='<value>')
 
 if res.response_get_source_priorities_v2_team_source_priorities_get is not None:
     # handle response
@@ -392,7 +392,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(api_key_id='string', team_id='string')
+res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(api_key_id='<value>', team_id='<value>')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -429,7 +429,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.team.search_users_by_uuid(query_id='string')
+res = s.team.search_users_by_uuid(query_id='<value>')
 
 if res.response_search_team_users_by_uuid_or_client_user_id_v2_team_users_search_get is not None:
     # handle response
@@ -467,8 +467,8 @@ s = vital.Vital()
 
 
 res = s.team.update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(update_api_key_body=shared.UpdateAPIKeyBody(
-    label='string',
-), api_key_id='string', team_id='string')
+    label='<value>',
+), api_key_id='<value>', team_id='<value>')
 
 if res.api_key_in_db is not None:
     # handle response
@@ -506,7 +506,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='string')
+res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='<value>')
 
 if res.response_update_source_priorities_v2_team_source_priorities_patch is not None:
     # handle response
@@ -543,7 +543,7 @@ from vital.models import shared
 s = vital.Vital()
 
 
-res = s.team.update_team_v2_team_team_id_patch(team_update=shared.TeamUpdate(), team_id='string')
+res = s.team.update_team_v2_team_team_id_patch(team_update=shared.TeamUpdate(), team_id='<value>')
 
 if res.team_in_db is not None:
     # handle response

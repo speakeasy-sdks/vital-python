@@ -211,7 +211,7 @@ from vital.models import errors, shared
 s = vital.Vital()
 
 req = shared.LinkTokenBase(
-    token='string',
+    token='<value>',
 )
 
 res = None

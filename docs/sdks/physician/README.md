@@ -19,7 +19,7 @@ s = vital.Vital()
 
 req = shared.OpenLoopEvent(
     event_type=shared.OpenLoopWebhookType.PAYMENT_DELETED,
-    resource_id='string',
+    resource_id='<value>',
     resource_id_type=shared.OpenLoopResourceIDType.APPOINTMENT,
 )
 

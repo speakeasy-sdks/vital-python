@@ -39,7 +39,7 @@ s = vital.Vital()
 
 
 res = s.order.book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_book_post(appointment_booking_request=shared.AppointmentBookingRequest(
-    booking_key='string',
+    booking_key='<value>',
 ), order_id='ce486d40-b1d8-4151-82e6-c0e7d72ca79b')
 
 if res.client_facing_appointment is not None:
@@ -115,7 +115,7 @@ s = vital.Vital()
 
 
 res = s.order.cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_cancel_patch(appointment_cancel_request=shared.AppointmentCancelRequest(
-    cancellation_reason_id='string',
+    cancellation_reason_id='<value>',
 ), order_id='a0cd9528-ddb0-4d27-a7e9-01ccf3b9448c')
 
 if res.client_facing_appointment is not None:
@@ -159,19 +159,19 @@ req = shared.CreateOrderRequestCompatible(
     patient_address=shared.PatientAddressCompatible(
         city='West Stephanytown',
         country='Macao',
-        state='string',
-        street='Corbin Expressway',
-        zip='string',
+        state='Idaho',
+        street='Cory Rapids',
+        zip='83814',
     ),
     patient_details=shared.PatientDetails(
-        dob=dateutil.parser.isoparse('2024-02-22T16:05:06.237Z'),
-        email='Ricardo.Hand41@gmail.com',
-        first_name='April',
-        gender=shared.Gender.OTHER,
-        last_name='Bradtke',
-        phone_number='string',
+        dob=dateutil.parser.isoparse('2022-03-22T23:50:34.866Z'),
+        email='Baron.Herzog@yahoo.com',
+        first_name='Eulalia',
+        gender=shared.Gender.UNKNOWN,
+        last_name='Bashirian',
+        phone_number='<value>',
     ),
-    user_id='5a25d0d9-ea13-420e-8504-aa8ce67b7c49',
+    user_id='d9ea1320-e850-44aa-8ce6-7b7c49cf24bd',
 )
 
 res = s.order.create(req)
@@ -215,13 +215,13 @@ req = shared.CreateRegistrableTestkitOrderRequest(
     shipping_details=shared.ShippingAddress(
         city='West Esmeraldaborough',
         country='Antarctica (the territory South of 60 deg S)',
-        first_line='string',
-        phone_number='string',
-        receiver_name='string',
-        state='string',
-        zip='string',
+        first_line='<value>',
+        phone_number='<value>',
+        receiver_name='<value>',
+        state='Maryland',
+        zip='40261-2310',
     ),
-    user_id='6c614a14-431d-4979-8fbf-e68efedf3713',
+    user_id='d9798fbf-e68e-4fed-b371-3330afbf06a4',
 )
 
 res = s.order.create_testkit(req)
@@ -329,9 +329,9 @@ s = vital.Vital()
 
 res = s.order.get_appointment_availability(order_id='c094c82e-a8e0-42d1-a065-be1f658ff11c', request_body=operations.GetOrderAppointmentAvailabilityV3OrderOrderIDPhlebotomyAppointmentAvailabilityPostAddress(
     city='Shanahanboro',
-    first_line='string',
-    state='string',
-    zip_code='56156',
+    first_line='<value>',
+    state='Hawaii',
+    zip_code='61562-2121',
 ))
 
 if res.appointment_availability_slots is not None:
@@ -372,7 +372,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.order.get_area_info(zip_code='string')
+res = s.order.get_area_info(zip_code='<value>')
 
 if res.area_info is not None:
     # handle response
@@ -696,8 +696,8 @@ s = vital.Vital()
 
 req = shared.ShipmentWebhookUpdate(
     fulfillment=shared.Fulfillment(
-        order_number='string',
-        order_uuid='string',
+        order_number='<value>',
+        order_uuid='<value>',
     ),
     webhook_type=shared.WebhookType.SHIPMENT_UPDATE,
 )
@@ -743,20 +743,20 @@ req = shared.RegisterTestkitRequest(
     patient_address=shared.PatientAddressCompatible(
         city='Port Marquise',
         country='Netherlands',
-        state='string',
-        street='Gloria Stream',
-        zip='string',
+        state='Hawaii',
+        street='Roma Overpass',
+        zip='58769',
     ),
     patient_details=shared.PatientDetails(
-        dob=dateutil.parser.isoparse('2023-10-13T19:44:26.282Z'),
-        email='Keanu_Schoen95@gmail.com',
-        first_name='Manley',
-        gender=shared.Gender.MALE,
-        last_name='Pouros',
-        phone_number='string',
+        dob=dateutil.parser.isoparse('2024-01-01T04:15:29.649Z'),
+        email='Mateo_Bode@gmail.com',
+        first_name='Flossie',
+        gender=shared.Gender.FEMALE,
+        last_name='Stroman',
+        phone_number='<value>',
     ),
-    sample_id='string',
-    user_id='16e51d81-0324-4367-87b0-5cba39bbafcb',
+    sample_id='<value>',
+    user_id='81032436-747b-405c-ba39-bbafcb7ed536',
 )
 
 res = s.order.register_testkit_v3_order_testkit_register_post(req)
@@ -797,7 +797,7 @@ s = vital.Vital()
 
 
 res = s.order.reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointment_reschedule_patch(appointment_reschedule_request=shared.AppointmentRescheduleRequest(
-    booking_key='string',
+    booking_key='<value>',
 ), order_id='337372e4-dddb-4832-b4a5-62cb3ddc204a')
 
 if res.client_facing_appointment is not None:

@@ -28,7 +28,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.UserCreateBody(
-    client_user_id='string',
+    client_user_id='<value>',
 )
 
 res = s.user.create_user(req)
@@ -390,7 +390,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.user.resolve_by_user_id(client_user_id='string')
+res = s.user.resolve_by_user_id(client_user_id='<value>')
 
 if res.client_facing_user is not None:
     # handle response

@@ -18,7 +18,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.insurance.search_diagnosis(diagnosis_query='string')
+res = s.insurance.search_diagnosis(diagnosis_query='<value>')
 
 if res.response_search_diagnosis_v3_insurance_search_diagnosis_get is not None:
     # handle response
@@ -55,7 +55,7 @@ from vital.models import shared
 s = vital.Vital()
 
 req = shared.PayorSearchRequest(
-    insurance_name='string',
+    insurance_name='<value>',
 )
 
 res = s.insurance.search_insurance_payor_info(req)
