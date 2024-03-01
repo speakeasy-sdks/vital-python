@@ -4,16 +4,16 @@ management:
   docChecksum: 509bcd91b41d4dc936dfcea383742b0b
   docVersion: 0.0.0-dev.f0ab7c6
   speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 0.9.2
-  configChecksum: bc4e0e2fe4270185980169679a613572
+  generationVersion: 2.275.4
+  releaseVersion: 0.10.0
+  configChecksum: 346a279ac5c76b541ba39f459d96c5ee
   repoURL: https://github.com/speakeasy-sdks/vital-python.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/vital-python.git
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.7
+    core: 4.5.0
     deprecations: 2.81.1
     flattening: 2.81.1
     globalServerURLs: 2.82.1
@@ -790,3 +790,6 @@ generatedFiles:
   - docs/sdks/orders/README.md
   - USAGE.md
   - .gitattributes
+  - src/vital/_hooks/sdkhooks.py
+  - src/vital/_hooks/types.py
+  - src/vital/_hooks/__init__.py
