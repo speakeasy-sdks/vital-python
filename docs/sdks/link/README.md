@@ -395,7 +395,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.link.create_token(user_id='2795b4e3-bfe4-4e25-a003-d249bbaf85eb', expires_at=dateutil.parser.isoparse('2022-12-10T18:25:02.682Z'))
+res = s.link.create_token(user_id='2795b4e3-bfe4-4e25-a003-d249bbaf85eb', expires_at=dateutil.parser.isoparse('2023-10-11T13:41:29.554841+00:00'))
 
 if res.vital_token_created_response is not None:
     # handle response

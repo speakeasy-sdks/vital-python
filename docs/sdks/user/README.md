@@ -177,7 +177,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.user.get_all(limit=178225, offset=64345)
+res = s.user.get_all(limit=100, offset=0)
 
 if res.paginated_users_response is not None:
     # handle response

@@ -34,7 +34,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_meals(start_date='<value>', user_id='641fb67c-c4de-44d2-8b5e-3e073000b0a5', end_date='<value>', provider='<value>')
+res = s.summary.get_meals(start_date='<value>', user_id='641fb67c-c4de-44d2-8b5e-3e073000b0a5', end_date='<value>', provider='')
 
 if res.client_facing_meal_response is not None:
     # handle response
@@ -73,7 +73,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_activity(start_date='<value>', user_id='29994eda-1c81-42f3-a33b-dcb5592eeffb', end_date='<value>', provider='<value>')
+res = s.summary.get_user_activity(start_date='<value>', user_id='29994eda-1c81-42f3-a33b-dcb5592eeffb', end_date='<value>', provider='')
 
 if res.client_activity_response is not None:
     # handle response
@@ -112,7 +112,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_activity_raw(start_date='<value>', user_id='c752487b-77c7-4c61-ad1e-e885ef0bdc3c', end_date='<value>', provider='<value>')
+res = s.summary.get_user_activity_raw(start_date='<value>', user_id='c752487b-77c7-4c61-ad1e-e885ef0bdc3c', end_date='<value>', provider='')
 
 if res.raw_activity is not None:
     # handle response
@@ -151,7 +151,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_body(start_date='<value>', user_id='8170daa1-c702-4d4a-9653-9a8a9e6e4eae', end_date='<value>', provider='<value>')
+res = s.summary.get_user_body(start_date='<value>', user_id='8170daa1-c702-4d4a-9653-9a8a9e6e4eae', end_date='<value>', provider='')
 
 if res.client_body_response is not None:
     # handle response
@@ -190,7 +190,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_body_raw(start_date='<value>', user_id='318730e0-1d99-4c94-97d6-8e72c1985489', end_date='<value>', provider='<value>')
+res = s.summary.get_user_body_raw(start_date='<value>', user_id='318730e0-1d99-4c94-97d6-8e72c1985489', end_date='<value>', provider='')
 
 if res.raw_body is not None:
     # handle response
@@ -229,7 +229,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_devices_raw(user_id='d3afcead-cf24-4987-97fa-74fe26009852', provider='<value>')
+res = s.summary.get_user_devices_raw(user_id='d3afcead-cf24-4987-97fa-74fe26009852', provider='')
 
 if res.raw_devices is not None:
     # handle response
@@ -266,7 +266,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_profile(user_id='1e03319e-ca0e-4660-8784-a0581ebdd19f', provider='<value>')
+res = s.summary.get_user_profile(user_id='1e03319e-ca0e-4660-8784-a0581ebdd19f', provider='')
 
 if res.client_facing_profile is not None:
     # handle response
@@ -303,7 +303,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_profile_raw(user_id='ae101aa4-8797-4dc6-bac7-aa9d64e72a37', provider='<value>')
+res = s.summary.get_user_profile_raw(user_id='ae101aa4-8797-4dc6-bac7-aa9d64e72a37', provider='')
 
 if res.raw_profile is not None:
     # handle response
@@ -340,7 +340,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_sleep(start_date='<value>', user_id='6a2ea429-e1c8-48ab-a43b-c6a94c896bba', end_date='<value>', provider='<value>')
+res = s.summary.get_user_sleep(start_date='<value>', user_id='6a2ea429-e1c8-48ab-a43b-c6a94c896bba', end_date='<value>', provider='')
 
 if res.client_sleep_response is not None:
     # handle response
@@ -379,7 +379,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_sleep_raw(start_date='<value>', user_id='b2ba77ed-68ff-441f-bfc0-77eae7285ab9', end_date='<value>', provider='<value>')
+res = s.summary.get_user_sleep_raw(start_date='<value>', user_id='b2ba77ed-68ff-441f-bfc0-77eae7285ab9', end_date='<value>', provider='')
 
 if res.raw_sleep is not None:
     # handle response
@@ -418,7 +418,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_sleep_stream(start_date='<value>', user_id='8905f1c3-5295-4037-bc4a-b0890f30d313', end_date='<value>', provider='<value>')
+res = s.summary.get_user_sleep_stream(start_date='<value>', user_id='8905f1c3-5295-4037-bc4a-b0890f30d313', end_date='<value>', provider='')
 
 if res.client_sleep_response is not None:
     # handle response
@@ -457,7 +457,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_workouts(start_date='<value>', user_id='bc0edaf0-6098-41f4-a6eb-525d09cc6d26', end_date='<value>', provider='<value>')
+res = s.summary.get_user_workouts(start_date='<value>', user_id='bc0edaf0-6098-41f4-a6eb-525d09cc6d26', end_date='<value>', provider='')
 
 if res.client_workout_response is not None:
     # handle response
@@ -496,7 +496,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.summary.get_user_workouts_raw(start_date='<value>', user_id='4853d653-58ad-48c0-b4b1-c219bac589e4', end_date='<value>', provider='<value>')
+res = s.summary.get_user_workouts_raw(start_date='<value>', user_id='4853d653-58ad-48c0-b4b1-c219bac589e4', end_date='<value>', provider='')
 
 if res.raw_workout is not None:
     # handle response

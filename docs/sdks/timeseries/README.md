@@ -42,7 +42,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_blood_oxygen(start_date='<value>', user_id='4c167a20-d001-40c6-9f96-363b96cbd8ac', end_date='<value>', provider='<value>')
+res = s.timeseries.get_blood_oxygen(start_date='<value>', user_id='4c167a20-d001-40c6-9f96-363b96cbd8ac', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_oxygen_get is not None:
     # handle response
@@ -81,7 +81,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_blood_pressure(start_date='<value>', user_id='e91b0b64-4f7b-43ea-a2b5-9387de819d04', end_date='<value>', provider='<value>')
+res = s.timeseries.get_blood_pressure(start_date='<value>', user_id='e91b0b64-4f7b-43ea-a2b5-9387de819d04', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_pressure_get is not None:
     # handle response
@@ -120,7 +120,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_caffeine(start_date='<value>', user_id='4313a0eb-8609-48dc-86f6-c357cf521cb8', end_date='<value>', provider='<value>')
+res = s.timeseries.get_caffeine(start_date='<value>', user_id='4313a0eb-8609-48dc-86f6-c357cf521cb8', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_caffeine_get is not None:
     # handle response
@@ -159,7 +159,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_calories_active(start_date='<value>', user_id='0bc1117e-3cf3-4f90-b776-bb89ae3afbb8', end_date='<value>', provider='<value>')
+res = s.timeseries.get_calories_active(start_date='<value>', user_id='0bc1117e-3cf3-4f90-b776-bb89ae3afbb8', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_active_get is not None:
     # handle response
@@ -198,7 +198,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_calories_basal(start_date='<value>', user_id='64ab8090-2f0d-48b8-8aba-6b9f3470ca80', end_date='<value>', provider='<value>')
+res = s.timeseries.get_calories_basal(start_date='<value>', user_id='64ab8090-2f0d-48b8-8aba-6b9f3470ca80', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_basal_get is not None:
     # handle response
@@ -237,7 +237,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_cholesterol_all(start_date='<value>', user_id='4b6c3b20-9b90-4b59-87cd-42be3036af69', end_date='<value>', provider='<value>')
+res = s.timeseries.get_cholesterol_all(start_date='<value>', user_id='4b6c3b20-9b90-4b59-87cd-42be3036af69', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_get is not None:
     # handle response
@@ -276,7 +276,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_cholesterol_hdl(start_date='<value>', user_id='f97d0d0e-3b2a-4529-bb1c-2d8b67282043', end_date='<value>', provider='<value>')
+res = s.timeseries.get_cholesterol_hdl(start_date='<value>', user_id='f97d0d0e-3b2a-4529-bb1c-2d8b67282043', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_hdl_get is not None:
     # handle response
@@ -315,7 +315,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_cholesterol_ldl(start_date='<value>', user_id='4f26c698-5e48-4f6e-8ca1-27edeb29d732', end_date='<value>', provider='<value>')
+res = s.timeseries.get_cholesterol_ldl(start_date='<value>', user_id='4f26c698-5e48-4f6e-8ca1-27edeb29d732', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_ldl_get is not None:
     # handle response
@@ -354,7 +354,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_distance(start_date='<value>', user_id='19ab33e7-f639-49b8-b73c-69a8c4ea5f81', end_date='<value>', provider='<value>')
+res = s.timeseries.get_distance(start_date='<value>', user_id='19ab33e7-f639-49b8-b73c-69a8c4ea5f81', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_distance_get is not None:
     # handle response
@@ -393,7 +393,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_floors_climbed(start_date='<value>', user_id='05b58dc0-4a14-4779-97b8-78666ff90d3c', end_date='<value>', provider='<value>')
+res = s.timeseries.get_floors_climbed(start_date='<value>', user_id='05b58dc0-4a14-4779-97b8-78666ff90d3c', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_floors_climbed_get is not None:
     # handle response
@@ -432,7 +432,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_glucose(start_date='<value>', user_id='76c755f4-e363-461b-9888-a33b1731a7ae', end_date='<value>', provider='<value>')
+res = s.timeseries.get_glucose(start_date='<value>', user_id='76c755f4-e363-461b-9888-a33b1731a7ae', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_glucose_get is not None:
     # handle response
@@ -471,7 +471,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_heartrate(start_date='<value>', user_id='3a24193a-7e0c-448f-b11f-293d439db945', end_date='<value>', provider='<value>')
+res = s.timeseries.get_heartrate(start_date='<value>', user_id='3a24193a-7e0c-448f-b11f-293d439db945', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_heartrate_get is not None:
     # handle response
@@ -510,7 +510,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_hrv(start_date='<value>', user_id='fa8c7b86-cf8a-4c7c-9611-342c13c4a095', end_date='<value>', provider='<value>')
+res = s.timeseries.get_hrv(start_date='<value>', user_id='fa8c7b86-cf8a-4c7c-9611-342c13c4a095', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_hrv_get is not None:
     # handle response
@@ -549,7 +549,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_hypnogram(start_date='<value>', user_id='9016363f-90dd-4ade-b540-c1806b114554', end_date='<value>', provider='<value>')
+res = s.timeseries.get_hypnogram(start_date='<value>', user_id='9016363f-90dd-4ade-b540-c1806b114554', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_hypnogram_get is not None:
     # handle response
@@ -588,7 +588,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_ige(start_date='<value>', user_id='ed97cbc2-98b6-4fed-b0c6-813b66be805e', end_date='<value>', provider='<value>')
+res = s.timeseries.get_ige(start_date='<value>', user_id='ed97cbc2-98b6-4fed-b0c6-813b66be805e', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_ige_get is not None:
     # handle response
@@ -627,7 +627,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_igg(start_date='<value>', user_id='584254a7-0b28-4d95-af79-8c9cf8e7ce7f', end_date='<value>', provider='<value>')
+res = s.timeseries.get_igg(start_date='<value>', user_id='584254a7-0b28-4d95-af79-8c9cf8e7ce7f', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_igg_get is not None:
     # handle response
@@ -666,7 +666,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_mindfulness_minutes(start_date='<value>', user_id='ff42bcd3-0f79-4dd6-a4ec-ae0a26ee2b9d', end_date='<value>', provider='<value>')
+res = s.timeseries.get_mindfulness_minutes(start_date='<value>', user_id='ff42bcd3-0f79-4dd6-a4ec-ae0a26ee2b9d', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_mindfulness_minutes_get is not None:
     # handle response
@@ -705,7 +705,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_respiratory_rate(start_date='<value>', user_id='f5daa7f6-973a-455e-a3cc-b2e2169f40d6', end_date='<value>', provider='<value>')
+res = s.timeseries.get_respiratory_rate(start_date='<value>', user_id='f5daa7f6-973a-455e-a3cc-b2e2169f40d6', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_respiratory_rate_get is not None:
     # handle response
@@ -744,7 +744,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_steps(start_date='<value>', user_id='f3f7b728-ead1-4ba0-b792-0b80b82a067b', end_date='<value>', provider='<value>')
+res = s.timeseries.get_steps(start_date='<value>', user_id='f3f7b728-ead1-4ba0-b792-0b80b82a067b', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_steps_get is not None:
     # handle response
@@ -783,7 +783,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_total_cholesterol(start_date='<value>', user_id='b56cf900-a013-495d-92e9-eebe971547d8', end_date='<value>', provider='<value>')
+res = s.timeseries.get_total_cholesterol(start_date='<value>', user_id='b56cf900-a013-495d-92e9-eebe971547d8', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_total_get is not None:
     # handle response
@@ -822,7 +822,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_triglycerides(start_date='<value>', user_id='58c97f14-3ec9-4355-8966-cdc7190c8f2e', end_date='<value>', provider='<value>')
+res = s.timeseries.get_triglycerides(start_date='<value>', user_id='58c97f14-3ec9-4355-8966-cdc7190c8f2e', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_triglycerides_get is not None:
     # handle response
@@ -933,7 +933,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.timeseries.get_water(start_date='<value>', user_id='2580182b-86b7-45ba-bc67-d64c9e6a0a12', end_date='<value>', provider='<value>')
+res = s.timeseries.get_water(start_date='<value>', user_id='2580182b-86b7-45ba-bc67-d64c9e6a0a12', end_date='<value>', provider='')
 
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_water_get is not None:
     # handle response

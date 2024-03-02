@@ -134,7 +134,7 @@ import vital
 s = vital.Vital()
 
 
-res = s.lab_tests.get_markers(lab_id=614936, name='<value>', page=549571, size=962743)
+res = s.lab_tests.get_markers(lab_id=614936, name='', page=1, size=50)
 
 if res.get_markers_response is not None:
     # handle response
