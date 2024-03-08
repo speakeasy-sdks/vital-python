@@ -22,6 +22,7 @@ res = s.providers.list()
 if res.response_get_list_of_providers_v2_providers_get is not None:
     # handle response
     pass
+
 ```
 
 

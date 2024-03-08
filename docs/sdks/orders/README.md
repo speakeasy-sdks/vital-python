@@ -24,6 +24,7 @@ res = s.orders.list(req)
 if res.get_orders_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -36,6 +36,7 @@ res = s.user.create_user(req)
 if res.client_facing_user_key is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -72,6 +73,7 @@ res = s.user.delete(user_id='8db863f6-ef9b-413a-8a70-cb816b33de6b')
 if res.user_success_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -109,6 +111,7 @@ res = s.user.deregister_provider_v2_user_user_id_provider_delete(provider=shared
 if res.user_success_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -146,6 +149,7 @@ res = s.user.get(user_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
 if res.client_facing_user is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -182,6 +186,7 @@ res = s.user.get_all(limit=100, offset=0)
 if res.paginated_users_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -219,6 +224,7 @@ res = s.user.get_connected_providers(user_id='30ef9033-9974-45c7-af5c-ddc9369dd7
 if res.response_get_connected_providers_v2_user_providers_user_id_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -255,6 +261,7 @@ res = s.user.get_metrics()
 if res.metrics_result is not None:
     # handle response
     pass
+
 ```
 
 
@@ -284,6 +291,7 @@ res = s.user.get_sign_in_token(user_id='d738147a-606f-41ac-a296-81a3993405ee')
 if res.user_sign_in_token_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -318,9 +326,10 @@ s = vital.Vital()
 
 res = s.user.patch_user_v2_user_user_id_patch(user_patch_body=shared.UserPatchBody(), user_id='02c6960d-b280-4a76-8c76-467d647deb43')
 
-if res.status_code == 200:
+if res is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -358,6 +367,7 @@ res = s.user.refresh_user_id_v2_user_refresh_user_id_post(user_id='1d35a855-b124
 if res.user_refresh_success_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -395,6 +405,7 @@ res = s.user.resolve_by_user_id(client_user_id='<value>')
 if res.client_facing_user is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

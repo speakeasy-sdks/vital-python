@@ -30,6 +30,7 @@ res = s.robots_robots_txt_get()
 if res.res is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -227,6 +228,7 @@ except errors.SDKError as e:
 if res.response_check_token_valid_v2_link_token_isvalid_post is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -258,6 +260,7 @@ res = s.robots_robots_txt_get()
 if res.res is not None:
     # handle response
     pass
+
 ```
 
 
@@ -277,6 +280,7 @@ res = s.robots_robots_txt_get()
 if res.res is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 

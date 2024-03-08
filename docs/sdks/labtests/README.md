@@ -37,6 +37,7 @@ res = s.lab_tests.create(req)
 if res.client_facing_lab_test is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -73,6 +74,7 @@ res = s.lab_tests.get_labs()
 if res.response_get_labs_v3_lab_tests_labs_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -102,6 +104,7 @@ res = s.lab_tests.get_marker_by_provider(lab_id=263548, provider_id='<value>')
 if res.client_facing_marker is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -139,6 +142,7 @@ res = s.lab_tests.get_markers(lab_id=614936, name='', page=1, size=50)
 if res.get_markers_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -178,6 +182,7 @@ res = s.lab_tests.list()
 if res.response_get_lab_tests_for_team_v3_lab_tests_get is not None:
     # handle response
     pass
+
 ```
 
 

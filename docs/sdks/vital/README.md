@@ -26,6 +26,7 @@ res = s.robots_robots_txt_get()
 if res.res is not None:
     # handle response
     pass
+
 ```
 
 

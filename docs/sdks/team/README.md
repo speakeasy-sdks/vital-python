@@ -40,6 +40,7 @@ res = s.team.create(req)
 if res.team_in_db is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -79,6 +80,7 @@ res = s.team.create_api_key(create_api_key_body=shared.CreateAPIKeyBody(
 if res.api_key_in_db is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -121,6 +123,7 @@ res = s.team.create_priority(priority_create=shared.PriorityCreate(
 if res.priority is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -158,6 +161,7 @@ res = s.team.delete_api_key(api_key_id='<value>', team_id='<value>')
 if res.api_key_in_db is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -195,6 +199,7 @@ res = s.team.get(team_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
 if res.client_facing_team is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -231,6 +236,7 @@ res = s.team.get_api_keys(team_id='<value>')
 if res.response_get_api_keys_for_team_v2_team_team_id_apikeys_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -267,6 +273,7 @@ res = s.team.get_config()
 if res.response_get_team_config_v2_team_link_config_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -296,6 +303,7 @@ res = s.team.get_source_priorities(data_type='<value>')
 if res.response_get_source_priorities_v2_team_source_priorities_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -332,6 +340,7 @@ res = s.team.get_user_count(team_id='3021769b-866d-4c37-8307-789796d71ace')
 if res.response_get_team_user_count_v2_team_team_id_users_count_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -368,6 +377,7 @@ res = s.team.get_webhook_url()
 if res.response_get_svix_webhook_url_v2_team_svix_url_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -397,6 +407,7 @@ res = s.team.rotate_api_key_v2_team_team_id_apikey_api_key_id_rotate_patch(api_k
 if res.api_key_in_db is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -434,6 +445,7 @@ res = s.team.search_users_by_uuid(query_id='<value>')
 if res.response_search_team_users_by_uuid_or_client_user_id_v2_team_users_search_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -473,6 +485,7 @@ res = s.team.update_api_key_label_v2_team_team_id_apikey_api_key_id_patch(update
 if res.api_key_in_db is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -511,6 +524,7 @@ res = s.team.update_source_priorities_v2_team_source_priorities_patch(team_id='<
 if res.response_update_source_priorities_v2_team_source_priorities_patch is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -548,6 +562,7 @@ res = s.team.update_team_v2_team_team_id_patch(team_update=shared.TeamUpdate(), 
 if res.team_in_db is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

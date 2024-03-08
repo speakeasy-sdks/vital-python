@@ -47,6 +47,7 @@ res = s.timeseries.get_blood_oxygen(start_date='<value>', user_id='4c167a20-d001
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_oxygen_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -86,6 +87,7 @@ res = s.timeseries.get_blood_pressure(start_date='<value>', user_id='e91b0b64-4f
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_blood_pressure_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -125,6 +127,7 @@ res = s.timeseries.get_caffeine(start_date='<value>', user_id='4313a0eb-8609-48d
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_caffeine_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -164,6 +167,7 @@ res = s.timeseries.get_calories_active(start_date='<value>', user_id='0bc1117e-3
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_active_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -203,6 +207,7 @@ res = s.timeseries.get_calories_basal(start_date='<value>', user_id='64ab8090-2f
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_calories_basal_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -242,6 +247,7 @@ res = s.timeseries.get_cholesterol_all(start_date='<value>', user_id='4b6c3b20-9
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -281,6 +287,7 @@ res = s.timeseries.get_cholesterol_hdl(start_date='<value>', user_id='f97d0d0e-3
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_hdl_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -320,6 +327,7 @@ res = s.timeseries.get_cholesterol_ldl(start_date='<value>', user_id='4f26c698-5
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_ldl_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -359,6 +367,7 @@ res = s.timeseries.get_distance(start_date='<value>', user_id='19ab33e7-f639-49b
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_distance_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -398,6 +407,7 @@ res = s.timeseries.get_floors_climbed(start_date='<value>', user_id='05b58dc0-4a
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_floors_climbed_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -437,6 +447,7 @@ res = s.timeseries.get_glucose(start_date='<value>', user_id='76c755f4-e363-461b
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_glucose_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -476,6 +487,7 @@ res = s.timeseries.get_heartrate(start_date='<value>', user_id='3a24193a-7e0c-44
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_heartrate_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -515,6 +527,7 @@ res = s.timeseries.get_hrv(start_date='<value>', user_id='fa8c7b86-cf8a-4c7c-961
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_hrv_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -554,6 +567,7 @@ res = s.timeseries.get_hypnogram(start_date='<value>', user_id='9016363f-90dd-4a
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_hypnogram_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -593,6 +607,7 @@ res = s.timeseries.get_ige(start_date='<value>', user_id='ed97cbc2-98b6-4fed-b0c
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_ige_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -632,6 +647,7 @@ res = s.timeseries.get_igg(start_date='<value>', user_id='584254a7-0b28-4d95-af7
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_igg_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -671,6 +687,7 @@ res = s.timeseries.get_mindfulness_minutes(start_date='<value>', user_id='ff42bc
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_mindfulness_minutes_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -710,6 +727,7 @@ res = s.timeseries.get_respiratory_rate(start_date='<value>', user_id='f5daa7f6-
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_respiratory_rate_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -749,6 +767,7 @@ res = s.timeseries.get_steps(start_date='<value>', user_id='f3f7b728-ead1-4ba0-b
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_steps_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -788,6 +807,7 @@ res = s.timeseries.get_total_cholesterol(start_date='<value>', user_id='b56cf900
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_total_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -827,6 +847,7 @@ res = s.timeseries.get_triglycerides(start_date='<value>', user_id='58c97f14-3ec
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_cholesterol_triglycerides_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -866,6 +887,7 @@ res = s.timeseries.get_user_sleep_stream(sleep_id='<value>')
 if res.client_facing_sleep_stream is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -902,6 +924,7 @@ res = s.timeseries.get_user_workouts(workout_id='bc0edaf0-6098-41f4-a6eb-525d09c
 if res.client_facing_stream is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -938,6 +961,7 @@ res = s.timeseries.get_water(start_date='<value>', user_id='2580182b-86b7-45ba-b
 if res.response_get_timeseries_resource_data_v2_timeseries_user_id_water_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -977,6 +1001,7 @@ res = s.timeseries.post_blood_pressure(user_id='5d55820e-8c39-4307-91e1-9cdd2372
 if res.response_post_user_blood_pressure_v2_timeseries_user_id_blood_pressure_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -1016,6 +1041,7 @@ res = s.timeseries.post_vitals(resource=shared.IngestibleTimeseriesResource.BLOO
 if res.response_post_user_vitals_v2_timeseries_user_id_resource_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

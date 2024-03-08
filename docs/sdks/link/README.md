@@ -37,6 +37,7 @@ res = s.link.check_token_state()
 if res.response_check_link_token_state_v2_link_state_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -70,6 +71,7 @@ res = s.link.check_token_validity(req)
 if res.response_check_token_valid_v2_link_token_isvalid_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -111,6 +113,7 @@ res = s.link.connect_ble_provider(manual_connection_data=shared.ManualConnection
 if res.response_connect_ble_provider_v2_link_provider_manual_provider_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -156,6 +159,7 @@ res = s.link.connect_email_auth(req)
 if res.connection_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -195,6 +199,7 @@ res = s.link.connect_email_provider(email_provider_auth_link=shared.EmailProvide
 if res.connection_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -236,6 +241,7 @@ res = s.link.connect_individual_provider(individual_provider_data=shared.Individ
 if res.provider_link_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -282,6 +288,7 @@ res = s.link.connect_password_auth(password_auth_link=shared.PasswordAuthLink(
 if res.connection_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -321,6 +328,7 @@ res = s.link.connect_provider(provider='<value>', x_vital_sdk_no_redirect='<valu
 if res.response_connect_provider_v2_link_connect_provider_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -363,6 +371,7 @@ res = s.link.create_demo_connection(req)
 if res.demo_connection_status is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -400,6 +409,7 @@ res = s.link.create_token(user_id='2795b4e3-bfe4-4e25-a003-d249bbaf85eb', expire
 if res.vital_token_created_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -437,6 +447,7 @@ res = s.link.exchange_token(code='<value>')
 if res.vital_token_exchange_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -482,6 +493,7 @@ res = s.link.generate(req)
 if res.link_token_exchange_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -519,6 +531,7 @@ res = s.link.get_oauth_provider(oauth_provider=shared.OAuthProviders.POLAR)
 if res.source is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -555,6 +568,7 @@ res = s.link.get_providers()
 if res.response_get_providers_v2_link_providers_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -590,6 +604,7 @@ res = s.link.start_connect_process(req)
 if res.response_start_connect_process_v2_link_start_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

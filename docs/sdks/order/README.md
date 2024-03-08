@@ -45,6 +45,7 @@ res = s.order.book_phlebotomy_appointment_v3_order_order_id_phlebotomy_appointme
 if res.client_facing_appointment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -82,6 +83,7 @@ res = s.order.cancel_order_v3_order_order_id_cancel_post(order_id='b9d919c2-b9aa
 if res.post_order_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -121,6 +123,7 @@ res = s.order.cancel_phlebotomy_appointment_v3_order_order_id_phlebotomy_appoint
 if res.client_facing_appointment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -179,6 +182,7 @@ res = s.order.create(req)
 if res.post_order_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -229,6 +233,7 @@ res = s.order.create_testkit(req)
 if res.post_order_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -265,6 +270,7 @@ res = s.order.dispatch_status()
 if res.response_dispatch_order_status_v3_order_dispatch_status_checks_post is not None:
     # handle response
     pass
+
 ```
 
 
@@ -294,6 +300,7 @@ res = s.order.get(order_id='b18d8d81-fd7b-4764-a31e-475cb1f36591')
 if res.client_facing_order is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -337,6 +344,7 @@ res = s.order.get_appointment_availability(order_id='c094c82e-a8e0-42d1-a065-be1
 if res.appointment_availability_slots is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -377,6 +385,7 @@ res = s.order.get_area_info(zip_code='<value>')
 if res.area_info is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -413,6 +422,7 @@ res = s.order.get_lab_test_result(order_id='c9229487-8f86-47ef-848e-7eb7243713ad
 if res.response_get_lab_test_result_v3_order_order_id_result_pdf_get is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -450,6 +460,7 @@ res = s.order.get_lab_test_result_metadata(order_id='daf5fdc5-7c54-4772-826b-696
 if res.lab_results_metadata is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -486,6 +497,7 @@ res = s.order.get_lab_test_result_raw(order_id='2cfa7265-4a8d-45d9-b8ea-42e844b0
 if res.lab_results_raw is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -522,6 +534,7 @@ res = s.order.get_phlebotomy_appointment(order_id='3e95493c-2969-4eab-9aaf-61adb
 if res.client_facing_appointment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -558,6 +571,7 @@ res = s.order.get_phlebotomy_cancellation_reasons()
 if res.response_get_phlebotomy_appointment_cancellation_reasons_v3_order_phlebotomy_appointment_cancellation_reasons_get is not None:
     # handle response
     pass
+
 ```
 
 
@@ -587,6 +601,7 @@ res = s.order.get_requisition_url(order_id='bfbbc5db-bd5f-47b5-9a88-6ef4ccfaf335
 if res.any is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -624,6 +639,7 @@ res = s.order.order_process_simulate_v3_order_order_id_test_post(order_id='03c5e
 if res.response_order_process_simulate_v3_order_order_id_test_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -662,6 +678,7 @@ res = s.order.process_testkit_order_v3_order_testkit_process_team_id_order_id_po
 if res.response_process_testkit_order_v3_order_testkit_process_team_id_order_id_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -707,6 +724,7 @@ res = s.order.process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_s
 if res.response_process_testkit_ship_hero_order_shipped_v3_order_testkit_webhook_shiphero_shipment_update_post is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -764,6 +782,7 @@ res = s.order.register_testkit_v3_order_testkit_register_post(req)
 if res.post_order_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -803,6 +822,7 @@ res = s.order.reschedule_phlebotomy_appointment_v3_order_order_id_phlebotomy_app
 if res.client_facing_appointment is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -844,6 +864,7 @@ res = s.order.sync_testkit_order_status_v3_order_testkit_status_post()
 if res.response_sync_testkit_order_status_v3_order_testkit_status_post is not None:
     # handle response
     pass
+
 ```
 
 
