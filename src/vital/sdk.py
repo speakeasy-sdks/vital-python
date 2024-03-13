@@ -13,7 +13,7 @@ from .summary import Summary
 from .team import Team
 from .timeseries import Timeseries
 from .user import User
-from typing import Dict
+from typing import Dict, Optional
 from vital import utils
 from vital._hooks import HookContext, SDKHooks
 from vital.models import errors, operations
@@ -35,14 +35,14 @@ class Vital:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 server_idx: int = None,
-                 server_url: str = None,
-                 url_params: Dict[str, str] = None,
-                 client: requests_http.Session = None,
-                 retry_config: utils.RetryConfig = None
+                 server_idx: Optional[int] = None,
+                 server_url: Optional[str] = None,
+                 url_params: Optional[Dict[str, str]] = None,
+                 client: Optional[requests_http.Session] = None,
+                 retry_config: Optional[utils.RetryConfig] = None
                  ) -> None:
         """Instantiates the SDK configuring it with the provided parameters.
-        
+
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -56,12 +56,17 @@ class Vital:
         """
         if client is None:
             client = requests_http.Session()
-        
+
         if server_url is not None:
             if url_params is not None:
                 server_url = utils.template_url(server_url, url_params)
 
-        self.sdk_configuration = SDKConfiguration(client, None, server_url, server_idx, retry_config=retry_config)
+        self.sdk_configuration = SDKConfiguration(
+            client,
+            server_url,
+            server_idx,
+            retry_config=retry_config
+        )
 
         hooks = SDKHooks()
 
@@ -71,10 +76,11 @@ class Vital:
             self.sdk_configuration.server_url = server_url
 
         # pylint: disable=protected-access
-        self.sdk_configuration._hooks=hooks
-       
+        self.sdk_configuration._hooks = hooks
+
         self._init_sdks()
-    
+
+
     def _init_sdks(self):
         self.link = Link(self.sdk_configuration)
         self.physician = Physician(self.sdk_configuration)
@@ -87,8 +93,8 @@ class Vital:
         self.lab_tests = LabTests(self.sdk_configuration)
         self.order = Order(self.sdk_configuration)
         self.orders = Orders(self.sdk_configuration)
-    
-    
+
+
     def robots_robots_txt_get(self) -> operations.RobotsRobotsTxtGetResponse:
         r"""Robots"""
         hook_ctx = HookContext(operation_id='robots_robots_txt_get', oauth2_scopes=[], security_source=None)
@@ -138,4 +144,3 @@ class Vital:
 
         return res
 
-    
